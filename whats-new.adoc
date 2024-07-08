@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
+summary: 'Informieren Sie sich über die Neuerungen bei Workload Factory: Zugangsdaten für Cloud-Provider, Codebox-Verbesserungen und vieles mehr.' 
+---
+= Was ist neu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Informieren Sie sich über die Neuerungen bei Workload Factory: Zugangsdaten für Cloud-Provider, Codebox-Verbesserungen und vieles mehr.
+
+
+
+== 7 Juli 2024
+
+
+
+=== Erstversion von Workload Factory
+
+BlueXP Workload Factory für AWS ist eine leistungsstarke Lifecycle-Managementplattform, die mithilfe von Amazon FSX für NetApp ONTAP-Dateisystemen zur Optimierung Ihrer Workloads entwickelt wurde. Zu den Workloads, die mit Workload Factory und FSX für ONTAP optimiert werden können, gehören Datenbanken, VMware Migrationen zu VMware Cloud on AWS, KI-Chatbots und vieles mehr.

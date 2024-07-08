@@ -1,0 +1,122 @@
+---
+sidebar: sidebar 
+permalink: operational-modes.html 
+keywords: modes, zero-trust, full-trust, read, basic, automate, aws, aws accounts, keys, multiple accounts, permissions, aws permissions, policy, policies, credentials 
+summary: Workload Factory bietet drei Betriebsmodi, mit denen Sie den Zugriff zwischen Workload Factory und Ihrem Cloud-Bestand anhand Ihrer IT-Richtlinien sorgfältig steuern können. Der von Ihnen verwendete Betriebsmodus wird durch die Level der AWS Berechtigungen bestimmt, die Sie für Workload Factory bereitstellen. 
+---
+= Informieren Sie sich über Betriebsmodi und AWS Zugangsdaten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Workload Factory bietet drei Betriebsmodi, mit denen Sie den Zugriff zwischen Workload Factory und Ihrem Cloud-Bestand anhand Ihrer IT-Richtlinien sorgfältig steuern können. Der von Ihnen verwendete Betriebsmodus wird durch die Level der AWS Berechtigungen bestimmt, die Sie für Workload Factory bereitstellen.
+
+
+
+== Betriebsmodi
+
+Betriebsmodi bieten eine logische Organisation der von Workload Factory bereitgestellten Funktionen und Fähigkeiten in Bezug auf das von Ihnen zugewiesene Vertrauensniveau. Im Betriebsmodus ist es Hauptziel, klar zu kommunizieren, welche Aufgaben Workload Factory innerhalb Ihres AWS-Kontos durchführen kann oder nicht.
+
+Grundmodus:: Stellt eine Zero-Trust-Beziehung dar, bei der Workload Factory keine AWS-Berechtigungen zugewiesen werden. Es wurde für die frühzeitige Untersuchung der Workload Factory und die Verwendung der verschiedenen Assistenten zur Erstellung des erforderlichen Infrastructure as Code (IAC) entwickelt. Sie können den Code kopieren und in AWS verwenden, indem Sie Ihre AWS Zugangsdaten manuell eingeben.
+Lesemodus:: Verbessert die Erfahrung des Grundmodus durch Hinzufügen von schreibgeschützten Berechtigungen, sodass die IAC-Vorlagen mit Ihren spezifischen Variablen (z. B. VPC, Sicherheitsgruppen usw.) gefüllt werden. Auf diese Weise können Sie die IAC direkt über Ihr AWS-Konto ausführen, ohne Änderungsberechtigungen für Workload Factory bereitzustellen.
+Automate-Modus:: Stellt eine vollständige Vertrauensbeziehung dar, sodass Workload Factory mit vollständigen Berechtigungen zugewiesen wird. Auf diese Weise kann Workload Factory in Ihrem Auftrag Vorgänge in AWS ausführen und automatisieren sowie Zugangsdaten angeben, die über die erforderlichen Berechtigungen für die Ausführung verfügen.
+
+
+
+
+=== Funktionen des Betriebsmodus
+
+Die verfügbaren Funktionen in den einzelnen Modi werden mit jedem Modus erweitert.
+
+[cols="12h,22,22,22,22"]
+|===
+| Modus | Automatisierung aus Workload Factory | Automatisierung innerhalb von AWS mithilfe von IAC | AWS-Ressourcenerkennung und automatische Vervollständigung | Fortschrittsüberwachung 
+
+
+| Basic | Nein | Minimal vollständige IAC-Vorlage | Nein | Nein 
+
+
+| Lesen | Nein | Mäßig vollständige IAC-Vorlage | Ja. | Ja. 
+
+
+| Automatisieren | Volle Automatisierung | Vollständige IAC-Vorlage mit vollständiger Automatisierung | Ja. | Ja. 
+|===
+
+
+=== Anforderungen an den
+
+Es gibt keine Auswahl, die Sie in Workload Factory festlegen müssen, um zu ermitteln, welchen Modus Sie verwenden möchten. Der Modus wird anhand der AWS-Anmeldeinformationen und -Berechtigungen ermittelt, die Sie Ihrem Workload Factory-Konto zuweisen.
+
+[cols="16h,35,35"]
+|===
+| Modus | Zugangsdaten für das AWS Konto | Verlinken 
+
+
+| Basic | Nicht erforderlich | Nicht erforderlich 
+
+
+| Lesen | Schreibgeschützt | Nicht erforderlich 
+
+
+| Automatisieren | Lese-/Schreibberechtigung | Erforderlich 
+|===
+https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Weitere Informationen zu Links"^]
+
+
+
+=== Beispiele für den Betriebsmodus
+
+Sie können Ihre Anmeldeinformationen so einrichten, dass ein Modus für eine Workload-Komponente und ein anderer Modus für eine andere Komponente bereitgestellt wird. Sie können beispielsweise den Automatisierungsmodus für Vorgänge konfigurieren, bei denen Sie FSX für ONTAP-Dateisysteme implementieren und verwalten, jedoch nur den Lesemodus zum Erstellen und Bereitstellen von Datenbank-Workloads mit Workload Factory konfigurieren.
+
+Sie können diese Funktionen in einem einzigen Satz von Anmeldeinformationen in einem Workload Factory-Konto bereitstellen oder Sie können mehrere Sätze von Anmeldeinformationen erstellen, wenn jede Anmeldeinformation eindeutige Workload-Bereitstellungsfunktionen bereitstellt.
+
+
+
+==== Beispiel 1
+
+Kontonutzer, die die Zugangsdaten verwenden, denen die folgenden Berechtigungen erteilt wurden, haben volle Kontrolle (Automatisierungsmodus) über die Erstellung von FSX für ONTAP-Dateisysteme, die Bereitstellung von Datenbanken und die Anzeige anderer Arten von AWS-Storage, der im Konto verwendet wird.
+
+image:screenshot-credentials1.png["Ein Screenshot mit einem Satz von Anmeldeinformationen, der zwei Arten von Workload-Berechtigungen bietet."]
+
+Sie verfügen jedoch über keine Automatisierungspsteuerungen zur Erstellung und Bereitstellung von VMware-Workloads (Basismodus) aus Workload Factory. Um VMware-Workloads zu erstellen, müssen sie den Code aus der Codebox kopieren, sich manuell bei ihrem AWS-Konto anmelden und die fehlenden Einträge manuell in den generierten Code einfügen, um diese Funktion nutzen zu können.
+
+
+
+==== Beispiel 2
+
+Hier hat der Benutzer zwei Sätze von Anmeldeinformationen erstellt, um je nach ausgewähltem Satz von Anmeldeinformationen verschiedene Betriebsfunktionen zu ermöglichen. In der Regel ist jeder Satz von Anmeldeinformationen mit einem anderen AWS Konto gekoppelt.
+
+Der erste Satz von Anmeldeinformationen umfasst Berechtigungen, die den Benutzern die vollständige Kontrolle über die Erstellung von FSX für ONTAP-Dateisysteme geben (und die Möglichkeit, andere im Konto verwendete Typen von AWS-Storage anzuzeigen), aber nur Leseberechtigungen, wenn sie mit VMware-Workloads arbeiten.
+
+image:screenshot-credentials-comparison-example-1.png["Ein Screenshot mit einem Satz von Anmeldeinformationen, der zwei Arten von Workload-Berechtigungen bietet."]
+
+Der zweite Satz von Anmeldeinformationen bietet nur Berechtigungen, die den Benutzern die vollständige Kontrolle über die Erstellung von FSX für ONTAP-Dateisysteme und die Anzeige anderer im Konto verwendeter AWS-Storage-Typen geben.
+
+image:screenshot-credentials-comparison-example-2.png["Ein Screenshot mit einem Satz von Anmeldeinformationen, der zwei Arten von Workload-Berechtigungen bietet."]
+
+
+
+== AWS Referenzen
+
+Wir haben einen Registrierungsfluss von AWS Angenommen Role Credentials entworfen, der Folgendes ermöglicht:
+
+* Unterstützt stärker ausgerichtete AWS-Kontoberechtigungen, indem Sie die Workload-Funktionen angeben können, die Sie verwenden möchten, und die IAM-Richtlinienanforderungen entsprechend dieser Auswahl bereitstellen.
+* Hier können Sie die gewährten AWS-Kontonberechtigungen anpassen, wenn Sie bestimmte Workload-Funktionen aktivieren oder deaktivieren.
+* Vereinfacht die manuelle Erstellung von IAM-Richtlinien durch maßgeschneiderte JSON-Richtliniendateien, die Sie in der AWS Konsole anwenden können.
+* Weitere Vereinfachung des Registrierungsprozesses von Anmeldeinformationen, indem Benutzern eine automatisierte Option für die erforderliche IAM-Richtlinie und die Rollenerstellung mithilfe von AWS CloudFormation-Stacks zur Verfügung gestellt wird.
+* Bessere Ausrichtung an FSX für ONTAP-Benutzer, die ihre Anmeldedaten lieber innerhalb der Grenzen des AWS-Cloud-Ecosystems speichern möchten, indem sie die Zugangsdaten für FSX für ONTAP-Services in einem AWS-basierten Geheimmanagement-Back-End speichern lassen.
+
+
+
+
+=== Eine oder mehrere AWS Zugangsdaten
+
+Wenn Sie Ihre erste Workload Factory-Funktion (oder Funktionen) verwenden, müssen Sie die Anmeldeinformationen mit den für diese Workload-Funktionen erforderlichen Berechtigungen erstellen. Sie fügen die Anmeldeinformationen zu Workload Factory hinzu, müssen jedoch auf die AWS Management Console zugreifen, um die IAM-Rolle und -Richtlinie zu erstellen. Diese Anmeldeinformationen stehen Ihnen bei der Verwendung von Funktionen in Workload Factory zur Verfügung.
+
+Ihre ersten AWS Zugangsdaten können eine IAM-Richtlinie für eine Funktion oder für viele Funktionen umfassen. Es hängt einfach von Ihren geschäftlichen Anforderungen ab.
+
+Durch Hinzufügen von mehr als einem Satz AWS-Anmeldeinformationen zu Workload Factory erhalten Sie zusätzliche Berechtigungen, die zur Nutzung weiterer Funktionen erforderlich sind, z. B. FSX für ONTAP-Dateisysteme, Bereitstellen von Datenbanken auf FSX für ONTAP, Migrieren von VMware-Workloads und mehr.
+
+link:add-credentials.html["Erfahren Sie, wie Sie den Workload Factory Zugangsdaten für AWS hinzufügen"].

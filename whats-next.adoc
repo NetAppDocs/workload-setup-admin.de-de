@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: whats-next.html 
+keywords: what you can do 
+summary: Nachdem Sie sich angemeldet und Workload Factory eingerichtet haben, können Sie FSX für ONTAP-Dateisysteme erstellen und verwalten und andere Workload Factory-Funktionen verwenden. 
+---
+= Was Sie als Nächstes tun können
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie sich jetzt angemeldet und Workload Factory eingerichtet haben, können Sie mehrere Workload Factory-Funktionen nutzen, wie z. B. das Erstellen von Amazon FSX für ONTAP-Dateisystemen, das Bereitstellen von Datenbanken auf FSX für ONTAP-Dateisystemen, und Migration von Virtual Machine-Konfigurationen in VMware Cloud on AWS mithilfe von FSX für ONTAP-Filesystemen als externe Datastores.
+
+* https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Amazon FSX für NetApp ONTAP"^]
++
+Bewerten und analysieren Sie aktuelle Datenbestände auf mögliche Kosteneinsparungen durch Einsatz von FSX for ONTAP als Storage-Infrastruktur, Bereitstellung und Vorlagenatisierung von FSX für ONTAP Implementierungen basierend auf Best Practices und Zugriff auf erweiterte Managementfunktionen.
+
+* https://docs.netapp.com/us-en/workload-genai/index.html["GenAI"^]
++
+Durch die Implementierung und das Management einer RAG-Infrastruktur (Retrieval-Augmented Generation) werden die Genauigkeit und Einzigartigkeit Ihrer KI-Applikationen verbessert. Erstellen Sie eine RAG Knowledge Base auf FSX for ONTAP mit integrierter Datensicherheit und Compliance.
+
+* https://docs.netapp.com/us-en/workload-databases/index.html["Datenbank-Workloads"^]
++
+Erkennen Sie Ihren vorhandenen Datenbankbestand auf AWS, ermitteln Sie potenzielle Kosteneinsparungen durch einen Wechsel zu FSX für ONTAP, implementieren Sie Datenbanken durchgängig mit integrierten Best Practices zur Optimierung und automatisieren Sie Thin Cloning für CI/CD-Pipelines.
+
+* https://docs.netapp.com/us-en/workload-vmware/index.html["VMware-Workloads"^]
++
+Optimieren Sie Migrationen und Betriebsabläufe mithilfe intelligenter Empfehlungen und automatischer Problembehebung. Implementieren Sie effiziente Backups und zuverlässige Disaster Recovery. Überwachen Sie Ihre VMs und beheben Sie Fehler.
+
+

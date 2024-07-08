@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="0204047d2332c588e7eb7d928e84f94a" category="summary">Fügen Sie die AWS-Anmeldedaten hinzu, damit Workload Factory über die erforderlichen Berechtigungen zum Bereitstellen und Verwalten von Cloud-Ressourcen in Ihren AWS-Konten verfügt.</block>
+  <block id="287ae8bc216279a75c04344894e04b7f" category="doc">Fügen Sie Workloads Factory Anmeldedaten für AWS hinzu</block>
+  <block id="b4b980a506b01e8ee88c1658f64ff933" category="paragraph">Fügen Sie AWS-Anmeldeinformationen hinzu und verwalten Sie diese, sodass Workload Factory die erforderlichen Berechtigungen hat, um Cloud-Ressourcen in Ihren AWS-Konten bereitzustellen und zu verwalten.</block>
+  <block id="3b878279a04dc47d60932cb294d96259" category="section-title">Überblick</block>
+  <block id="4dacf6e0adb6ed0f64acd514a486bf8a" category="inline-link-macro">Weitere Informationen zu Betriebsmodi</block>
+  <block id="8b7ed833b15fc4a24d7c01f4ff0473e3" category="paragraph">Workload Factory arbeitet im Modus „_Basic_“, es sei denn, Sie fügen Anmeldedaten für das AWS-Konto hinzu. Sie können Anmeldeinformationen hinzufügen, um andere Betriebsmodi zu aktivieren, z. B. Lesemodus und Automatisierungsmodus. <block ref="3ecbe38d325fe0025957d871a4619a77" category="inline-link-macro-rx"></block>.</block>
+  <block id="7f76e91e5513affc227459b415e2e1cf" category="paragraph">Auf der Seite Anmeldedaten können Sie einem vorhandenen Workload Factory-Konto AWS-Anmeldeinformationen hinzufügen. Auf diese Weise erhält Workload Factory die Berechtigungen, die für das Management von Ressourcen und Prozessen in der AWS Cloud-Umgebung erforderlich sind.</block>
+  <block id="df21e6f22445f7e313093546a4762e64" category="paragraph">Sie können Anmeldeinformationen mit zwei Methoden hinzufügen:</block>
+  <block id="ebb29cdb5a9f5368e3f445c808c91552" category="list-text">*Manuell*: Sie erstellen die IAM-Richtlinie und die IAM-Rolle in Ihrem AWS-Konto, während Sie Anmeldeinformationen in Workload Factory hinzufügen.</block>
+  <block id="1a04b786edc8b8251d22307b11cb2a8d" category="list-text">*Automatisch*: Sie erfassen eine minimale Menge an Informationen über Berechtigungen und verwenden dann einen CloudFormation-Stack, um die IAM-Richtlinien und Rolle für Ihre Anmeldeinformationen zu erstellen.</block>
+  <block id="3e704746794b6c6da13402ca9df54660" category="section-title">Fügen Sie einem Konto manuell Anmeldeinformationen hinzu</block>
+  <block id="c3ba6c13344137feef1d3795c8b29466" category="paragraph">Sie können die AWS-Anmeldeinformationen manuell zu Workload Factory hinzufügen, um Ihrem Workload Factory-Konto die Berechtigungen zum Management der AWS Ressourcen zu erteilen, die Sie für die Ausführung Ihrer individuellen Workloads verwenden. Jeder Satz von Anmeldeinformationen, den Sie hinzufügen, enthält eine oder mehrere IAM-Richtlinien, die auf den Workload-Funktionen basieren, die Sie verwenden möchten, und eine IAM-Rolle, die Ihrem Konto zugewiesen ist.</block>
+  <block id="ea106b6fa0504ddb53d4506dcd8e7755" category="paragraph">Die Erstellung der Anmeldedaten besteht aus drei Teilen:</block>
+  <block id="b4968210d824a9808cbfac903e6a2461" category="list-text">Wählen Sie die gewünschte Service- und Berechtigungsebene aus und erstellen Sie anschließend IAM-Richtlinien über die AWS Management Console.</block>
+  <block id="3b022a10e2c2436d37f59e86b18713f7" category="list-text">Erstellen Sie eine IAM-Rolle über die AWS Management Console.</block>
+  <block id="875b761ddc794776aadfc56fc5a6fc34" category="list-text">Geben Sie in Workload Factory einen Namen ein und fügen Sie die Anmeldeinformationen hinzu.</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Bevor Sie beginnen</block>
+  <block id="36a8744ea109fc8ef18fd018d5d97aa0" category="paragraph">Um sich bei Ihrem AWS-Konto anzumelden, müssen Sie über Anmeldedaten verfügen.</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Schritte</block>
+  <block id="a8fab9cf1c5f1b2f874573a923af9503" category="list-text">Wählen Sie in der Workload Factory-Konsole das Symbol *Account* und dann *Credentials* aus.</block>
+  <block id="7bb5995fb8df55fef061908839bf8869" category="inline-image-macro">Ein Screenshot mit dem Symbol für die Kontoeinstellungen in der Workload Factory-Konsole.</block>
+  <block id="f1801c767f1fdb84cf89d4dc163ed814" category="paragraph"><block ref="f1801c767f1fdb84cf89d4dc163ed814" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dcad3915ef43cba7d550cad972fa348d" category="list-text">Wählen Sie auf der Seite *Anmeldeinformationen* die Option *Anmeldeinformationen hinzufügen* aus, und die Seite Anmeldeinformationen hinzufügen wird angezeigt.</block>
+  <block id="c8df78ded4cea0598f7679f11a3c3246" category="list-text">Wählen Sie *manuell hinzufügen* und befolgen Sie die nachstehenden Schritte, um die drei Abschnitte unter _Berechtigungskonfiguration_ auszufüllen.</block>
+  <block id="ef7fe40c036b5b08d74837dcb702dc33" category="inline-image-macro">Ein Screenshot mit den Elementen, die Sie manuell für jeden Satz von Anmeldeinformationen definieren müssen.</block>
+  <block id="083fb8583b0a2366ef9a94388dd9640f" category="paragraph"><block ref="083fb8583b0a2366ef9a94388dd9640f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d11861b4e2dfc9ac3d86245926aa2785" category="section-title">Schritt 1: Wählen Sie die Workload-Funktionen aus und erstellen Sie die IAM-Richtlinien</block>
+  <block id="530d81548274a062436af51b8c3e829f" category="paragraph">In diesem Abschnitt legen Sie fest, welche Arten von Workload-Funktionen im Rahmen dieser Anmeldedaten gemanagt werden können und welche Berechtigungen für jeden Workload aktiviert werden. Sie müssen die Richtlinienberechtigungen für jeden ausgewählten Workload aus der Codebox kopieren und zur Erstellung der Richtlinien in die AWS Management Console innerhalb Ihres AWS-Kontos hinzufügen.</block>
+  <block id="445f4ba50fbc8e7b285aedb4396412bb" category="inline-image-macro">Ein Screenshot, der zeigt, welche Workload-Funktionen im Rahmen der Richtlinien in diesen Anmeldedaten gemanagt werden können.</block>
+  <block id="0edc9a25423073fcc768405f6aeda88b" category="paragraph"><block ref="0edc9a25423073fcc768405f6aeda88b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c1ab1d79c6a7c98f384377942001e718" category="list-text">Aktivieren Sie im Abschnitt *Richtlinien erstellen* die Workload-Funktionen, die Sie in diese Anmeldedaten aufnehmen möchten.</block>
+  <block id="3b9b789374908017040d97f81eb4008d" category="paragraph">Sie können später weitere Funktionen hinzufügen. Wählen Sie also einfach die Workloads aus, die Sie aktuell implementieren und managen möchten.</block>
+  <block id="5366a51a090d4b12810a9a8050f2fec4" category="list-text">Wählen Sie für Workload-Funktionen, die eine Auswahl an Berechtigungsebenen bieten (Betrieb, Ansicht usw.), den Berechtigungstyp aus, der mit diesen Zugangsdaten verfügbar sein wird.</block>
+  <block id="6d45b51df5e4b4d742aed3a012be7ece" category="list-text">Kopieren Sie im Codebox-Fenster die Berechtigungen für die erste IAM-Richtlinie.</block>
+  <block id="d9951e6a22fb7f7d403d017e5b8ef9c6" category="list-text">Öffnen Sie ein anderes Browserfenster, und melden Sie sich bei Ihrem AWS-Konto in der AWS Management Console an.</block>
+  <block id="0545945650ae73f856cfac5d203df5f5" category="list-text">Öffnen Sie den IAM-Dienst, und wählen Sie dann *Richtlinien* &gt; *Richtlinie erstellen* aus.</block>
+  <block id="27b582bcbcca0fd418f9f9f855710d0a" category="list-text">Wählen Sie JSON als Dateityp aus, fügen Sie die Berechtigungen ein, die Sie in Schritt 3 kopiert haben, und wählen Sie *Weiter* aus.</block>
+  <block id="e8ea9480c70ef3b586604a914898eff0" category="list-text">Geben Sie den Namen für die Richtlinie ein und wählen Sie *Richtlinie erstellen*.</block>
+  <block id="c240537b83fe8c59f5bb758e5c166662" category="list-text">Wenn Sie in Schritt 1 mehrere Workload-Funktionen ausgewählt haben, wiederholen Sie diese Schritte, um eine Richtlinie für jeden Satz von Workload-Berechtigungen zu erstellen.</block>
+  <block id="eca99ccb2e04bfcfc06a9cb5860e53a9" category="section-title">Schritt 2: Erstellen Sie die IAM-Rolle, die die Richtlinien verwendet</block>
+  <block id="30551002ceb8abd5af0ee8907423b553" category="paragraph">In diesem Abschnitt richten Sie eine IAM-Rolle ein, von der Workload Factory annimmt, dass sie die Berechtigungen und Richtlinien enthält, die Sie gerade erstellt haben.</block>
+  <block id="05e2d97b3b23a80afeb67390bad5f97c" category="inline-image-macro">Ein Screenshot, der zeigt, welche Berechtigungen Teil der neuen Rolle sind.</block>
+  <block id="bfc77a43a5b610654d7d0e7bbb9162a7" category="paragraph"><block ref="bfc77a43a5b610654d7d0e7bbb9162a7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c0a8070d8176ef21fdf6bc0d6b6833c9" category="list-text">Wählen Sie in der AWS Management Console *Roles &gt; Create Role* aus.</block>
+  <block id="e506de832b98c2693eb3f400ef0722c0" category="list-text">Wählen Sie unter *Vertrauenswürdiger Entitätstyp* *AWS-Konto* aus.</block>
+  <block id="f0497660975536e414a629b7d4f9f276" category="list-text">Wählen Sie *another AWS Account* aus und kopieren Sie die Konto-ID für FSX for ONTAP Workload Management von der Workload Factory UI und fügen Sie sie ein.</block>
+  <block id="f97e7ca54bb60a402c14107162345b08" category="list-text">Wählen Sie *required external ID* aus, und kopieren Sie die externe ID aus der Workload Factory-Benutzeroberfläche.</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Wählen Sie *Weiter*.</block>
+  <block id="552a0f683211339f8f7517a1d4fc804d" category="list-text">Wählen Sie im Abschnitt „Berechtigungsrichtlinie“ alle zuvor definierten Richtlinien aus und wählen Sie *Weiter* aus.</block>
+  <block id="eb940e2ee0ec63786b166a518db881df" category="list-text">Geben Sie einen Namen für die Rolle ein und wählen Sie *Rolle erstellen*.</block>
+  <block id="38743fa9100c2dfb5d984fc45fed3de7" category="list-text">Kopieren Sie die Rolle ARN.</block>
+  <block id="3ef33e9c33bb03c549beb540233aef7a" category="list-text">Kehren Sie zur Workload Factory zurück, erweitern Sie den Abschnitt *Rolle erstellen*, und fügen Sie die ARN in das Feld _Rolle ARN_ ein.</block>
+  <block id="c66b75fd4a0a3e3eff2094b970b0b897" category="section-title">Schritt 3: Geben Sie einen Namen ein und fügen Sie die Anmeldeinformationen hinzu</block>
+  <block id="a9c4ed0c041add98b3c1c27e6191e29e" category="paragraph">Im letzten Schritt geben Sie einen Namen für die Anmeldeinformationen in Workload Factory ein.</block>
+  <block id="3d89a5fdb924680cf3d2a6757ec9707c" category="list-text">Erweitern Sie in Workload Factory die Option * Credentials Name*.</block>
+  <block id="a961eea4fc631a6689d895b16be74287" category="list-text">Geben Sie den Namen ein, den Sie für diese Anmeldedaten verwenden möchten.</block>
+  <block id="027a8d7e43e765637f8ef1ae06ce3700" category="list-text">Wählen Sie *Hinzufügen*, um die Anmeldeinformationen zu erstellen.</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Ergebnis</block>
+  <block id="47d8a5dd0796937c17e25e1cddfa4b0a" category="paragraph">Die Anmeldeinformationen werden erstellt, und Sie werden zur Seite Anmeldedaten zurückgeführt.</block>
+  <block id="5512d35e832df0796cf2e9bbfc4ef8e7" category="section-title">Fügen Sie Anmeldeinformationen zu einem Konto über CloudFormation hinzu</block>
+  <block id="21f73823dc240b09e9b0a0896496f95d" category="paragraph">Sie können über einen AWS CloudFormation-Stack AWS Zugangsdaten zu Workload Factory hinzufügen, indem Sie die zu verwendenden Workload Factory-Funktionen auswählen und dann den AWS CloudFormation-Stack in Ihrem AWS-Konto starten. CloudFormation erstellt die IAM-Richtlinien und IAM-Rolle auf Basis der von Ihnen ausgewählten Workload-Funktionen.</block>
+  <block id="f48f7e164b0415ad7634845f95eb03e1" category="list-text">Sie müssen über die folgenden Berechtigungen in Ihrem AWS-Konto verfügen, wenn Sie Anmeldeinformationen mit einem CloudFormation-Stack hinzufügen:</block>
+  <block id="7f1a76d5b7da63bea7c6b448303e146a" category="list-text">Wählen Sie auf der Seite *Anmeldeinformationen* die Option *Anmeldeinformationen hinzufügen* aus.</block>
+  <block id="4454b47599abbe986fcc1d78e9d5c3d5" category="list-text">Wählen Sie *Add via AWS CloudFormation* aus.</block>
+  <block id="5ad4ec01b313b6c0c149b0ecd63aca07" category="inline-image-macro">Ein Screenshot mit den Elementen, die definiert werden müssen, bevor Sie CloudFormation starten können, um die Anmeldeinformationen zu erstellen.</block>
+  <block id="901a75a6ee535c459b098fcdbbfb42aa" category="paragraph"><block ref="901a75a6ee535c459b098fcdbbfb42aa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3534f18786c0daea2192750276eda6f0" category="list-text">Aktivieren Sie unter *Create Policies* die Workload-Funktionen, die Sie in diese Anmeldedaten aufnehmen möchten, und wählen Sie eine Berechtigungsstufe für jeden Workload aus.</block>
+  <block id="fa7fbda40357a3d9d2b6286d82c737a8" category="list-text">Geben Sie unter *Name der Anmeldeinformationen* den Namen ein, den Sie für diese Anmeldeinformationen verwenden möchten.</block>
+  <block id="55af5349296de9cc03eea75eb011b988" category="list-text">Fügen Sie die Zugangsdaten von AWS CloudFormation hinzu:</block>
+  <block id="a83b560232f912e9085bc49e52b3b48b" category="list-text">Wählen Sie *Add* (oder wählen Sie *Redirect to CloudFormation*) und die Seite Redirect to CloudFormation wird angezeigt.</block>
+  <block id="7b8b5df6726a1112cf43c1440a2b4def" category="inline-image-macro">Ein Screenshot, der zeigt, wie der CloudFormation-Stack zum Hinzufügen von Richtlinien und eine Rolle für Workload Factory-Anmeldeinformationen erstellt wird.</block>
+  <block id="b0f8c37516e3eee761656df941264fa2" category="paragraph"><block ref="b0f8c37516e3eee761656df941264fa2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d1ef06b747e151725861e376eb2fca2b" category="list-text">Wenn Sie Single Sign-On (SSO) mit AWS verwenden, öffnen Sie eine separate Browser-Registerkarte und melden Sie sich bei der AWS-Konsole an, bevor Sie *Weiter* auswählen.</block>
+  <block id="43bcb79a644c3cd71bfe3cb4635d97a0" category="paragraph">Sie sollten sich beim AWS-Konto anmelden, wo sich das FSX für ONTAP-Dateisystem befindet.</block>
+  <block id="3364e8fe52c54126e3d0ebbdc3ebe636" category="list-text">Wählen Sie auf der Seite „Umleiten zur CloudFormation“ die Option *Weiter*.</block>
+  <block id="ab44f988398acb833af7b9b2bc6c26b9" category="list-text">Wählen Sie auf der Seite „schneller Stapel erstellen“ unter „Funktionen“ *Ich bestätige, dass AWS CloudFormation IAM-Ressourcen erstellen könnte*.</block>
+  <block id="69831ef6721ecf7f184cdd4b29af8f45" category="list-text">Wählen Sie *Stapel erstellen*.</block>
+  <block id="67a2aece01328bf00637fcc5391ba3ec" category="list-text">Kehren Sie zur Seite Workload Factory zurück, und überwachen Sie die Seite Anmeldeinformationen, um zu überprüfen, ob die neuen Anmeldeinformationen ausgeführt werden oder ob sie hinzugefügt wurden.</block>
+  <block id="33806546d5449616c234971d2aa7c18b" category="summary">Codebox ist ein Co-Pilot von Infrastructure as Code (IAC), mit dem Entwickler und DevOps den Code generieren können, der für die Ausführung aller von Workload Factory unterstützten Vorgänge erforderlich ist. Codebox ist auf die Betriebsmodi von Workload Factory ausgerichtet (Basic, Read, Automate) und legt einen klaren Weg für die Ausführungsbereitschaft sowie einen Automatisierungsskatalog für eine schnelle spätere Wiederverwendung vor.</block>
+  <block id="b9d92ff083cdd90473a495ae946507fa" category="doc">Erfahren Sie mehr über die Codebox-Automatisierung</block>
+  <block id="86df170aaac2322b854dc499ffb2f681" category="paragraph">Codebox ist ein Co-Pilot von Infrastructure as Code (IAC), mit dem Entwickler und DevOps den Code generieren können, der für die Ausführung aller von Workload Factory unterstützten Vorgänge erforderlich ist. Codebox ist auf die Betriebsmodi von Workload Factory ausgerichtet (Basic, Read und Automate) und bietet einen klaren Weg für die Ausführungsbereitschaft sowie einen Automatisierungsskatalog für eine schnelle spätere Wiederverwendung.</block>
+  <block id="c20a9fb18c5ad24194fdd7ccde0a108d" category="section-title">Codebox-Funktionen</block>
+  <block id="a60481064d733c1b8603777a0fed54b0" category="paragraph">Codebox bietet zwei wichtige IAC-Funktionen:</block>
+  <block id="7b03b939d7a7886fee314498791450ce" category="list-text">_Codebox Viewer_ zeigt die IAC an, die durch einen bestimmten Job-Flow-Vorgang erzeugt wird, indem Einträge und Auswahlen aus dem grafischen Assistenten oder aus der Konversations-Chat-Schnittstelle aufeinander abgestimmt werden. Codebox Viewer unterstützt zwar die Farbcodierung für eine einfache Navigation und Analyse, erlaubt aber keine Bearbeitung – nur das Kopieren oder Speichern von Code in den Automation Catalog.</block>
+  <block id="e270244cb4311b8491d54c9d67c0622f" category="list-text">_Codebox Automation Catalog_ zeigt alle gespeicherten IAC-Jobs an, so dass Sie sie einfach für die zukünftige Verwendung referenzieren können. Die Aufträge im Automatisierungskatalog werden als Vorlagen gespeichert und im Kontext der Ressourcen angezeigt, die für sie gelten.</block>
+  <block id="11c284cdfd9860e62b7f844adeae2037" category="paragraph">Darüber hinaus zeigt Codebox beim Einrichten der Workload Factory-Anmeldeinformationen dynamisch die AWS-Berechtigungen an, die zum Erstellen von IAM-Richtlinien erforderlich sind. Die Berechtigungen werden für jede Workload Factory-Funktion, die Sie verwenden möchten (Datenbanken, KI, FSX für ONTAP usw.) bereitgestellt und sie werden entsprechend angepasst, ob die Benutzer der Richtlinie schreibgeschützte oder vollständige Betriebsberechtigungen erhalten. Sie kopieren einfach die Berechtigungen aus der Codebox und fügen sie dann in die AWS Management Console ein, damit Workload Factory die richtigen Berechtigungen für das Management Ihrer Workloads hat.</block>
+  <block id="83bc09f30d22b08aaed079135d400a58" category="section-title">Unterstützte Codeformate</block>
+  <block id="a2d178a4422e96a4ba807df17805b391" category="paragraph">Die unterstützten Codeformate umfassen:</block>
+  <block id="2a877c6ff8f47bb17f9e4d12f8a693bc" category="list-text">REST-APIs für Workload Factory</block>
+  <block id="7820fdb5d8b3ebe0c69c86cf8bd2d0cf" category="list-text">AWS CLI</block>
+  <block id="8679a1944db93938a65e47107be5d2b8" category="list-text">AWS CloudFormation</block>
+  <block id="1767b6ef838f3d4774bc0f274ffd6680" category="inline-link-macro">Lernen Sie die Verwendung von Codebox kennen</block>
+  <block id="431b5bf36166f939706fd1cd6625e311" category="paragraph"><block ref="58039229c34145102d9497de13b6e7b4" category="inline-link-macro-rx"></block>.</block>
+  <block id="243f4102d24e538f61072e19e53b373f" category="summary">NetApp bietet unterschiedlichen Support für Workload Factory. Umfassende kostenlose Self-Support-Optionen stehen rund um die Uhr zur Verfügung, wie etwa Knowledge Base-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung umfasst technischen Remote-Support über Web-Ticketing.</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Holen Sie sich Hilfe</block>
+  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="paragraph">NetApp bietet für Workload Factory und die zugehörigen Cloud-Services unterschiedliche Unterstützung. Umfassende kostenlose Self-Support-Optionen stehen rund um die Uhr zur Verfügung, wie etwa Knowledge Base-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung umfasst technischen Remote-Support über Web-Ticketing.</block>
+  <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">Erhalten Sie Support für FSX für ONTAP</block>
+  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">Für technischen Support in Bezug auf FSX for ONTAP, seine Infrastruktur oder jede Lösung, die den Service verwendet, siehe „Hilfe erhalten“ in der Dokumentation zu Workload Factory für dieses Produkt.</block>
+  <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX für ONTAP</block>
+  <block id="9d06990508d25d367d9158c6558eb9c8" category="paragraph"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
+  <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">Nutzen Sie die unten beschriebenen Support-Optionen, um technischen Support für Workload Factory und seine Storage-Lösungen und -Services zu erhalten.</block>
+  <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Nutzen Sie Self-Support-Optionen</block>
+  <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Diese Optionen sind kostenlos verfügbar, 24 Stunden am Tag, 7 Tage die Woche:</block>
+  <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Dokumentation</block>
+  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">Die Workload Factory-Dokumentation, die Sie derzeit anzeigen.</block>
+  <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">Wissensdatenbank</block>
+  <block id="436f63b446dba5a418c698d49bd39718" category="list-text"><block ref="436f63b446dba5a418c698d49bd39718" category="inline-link-rx"></block></block>
+  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">Durchsuchen Sie die Workload Factory Knowledge Base, um hilfreiche Artikel zur Fehlerbehebung zu finden.</block>
+  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">Communitys</block>
+  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
+  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">Treten Sie der Workload Factory Community bei, um laufende Diskussionen zu verfolgen oder neue zu erstellen.</block>
+  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Erstellen Sie einen Fall mit dem NetApp Support</block>
+  <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Zusätzlich zu den oben genannten Self-Support-Optionen können Sie gemeinsam mit einem NetApp Support-Experten eventuelle Probleme nach der Aktivierung des Supports beheben.</block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">Bevor Sie beginnen</block>
+  <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">Erfahren Sie, wie Sie sich für Support registrieren</block>
+  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">Um die Funktion *Fall erstellen* nutzen zu können, müssen Sie sich zunächst für den Support registrieren. Verknüpfen Sie Ihre Zugangsdaten für die NetApp Support-Website mit Ihrer Workload Factory Anmeldung. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
+  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">Wählen Sie oben rechts in der Workload Factory-Konsole *Hilfe &gt; Support* aus.</block>
+  <block id="aadd86a3fadf19221852692c6e4adc2f" category="paragraph">Wenn Sie diese Option auswählen, wird die BlueXP Konsole um eine neue Browserregisterkarte geöffnet und das Support Dashboard geladen.</block>
+  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">Wählen Sie auf der Seite *Ressourcen* eine der verfügbaren Optionen unter Technischer Support:</block>
+  <block id="6a1b74969231967ed071d465206b15c7" category="list-text">Wählen Sie *Rufen Sie uns an*, wenn Sie mit jemandem am Telefon sprechen möchten. Sie werden zu einer Seite auf netapp.com weitergeleitet, auf der die Telefonnummern aufgeführt sind, die Sie anrufen können.</block>
+  <block id="d65a2a6fc9caad1867728d4382eeb989" category="list-text">Wählen Sie *Fall erstellen*, um ein Ticket mit einem NetApp-Supportspezialisten zu öffnen:</block>
+  <block id="d7d0da18fbb8f8f85c1364883fbdf4c7" category="list-text">*Service*: Wählen Sie *Workload Factory*.</block>
+  <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*Case Priority*: Wählen Sie die Priorität für den Fall, der niedrig, Mittel, hoch oder kritisch sein kann.</block>
+  <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">Wenn Sie weitere Informationen zu diesen Prioritäten wünschen, bewegen Sie den Mauszeiger über das Informationssymbol neben dem Feldnamen.</block>
+  <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">*Problembeschreibung*: Geben Sie eine detaillierte Beschreibung Ihres Problems an, einschließlich aller anwendbaren Fehlermeldungen oder Fehlerbehebungsschritte, die Sie durchgeführt haben.</block>
+  <block id="002c6f26fb01affb37b8cf3cef7a1fb0" category="list-text">*Zusätzliche E-Mail-Adressen*: Geben Sie zusätzliche E-Mail-Adressen ein, wenn Sie jemand anderes auf dieses Problem aufmerksam machen möchten.</block>
+  <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*Anhang (optional)*: Laden Sie bis zu fünf Anhänge nacheinander hoch.</block>
+  <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">Anhänge sind auf 25 MB pro Datei begrenzt. Folgende Dateierweiterungen werden unterstützt: Txt, log, pdf, jpg/jpeg, rtf, doc/docx, xls/xlsx und csv.</block>
+  <block id="baaf0e61add7d12cf8d12e023d5aef18" category="inline-image-macro">Screenshot aus dem Formular „Create a Case“, in dem Sie einen Case beim NetApp Support erstellen können</block>
+  <block id="b0c6c3ee60a29925d3f09cd609b79483" category="paragraph"><block ref="b0c6c3ee60a29925d3f09cd609b79483" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">Nachdem Sie fertig sind</block>
+  <block id="18f487556417bb6d9721a7005ae097c9" category="paragraph">Es wird ein Popup-Fenster mit der Support-Fallnummer angezeigt. Ein NetApp Support-Experte prüft Ihren Fall und macht Sie umgehend mit.</block>
+  <block id="0ff9b4b8684b9e03c9c1e1320935eae3" category="paragraph">Um eine Historie deiner Support-Fälle anzuzeigen, kannst du *Einstellungen &gt; Chronik* auswählen und nach Aktionen mit dem Namen „Support-Case erstellen“ suchen. Mit einer Schaltfläche ganz rechts können Sie die Aktion erweitern, um Details anzuzeigen.</block>
+  <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">Es ist möglich, dass beim Versuch, einen Fall zu erstellen, möglicherweise die folgende Fehlermeldung angezeigt wird:</block>
+  <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">„Sie sind nicht berechtigt, einen Fall für den ausgewählten Service zu erstellen.“</block>
+  <block id="c7b7a5ae9f37fd7d24e4d641b9186fe9" category="paragraph">Dieser Fehler könnte bedeuten, dass das NSS-Konto und das Unternehmen des Datensatzes, mit dem es verbunden ist, nicht das gleiche Unternehmen des Eintrags für die BlueXP Account Seriennummer (dh 960xxxx) oder Seriennummer der Arbeitsumgebung. Sie können Hilfe mit einer der folgenden Optionen anfordern:</block>
+  <block id="e01df0b4dfd95eba2c59333419e4fac6" category="list-text">Verwenden Sie den Chat im Produkt</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
+  <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">Übermitteln Sie einen nicht-technischen Case unter<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
+  <block id="898e35e1a4bf4b025c3edec879439b08" category="section-title">Managen Ihrer Support-Cases (Vorschau)</block>
+  <block id="8b74b053fbeeff5c3b6f4991cb1d028d" category="paragraph">Sie können aktive und gelöste Support-Cases direkt über BlueXP anzeigen und managen. Sie können die mit Ihrem NSS-Konto und Ihrem Unternehmen verbundenen Fälle verwalten.</block>
+  <block id="394ef093ad3259b9ff0fe7406f015b83" category="paragraph">Case Management ist als Vorschau verfügbar. Wir planen, diese Erfahrungen weiter zu verbessern und in zukünftigen Versionen Verbesserungen hinzuzufügen. Bitte senden Sie uns Ihr Feedback über den Product-Chat.</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">Beachten Sie Folgendes:</block>
+  <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">Das Case-Management-Dashboard oben auf der Seite bietet zwei Ansichten:</block>
+  <block id="01c3ffea552d74a5ae390b10e71a1f26" category="list-text">Die Ansicht auf der linken Seite zeigt die Gesamtzahl der Fälle, die in den letzten 3 Monaten durch das von Ihnen angegebene NSS-Benutzerkonto eröffnet wurden.</block>
+  <block id="e3b6c09a5686233f72ce1ea60a1eb088" category="list-text">Die Ansicht auf der rechten Seite zeigt die Gesamtzahl der in den letzten 3 Monaten auf Unternehmensebene eröffneten Fälle basierend auf Ihrem NSS-Benutzerkonto an.</block>
+  <block id="b19b168cc8a2b8c984465e140256b3a2" category="paragraph">Die Ergebnisse in der Tabelle geben die Fälle in Bezug auf die ausgewählte Ansicht wieder.</block>
+  <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">Sie können interessante Spalten hinzufügen oder entfernen und den Inhalt von Spalten wie Priorität und Status filtern. Andere Spalten bieten nur Sortierfunktionen.</block>
+  <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">Weitere Informationen erhalten Sie in den Schritten unten.</block>
+  <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">Auf Fallebene bieten wir die Möglichkeit, Fallnotizen zu aktualisieren oder einen Fall zu schließen, der sich noch nicht im Status „Geschlossen“ oder „Geschlossen“ befindet.</block>
+  <block id="0a4050ac39772e9281a9aba225254bf8" category="list-text">Wählen Sie *Case Management* aus und fügen Sie bei Aufforderung Ihr NSS-Konto zu BlueXP hinzu.</block>
+  <block id="d8ce1865cf1fe3cffd60300b4b86ad63" category="paragraph">Auf der Seite *Case Management* werden offene Fälle im Zusammenhang mit dem NSS-Konto angezeigt, das mit Ihrem BlueXP Benutzerkonto verknüpft ist. Dies ist das gleiche NSS-Konto, das oben auf der Seite *NSS Management* angezeigt wird.</block>
+  <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">Ändern Sie optional die in der Tabelle angezeigten Informationen:</block>
+  <block id="1d39d3ab518e1e3f16cbafb2a56e1fd9" category="list-text">Wählen Sie unter *Vorgänge der Organisation* *Ansicht* aus, um alle mit Ihrem Unternehmen verbundenen Fälle anzuzeigen.</block>
+  <block id="059e856250b59be3069246887b74a23c" category="list-text">Ändern Sie den Datumsbereich, indem Sie einen genauen Datumsbereich oder einen anderen Zeitrahmen auswählen.</block>
+  <block id="dfb3764bce2548df4e06357403f9c7d0" category="inline-image-macro">Ein Screenshot der Option über der Tabelle auf der Seite Case Management, mit der Sie einen genauen Datumsbereich oder die letzten 7 Tage, 30 Tage oder 3 Monate auswählen können.</block>
+  <block id="4f7062c5c309a833cf46e4a1a5a5d366" category="paragraph"><block ref="4f7062c5c309a833cf46e4a1a5a5d366" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a1bb576be9e5a356290f231efb51b3f5" category="list-text">Filtern Sie den Inhalt der Spalten.</block>
+  <block id="3753f10a59e21f58b30e3e67d416453e" category="inline-image-macro">Ein Screenshot der Filteroption in der Spalte Status, in dem Sie Fälle filtern können, die einem bestimmten Status entsprechen, z. B. aktiv oder Geschlossen.</block>
+  <block id="8f624dee500d9670a27c4404084a7a62" category="paragraph"><block ref="8f624dee500d9670a27c4404084a7a62" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1c6ea5ef583389e18e7d7bda70beaa71" category="inline-image-macro">Das Plus-Symbol, das in der Tabelle angezeigt wird</block>
+  <block id="002f1c0a8cf4a68b888010ddef3a7f7e" category="list-text">Ändern Sie die Spalten, die in der Tabelle angezeigt werden, indem <block ref="e55ec8dc42ae68d9326c51261c8a5f4f" category="inline-image-macro-rx" type="image"></block> Sie die Spalten auswählen und dann auswählen, die Sie anzeigen möchten.</block>
+  <block id="370b44009f1b82d0b6b178bb80cc62fa" category="inline-image-macro">Ein Screenshot mit den Spalten, die Sie in der Tabelle anzeigen können.</block>
+  <block id="72c5c65442a2c44e7f2546b8b4c957df" category="paragraph"><block ref="72c5c65442a2c44e7f2546b8b4c957df" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">Ein Symbol mit drei Punkten, das in der letzten Spalte der Tabelle angezeigt wird</block>
+  <block id="000a1376035909240f559b8ab724030c" category="list-text">Managen Sie einen bestehenden Fall, indem <block ref="54181d1b918b28e5f92545f8b3b4a30c" category="inline-image-macro-rx" type="image"></block> Sie eine der verfügbaren Optionen auswählen:</block>
+  <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*Fall anzeigen*: Vollständige Details zu einem bestimmten Fall anzeigen.</block>
+  <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*Aktennotizen aktualisieren*: Geben Sie zusätzliche Details zu Ihrem Problem an oder wählen Sie *Dateien hochladen*, um maximal fünf Dateien anzuhängen.</block>
+  <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*Fall schließen*: Geben Sie Einzelheiten darüber an, warum Sie den Fall schließen und wählen Sie *Fall schließen*.</block>
+  <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">Ein Screenshot, der die Aktionen zeigt, die Sie nach Auswahl des Menüs in der letzten Spalte der Tabelle durchführen können.</block>
+  <block id="6f7cf78e14aa346236a87d9541221fb2" category="paragraph"><block ref="6f7cf78e14aa346236a87d9541221fb2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Rechtliche Hinweise</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Rechtliche Hinweise ermöglichen den Zugriff auf Copyright-Erklärungen, Marken, Patente und mehr.</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Urheberrecht</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marken</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp, das NETAPP Logo und die auf der NetApp Markenseite aufgeführten Marken sind Marken von NetApp Inc. Andere Firmen- und Produktnamen können Marken der jeweiligen Eigentümer sein.</block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Patente</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Eine aktuelle Liste der NetApp Patente finden Sie unter:</block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Datenschutzrichtlinie</block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open Source</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">In den Benachrichtigungsdateien finden Sie Informationen zu Urheberrechten und Lizenzen von Drittanbietern, die in der NetApp Software verwendet werden.</block>
+  <block id="22e5a7336ebe77138f0282cedcb069ab" category="inline-link">Workload Factory</block>
+  <block id="7ffcbeca3b450b8d05f9cf0eedb617f8" category="list-text"><block ref="7ffcbeca3b450b8d05f9cf0eedb617f8" category="inline-link-rx"></block></block>
+  <block id="887f800d53dc2cd5a7894464a6f60a6b" category="inline-link">Workload Factory für Datenbanken</block>
+  <block id="7e505d4c691d86e5bd415f9ccb849966" category="list-text"><block ref="7e505d4c691d86e5bd415f9ccb849966" category="inline-link-rx"></block></block>
+  <block id="9591e2d54c998ae1c9d48fd5be7762e9" category="inline-link">Workload Factory für GenAI</block>
+  <block id="f38c7416013fc239c3dd3288d40a40c0" category="list-text"><block ref="f38c7416013fc239c3dd3288d40a40c0" category="inline-link-rx"></block></block>
+  <block id="404a5efb62a3a3f22b02593091042608" category="inline-link">Workload-Fabrik für VMware</block>
+  <block id="9a211183d3fa82368d76fdbab5abdeda" category="list-text"><block ref="9a211183d3fa82368d76fdbab5abdeda" category="inline-link-rx"></block></block>
+  <block id="dfccab35bc7005d989cb4561e9255ada" category="summary">Nachdem Sie sich bei Workload Factory angemeldet haben, können Sie sich jederzeit über die webbasierte Konsole einloggen, um mit dem Management Ihrer Workloads und FSX für ONTAP-Dateisysteme zu beginnen.</block>
+  <block id="7ffef60a0bb1e63a8505f9e4285dab5f" category="doc">Melden Sie sich bei Workload Factory an</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Über diese Aufgabe</block>
+  <block id="4a82c28eaf9e486d9116434f89bacba7" category="paragraph">Sie können sich über eine der folgenden Optionen bei der webbasierten Workload Factory-Konsole anmelden:</block>
+  <block id="19df8bb4b5a805b23aeac731605bdf21" category="list-text">Ihre vorhandenen Zugangsdaten für die NetApp Support Site (NSS</block>
+  <block id="691be8e1993c2535e4afe5834afe3b01" category="list-text">Nutzen Sie Ihre E-Mail-Adresse und ein Passwort, um sich bei einem NetApp Cloud-Login anzumelden</block>
+  <block id="8fd935558171bd50056871ef9ee7bd05" category="inline-link">Workload Factory-Konsole</block>
+  <block id="ba66ed28174cebd60e2e5bb8650d4aa1" category="list-text">Öffnen Sie einen Webbrowser und gehen Sie zum<block ref="d98336faa10e493cfae83d68fb7054ec" category="inline-link-rx"></block>.</block>
+  <block id="03eb7e8aedd1ad900f6996ff1a9cf8dd" category="list-text">Geben Sie auf der Seite *Anmelden* die E-Mail-Adresse ein, die mit Ihrem Login verknüpft ist.</block>
+  <block id="784d4eeca11deaf4ee3f37735e4d0334" category="list-text">Abhängig von der Authentifizierungsmethode, die mit Ihrer Anmeldung verknüpft ist, werden Sie aufgefordert, Ihre Anmeldedaten einzugeben:</block>
+  <block id="8a7c8d2028930eaef2c3f44925994051" category="list-text">NetApp Cloud-Anmeldedaten: Geben Sie Ihr Passwort ein</block>
+  <block id="a02705346febd77df5680fe2f12343a9" category="list-text">Föderierte Benutzer: Geben Sie Ihre föderierten Identitätsinformationen ein</block>
+  <block id="24bdc2b22d38abff9ff97a9c5b5e7966" category="list-text">NetApp Support Site Konto: Geben Sie Ihre Zugangsdaten für die NetApp Support Site ein</block>
+  <block id="c4d4e21d2a557d3c9be0ce8dc071f547" category="list-text">Wählen Sie *Anmelden*.</block>
+  <block id="1c883b8b402bae840152eb96ee53c8bf" category="paragraph">Wenn Sie sich in der Vergangenheit erfolgreich angemeldet haben, wird die Startseite von Workload Factory angezeigt, und Sie verwenden das Standardkonto.</block>
+  <block id="817b94dd7f00f6dd33e23875e9f03368" category="paragraph">Wenn Sie sich zum ersten Mal angemeldet haben, werden Sie auf die Seite *Account* weitergeleitet.</block>
+  <block id="3b05fd0eeb02280c9e89c847477bc0fc" category="list-text">Wenn Sie Mitglied eines einzelnen Kontos sind, wählen Sie *Weiter*.</block>
+  <block id="9dd8932847709b0a76c3786f584e1272" category="list-text">Wenn Sie Mitglied mehrerer Konten sind, wählen Sie das Konto aus und wählen Sie *Weiter*.</block>
+  <block id="a67ab1c62f2a6164c719be422f163c0c" category="paragraph">Sie sind jetzt angemeldet und können mit der Nutzung von Workload Factory beginnen, um FSX für ONTAP-Dateisysteme und Ihre Workloads zu verwalten.</block>
+  <block id="2f13edc244ce3aa63a739bc5418cd67f" category="summary">Wenn Sie keine Zugangsdaten mehr benötigen, können Sie sie aus Workload Factory löschen. Sie können nur Anmeldeinformationen löschen, die nicht mit einem FSX für ONTAP-Dateisystem verknüpft sind.</block>
+  <block id="25f033e226552b2f5ae002edb8e5fd2f" category="doc">Anmeldedaten entfernen</block>
+  <block id="58eed24ee19ccccfe9a117084c2d03a6" category="list-text">Wählen Sie auf der Seite *Anmeldeinformationen* das Aktionsmenü für einen Satz von Anmeldeinformationen aus und wählen Sie dann *Entfernen*.</block>
+  <block id="b7dd0331ad4ede9488c2fd01dda69e83" category="list-text">Wählen Sie *Entfernen*, um zu bestätigen.</block>
+  <block id="be43daf19814961c1c1f681b1719f65a" category="summary">Workload Factory bietet drei Betriebsmodi, mit denen Sie den Zugriff zwischen Workload Factory und Ihrem Cloud-Bestand anhand Ihrer IT-Richtlinien sorgfältig steuern können. Der von Ihnen verwendete Betriebsmodus wird durch die Level der AWS Berechtigungen bestimmt, die Sie für Workload Factory bereitstellen.</block>
+  <block id="0261a8e2837bda78e3e9784459c8d346" category="doc">Informieren Sie sich über Betriebsmodi und AWS Zugangsdaten</block>
+  <block id="3b39e22b0ceb822bf56d19eb7ec14f7f" category="section-title">Betriebsmodi</block>
+  <block id="bc63252869898532ad7c844d8447e358" category="paragraph">Betriebsmodi bieten eine logische Organisation der von Workload Factory bereitgestellten Funktionen und Fähigkeiten in Bezug auf das von Ihnen zugewiesene Vertrauensniveau. Im Betriebsmodus ist es Hauptziel, klar zu kommunizieren, welche Aufgaben Workload Factory innerhalb Ihres AWS-Kontos durchführen kann oder nicht.</block>
+  <block id="dad76b021334eb3d63f98648f701f598" category="list-text">Grundmodus</block>
+  <block id="4d34e6e6a767b4ce93680aa48cb370d0" category="list-text">Stellt eine Zero-Trust-Beziehung dar, bei der Workload Factory keine AWS-Berechtigungen zugewiesen werden. Es wurde für die frühzeitige Untersuchung der Workload Factory und die Verwendung der verschiedenen Assistenten zur Erstellung des erforderlichen Infrastructure as Code (IAC) entwickelt. Sie können den Code kopieren und in AWS verwenden, indem Sie Ihre AWS Zugangsdaten manuell eingeben.</block>
+  <block id="1aa9d894db1bbfc4f52d99a458da7ff9" category="list-text">Lesemodus</block>
+  <block id="5198d3d3b16bbd8165878b42f177a30b" category="list-text">Verbessert die Erfahrung des Grundmodus durch Hinzufügen von schreibgeschützten Berechtigungen, sodass die IAC-Vorlagen mit Ihren spezifischen Variablen (z. B. VPC, Sicherheitsgruppen usw.) gefüllt werden. Auf diese Weise können Sie die IAC direkt über Ihr AWS-Konto ausführen, ohne Änderungsberechtigungen für Workload Factory bereitzustellen.</block>
+  <block id="8d350bc547891d480d771e3f371ccf36" category="list-text">Automate-Modus</block>
+  <block id="90e0e635e22e69ee097729d5734a7d9d" category="list-text">Stellt eine vollständige Vertrauensbeziehung dar, sodass Workload Factory mit vollständigen Berechtigungen zugewiesen wird. Auf diese Weise kann Workload Factory in Ihrem Auftrag Vorgänge in AWS ausführen und automatisieren sowie Zugangsdaten angeben, die über die erforderlichen Berechtigungen für die Ausführung verfügen.</block>
+  <block id="ba15cdea72f76749ac3c4d115682e1d5" category="section-title">Funktionen des Betriebsmodus</block>
+  <block id="98065f8fb54547b003b502647ed5da13" category="paragraph">Die verfügbaren Funktionen in den einzelnen Modi werden mit jedem Modus erweitert.</block>
+  <block id="650be61892bf690026089544abbd9d26" category="cell">Modus</block>
+  <block id="b68bbc990631af9eef3fe553c0db51c2" category="cell">Automatisierung aus Workload Factory</block>
+  <block id="8b9f82548e6c7bc4008b903cade408bd" category="cell">Automatisierung innerhalb von AWS mithilfe von IAC</block>
+  <block id="cb96700fed42790aca4b326c2ddf0ee1" category="cell">AWS-Ressourcenerkennung und automatische Vervollständigung</block>
+  <block id="822fdc9d51edd3ea21167e6afc3133bb" category="cell">Fortschrittsüberwachung</block>
+  <block id="972e73b7a882d0802a4e3a16946a2f94" category="cell">Basic</block>
+  <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="cell">Nein</block>
+  <block id="bc459ff156247ecdc2f450d6760864e0" category="cell">Minimal vollständige IAC-Vorlage</block>
+  <block id="7a1a5f3e79fdc91edf2f5ead9d66abb4" category="cell">Lesen</block>
+  <block id="dd5bf678cc7b441324b2d76ab8b6329d" category="cell">Mäßig vollständige IAC-Vorlage</block>
+  <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">Ja.</block>
+  <block id="9ed56d4841dbb118ee9f4fc81ea82572" category="cell">Automatisieren</block>
+  <block id="3babc847b322c661049062334b9c76b2" category="cell">Volle Automatisierung</block>
+  <block id="78ac103234082be5f5a4ea67a4551981" category="cell">Vollständige IAC-Vorlage mit vollständiger Automatisierung</block>
+  <block id="c1ae257d71f3632f9398109243cbfd70" category="section-title">Anforderungen an den</block>
+  <block id="97ad164404d252aefcb10ad97a940250" category="paragraph">Es gibt keine Auswahl, die Sie in Workload Factory festlegen müssen, um zu ermitteln, welchen Modus Sie verwenden möchten. Der Modus wird anhand der AWS-Anmeldeinformationen und -Berechtigungen ermittelt, die Sie Ihrem Workload Factory-Konto zuweisen.</block>
+  <block id="38a12b37ae4221c5fda46c9430a61d47" category="cell">Zugangsdaten für das AWS Konto</block>
+  <block id="97e7c9a7d06eac006a28bf05467fcc8b" category="cell">Verlinken</block>
+  <block id="6fd5e95dc0bce8329da87e1152677b48" category="cell">Nicht erforderlich</block>
+  <block id="d8bd6e60adcc01ce20f509ea6800de8f" category="cell">Schreibgeschützt</block>
+  <block id="ae4591bb8d9ec57460d11dc6394e972e" category="cell">Lese-/Schreibberechtigung</block>
+  <block id="b651efdb98a5d6bd2b3935d0c3f4a5e2" category="cell">Erforderlich</block>
+  <block id="6015cd2e9e5bc5b037ad456163cc26cb" category="inline-link">Weitere Informationen zu Links</block>
+  <block id="cea96a6659ee3b63722518018a5e6659" category="paragraph"><block ref="cea96a6659ee3b63722518018a5e6659" category="inline-link-rx"></block></block>
+  <block id="7cc58201fa83275d07886281be81a758" category="section-title">Beispiele für den Betriebsmodus</block>
+  <block id="e45b6aecc9afa1e709e8df27941fce38" category="paragraph">Sie können Ihre Anmeldeinformationen so einrichten, dass ein Modus für eine Workload-Komponente und ein anderer Modus für eine andere Komponente bereitgestellt wird. Sie können beispielsweise den Automatisierungsmodus für Vorgänge konfigurieren, bei denen Sie FSX für ONTAP-Dateisysteme implementieren und verwalten, jedoch nur den Lesemodus zum Erstellen und Bereitstellen von Datenbank-Workloads mit Workload Factory konfigurieren.</block>
+  <block id="1e82623c909c729fd392237767a08bbd" category="paragraph">Sie können diese Funktionen in einem einzigen Satz von Anmeldeinformationen in einem Workload Factory-Konto bereitstellen oder Sie können mehrere Sätze von Anmeldeinformationen erstellen, wenn jede Anmeldeinformation eindeutige Workload-Bereitstellungsfunktionen bereitstellt.</block>
+  <block id="5504977cb47d642da3d1264eefb7edda" category="section-title">Beispiel 1</block>
+  <block id="38356e3b8f5e0e5ad2a7ff778c4e8d82" category="paragraph">Kontonutzer, die die Zugangsdaten verwenden, denen die folgenden Berechtigungen erteilt wurden, haben volle Kontrolle (Automatisierungsmodus) über die Erstellung von FSX für ONTAP-Dateisysteme, die Bereitstellung von Datenbanken und die Anzeige anderer Arten von AWS-Storage, der im Konto verwendet wird.</block>
+  <block id="4cd751338620bbd6099bbf7dcff61879" category="inline-image-macro">Ein Screenshot mit einem Satz von Anmeldeinformationen, der zwei Arten von Workload-Berechtigungen bietet.</block>
+  <block id="9d405f908b42d501e27391e88e96690c" category="paragraph"><block ref="9d405f908b42d501e27391e88e96690c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="142d2c6ddb5d16596bad6ce5f8e87fe3" category="paragraph">Sie verfügen jedoch über keine Automatisierungspsteuerungen zur Erstellung und Bereitstellung von VMware-Workloads (Basismodus) aus Workload Factory. Um VMware-Workloads zu erstellen, müssen sie den Code aus der Codebox kopieren, sich manuell bei ihrem AWS-Konto anmelden und die fehlenden Einträge manuell in den generierten Code einfügen, um diese Funktion nutzen zu können.</block>
+  <block id="5f3a8aa007370d00f3fd3b293a6a1118" category="section-title">Beispiel 2</block>
+  <block id="bad86c34eeb44e43315105ff00eb040b" category="paragraph">Hier hat der Benutzer zwei Sätze von Anmeldeinformationen erstellt, um je nach ausgewähltem Satz von Anmeldeinformationen verschiedene Betriebsfunktionen zu ermöglichen. In der Regel ist jeder Satz von Anmeldeinformationen mit einem anderen AWS Konto gekoppelt.</block>
+  <block id="f043f48233d1d8f545991908ce06fc8f" category="paragraph">Der erste Satz von Anmeldeinformationen umfasst Berechtigungen, die den Benutzern die vollständige Kontrolle über die Erstellung von FSX für ONTAP-Dateisysteme geben (und die Möglichkeit, andere im Konto verwendete Typen von AWS-Storage anzuzeigen), aber nur Leseberechtigungen, wenn sie mit VMware-Workloads arbeiten.</block>
+  <block id="13834b608e3eab1a58b1e60d8594b010" category="paragraph"><block ref="13834b608e3eab1a58b1e60d8594b010" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7b951488dcd4f24a1001cb4ce278841f" category="paragraph">Der zweite Satz von Anmeldeinformationen bietet nur Berechtigungen, die den Benutzern die vollständige Kontrolle über die Erstellung von FSX für ONTAP-Dateisysteme und die Anzeige anderer im Konto verwendeter AWS-Storage-Typen geben.</block>
+  <block id="a1c7a646d9f617df5f4591d961591390" category="paragraph"><block ref="a1c7a646d9f617df5f4591d961591390" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2c4eed705dd3e0adf6e7194858d8dff7" category="section-title">AWS Referenzen</block>
+  <block id="79c24ecd9f3b01018d8a2753b852b157" category="paragraph">Wir haben einen Registrierungsfluss von AWS Angenommen Role Credentials entworfen, der Folgendes ermöglicht:</block>
+  <block id="ea26385a0e9eb0b784d2878d8ad78cdc" category="list-text">Unterstützt stärker ausgerichtete AWS-Kontoberechtigungen, indem Sie die Workload-Funktionen angeben können, die Sie verwenden möchten, und die IAM-Richtlinienanforderungen entsprechend dieser Auswahl bereitstellen.</block>
+  <block id="29e72ecd81812bc6e42b8fe63e32189a" category="list-text">Hier können Sie die gewährten AWS-Kontonberechtigungen anpassen, wenn Sie bestimmte Workload-Funktionen aktivieren oder deaktivieren.</block>
+  <block id="1638738a86a490b406672c22f563a2da" category="list-text">Vereinfacht die manuelle Erstellung von IAM-Richtlinien durch maßgeschneiderte JSON-Richtliniendateien, die Sie in der AWS Konsole anwenden können.</block>
+  <block id="ba3950fc801639789c6f2c3d00092cfb" category="list-text">Weitere Vereinfachung des Registrierungsprozesses von Anmeldeinformationen, indem Benutzern eine automatisierte Option für die erforderliche IAM-Richtlinie und die Rollenerstellung mithilfe von AWS CloudFormation-Stacks zur Verfügung gestellt wird.</block>
+  <block id="4a2be88868f600a45501fde04364bae7" category="list-text">Bessere Ausrichtung an FSX für ONTAP-Benutzer, die ihre Anmeldedaten lieber innerhalb der Grenzen des AWS-Cloud-Ecosystems speichern möchten, indem sie die Zugangsdaten für FSX für ONTAP-Services in einem AWS-basierten Geheimmanagement-Back-End speichern lassen.</block>
+  <block id="f9e7dc895484b33db42d9ee0925e28e0" category="section-title">Eine oder mehrere AWS Zugangsdaten</block>
+  <block id="9e4d021b600a18ca2bdc19e316e61a90" category="paragraph">Wenn Sie Ihre erste Workload Factory-Funktion (oder Funktionen) verwenden, müssen Sie die Anmeldeinformationen mit den für diese Workload-Funktionen erforderlichen Berechtigungen erstellen. Sie fügen die Anmeldeinformationen zu Workload Factory hinzu, müssen jedoch auf die AWS Management Console zugreifen, um die IAM-Rolle und -Richtlinie zu erstellen. Diese Anmeldeinformationen stehen Ihnen bei der Verwendung von Funktionen in Workload Factory zur Verfügung.</block>
+  <block id="2805984a9d1d71e7e662e187f6160808" category="paragraph">Ihre ersten AWS Zugangsdaten können eine IAM-Richtlinie für eine Funktion oder für viele Funktionen umfassen. Es hängt einfach von Ihren geschäftlichen Anforderungen ab.</block>
+  <block id="b6cd757220290782ab371e620582ddcd" category="paragraph">Durch Hinzufügen von mehr als einem Satz AWS-Anmeldeinformationen zu Workload Factory erhalten Sie zusätzliche Berechtigungen, die zur Nutzung weiterer Funktionen erforderlich sind, z. B. FSX für ONTAP-Dateisysteme, Bereitstellen von Datenbanken auf FSX für ONTAP, Migrieren von VMware-Workloads und mehr.</block>
+  <block id="b6358992bb0152c2af9f3e2e315ef468" category="inline-link-macro">Erfahren Sie, wie Sie den Workload Factory Zugangsdaten für AWS hinzufügen</block>
+  <block id="1350027224712371708c0a642ae2b919" category="paragraph"><block ref="bc58254869896d67e8e31b026259707a" category="inline-link-macro-rx"></block>.</block>
+  <block id="e322079c316096bc16e777a93da0a332" category="summary">Starten Sie mit Workload Factory, indem Sie das Netzwerk für die Workload Factory-Konsole vorbereiten, ein Konto anmelden und erstellen und Anmeldeinformationen hinzufügen, damit Workload Factory AWS-Ressourcen direkt verwalten kann.</block>
+  <block id="1441f501677899abf4972d9286b527e5" category="doc">Schneller Einstieg in Workload Factory</block>
+  <block id="cb88f58f7496fb27698451feb9736c1d" category="paragraph">Erste Schritte mit Workload Factory: Melden Sie sich an, erstellen Sie ein Konto und fügen Sie Zugangsdaten ein, damit Workload Factory AWS Ressourcen direkt verwalten kann, und optimieren Sie dann Ihre Workloads mithilfe von Amazon FSX for NetApp ONTAP.</block>
+  <block id="ba8b072b83c1e6db56e40bf48ddb0871" category="inline-link-macro">Betriebsmodi</block>
+  <block id="4c85eb71378362d162e4b7bd1c50c800" category="paragraph">Workload Factory ist für Benutzer als Cloud-Service über die webbasierte Konsole zugänglich. Bevor Sie beginnen, sollten Sie ein Verständnis von und haben <block ref="fc500664a3cbaaa3aa46a84367805795" category="inline-link-macro-rx"></block> <block ref="232f97f76b2e1af290ebde69715d8d8f" category="inline-link-macro-rx"></block>.</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Eins</block>
+  <block id="0876e0a47d86eee44886009e6fdae6e5" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> Registrieren Sie sich und erstellen Sie ein Konto</block>
+  <block id="58902cbb0adcf45cfe72ced7fa9d043a" category="paragraph">Gehen Sie zu<block ref="d98336faa10e493cfae83d68fb7054ec" category="inline-link-rx"></block>, melden Sie sich an, und erstellen Sie ein Konto.</block>
+  <block id="996a84421252d4a7c2db622831369066" category="inline-link-macro">Erfahren Sie, wie Sie sich anmelden und ein Konto erstellen</block>
+  <block id="84be2f973a02d5b8bf1736d6dc104aba" category="paragraph"><block ref="e4d5af2c826e0765566919d017f9cac9" category="inline-link-macro-rx"></block>.</block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Zwei</block>
+  <block id="81fe43671919388bf418561882652f2a" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> Fügen Sie Workloads Factory Anmeldedaten für AWS hinzu</block>
+  <block id="a96649d1a3b32786a74fc2de9529a00e" category="paragraph">Dieser Schritt ist optional. Sie können Workload Factory im _Basic_-Modus verwenden, ohne Anmeldedaten für den Zugriff auf Ihr AWS-Konto hinzuzufügen. Durch das Hinzufügen von AWS Zugangsdaten zu Workload Factory im Modus _Lesen_ oder _Automatisieren_ erhält Ihr Workload Factory-Konto die Berechtigungen, die zum Erstellen und Managen von FSX für ONTAP-Dateisysteme sowie zum Implementieren und Managen bestimmter Workloads wie Datenbanken und GenAI erforderlich sind.</block>
+  <block id="485569d333cc1d252d174152a87152ec" category="inline-link-macro">Hier erfahren Sie, wie Sie Ihrem Konto Anmeldeinformationen hinzufügen</block>
+  <block id="26779013e769dc74269c7261b62546d1" category="paragraph"><block ref="91f10e444bfec911e6e2bc237cc7d0c2" category="inline-link-macro-rx"></block>.</block>
+  <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Drittens</block>
+  <block id="5859940cb26aa023a0c3f7bc2abb0f66" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> Mit FSX for ONTAP können Sie Ihre Workloads optimieren</block>
+  <block id="ecf12e8c9cfc73f5d81a941356b2effd" category="paragraph">Nachdem Sie sich jetzt angemeldet, ein Konto erstellt und optional AWS-Anmeldedaten hinzugefügt haben, können Sie mit Workload Factory Ihre Workloads mit FSX für ONTAP optimieren. Mithilfe der folgenden Links folgen Sie den Schritt-für-Schritt-Anweisungen für jeden Workload-Typ.</block>
+  <block id="4d82a1ec1af02725042c8c785564ee7a" category="inline-link">Amazon FSX für NetApp ONTAP</block>
+  <block id="4d8d6f286ec4089532b442b9e29bdd84" category="list-text"><block ref="4d8d6f286ec4089532b442b9e29bdd84" category="inline-link-rx"></block></block>
+  <block id="ad5615f8474eab297b35d0cbf8020dfc" category="paragraph">Bewerten und analysieren Sie aktuelle Datenbestände auf mögliche Kosteneinsparungen durch Einsatz von FSX for ONTAP als Storage-Infrastruktur, Bereitstellung und Vorlagenatisierung von FSX für ONTAP Implementierungen basierend auf Best Practices und Zugriff auf erweiterte Managementfunktionen.</block>
+  <block id="cccae24691c5ff7191f1ffebe4352285" category="inline-link">GenAI</block>
+  <block id="88575fa076e31705fdc0a050f3c46540" category="list-text"><block ref="88575fa076e31705fdc0a050f3c46540" category="inline-link-rx"></block></block>
+  <block id="1ab964190acf4217fadb080cfcbe361f" category="paragraph">Durch die Implementierung und das Management einer RAG-Infrastruktur (Retrieval-Augmented Generation) werden die Genauigkeit und Einzigartigkeit Ihrer KI-Applikationen verbessert. Erstellen Sie eine RAG Knowledge Base auf FSX for ONTAP mit integrierter Datensicherheit und Compliance.</block>
+  <block id="38bd169945a371832b0b65c9086b1792" category="inline-link">Datenbank-Workloads</block>
+  <block id="7c05124c7bff1277e0dd98967825f03a" category="list-text"><block ref="7c05124c7bff1277e0dd98967825f03a" category="inline-link-rx"></block></block>
+  <block id="0b65135cac08d591d73cff9785b28f30" category="paragraph">Erkennen Sie Ihren vorhandenen Datenbankbestand auf AWS, bewerten Sie potenzielle Kosteneinsparungen mit FSX für ONTAP, implementieren Sie Datenbanken durchgängig mit integrierten Best Practices zur Optimierung und automatisieren Sie Thin Cloning für CI/CD-Pipelines.</block>
+  <block id="a76e64a0fbf98a083080351e4cb67566" category="inline-link">VMware-Workloads</block>
+  <block id="e555278247527c688d390729e5f7e123" category="list-text"><block ref="e555278247527c688d390729e5f7e123" category="inline-link-rx"></block></block>
+  <block id="bc9eaabfc00230f2aa0ab1f9dfcfb994" category="paragraph">Optimieren Sie Migrationen und Betriebsabläufe mithilfe intelligenter Empfehlungen und automatischer Problembehebung. Implementieren Sie effiziente Backups und zuverlässige Disaster Recovery. Überwachen Sie Ihre VMs und beheben Sie Fehler.</block>
+  <block id="023c464fc92ec044e83176c4e57027c4" category="summary">Der Zugriff auf Workload Factory erfolgt über eine webbasierte Konsole. Nach den ersten Schritten zu Workload Factory besteht Ihr erster Schritt darin, sich mit Ihren vorhandenen Zugangsdaten für die NetApp Support Website zu registrieren oder ein NetApp Cloud-Login zu erstellen.</block>
+  <block id="86dd1f2c1da07102d586b3d680ed37a3" category="doc">Melden Sie sich bei Workload Factory an</block>
+  <block id="9e9a0202d2a4a6551faca1e042e523e5" category="paragraph">Sie können sich mit einer der folgenden Optionen bei Workload Factory anmelden:</block>
+  <block id="d7330e52ac45b9d5a769aa9a5c244319" category="list-text">Geben Sie Ihre E-Mail-Adresse und ein Passwort an, um sich bei einem NetApp Cloud-Login anzumelden</block>
+  <block id="dd8dfb2c954c59328d486f61112b7dc6" category="list-text">Öffnen Sie einen Webbrowser, und wechseln Sie zum<block ref="d98336faa10e493cfae83d68fb7054ec" category="inline-link-rx"></block></block>
+  <block id="3587d9f2b48c4f0c9c40433731329a21" category="list-text">Wenn Sie über ein NetApp Support Site Konto verfügen, geben Sie die mit Ihrem NSS Konto verknüpfte E-Mail-Adresse direkt auf der *Anmelden* Seite ein.</block>
+  <block id="9afbcf749bbbaca180b483af3042470e" category="paragraph">Sie können die Anmeldeseite überspringen, wenn Sie ein NSS-Konto haben. Workload Factory wird Sie im Rahmen dieser ersten Anmeldung registrieren.</block>
+  <block id="7c74a9177ae92ae3e635c6ec91ce1d71" category="list-text">Wenn Sie noch keinen NSS-Account haben und sich mit einem NetApp Cloud Login registrieren möchten, wählen Sie *Registrieren*.</block>
+  <block id="d3ec3db6c6205c0b2c9d4904d509b3ca" category="inline-image-macro">Ein Screenshot der Anmeldeseite, in dem Sie Ihren Benutzernamen und Ihr Kennwort für den Zugriff auf Workload Factory hinzufügen können.</block>
+  <block id="f469d8f6e1958f36faad490b72b0ed6c" category="paragraph"><block ref="f469d8f6e1958f36faad490b72b0ed6c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="871e895e179ae68a9381988dd33c133b" category="list-text">Geben Sie auf der Seite *Anmelden* die erforderlichen Informationen ein, um einen NetApp-Cloud-Login zu erstellen, und wählen Sie *Weiter*.</block>
+  <block id="9998984c95caccce61e49ca25de1c99f" category="paragraph">Beachten Sie, dass nur englische Zeichen im Anmeldeformular zulässig sind.</block>
+  <block id="ec0e398abc2c6f6a9f2afe38708291da" category="list-text">Geben Sie die detaillierten Informationen für Ihr Unternehmen ein und wählen Sie *Anmelden*.</block>
+  <block id="422588021a93cfdaa26ce8d7d46dfeda" category="list-text">In Ihrem Posteingang finden Sie eine E-Mail von NetApp, die Anweisungen zur Überprüfung Ihrer E-Mail-Adresse enthält.</block>
+  <block id="94f38e991501c8594d502e52dd265abd" category="paragraph">Dieser Schritt ist erforderlich, bevor Sie sich anmelden können.</block>
+  <block id="94d337ef5b62bd31ee54e5111cfec45f" category="list-text">Wenn Sie dazu aufgefordert werden, lesen Sie die Endbenutzer-Lizenzvereinbarung, akzeptieren Sie die Bedingungen und wählen Sie *Weiter* aus.</block>
+  <block id="b789a2d1c7228d0b2d7174302e2c6996" category="list-text">Geben Sie auf der Seite *Account* einen Namen für Ihr Konto ein und wählen Sie optional Ihre Stellenbeschreibung aus.</block>
+  <block id="f54bc40f2305bb493aa6597d8c67d892" category="paragraph">Ein Account ist das wichtigste Element der Identitätsplattform von NetApp, über das Sie Berechtigungen und Anmeldeinformationen hinzufügen und managen können.</block>
+  <block id="2b7293baeca5711138792716543c991a" category="inline-image-macro">Ein Screenshot der Kontoseite, der angezeigt wird, wenn Sie sich mit einem neuen Konto anmelden.</block>
+  <block id="28fc544db57c6f54a41eaa5c6ebc4a57" category="paragraph"><block ref="28fc544db57c6f54a41eaa5c6ebc4a57" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3ca580d5cb98bdcfa7834616d19d2eda" category="list-text">Wählen Sie *Create*, und die Workload Factory-Startseite wird angezeigt.</block>
+  <block id="0fa2d9e93d2ebe5dc084c22e852d5e0e" category="paragraph">Sie haben jetzt eine Workload Factory Anmeldung und ein Konto. Sie gelten als Kontoadministrator und haben Zugriff auf alle Workload Factory-Funktionen.</block>
+  <block id="243263104c829e77835d632f591230d5" category="summary">Bevor Sie einen Support-Fall beim technischen Support von NetApp eröffnen können, müssen Sie BlueXP ein NetApp Support Site Konto hinzufügen und sich dann für den Support registrieren.</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">Für den Support anmelden</block>
+  <block id="996ad73a480311d4f86d6946935389d2" category="paragraph">Für den Support von Workload Factory und seinen Storage-Lösungen und -Services ist eine Support-Registrierung erforderlich. Sie müssen sich für Support über die BlueXP Konsole registrieren, einer separaten webbasierten Konsole von Workload Factory.</block>
+  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">Durch die Registrierung für den Support wird die NetApp-Unterstützung für einen Fileservice eines Cloud-Providers nicht aktiviert. Technischer Support im Zusammenhang mit einem Fileservice eines Cloud-Providers, seiner Infrastruktur oder einer Lösung, die den Service verwendet, finden Sie unter „Hilfe erhalten“ in der Dokumentation zu Workload Factory für dieses Produkt.</block>
+  <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Übersicht über die Support-Registrierung</block>
+  <block id="d7e4bb081bf4ec4814d83edcfbdb8b96" category="paragraph">Die Registrierung Ihres Support-Abonnements für Ihre Account-ID (Ihre 20-stellige Seriennummer 960xxxxxxx auf der Seite „Support Resources“ in BlueXP) dient als zentrale Support-Abonnement-ID. Jedes BlueXP-Abonnement für Support auf Kontoebene muss registriert werden.</block>
+  <block id="f9e05c2b383e3f11e3b4bebbe8952225" category="paragraph">Durch das Registrieren von Funktionen wie das Öffnen von Support-Tickets und die automatische Generierung von Support-Cases. Die Registrierung ist abgeschlossen, indem wie unten beschrieben Konten der NetApp Support Website (NSS) zu BlueXP hinzugefügt werden.</block>
+  <block id="856edc4caec68fece6859c4be9360f3c" category="section-title">Registrieren Sie Ihr Konto für NetApp Support</block>
+  <block id="2d6573b6ae4c51dc24e58109473f2490" category="paragraph">Um sich für den Support zu registrieren und die Supportberechtigung zu aktivieren, muss ein Benutzer in Ihrem Konto einem NetApp Support Site Konto seine BlueXP Anmeldedaten zuweisen. Wie Sie sich für den NetApp Support registrieren, hängt davon ab, ob Sie bereits über einen NSS Account (NetApp Support Site) verfügen.</block>
+  <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">Bestandskunde mit NSS-Konto</block>
+  <block id="7e177185e7eddff33dd8f3aeb7551132" category="paragraph">Wenn Sie ein NetApp Kunde mit einem NSS-Konto sind, müssen Sie sich lediglich für den Support über BlueXP registrieren.</block>
+  <block id="0307a12e5749f8dd930472ee78f69d2c" category="list-text">Klicken Sie oben rechts auf der BlueXP Konsole auf das Symbol Einstellungen, und wählen Sie *Credentials* aus.</block>
+  <block id="f19ab635e6d5f884a22ee4ce067fdbfd" category="list-text">Wählen Sie *Benutzeranmeldeinformationen*.</block>
+  <block id="0c788a722f31f8f0cf36539ee04615cf" category="list-text">Wählen Sie *NSS-Anmeldeinformationen hinzufügen* und folgen Sie der Eingabeaufforderung für die NetApp-Support-Website (NSS)-Authentifizierung.</block>
+  <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">Um zu bestätigen, dass die Registrierung erfolgreich war, wählen Sie das Hilfesymbol und dann *Support*.</block>
+  <block id="8add4eb0d3f6ce61d374f3df3ee4eadf" category="paragraph">Auf der Seite *Ressourcen* sollte angezeigt werden, dass Ihr Konto für Support registriert ist.</block>
+  <block id="10c56875db7a47f791d653e5d5bff0e9" category="inline-image-macro">Ein Screenshot mit einer Seriennummer des Kontos und einem grünen Kontrollkästchen sowie dem für den Support registrierten Text.</block>
+  <block id="fa7897454f637026faa3e00ccbfec239" category="paragraph"><block ref="fa7897454f637026faa3e00ccbfec239" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d9a01bdcfab6f0a10fc126999b4d5988" category="paragraph">Beachten Sie, dass andere BlueXP Benutzer diesen Support-Registrierungsstatus nicht sehen, wenn sie ihrem BlueXP Login kein NetApp Support Site Konto zugeordnet haben. Das bedeutet jedoch nicht, dass Ihr BlueXP Konto nicht für den Support registriert ist. Solange ein Benutzer im Konto diese Schritte befolgt hat, wurde Ihr Konto registriert.</block>
+  <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">Vorhandener Kunde, aber kein NSS-Konto</block>
+  <block id="bdd862f49d428a850400bcf2f53cdaf2" category="paragraph">Wenn Sie bereits NetApp Kunde sind und über vorhandene Lizenzen und Seriennummern sowie _No_ NSS Konto verfügen, müssen Sie ein NSS Konto erstellen und es Ihren BlueXP Anmeldedaten zuordnen.</block>
+  <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">NetApp Support Site-Formular zur Benutzerregistrierung</block>
+  <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">Erstellen Sie ein NetApp Support Site Konto, indem Sie das abschließen<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
+  <block id="d61c9f72493817776f392db42ac446a2" category="list-text">Stellen Sie sicher, dass Sie die entsprechende Benutzerebene wählen, die normalerweise *NetApp Kunde/Endbenutzer* ist.</block>
+  <block id="5226d4ec1f4f81b740cbbd27635b441f" category="list-text">Kopieren Sie unbedingt die oben verwendete BlueXP-Kontonummer (960xxxx) für das Feld Seriennummer. Dadurch wird die Kontobearbeitung beschleunigt.</block>
+  <block id="0499bba105f8a891a2c671f1ba99dd34" category="list-text">Ordnen Sie Ihr neues NSS-Konto Ihrem BlueXP-Login zu, indem Sie die unter aufgeführten Schritte ausführen <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">Neu bei NetApp</block>
+  <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">Wenn Sie neu bei NetApp sind und über keinen NSS-Account verfügen, befolgen Sie jeden Schritt unten.</block>
+  <block id="f5d7029ed18f998c0a9d780b2554e538" category="list-text">Suchen Sie auf der Seite „Support Resources“ nach der Seriennummer Ihres Kontos.</block>
+  <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">Ein Screenshot des Hilfemenü, in dem Support die erste Option aufgeführt ist</block>
+  <block id="55adf589d087b17fca134b34f65498ed" category="paragraph"><block ref="55adf589d087b17fca134b34f65498ed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">Die Support-Registrierungs-Website von NetApp</block>
+  <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">Navigieren Sie zu<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> und wählen Sie *Ich bin kein registrierter NetApp-Kunde*.</block>
+  <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">Füllen Sie die Pflichtfelder aus (mit roten Sternchen).</block>
+  <block id="1128fc8d5ec64880f4d49337ed798d31" category="list-text">Wählen Sie im Feld *Product Line* die Option *Cloud Manager* aus, und wählen Sie dann den gewünschten Abrechnungsanbieter aus.</block>
+  <block id="50a1dc01b7312307c34a888071586955" category="list-text">Kopieren Sie die Seriennummer des Kontos von Schritt 2 oben, füllen Sie die Sicherheitsprüfung aus und bestätigen Sie dann, dass Sie die globale Datenschutzrichtlinie von NetApp lesen.</block>
+  <block id="3a24c87c9971d2011b4df223718f84b4" category="paragraph">Zur Fertigstellung dieser sicheren Transaktion wird sofort eine E-Mail an die angegebene Mailbox gesendet. Überprüfen Sie Ihre Spam-Ordner, wenn die Validierungs-E-Mail nicht in wenigen Minuten ankommt.</block>
+  <block id="03413baeca1ff7222737d8ce299bd4e8" category="list-text">Bestätigen Sie die Aktion in der E-Mail.</block>
+  <block id="201080500e946070a2e4873042507c77" category="paragraph">Indem Sie Ihre Anfrage an NetApp senden, wird Ihnen die Erstellung eines NetApp Support Site Kontos empfohlen.</block>
+  <block id="cc8b0535948da368f832027c19b7f853" category="list-text">Kopieren Sie die oben angegebene Seriennummer (960xxxx) für das Feld „Seriennummer“. Dadurch wird die Kontobearbeitung beschleunigt.</block>
+  <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">NetApp sollte sich bei diesem Prozess mit Ihnen in Verbindung setzen. Dies ist eine einmalige Onboarding-Übung für neue Benutzer.</block>
+  <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">Wenn Sie über Ihren Account für die NetApp Support-Website verfügen, ordnen Sie das Konto Ihrer BlueXP Anmeldung zu, indem Sie die unter aufgeführten Schritte ausführen <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
+  <block id="5db41fd4421f19d93e5dd91c17ef6114" category="summary">Sie können Codebox verwenden, um den Code zu generieren, der für die Ausführung eines von Workload Factory unterstützten Vorgangs erforderlich ist. Mit REST-APIs für Workload Factory, AWS CLI und AWS CloudFormation kann Code generiert werden, der genutzt und ausgeführt werden kann.</block>
+  <block id="74e50aedf700596c6a3592a6d25fec74" category="doc">Codebox für die Automatisierung verwenden</block>
+  <block id="04408b634d2d9206d79119d448664c52" category="paragraph">Sie können Codebox verwenden, um den Code zu generieren, der für die Ausführung eines von Workload Factory unterstützten Vorgangs erforderlich ist. Mit den REST-APIs von Workload Factory, der AWS CLI und AWS CloudFormation kann Code generiert werden, der genutzt und ausgeführt werden kann.</block>
+  <block id="9e96cce41b7a764dc14629fa750c2747" category="paragraph">Codebox wird mit den Workload Factory-Betriebsmodi (Basic, Read und Automate) abgestimmt, indem die entsprechenden Daten auf der Grundlage der im Workload Factory-Konto für jeden Benutzer bereitgestellten AWS-Berechtigungen in den Code eingetragen werden. Der Code kann wie eine Vorlage verwendet werden, in der Sie fehlende Informationen (z. B. Anmeldeinformationen) eingeben oder bestimmte Daten anpassen können, bevor Sie den Code ausführen.</block>
+  <block id="3d60b94b36b55e7dd31bca9ed2ce46f8" category="section-title">Wie Sie die Codebox verwenden</block>
+  <block id="a064715cfe4e3e4a214bc84cf0551160" category="inline-image-macro">Die Schaltfläche „Kopieren“</block>
+  <block id="62835b251ca7e00f685a007f7c8b4941" category="paragraph">Wenn Sie Werte in die Assistenten der Workload Factory-Benutzeroberfläche eingeben, wird die Datenaktualisierung in der Codebox angezeigt, wenn Sie jedes Feld ausfüllen. Wenn Sie den Assistenten fertig stellen, aber bevor Sie die Schaltfläche *Create* unten auf der Seite wählen, wählen Sie <block ref="4b7dbf915ce902400e3f4172621123eb" category="inline-image-macro-rx" type="image"></block> in die Codebox kopieren, um den Code zu erfassen, der zum Erstellen Ihrer Konfiguration erforderlich ist. In diesem Screenshot zum Erstellen eines neuen Microsoft SQL Servers werden beispielsweise die Einträge des Assistenten für VPC und Verfügbarkeitszonen sowie die entsprechenden Einträge in der Codebox für eine REST-API-Implementierung angezeigt.</block>
+  <block id="502f1d03f24f8a0cfa430dc69e3b0a81" category="inline-image-macro">Ein Screenshot, der zeigt, wie ein Microsoft SQL Server in der UI erstellt wird, sowie die entsprechenden Einträge für VPC und Verfügbarkeitszonen in der Codebox.</block>
+  <block id="5f52d0f5bc329ec0f8b2cfd9d5a45307" category="paragraph"><block ref="5f52d0f5bc329ec0f8b2cfd9d5a45307" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e1e4d5313e88ce840e8cca3e7f84f01c" category="paragraph">Bei einigen Codeformaten können Sie auch die Schaltfläche Download wählen, um den Code in einer Datei zu speichern, die Sie in ein anderes System bringen können. Bei Bedarf können Sie den Code nach dem Herunterladen bearbeiten, sodass Sie ihn an andere AWS-Konten anpassen können.</block>
+  <block id="309209712bce6112df6ef830b062c685" category="section-title">Verwenden Sie den CloudFormation-Code aus der Codebox</block>
+  <block id="ea91e366c1caa6817dd5fd6381bdcf91" category="paragraph">Sie können den von Codebox generierten CloudFormation-Code kopieren und dann den Amazon Web Services CloudFormation-Stack in Ihrem AWS-Konto starten. CloudFormation führt die Aktionen aus, die Sie in der Workload Factory-Benutzeroberfläche definiert haben.</block>
+  <block id="6b2932e540d5f7ea082e1ac798f02299" category="paragraph">Die Schritte zur Verwendung des CLoudFormation-Codes können unterschiedlich sein, je nachdem, ob Sie ein FSX für ONTAP-Dateisystem bereitstellen, Kontoanmeldeinformationen erstellen oder andere Workload Factory-Aktionen durchführen.</block>
+  <block id="db45cb70284a7cbad935a33a0ef0b6dc" category="paragraph">Beachten Sie, dass der Code innerhalb einer von CloudFormation generierten YAML-Datei aus Sicherheitsgründen nach 7 Tagen abläuft.</block>
+  <block id="f4beed69f4c72e3f9969d0e2daa8cc67" category="list-text">Sie benötigen die folgenden Benutzerberechtigungen, um einen CloudFormation-Stack zu verwenden:</block>
+  <block id="e1e1a8055c6ecfa43b025a1584c3155f" category="list-text">Nachdem Sie die gewünschte Operation über die Benutzeroberfläche definiert haben, wählen Sie aus, <block ref="4b7dbf915ce902400e3f4172621123eb" category="inline-image-macro-rx" type="image"></block> um den Code in die Codebox zu kopieren.</block>
+  <block id="99ca7c9c85fef7c6ab0e44eb58675162" category="list-text">Wählen Sie *an CloudFormation umleiten* und die Seite Redirect to CloudFormation wird angezeigt.</block>
+  <block id="7463b18d69a514063d0f320bc1d16b0d" category="list-text">Öffnen Sie ein anderes Browserfenster, und melden Sie sich bei der AWS Management Console an.</block>
+  <block id="3bc22cebdcd7af89d94afadce527cc1d" category="list-text">Melden Sie sich bei dem AWS-Konto an, wo der Code ausgeführt werden soll.</block>
+  <block id="594a7e880447342dea72f44c4dc53943" category="list-text">Wählen Sie auf der Seite „schneller Stapel erstellen“ unter „Funktionen“ *Ich bestätige, dass AWS CloudFormation möglicherweise ...* auswählen könnte.</block>
+  <block id="d097667109af7665e3dae788e8f5d9c6" category="list-text">Überwachen Sie den Fortschritt von AWS oder Workload Factory.</block>
+  <block id="5f75111d3408d87431450df4c0043a74" category="section-title">Verwenden Sie den REST-API-Code aus der Codebox</block>
+  <block id="05c017ebdfb63b85bc91ed2748f0a19f" category="paragraph">Mit den von Codebox generierten REST-APIs für Workload Factory lassen sich die FSX for ONTAP-Dateisysteme und andere AWS-Ressourcen implementieren und managen.</block>
+  <block id="3c3f00270f1d36904ead2ac33f53a58f" category="paragraph">Sie können die APIs von jedem Host ausführen, der Curl unterstützt und über eine Internetverbindung verfügt.</block>
+  <block id="ed172ca8e9fe57859bcb8978982d2e0d" category="paragraph">Beachten Sie, dass die Authentifizierungs-Tokens in der Codebox verborgen sind, aber beim Kopieren und Einfügen des API-Aufrufs ausgefüllt werden.</block>
+  <block id="50bea3d64c18b01d7ce7b30ec89500d8" category="list-text">Nachdem Sie die gewünschte Operation mit der Benutzeroberfläche definiert haben, wählen Sie aus, <block ref="4b7dbf915ce902400e3f4172621123eb" category="inline-image-macro-rx" type="image"></block> um den API-Code in die Codebox zu kopieren.</block>
+  <block id="b68f0143fe964c9ac34ce1d33e961f82" category="list-text">Fügen Sie den Code ein und führen Sie ihn auf Ihrem Hostsystem aus.</block>
+  <block id="b4c82b8569210de2a2777b454448b42e" category="section-title">Verwenden Sie den AWS CLI-Code aus der Codebox</block>
+  <block id="8d03c4936e76f2455607364517b82e3e" category="paragraph">Mit der über Codebox generierten CLI für Amazon Web Services können Sie Ihre FSX for ONTAP-Dateisysteme und andere AWS-Ressourcen implementieren und managen.</block>
+  <block id="4002cdda8ab65bc08a255c31321855ab" category="list-text">Nachdem Sie die gewünschte Operation mit der UI definiert haben, wählen Sie aus, <block ref="4b7dbf915ce902400e3f4172621123eb" category="inline-image-macro-rx" type="image"></block> um die AWS-CLI in die Codebox zu kopieren.</block>
+  <block id="b28a0d67dfa6e54814b9650389eea71b" category="list-text">Fügen Sie den Code ein und führen Sie ihn aus.</block>
+  <block id="3c9ee3abb878e5099cd76beeedcb2d04" category="summary">Informieren Sie sich über die Neuerungen bei Workload Factory: Zugangsdaten für Cloud-Provider, Codebox-Verbesserungen und vieles mehr.</block>
+  <block id="490414e0366b091220802d406e52c076" category="doc">Was ist neu</block>
+  <block id="1d949c7c5600289e10795f178278edd1" category="section-title">7 Juli 2024</block>
+  <block id="0cd06f0acd63988f29fda6d11297591b" category="section-title">Erstversion von Workload Factory</block>
+  <block id="40e01e3ae3c6f388cb88b96223a5b962" category="paragraph">BlueXP Workload Factory für AWS ist eine leistungsstarke Lifecycle-Managementplattform, die mithilfe von Amazon FSX für NetApp ONTAP-Dateisystemen zur Optimierung Ihrer Workloads entwickelt wurde. Zu den Workloads, die mit Workload Factory und FSX für ONTAP optimiert werden können, gehören Datenbanken, VMware Migrationen zu VMware Cloud on AWS, KI-Chatbots und vieles mehr.</block>
+  <block id="46e9fd42b97085e4579c13a072543d69" category="summary">Nachdem Sie sich angemeldet und Workload Factory eingerichtet haben, können Sie FSX für ONTAP-Dateisysteme erstellen und verwalten und andere Workload Factory-Funktionen verwenden.</block>
+  <block id="d0a7edff5cd82c23f3d1c18e0779ccbc" category="doc">Was Sie als Nächstes tun können</block>
+  <block id="fa9fb0312fb3b93323ee60f1cf0258b7" category="paragraph">Nachdem Sie sich jetzt angemeldet und Workload Factory eingerichtet haben, können Sie mehrere Workload Factory-Funktionen nutzen, wie z. B. das Erstellen von Amazon FSX für ONTAP-Dateisystemen, das Bereitstellen von Datenbanken auf FSX für ONTAP-Dateisystemen, und Migration von Virtual Machine-Konfigurationen in VMware Cloud on AWS mithilfe von FSX für ONTAP-Filesystemen als externe Datastores.</block>
+  <block id="452c8a300642b831148cf770baf1cd2f" category="paragraph">Erkennen Sie Ihren vorhandenen Datenbankbestand auf AWS, ermitteln Sie potenzielle Kosteneinsparungen durch einen Wechsel zu FSX für ONTAP, implementieren Sie Datenbanken durchgängig mit integrierten Best Practices zur Optimierung und automatisieren Sie Thin Cloning für CI/CD-Pipelines.</block>
+  <block id="71c665ac24c583a0a9ad96a67210bac2" category="summary">NetApp Workload Factory ist eine leistungsstarke Lifecycle-Management-Plattform, die Sie bei der Optimierung Ihrer Workloads mit Amazon FSX für NetApp ONTAP-Dateisystemen unterstützt. Zu den Workloads, die mit Workload Factory und FSX für ONTAP optimiert werden können, gehören Datenbanken, VMware Migrationen zu VMware Cloud on AWS, KI-Chatbots und vieles mehr.</block>
+  <block id="19954ae9949550c5366a9fb2b48def27" category="doc">Erfahren Sie mehr über Workload Factory</block>
+  <block id="96298fa6d94ac6f49aa36e586e268f0f" category="paragraph">Amazon FSX for NetApp ONTAP bietet vollständig gemanagte, AWS-native NFS-, SMB/CIFS- und iSCSI-Storage-Volumes für geschäftskritische Applikationen, Datenbanken, Container, VMware Cloud-Datastores und Benutzerdateien. FSX für ONTAP lässt sich über Workload Factory und mithilfe nativer AWS Managementtools managen.</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">Funktionen</block>
+  <block id="a0f53b5544ae2841af96b6a2c93a0849" category="paragraph">Die Workload Factory-Plattform bietet die folgenden wichtigen Funktionen:</block>
+  <block id="6cfad4df5416db8db29bda4f011d3211" category="list-text">Flexibler und kostengünstiger Storage</block>
+  <block id="922bba58b532e71878d3d5858f7e8194" category="list-text">Erkennung, Implementierung und Management von Amazon FSX für NetApp ONTAP-Filesystemen in der Cloud FSX for ONTAP bringt alle Funktionen von ONTAP in einen nativen AWS Managed Service ein und bietet so eine konsistente Nutzung der Hybrid Cloud.</block>
+  <block id="6d46b033eabdea8f60b174a46dfcfb14" category="list-text">Migrieren Sie lokale vSphere Umgebungen zu VMware Cloud on AWS</block>
+  <block id="f760ee48ca0d5104a3c884c851536392" category="list-text">Mit dem Migrationsberater von VMware Cloud on AWS können Sie Ihre aktuellen Konfigurationen von Virtual Machines in lokalen vSphere-Umgebungen analysieren, einen Plan zur Implementierung empfohlener VM-Layouts in VMware Cloud on AWS erstellen und die benutzerdefinierten Amazon FSX for NetApp ONTAP-Filesysteme als externe Datastores verwenden.</block>
+  <block id="9a65d2a72eb8a959d799dda25fa053e1" category="list-text">Optimierte Datenbankimplementierung</block>
+  <block id="65ebf27c56e124c006284c1cd9f06d3d" category="list-text">Implementieren Sie Microsoft SQL Server, Datenbanken und Datenbankklone, einschließlich AWS-Ressourcenbereitstellung, Storage-Provisionierung, Netzwerk- und Betriebssystemkonfigurationen, und nutzen Sie optimierte Implementierungskonfigurationen, um einen konsistenten und fehlerfreien Einrichtungsprozess zu gewährleisten.</block>
+  <block id="c8556381857e2b130302cd1951b0b62c" category="list-text">KI-Chatbot-Entwicklung</block>
+  <block id="b74c52466a8f67e18b547bf25d14844f" category="list-text">Nutzen Sie Ihre FSX für ONTAP-Dateisysteme zum Speichern Ihrer Unternehmen Chatbot-Quellen und die KI-Engine-Datenbanken. Auf diese Weise können Sie die unstrukturierten Daten Ihres Unternehmens in eine Chatbot-Anwendung des Unternehmens einbetten.</block>
+  <block id="d4dc097b509662a241b4f1d85924fdb4" category="list-text">Storage-Rechner zur Kostensenkung</block>
+  <block id="1a78f887c27cbb9e00745a4c2bb056a1" category="list-text">Analysieren Sie Ihre aktuellen Implementierungen, die Amazon Elastic Block Store (EBS) oder Elastic File System (EFS) Storage oder Amazon FSX für Windows File Server verwenden, um zu erfahren, wie viel Geld Sie durch einen Wechsel zu Amazon FSX für NetApp ONTAP sparen können. Mit dem Rechner können Sie auch ein Was-wäre-wenn-Szenario für eine zukünftige Bereitstellung, die Sie planen, ausführen.</block>
+  <block id="902e65d33784bd8924eb05e622aa2dda" category="section-title">Unterstützte Cloud-Provider</block>
+  <block id="f23d73684a524dc65f1c2ab55054ed6c" category="paragraph">Workload Factory ermöglicht das Management von Cloud-Storage und die Nutzung von Workload-Funktionen in Amazon Web Services.</block>
+  <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">Kosten</block>
+  <block id="6396fbe69c05e9a323cf53a0fbf0983d" category="paragraph">Workload Factory ist frei zu verwenden. Die Kosten, die für Amazon Web Services (AWS) gezahlt werden, hängen von den Storage- und Workload-Services ab, die Sie implementieren möchten. Dies umfasst u. a. die Kosten von Amazon FSX für NetApp ONTAP-Filesysteme, VMware Cloud auf AWS-Infrastruktur, AWS-Services.</block>
+  <block id="d866a7eda949420ef136789c93a23ee9" category="section-title">So funktioniert Workload Factory</block>
+  <block id="20977d337d4e7d1aa80c7ebdb962f859" category="paragraph">Workload Factory umfasst eine webbasierte Konsole, die über die SaaS-Schicht bereitgestellt wird, ein Konto, Betriebsmodi, die den Zugriff auf Ihren Cloud-Bestand steuern, Links, die eine getrennte Verbindung zwischen Workload Factory und einem AWS-Konto bieten und vieles mehr.</block>
+  <block id="11cf550820ecd5e75ae1a9046f7f7f05" category="section-title">Software-as-a-Service</block>
+  <block id="22412f0c62e1935807bc2c96a82d38cd" category="inline-link">Webbasierte Konsole</block>
+  <block id="da89a2a4a0fe528ec46275a6250f3705" category="paragraph">Workload Factory ist über ein zugänglich<block ref="7c75ef957f9c2706e82e5fc687e49689" category="inline-link-rx"></block>. Mit dieser SaaS-Erfahrung können Sie automatisch auf die neuesten Funktionen zugreifen, sobald diese veröffentlicht wurden, und problemlos zwischen Ihren Workload Factory-Konten und -Links wechseln.</block>
+  <block id="9b945efebb006547a94415eadaa12921" category="section-title">Konten</block>
+  <block id="0c600280e89b5a618e533108344236d5" category="paragraph">Wenn Sie sich zum ersten Mal bei Workload Factory anmelden, werden Sie aufgefordert, ein Konto zu erstellen. Mit diesem Konto können Sie Ihre Ressourcen, Workloads und Workload-Zugriff für Ihr Unternehmen mithilfe von Anmeldedaten organisieren.</block>
+  <block id="2edc1f0f1478d883c0d423d0d8ce8ba6" category="inline-image-macro">Ein Screenshot des Einrichtungsassistenten für Workload Factory, der Sie zur Eingabe des Workload Factory-Kontos auffordert.</block>
+  <block id="912befb3eaba2908b9f951f6483b77fd" category="paragraph"><block ref="912befb3eaba2908b9f951f6483b77fd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6e1351546ad06187ed26aac56cc1d573" category="paragraph">Wenn Sie ein Konto erstellen, sind Sie der einzige Account Admin-Benutzer für dieses Konto.</block>
+  <block id="41d28e7b29f45d4f63653993af041bc7" category="paragraph">Wenn Ihr Unternehmen zusätzliche Konto- oder Benutzerverwaltung benötigt, wenden Sie sich über den Produktchat an uns.</block>
+  <block id="c8046b7d36a4a9672ff01fb0fdfd88bf" category="admonition">Wenn Sie NetApp BlueXP nutzen, gehören Sie bereits zu einem Konto, da Workload Factory BlueXP Konten nutzt.</block>
+  <block id="aa9b9cc18c16d4ea10f38b25b835c5aa" category="paragraph">Workload Factory bietet drei Betriebsmodi, mit denen Sie den Zugriff auf Ihren Cloud-Bestand sorgfältig steuern und Workload Factory basierend auf Ihren IT-Richtlinien inkrementelle Vertrauensvoreinstellungen zuweisen können.</block>
+  <block id="d41adf884cb045d0ebe1b066d2b95a2b" category="list-text">*Basic-Modus* stellt eine Zero-Trust-Beziehung dar und ist für die frühzeitige Erforschung von Workload Factory und die Verwendung der verschiedenen Assistenten zur Erstellung der benötigten Infrastruktur als Code konzipiert. Dieser Code kann zusammen mit den relevanten AWS-Zugangsdaten vom Benutzer kopiert und manuell verwendet werden.</block>
+  <block id="d81fee99e7fd276bb44ecddacfeba318" category="list-text">*Lesemodus* verbessert die Erfahrung des Basic-Modus, indem er den Benutzer bei der Erkennung verschiedener Ressourcen und Tools unterstützt und damit hilft, relevante Assistenten zu vervollständigen.</block>
+  <block id="e2cde95c1c68867f8b74113e5266c7e4" category="list-text">*Automate-Modus* ist eine vollständige Vertrauensbeziehung und wurde entwickelt, um im Namen des Benutzers zusammen mit den zugewiesenen Anmeldeinformationen auszuführen und zu automatisieren, die über die erforderlichen und validierten Berechtigungen für die Ausführung verfügen.</block>
+  <block id="cc85ceb9ec5c575a9f6e41669887b58d" category="inline-link-macro">Erfahren Sie mehr über die Betriebsmodi der Workload Factory</block>
+  <block id="bc8c94f9b7d24148c98db964dcfdf4f4" category="paragraph"><block ref="122264b4ce030632c8f10e1e484f4776" category="inline-link-macro-rx"></block>.</block>
+  <block id="e73298b79ea9408111cb3612bf336a0e" category="section-title">Verbindungsverbindungen</block>
+  <block id="a74fb96e1eef90ea865f1878f02b4e15" category="paragraph">Ein Workload Factory Link erzeugt eine Vertrauensbeziehung und eine Verbindung zwischen Workload Factory und einem oder mehreren FSX for ONTAP-Dateisystemen. So können Sie bestimmte Filesystem-Funktionen direkt über die ONTAP-REST-API-Aufrufe überwachen und managen, die über die Amazon FSX for ONTAP-API nicht verfügbar sind.</block>
+  <block id="1e2cf39904eebcbddae0fe72e0186b8b" category="paragraph">Sie benötigen keinen Link, um mit Workload Factory zu beginnen, aber in einigen Fällen müssen Sie einen Link erstellen, um alle Workload Factory-Funktionen und Workload-Funktionen freizuschalten.</block>
+  <block id="e20e09752eeb59f7fee2ca964db1c848" category="paragraph">Links nutzen derzeit AWS Lambda.</block>
+  <block id="e3bdd5798efebca8061760f610d98bcc" category="inline-link">Weitere Informationen zu Links</block>
+  <block id="cee76762b1db025f50dc7b50c80548de" category="paragraph"><block ref="cee76762b1db025f50dc7b50c80548de" category="inline-link-rx"></block></block>
+  <block id="bd282943a337f4287ca0d70f9a836261" category="section-title">Codebox-Automatisierung</block>
+  <block id="528a4ef2f9c8bc3b67d3efa2374a45d4" category="paragraph">Codebox ist ein Co-Pilot von Infrastructure as Code (IAC), mit dem Entwickler und DevOps-Techniker den Code generieren können, der für die Ausführung aller von Workload Factory unterstützten Vorgänge erforderlich ist. Zu den Codeformaten gehören Workload Factory-REST-API, AWS CLI und AWS CloudFormation.</block>
+  <block id="8a01a94fb083632bcf067deb51f9299b" category="paragraph">Codebox ist auf die Betriebsmodi von Workload Factory ausgerichtet (Basic, Read und Automate) und legt einen klaren Weg für die Ausführungsbereitschaft sowie einen Automatisierungsskatalog für eine schnelle spätere Wiederverwendung fest.</block>
+  <block id="7c408fda146892c9e1c039f91fee3cd3" category="paragraph">Im Codebox-Fenster wird die IAC angezeigt, die von einem bestimmten Job-Flow-Vorgang generiert wird und von einem grafischen Assistenten oder einer Konversations-Chat-Schnittstelle abgeglichen wird. Codebox unterstützt Farbcodierung und Suche für eine einfache Navigation und Analyse, aber es ist nicht erlaubt zu bearbeiten. Sie können nur im Automatisierungskatalog kopieren oder speichern.</block>
+  <block id="ec6b8f7cd0c5cd9853d947bc13f72f4b" category="inline-link-macro">Erfahren Sie mehr über Codebox</block>
+  <block id="7221d615997ca03d4480df5a43dae047" category="paragraph"><block ref="491e45ff3f847be901c7d8962829a3f8" category="inline-link-macro-rx"></block>.</block>
+  <block id="6495534fd654d5f36372a209ee27f0a4" category="section-title">Storage-Rechner</block>
+  <block id="8ab314706201f4dddfd4b45dee861f4a" category="paragraph">Workload Factory bietet einen Storage-Rechner, mit dem Sie die Kosten des Storage auf FSX für ONTAP-Filesysteme mit Elastic Block Store (EBS), Elastic File Systems (EFS) und FSX für Windows Dateiserver vergleichen können. Je nach Ihren Storage-Anforderungen können Sie feststellen, dass FSX für ONTAP-Filesysteme die kostengünstigste Option für Sie sind.</block>
+  <block id="3d40a6fbdf1b779c8b032be37bcf95a4" category="paragraph">Die Kriterien, die zwischen den verschiedenen Arten von Storage-Systemen verglichen werden, umfassen die gesamte erforderliche Kapazität und die Gesamt-Performance, einschließlich der erforderlichen IOPS und des erforderlichen Durchsatzes.</block>
+  <block id="c8d9b9f1a68d559ab984d4aa5efa4076" category="inline-link">Erfahren Sie, wie Sie Storage-Rechner die Einsparungen erkennen</block>
+  <block id="62ee06e3888f5791ca82b765e4aa3773" category="paragraph"><block ref="62ee06e3888f5791ca82b765e4aa3773" category="inline-link-rx"></block></block>
+  <block id="c257f5c852c12409e63afb17104f69c5" category="section-title">Rest-APIs</block>
+  <block id="cfcd02bc3ad349605f667b1db0164fe0" category="paragraph">Mit Workload Factory können Sie Ihr FSX für ONTAP-Dateisysteme für spezifische Workloads optimieren, automatisieren und betreiben. Jeder Workload legt eine zugehörige REST-API offen. Gemeinsam bilden diese Workloads und APIs eine flexible und erweiterbare Entwicklungsplattform, mit der Sie Ihre FSX for ONTAP-Dateisysteme verwalten können.</block>
+  <block id="49dac47ef61c863ab22404394b6c84e7" category="paragraph">Bei der Verwendung der Workload Factory REST-APIs gibt es mehrere Vorteile:</block>
+  <block id="0fe398a436a33849be29455ed17d4185" category="list-text">Die APIs wurden auf der Grundlage von REST-Technologie und aktuellen Best Practices entwickelt. Zu den Kerntechnologien gehören HTTP und JSON.</block>
+  <block id="b5b61948785c8f81b44871382cf798d9" category="list-text">Die Workload Factory-Authentifizierung basiert auf dem OAuth2-Standard. NetApp setzt auf die Implementierung des Auth0-Dienstes.</block>
+  <block id="cbc4c63269886120ca8da87d6017c0ca" category="list-text">Die webbasierte Workload Factory-Konsole verwendet dieselben REST-APIs, sodass die beiden Zugriffspfade konsistent sind.</block>
+  <block id="7d4c208fb5531fb6f56eb2444364de9a" category="inline-link">Sehen Sie sich die Dokumentation zur Workload Factory REST API an</block>
+  <block id="855730139927264118c576e496933287" category="paragraph"><block ref="855730139927264118c576e496933287" category="inline-link-rx"></block></block>
+  <block id="cf95d3228718365c810531ae8c95e31a" category="sidebar">Erste Schritte mit der Workload Factory, damit Sie bei der Verwendung von Amazon FSX für NetApp ONTAP das Beste aus Ihren Workloads machen können. Nach dem Setup können Sie FSX für ONTAP-Filesysteme für Ihre Workloads erstellen, optimieren und managen, mit FSX für ONTAP Kosteneinsparungen erkunden, das integrierte IaaS-als-Code-Co-Pilot für die Automatisierung über mehrere Plattformen hinweg einsetzen und Ihre Workloads in Workload Factory managen.</block>
+  <block id="88978255b949b7e0bfa9219676906cec" category="sidebar">Dokumentation zur Einrichtung und Verwaltung der Workload Factory</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Los geht's</block>
+  <block id="d9776f0775997b2e698c6975420b5c5d" category="sidebar">Melden Sie sich an</block>
+  <block id="1c71023bf289bc297d09be71221ff819" category="sidebar">Betriebsmodi und Anmeldeinformationen</block>
+  <block id="65179615095fe42a8a47efc1a529ea2f" category="sidebar">Weitere Informationen zu Betriebsmodi</block>
+  <block id="196a1b1d4d7eff75b0b7bc0f6fa282e7" category="sidebar">AWS-Anmeldedaten hinzufügen</block>
+  <block id="b60830c9ff5a76f323a283c0cae1b47a" category="sidebar">Automatisierung mit Codebox</block>
+  <block id="6359b03a7ff6ac7a9c38c6edebcd1408" category="sidebar">Erfahren Sie mehr über Codebox</block>
+  <block id="f53835e0f369158c476f99fda577e700" category="sidebar">Installations- und Administrationsdokumente</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Versionshinweise</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Was ist neu</block>
+  <block id="e4c53684ddd66ee4898db459d57514e8" category="sidebar">Lernen Sie die Grundlagen kennen</block>
+  <block id="6ae8e58cb52cd45b321927bcb2961f4e" category="sidebar">Übersicht über Workload Factory</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">Schnellstart</block>
+  <block id="bec1e3daee54f5a9410751eb03bd867e" category="sidebar">Verwaltung Von Workload Factory</block>
+  <block id="3700c3dfbf95d68b06191b4a4cbb7592" category="sidebar">Automatisieren Sie Aufgaben mit der Codebox</block>
+  <block id="733ae60890dc5503303e1f5780ac5c9b" category="sidebar">Codebox verwenden, um Code zu generieren</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Wissen und Support</block>
+</blocks>
