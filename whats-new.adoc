@@ -15,6 +15,18 @@ Informieren Sie sich über die Neuerungen bei Workload Factory: Zugangsdaten fü
 
 
 
+== 4 August 2024
+
+
+
+=== Terraform-Unterstützung
+
+Terraform-Unterstützung ist für die Implementierung von Amazon FSX for NetApp ONTAP Filesystemen und die Erstellung von Storage-VMs verfügbar. Die Setup- und Admin-Anleitung enthält nun Anweisungen zur Verwendung von Terraform aus der Codebox.
+
+link:use-codebox.html["Verwenden Sie Terraform aus der Codebox"]
+
+
+
 == 7 Juli 2024
 
 

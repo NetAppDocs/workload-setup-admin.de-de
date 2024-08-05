@@ -392,7 +392,6 @@
   <block id="6b2932e540d5f7ea082e1ac798f02299" category="paragraph">Die Schritte zur Verwendung des CLoudFormation-Codes können unterschiedlich sein, je nachdem, ob Sie ein FSX für ONTAP-Dateisystem bereitstellen, Kontoanmeldeinformationen erstellen oder andere Workload Factory-Aktionen durchführen.</block>
   <block id="db45cb70284a7cbad935a33a0ef0b6dc" category="paragraph">Beachten Sie, dass der Code innerhalb einer von CloudFormation generierten YAML-Datei aus Sicherheitsgründen nach 7 Tagen abläuft.</block>
   <block id="f4beed69f4c72e3f9969d0e2daa8cc67" category="list-text">Sie benötigen die folgenden Benutzerberechtigungen, um einen CloudFormation-Stack zu verwenden:</block>
-  <block id="e1e1a8055c6ecfa43b025a1584c3155f" category="list-text">Nachdem Sie die gewünschte Operation über die Benutzeroberfläche definiert haben, wählen Sie aus, <block ref="4b7dbf915ce902400e3f4172621123eb" category="inline-image-macro-rx" type="image"></block> um den Code in die Codebox zu kopieren.</block>
   <block id="99ca7c9c85fef7c6ab0e44eb58675162" category="list-text">Wählen Sie *an CloudFormation umleiten* und die Seite Redirect to CloudFormation wird angezeigt.</block>
   <block id="7463b18d69a514063d0f320bc1d16b0d" category="list-text">Öffnen Sie ein anderes Browserfenster, und melden Sie sich bei der AWS Management Console an.</block>
   <block id="3bc22cebdcd7af89d94afadce527cc1d" category="list-text">Melden Sie sich bei dem AWS-Konto an, wo der Code ausgeführt werden soll.</block>
@@ -402,11 +401,9 @@
   <block id="05c017ebdfb63b85bc91ed2748f0a19f" category="paragraph">Mit den von Codebox generierten REST-APIs für Workload Factory lassen sich die FSX for ONTAP-Dateisysteme und andere AWS-Ressourcen implementieren und managen.</block>
   <block id="3c3f00270f1d36904ead2ac33f53a58f" category="paragraph">Sie können die APIs von jedem Host ausführen, der Curl unterstützt und über eine Internetverbindung verfügt.</block>
   <block id="ed172ca8e9fe57859bcb8978982d2e0d" category="paragraph">Beachten Sie, dass die Authentifizierungs-Tokens in der Codebox verborgen sind, aber beim Kopieren und Einfügen des API-Aufrufs ausgefüllt werden.</block>
-  <block id="50bea3d64c18b01d7ce7b30ec89500d8" category="list-text">Nachdem Sie die gewünschte Operation mit der Benutzeroberfläche definiert haben, wählen Sie aus, <block ref="4b7dbf915ce902400e3f4172621123eb" category="inline-image-macro-rx" type="image"></block> um den API-Code in die Codebox zu kopieren.</block>
   <block id="b68f0143fe964c9ac34ce1d33e961f82" category="list-text">Fügen Sie den Code ein und führen Sie ihn auf Ihrem Hostsystem aus.</block>
   <block id="b4c82b8569210de2a2777b454448b42e" category="section-title">Verwenden Sie den AWS CLI-Code aus der Codebox</block>
   <block id="8d03c4936e76f2455607364517b82e3e" category="paragraph">Mit der über Codebox generierten CLI für Amazon Web Services können Sie Ihre FSX for ONTAP-Dateisysteme und andere AWS-Ressourcen implementieren und managen.</block>
-  <block id="4002cdda8ab65bc08a255c31321855ab" category="list-text">Nachdem Sie die gewünschte Operation mit der UI definiert haben, wählen Sie aus, <block ref="4b7dbf915ce902400e3f4172621123eb" category="inline-image-macro-rx" type="image"></block> um die AWS-CLI in die Codebox zu kopieren.</block>
   <block id="b28a0d67dfa6e54814b9650389eea71b" category="list-text">Fügen Sie den Code ein und führen Sie ihn aus.</block>
   <block id="3c9ee3abb878e5099cd76beeedcb2d04" category="summary">Informieren Sie sich über die Neuerungen bei Workload Factory: Zugangsdaten für Cloud-Provider, Codebox-Verbesserungen und vieles mehr.</block>
   <block id="490414e0366b091220802d406e52c076" category="doc">Was ist neu</block>
@@ -498,4 +495,16 @@
   <block id="3700c3dfbf95d68b06191b4a4cbb7592" category="sidebar">Automatisieren Sie Aufgaben mit der Codebox</block>
   <block id="733ae60890dc5503303e1f5780ac5c9b" category="sidebar">Codebox verwenden, um Code zu generieren</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Wissen und Support</block>
+  <block id="c419efd1c7454d477938da03ab909ff4" category="list-text">Nachdem Sie die gewünschte Operation über die Benutzeroberfläche definiert haben, kopieren Sie den Code in die Codebox.</block>
+  <block id="ac8312e3b09c390dd9da069d9697ab8c" category="list-text">Nachdem Sie die gewünschte Operation über die Benutzeroberfläche definiert haben, kopieren Sie den API-Code in die Codebox.</block>
+  <block id="1b2b6bf8e053a2f8088251c3a2cc65f9" category="list-text">Nachdem Sie die gewünschte Operation mit der UI definiert haben, kopieren Sie die AWS-CLI in die Codebox.</block>
+  <block id="2532cd63354e6e99119077d45134b5ef" category="section-title">Verwenden Sie Terraform aus der Codebox</block>
+  <block id="a5a1cedd11df4667bf63eec57c1622aa" category="paragraph">Mit Terraform können Sie Ihre FSX for ONTAP-Filesysteme und andere AWS-Ressourcen implementieren und managen.</block>
+  <block id="372393cee3187826465089e7fa3db98e" category="list-text">Sie benötigen einen Terraform-Server, um die Befehle von auszuführen.</block>
+  <block id="90d8257298c061974c94790388e32bbd" category="list-text">Nachdem Sie die gewünschte Operation über die Benutzeroberfläche definiert haben, kopieren oder laden Sie den Terraform-Code in die Codebox herunter.</block>
+  <block id="a2417f4d64bad3dff09f2bdbce4dc0e2" category="list-text">Stellen Sie eine Verbindung zu Ihrem Server her.</block>
+  <block id="691e71734464aaf43017f5b033e54559" category="section-title">4 August 2024</block>
+  <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Terraform-Unterstützung</block>
+  <block id="1571710cf3c95e6290fc41ea04917d42" category="paragraph">Terraform-Unterstützung ist für die Implementierung von Amazon FSX for NetApp ONTAP Filesystemen und die Erstellung von Storage-VMs verfügbar. Die Setup- und Admin-Anleitung enthält nun Anweisungen zur Verwendung von Terraform aus der Codebox.</block>
+  <block id="1a83a24f33c92a88ea922a23bd6cf4e5" category="paragraph"><block ref="1a83a24f33c92a88ea922a23bd6cf4e5" category="inline-link-macro-rx"></block></block>
 </blocks>

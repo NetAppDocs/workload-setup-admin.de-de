@@ -76,7 +76,7 @@ Beachten Sie, dass der Code innerhalb einer von CloudFormation generierten YAML-
 
 
 .Schritte
-. Nachdem Sie die gewünschte Operation über die Benutzeroberfläche definiert haben, wählen Sie aus, image:button-copy-codebox.png["Die Schaltfläche „Kopieren“"] um den Code in die Codebox zu kopieren.
+. Nachdem Sie die gewünschte Operation über die Benutzeroberfläche definiert haben, kopieren Sie den Code in die Codebox.
 . Wählen Sie *an CloudFormation umleiten* und die Seite Redirect to CloudFormation wird angezeigt.
 . Öffnen Sie ein anderes Browserfenster, und melden Sie sich bei der AWS Management Console an.
 . Wählen Sie auf der Seite „Umleiten zur CloudFormation“ die Option *Weiter*.
@@ -97,7 +97,7 @@ Sie können die APIs von jedem Host ausführen, der Curl unterstützt und über 
 Beachten Sie, dass die Authentifizierungs-Tokens in der Codebox verborgen sind, aber beim Kopieren und Einfügen des API-Aufrufs ausgefüllt werden.
 
 .Schritte
-. Nachdem Sie die gewünschte Operation mit der Benutzeroberfläche definiert haben, wählen Sie aus, image:button-copy-codebox.png["Die Schaltfläche „Kopieren“"] um den API-Code in die Codebox zu kopieren.
+. Nachdem Sie die gewünschte Operation über die Benutzeroberfläche definiert haben, kopieren Sie den API-Code in die Codebox.
 . Fügen Sie den Code ein und führen Sie ihn auf Ihrem Hostsystem aus.
 
 
@@ -108,7 +108,24 @@ Beachten Sie, dass die Authentifizierungs-Tokens in der Codebox verborgen sind, 
 Mit der über Codebox generierten CLI für Amazon Web Services können Sie Ihre FSX for ONTAP-Dateisysteme und andere AWS-Ressourcen implementieren und managen.
 
 .Schritte
-. Nachdem Sie die gewünschte Operation mit der UI definiert haben, wählen Sie aus, image:button-copy-codebox.png["Die Schaltfläche „Kopieren“"] um die AWS-CLI in die Codebox zu kopieren.
+. Nachdem Sie die gewünschte Operation mit der UI definiert haben, kopieren Sie die AWS-CLI in die Codebox.
 . Öffnen Sie ein anderes Browserfenster, und melden Sie sich bei der AWS Management Console an.
+. Fügen Sie den Code ein und führen Sie ihn aus.
+
+
+
+
+== Verwenden Sie Terraform aus der Codebox
+
+Mit Terraform können Sie Ihre FSX for ONTAP-Filesysteme und andere AWS-Ressourcen implementieren und managen.
+
+.Bevor Sie beginnen
+* Sie benötigen einen Terraform-Server, um die Befehle von auszuführen.
+* Um sich bei Ihrem AWS-Konto anzumelden, müssen Sie über Anmeldedaten verfügen.
+
+
+.Schritte
+. Nachdem Sie die gewünschte Operation über die Benutzeroberfläche definiert haben, kopieren oder laden Sie den Terraform-Code in die Codebox herunter.
+. Stellen Sie eine Verbindung zu Ihrem Server her.
 . Fügen Sie den Code ein und führen Sie ihn aus.
 
