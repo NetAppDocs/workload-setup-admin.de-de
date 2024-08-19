@@ -13,6 +13,8 @@ summary: NetApp Workload Factory ist eine leistungsstarke Lifecycle-Management-P
 [role="lead"]
 NetApp Workload Factory ist eine leistungsstarke Lifecycle-Management-Plattform, die Sie bei der Optimierung Ihrer Workloads mit Amazon FSX für NetApp ONTAP-Dateisystemen unterstützt. Zu den Workloads, die mit Workload Factory und FSX für ONTAP optimiert werden können, gehören Datenbanken, VMware Migrationen zu VMware Cloud on AWS, KI-Chatbots und vieles mehr.
 
+Ein Workload umfasst eine Kombination aus Ressourcen, Code und Services oder Applikationen, die auf das Erreichen eines Geschäftsziels ausgelegt sind. Dabei kann es sich um alles, von einer kundenorientierten Anwendung bis hin zu einem Backend-Prozess, gehen. Für Workloads kann ein Teilsatz der Ressourcen in einem einzelnen AWS-Konto erforderlich sein oder sich über mehrere Konten erstrecken.
+
 Amazon FSX for NetApp ONTAP bietet vollständig gemanagte, AWS-native NFS-, SMB/CIFS- und iSCSI-Storage-Volumes für geschäftskritische Applikationen, Datenbanken, Container, VMware Cloud-Datastores und Benutzerdateien. FSX für ONTAP lässt sich über Workload Factory und mithilfe nativer AWS Managementtools managen.
 
 
@@ -106,9 +108,9 @@ link:codebox-automation.html["Erfahren Sie mehr über Codebox"].
 
 
 
-=== Storage-Rechner
+=== Einsparungsrechner
 
-Workload Factory bietet einen Storage-Rechner, mit dem Sie die Kosten des Storage auf FSX für ONTAP-Filesysteme mit Elastic Block Store (EBS), Elastic File Systems (EFS) und FSX für Windows Dateiserver vergleichen können. Je nach Ihren Storage-Anforderungen können Sie feststellen, dass FSX für ONTAP-Filesysteme die kostengünstigste Option für Sie sind.
+Workload Factory bietet einen Einsparungsrechner, mit dem Sie die Kosten des Storage auf FSX für ONTAP Filesysteme mit Elastic Block Store (EBS), Elastic File Systems (EFS) und FSX für Windows File Server vergleichen können. Je nach Ihren Storage-Anforderungen können Sie feststellen, dass FSX für ONTAP-Filesysteme die kostengünstigste Option für Sie sind.
 
 Die Kriterien, die zwischen den verschiedenen Arten von Storage-Systemen verglichen werden, umfassen die gesamte erforderliche Kapazität und die Gesamt-Performance, einschließlich der erforderlichen IOPS und des erforderlichen Durchsatzes.
 
