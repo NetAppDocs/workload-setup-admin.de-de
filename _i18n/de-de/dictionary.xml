@@ -504,8 +504,8 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">4 August 2024</block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Terraform-Unterstützung</block>
   <block id="1571710cf3c95e6290fc41ea04917d42" category="paragraph">Terraform-Unterstützung ist für die Implementierung von Amazon FSX for NetApp ONTAP Filesystemen und die Erstellung von Storage-VMs verfügbar. Die Setup- und Admin-Anleitung enthält nun Anweisungen zur Verwendung von Terraform aus der Codebox.</block>
-  <block id="1a83a24f33c92a88ea922a23bd6cf4e5" category="paragraph"><block ref="1a83a24f33c92a88ea922a23bd6cf4e5" category="inline-link-macro-rx"></block></block>
   <block id="462c14d3e045d4b0b69cee0781df3207" category="paragraph">Ein Workload umfasst eine Kombination aus Ressourcen, Code und Services oder Applikationen, die auf das Erreichen eines Geschäftsziels ausgelegt sind. Dabei kann es sich um alles, von einer kundenorientierten Anwendung bis hin zu einem Backend-Prozess, gehen. Für Workloads kann ein Teilsatz der Ressourcen in einem einzelnen AWS-Konto erforderlich sein oder sich über mehrere Konten erstrecken.</block>
   <block id="fb44c12e7a424c0619764b1060434a74" category="section-title">Einsparungsrechner</block>
   <block id="6904c85b1af908213d1642916b521739" category="paragraph">Workload Factory bietet einen Einsparungsrechner, mit dem Sie die Kosten des Storage auf FSX für ONTAP Filesysteme mit Elastic Block Store (EBS), Elastic File Systems (EFS) und FSX für Windows File Server vergleichen können. Je nach Ihren Storage-Anforderungen können Sie feststellen, dass FSX für ONTAP-Filesysteme die kostengünstigste Option für Sie sind.</block>
+  <block id="11cb17d1b990bbf37a24337d5692efa1" category="paragraph"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
 </blocks>
