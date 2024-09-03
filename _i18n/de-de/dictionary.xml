@@ -508,4 +508,14 @@
   <block id="fb44c12e7a424c0619764b1060434a74" category="section-title">Einsparungsrechner</block>
   <block id="6904c85b1af908213d1642916b521739" category="paragraph">Workload Factory bietet einen Einsparungsrechner, mit dem Sie die Kosten des Storage auf FSX für ONTAP Filesysteme mit Elastic Block Store (EBS), Elastic File Systems (EFS) und FSX für Windows File Server vergleichen können. Je nach Ihren Storage-Anforderungen können Sie feststellen, dass FSX für ONTAP-Filesysteme die kostengünstigste Option für Sie sind.</block>
   <block id="11cb17d1b990bbf37a24337d5692efa1" category="paragraph"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
+  <block id="2fd1745cefcdce50d6467d96e693f6b7" category="doc">RSS-Abonnement</block>
+  <block id="0fa776fabe30e41d70bd8d9c9e64c974" category="paragraph">RSS-Abonnement ist über die verfügbar<block ref="372504cb6bb48559009ff8f8cdb9a245" category="inline-link-macro-rx"></block>. Die Verwendung eines RSS-Feeds ist eine einfache Möglichkeit, sich über Änderungen in der BlueXP  Workload Factory zu informieren.</block>
+  <block id="447fb3de7bec10468f55367375163603" category="inline-image-macro">Screenshot des Dropdown-Menüs der Workload Factory-Konsole. Eine neue Schaltfläche zum Abonnieren von RSS wird als Option im Dropdown-Menü angezeigt.</block>
+  <block id="c508966f04ada556baaaa0b94e781209" category="paragraph"><block ref="c508966f04ada556baaaa0b94e781209" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="80f4b5aa553e3a44455088c83954a088" category="section-title">Unterstützung einer einzelnen Berechtigungsrichtlinie pro Workload</block>
+  <block id="c876ca70d1ae73b09cdc0004b328448e" category="paragraph">Beim Hinzufügen von AWS Zugangsdaten in Workload Factory können Sie nun für jeden Workload und jedes Storage-Management eine einzelne Berechtigungsrichtlinie auswählen, entweder den Lese- oder den Automatisierungsmodus.</block>
+  <block id="41b3a089d4fbacfb53e9a5634cfc6647" category="inline-image-macro">Screenshot aus dem Abschnitt „Berechtigungskonfiguration“ auf der Seite „Anmeldedaten“, im dem Sie Lese- oder Automatisierungsberechtigungen für das Storage-Management, KI-Workloads, Datenbank-Workloads und VMware-Workloads auswählen können.</block>
+  <block id="fa5f572610383fbc01cbba40c0f535e2" category="paragraph"><block ref="fa5f572610383fbc01cbba40c0f535e2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1db25aada4bff8233b24c1d7b39230cd" category="paragraph"><block ref="1db25aada4bff8233b24c1d7b39230cd" category="inline-link-macro-rx"></block></block>
+  <block id="b5cef683aab00353096b98823a237e69" category="section-title">1 September 2024</block>
 </blocks>
