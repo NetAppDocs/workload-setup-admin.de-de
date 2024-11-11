@@ -1,9 +1,9 @@
-= Erstversion von Workload Factory
+= Erste Version der BlueXP  Workload-Farm
 :allow-uri-read: 
 
 
 
 
-=== Erstversion von Workload Factory
+=== Erste Version der BlueXP  Workload-Farm
 
-BlueXP Workload Factory für AWS ist eine leistungsstarke Lifecycle-Managementplattform, die mithilfe von Amazon FSX für NetApp ONTAP-Dateisystemen zur Optimierung Ihrer Workloads entwickelt wurde. Zu den Workloads, die mit Workload Factory und FSX für ONTAP optimiert werden können, gehören Datenbanken, VMware Migrationen zu VMware Cloud on AWS, KI-Chatbots und vieles mehr.
+Die BlueXP  Workload Factory ist eine leistungsstarke Lifecycle-Management-Plattform, die Sie bei der Optimierung Ihrer Workloads mit Amazon FSX für NetApp ONTAP-Dateisystemen unterstützt. Zu den Workloads, die mithilfe von Workload-Factory und FSX für ONTAP optimiert werden können, gehören Datenbanken, VMware Migrationen zu VMware Cloud on AWS, KI-Chatbots und vieles mehr.

@@ -1,24 +1,24 @@
 ---
 indexpage:
-  title: Dokumentation zur Einrichtung und Verwaltung der Workload Factory
-  summary: Erste Schritte mit der Workload Factory, damit Sie bei der Verwendung von
-    Amazon FSX für NetApp ONTAP das Beste aus Ihren Workloads machen können. Nach
-    dem Setup können Sie FSX für ONTAP-Filesysteme für Ihre Workloads erstellen, optimieren
-    und managen, mit FSX für ONTAP Kosteneinsparungen erkunden, das integrierte IaaS-als-Code-Co-Pilot
-    für die Automatisierung über mehrere Plattformen hinweg einsetzen und Ihre Workloads
-    in Workload Factory managen.
+  title: Dokumentation zur werkseitigen Einrichtung und Administration von BlueXP -Workloads
+  summary: Erste Schritte mit der BlueXP -Workload-Farm, mit der Sie Ihre Workloads
+    optimal nutzen können, wenn Sie Amazon FSX für NetApp ONTAP verwenden Nach der
+    Einrichtung können Sie FSX für ONTAP-Filesysteme für Ihre Workloads erstellen,
+    optimieren und managen, mit FSX für ONTAP Kosteneinsparungen erkunden, das integrierte
+    IaaS-als-Code-Co-Pilot für die plattformübergreifende Automatisierung verwenden
+    und Ihre Workloads an der Fabrik managen.
   keywords: workload factory, fsx, account, credentials, users, permissions, log in,
     calculator, codebox
-  lead: Erste Schritte mit der Workload Factory, damit Sie bei der Verwendung von
-    Amazon FSX für NetApp ONTAP das Beste aus Ihren Workloads machen können. Nach
-    dem Setup können Sie FSX für ONTAP-Filesysteme für Ihre Workloads erstellen, optimieren
+  lead: Erste Schritte mit der BlueXP -Workload-Farm, mit der Sie Ihre Workloads optimal
+    nutzen können, wenn Sie Amazon FSX für NetApp ONTAP verwenden Nach der Einrichtung
+    können Sie FSX für ONTAP-Filesysteme für Ihre Workloads erstellen, optimieren
     und managen, mit FSX für ONTAP Kosteneinsparungen erkunden, das integrierte IaaS-als-Code-Co-Pilot
-    für die Automatisierung über mehrere Plattformen hinweg einsetzen und Ihre Workloads
-    in Workload Factory managen.
+    für die plattformübergreifende Automatisierung verwenden und Ihre Workloads an
+    der Fabrik managen.
   tiles:
   - title: Los geht's
     links:
-    - title: Erfahren Sie mehr über Workload Factory
+    - title: Erfahren Sie mehr über die BlueXP  Workload-Fabrik
       url: workload-factory-overview.html
     - title: Melden Sie sich an
       url: sign-up-saas.html

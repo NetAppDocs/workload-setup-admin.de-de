@@ -23,19 +23,21 @@ sidebar:
     entries:
     - title: Lernen Sie die Grundlagen kennen
       entries:
-      - title: Übersicht über Workload Factory
+      - title: Übersicht über die Workload-Fabrik
         url: "/workload-factory-overview.html"
       - title: Betriebsmodi
         url: "/operational-modes.html"
+      - title: Konsolenerfahrungen
+        url: "/console-experiences.html"
     - title: Schnellstart
       url: "/quick-start.html"
-    - title: Melden Sie sich bei Workload Factory an
+    - title: Melden Sie sich für die Workload-Fabrik an
       url: "/sign-up-saas.html"
     - title: AWS-Anmeldedaten hinzufügen
       url: "/add-credentials.html"
     - title: Was Sie als Nächstes tun können
       url: "/whats-next.html"
-  - title: Verwaltung Von Workload Factory
+  - title: Verwaltung der Workload-Fabrik
     entries:
     - title: Melden Sie sich bei Workload Factory an
       url: "/log-in.html"
@@ -56,5 +58,5 @@ sidebar:
   - title: Rechtliche Hinweise
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP Workload Factory for AWS
+  name: BlueXP workload factory
   repo: workload-family

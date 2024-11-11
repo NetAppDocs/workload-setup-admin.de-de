@@ -4,10 +4,10 @@ sidebar: sidebar
 keywords:  
 summary:  
 ---
-= Rechtliche Hinweise
+= Rechtliche Hinweise für die BlueXP  Workload-Fabrik
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]

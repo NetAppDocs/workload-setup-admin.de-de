@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: whats-next.html 
 keywords: what you can do 
-summary: Nachdem Sie sich angemeldet und Workload Factory eingerichtet haben, können Sie FSX für ONTAP-Dateisysteme erstellen und verwalten und andere Workload Factory-Funktionen verwenden. 
+summary: Nachdem Sie sich angemeldet und die Workload Factory eingerichtet haben, können Sie FSX für ONTAP-Dateisysteme erstellen und verwalten und andere Funktionen für die Workload Factory verwenden. 
 ---
-= Was Sie als Nächstes tun können
+= Was Sie bei der BlueXP -Workload-Fabrik als nächstes tun können
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Nachdem Sie sich jetzt angemeldet und Workload Factory eingerichtet haben, können Sie mehrere Workload Factory-Funktionen nutzen, wie z. B. das Erstellen von Amazon FSX für ONTAP-Dateisystemen, das Bereitstellen von Datenbanken auf FSX für ONTAP-Dateisystemen, und Migration von Virtual Machine-Konfigurationen in VMware Cloud on AWS mithilfe von FSX für ONTAP-Filesystemen als externe Datastores.
+Nachdem Sie sich jetzt angemeldet und die BlueXP -Workload-Fabrik eingerichtet haben, können Sie verschiedene Funktionen für die Workload-Fabrik nutzen, wie z. B. das Erstellen von Amazon FSX für ONTAP-Dateisystemen, das Bereitstellen von Datenbanken auf FSX für ONTAP-Dateisystemen und das Migrieren der Konfigurationen von Virtual Machines zu VMware Cloud auf AWS mithilfe von FSX für ONTAP-Dateisystemen als externe Datastores.
 
 * https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Amazon FSX für NetApp ONTAP"^]
 +

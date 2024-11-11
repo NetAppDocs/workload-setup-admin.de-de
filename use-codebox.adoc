@@ -2,24 +2,24 @@
 sidebar: sidebar 
 permalink: use-codebox.html 
 keywords: codebox, automation, cloudformation, rest api, aws cli, permissions 
-summary: Sie können Codebox verwenden, um den Code zu generieren, der für die Ausführung eines von Workload Factory unterstützten Vorgangs erforderlich ist. Mit REST-APIs für Workload Factory, AWS CLI und AWS CloudFormation kann Code generiert werden, der genutzt und ausgeführt werden kann. 
+summary: Sie können Codebox verwenden, um den Code zu generieren, der für die Ausführung eines Vorgangs benötigt wird, der von der BlueXP  Workload Factory unterstützt wird. 
 ---
-= Codebox für die Automatisierung verwenden
+= Nutzen Sie die Codebox für die Automatisierung in der BlueXP  Workload-Fabrik
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Sie können Codebox verwenden, um den Code zu generieren, der für die Ausführung eines von Workload Factory unterstützten Vorgangs erforderlich ist. Mit den REST-APIs von Workload Factory, der AWS CLI und AWS CloudFormation kann Code generiert werden, der genutzt und ausgeführt werden kann.
+Sie können Codebox verwenden, um den Code zu generieren, der für die Ausführung eines Vorgangs benötigt wird, der von der BlueXP  Workload Factory unterstützt wird. Mit REST-APIs für die Workload-Farm, der AWS-CLI und AWS CloudFormation kann Code generiert werden, der genutzt und ausgeführt werden kann.
 
-Codebox wird mit den Workload Factory-Betriebsmodi (Basic, Read und Automate) abgestimmt, indem die entsprechenden Daten auf der Grundlage der im Workload Factory-Konto für jeden Benutzer bereitgestellten AWS-Berechtigungen in den Code eingetragen werden. Der Code kann wie eine Vorlage verwendet werden, in der Sie fehlende Informationen (z. B. Anmeldeinformationen) eingeben oder bestimmte Daten anpassen können, bevor Sie den Code ausführen.
+Codebox ist an den Betriebsmodi für den Workload-Betrieb (Basic, Read und Automate) ausgerichtet, indem die entsprechenden Daten im Code basierend auf den AWS-Berechtigungen, die im Workload-Factory-Konto für jeden Benutzer bereitgestellt werden, eingetragen werden. Der Code kann wie eine Vorlage verwendet werden, in der Sie fehlende Informationen (z. B. Anmeldeinformationen) eingeben oder bestimmte Daten anpassen können, bevor Sie den Code ausführen.
 
 
 
 == Wie Sie die Codebox verwenden
 
-Wenn Sie Werte in die Assistenten der Workload Factory-Benutzeroberfläche eingeben, wird die Datenaktualisierung in der Codebox angezeigt, wenn Sie jedes Feld ausfüllen. Wenn Sie den Assistenten fertig stellen, aber bevor Sie die Schaltfläche *Create* unten auf der Seite wählen, wählen Sie image:button-copy-codebox.png["Die Schaltfläche „Kopieren“"] in die Codebox kopieren, um den Code zu erfassen, der zum Erstellen Ihrer Konfiguration erforderlich ist. In diesem Screenshot zum Erstellen eines neuen Microsoft SQL Servers werden beispielsweise die Einträge des Assistenten für VPC und Verfügbarkeitszonen sowie die entsprechenden Einträge in der Codebox für eine REST-API-Implementierung angezeigt.
+Wenn Sie Werte in die Assistenten für die Workload Factory UI eingeben, wird die Datenaktualisierung in der Codebox angezeigt, wenn Sie jedes Feld ausfüllen. Wenn Sie den Assistenten fertig stellen, aber bevor Sie die Schaltfläche *Create* unten auf der Seite wählen, wählen Sie image:button-copy-codebox.png["Die Schaltfläche „Kopieren“"] in die Codebox kopieren, um den Code zu erfassen, der zum Erstellen Ihrer Konfiguration erforderlich ist. In diesem Screenshot zum Erstellen eines neuen Microsoft SQL Servers werden beispielsweise die Einträge des Assistenten für VPC und Verfügbarkeitszonen sowie die entsprechenden Einträge in der Codebox für eine REST-API-Implementierung angezeigt.
 
 image:screenshot-codebox-example1.png["Ein Screenshot, der zeigt, wie ein Microsoft SQL Server in der UI erstellt wird, sowie die entsprechenden Einträge für VPC und Verfügbarkeitszonen in der Codebox."]
 
@@ -29,9 +29,9 @@ Bei einigen Codeformaten können Sie auch die Schaltfläche Download wählen, um
 
 == Verwenden Sie den CloudFormation-Code aus der Codebox
 
-Sie können den von Codebox generierten CloudFormation-Code kopieren und dann den Amazon Web Services CloudFormation-Stack in Ihrem AWS-Konto starten. CloudFormation führt die Aktionen aus, die Sie in der Workload Factory-Benutzeroberfläche definiert haben.
+Sie können den von Codebox generierten CloudFormation-Code kopieren und dann den Amazon Web Services CloudFormation-Stack in Ihrem AWS-Konto starten. CloudFormation führt die Aktionen aus, die Sie in der Workload Factory-UI definiert haben.
 
-Die Schritte zur Verwendung des CLoudFormation-Codes können unterschiedlich sein, je nachdem, ob Sie ein FSX für ONTAP-Dateisystem bereitstellen, Kontoanmeldeinformationen erstellen oder andere Workload Factory-Aktionen durchführen.
+Die Schritte zur Verwendung des CLoudFormation-Codes können unterschiedlich sein, je nachdem, ob Sie ein FSX für ONTAP-Dateisystem bereitstellen, Kontoanmeldeinformationen erstellen oder andere Workload-Factory-Aktionen durchführen.
 
 Beachten Sie, dass der Code innerhalb einer von CloudFormation generierten YAML-Datei aus Sicherheitsgründen nach 7 Tagen abläuft.
 
@@ -83,14 +83,14 @@ Beachten Sie, dass der Code innerhalb einer von CloudFormation generierten YAML-
 . Melden Sie sich bei dem AWS-Konto an, wo der Code ausgeführt werden soll.
 . Wählen Sie auf der Seite „schneller Stapel erstellen“ unter „Funktionen“ *Ich bestätige, dass AWS CloudFormation möglicherweise ...* auswählen könnte.
 . Wählen Sie *Stapel erstellen*.
-. Überwachen Sie den Fortschritt von AWS oder Workload Factory.
+. Überwachen Sie den Fortschritt von AWS oder von der Workload-Farm.
 
 
 
 
 == Verwenden Sie den REST-API-Code aus der Codebox
 
-Mit den von Codebox generierten REST-APIs für Workload Factory lassen sich die FSX for ONTAP-Dateisysteme und andere AWS-Ressourcen implementieren und managen.
+Sie können die über Codebox generierten REST-APIs für die Workload-Fabrik verwenden, um Ihre FSX für ONTAP-Dateisysteme und andere AWS-Ressourcen zu implementieren und zu managen.
 
 Sie können die APIs von jedem Host ausführen, der Curl unterstützt und über eine Internetverbindung verfügt.
 

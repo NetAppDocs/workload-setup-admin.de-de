@@ -7,7 +7,7 @@ summary: Bevor Sie einen Support-Fall beim technischen Support von NetApp eröff
 = Für den Support anmelden
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]

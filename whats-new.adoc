@@ -2,16 +2,28 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
-summary: 'Informieren Sie sich über die Neuerungen bei Workload Factory: Zugangsdaten für Cloud-Provider, Codebox-Verbesserungen und vieles mehr.' 
+summary: 'Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen für die Workload-Farm: Zugangsdaten für Cloud-Provider, Codebox-Verbesserungen und vieles mehr.' 
 ---
-= Was ist neu
+= Was ist neu bei den BlueXP -Funktionen für die werkseitige Administration von Workloads
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Informieren Sie sich über die Neuerungen bei Workload Factory: Zugangsdaten für Cloud-Provider, Codebox-Verbesserungen und vieles mehr.
+Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen für die Workload-Farm: Zugangsdaten für Cloud-Provider, Codebox-Verbesserungen und vieles mehr.
+
+
+
+== Bis 11. November 2024
+
+
+
+=== Workload Factory Integration in die BlueXP  Konsole
+
+Sie haben nun die Möglichkeit, die Workload Factory aus der link:https://console.bluexp.netapp.com["BlueXP-Konsole"^]zu verwenden. Die BlueXP -Konsole bietet die gleiche Funktionalität wie die Arbeitslastwerkkonsole.
+
+link:https://docs.netapp.com/workload-setup-admin/console-experiences.html["Erfahren Sie, wie Sie über die BlueXP -Konsole auf die Workload-Farm zugreifen"]
 
 
 
@@ -21,19 +33,19 @@ Informieren Sie sich über die Neuerungen bei Workload Factory: Zugangsdaten fü
 
 === RSS-Abonnement
 
-RSS-Abonnement ist über die verfügbarlink:https://console.workloads.netapp.com/["Workload Factory-Konsole"^]. Die Verwendung eines RSS-Feeds ist eine einfache Möglichkeit, sich über Änderungen in der BlueXP  Workload Factory zu informieren.
+RSS-Abonnement ist über die verfügbarlink:https://console.workloads.netapp.com/["Arbeitslastwerkkonsole"^]. Durch die Verwendung eines RSS-Feeds können Sie auf einfache Weise von Änderungen in der BlueXP  Workload Factory Gebrauch machen.
 
-image:screenshot-rss-subscribe-button.png["Screenshot des Dropdown-Menüs der Workload Factory-Konsole. Eine neue Schaltfläche zum Abonnieren von RSS wird als Option im Dropdown-Menü angezeigt."]
+image:screenshot-rss-subscribe-button.png["Screenshot des Dropdown-Menüs „Workload Factory Console“. Eine neue Schaltfläche zum Abonnieren von RSS wird als Option im Dropdown-Menü angezeigt."]
 
 
 
 === Unterstützung einer einzelnen Berechtigungsrichtlinie pro Workload
 
-Beim Hinzufügen von AWS Zugangsdaten in Workload Factory können Sie nun für jeden Workload und jedes Storage-Management eine einzelne Berechtigungsrichtlinie auswählen, entweder den Lese- oder den Automatisierungsmodus.
+Beim Hinzufügen von AWS Zugangsdaten an die Workload-Farm können Sie nun für jeden Workload und jedes Storage-Management eine einzelne Berechtigungsrichtlinie auswählen, entweder den Lese- oder den Automatisierungsmodus.
 
 image:screenshot-single-permission-policy-support.png["Screenshot aus dem Abschnitt „Berechtigungskonfiguration“ auf der Seite „Anmeldedaten“, im dem Sie Lese- oder Automatisierungsberechtigungen für das Storage-Management, KI-Workloads, Datenbank-Workloads und VMware-Workloads auswählen können."]
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Fügen Sie Workloads Factory Anmeldedaten für AWS hinzu"^]
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Fügen Sie AWS-Anmeldedaten zu der Workload-Factory hinzu"^]
 
 
 
@@ -53,6 +65,6 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Verwen
 
 
 
-=== Erstversion von Workload Factory
+=== Erste Version der BlueXP  Workload-Farm
 
-BlueXP Workload Factory für AWS ist eine leistungsstarke Lifecycle-Managementplattform, die mithilfe von Amazon FSX für NetApp ONTAP-Dateisystemen zur Optimierung Ihrer Workloads entwickelt wurde. Zu den Workloads, die mit Workload Factory und FSX für ONTAP optimiert werden können, gehören Datenbanken, VMware Migrationen zu VMware Cloud on AWS, KI-Chatbots und vieles mehr.
+Die BlueXP  Workload Factory ist eine leistungsstarke Lifecycle-Management-Plattform, die Sie bei der Optimierung Ihrer Workloads mit Amazon FSX für NetApp ONTAP-Dateisystemen unterstützt. Zu den Workloads, die mithilfe von Workload-Factory und FSX für ONTAP optimiert werden können, gehören Datenbanken, VMware Migrationen zu VMware Cloud on AWS, KI-Chatbots und vieles mehr.
