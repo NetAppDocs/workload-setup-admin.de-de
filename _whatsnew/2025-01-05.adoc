@@ -1,0 +1,11 @@
+= Support für Servicekonten in der BlueXP  Workload-Fabrik
+:allow-uri-read: 
+
+
+
+
+=== Support für Servicekonten in der BlueXP  Workload-Fabrik
+
+Servicekonten werden jetzt in der BlueXP  Workload-Fabrik unterstützt. Sie können Servicekonten erstellen, die als Maschinenbenutzer fungieren, die Infrastrukturvorgänge automatisieren.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-service-accounts.html["Erstellen und Verwalten von Servicekonten"]

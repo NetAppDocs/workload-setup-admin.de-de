@@ -28,6 +28,7 @@ Migrieren Sie lokale vSphere Umgebungen zu VMware Cloud on AWS:: Mit dem Migrati
 Lifecycle Management der Datenbank:: Entdecken Sie Datenbank-Workloads und analysieren Sie Kosteneinsparungen mit Amazon FSX for NetApp ONTAP, nutzen Sie Storage- und Applikationsvorteile bei der Migration von SQL Server-Datenbanken auf FSX für ONTAP Storage, implementieren Sie SQL Server, Datenbanken und Datenbankklone, die Best Practices von Anbietern implementieren, nutzen Sie eine Infrastruktur als Code-Pilotprojekt zur Automatisierung von Abläufen und überwachen und optimieren Sie SQL Server-Bestände kontinuierlich, um Performance, Verfügbarkeit, Schutz und Kosteneffizienz zu verbessern.
 KI-Chatbot-Entwicklung:: Nutzen Sie Ihre FSX für ONTAP-Dateisysteme zum Speichern Ihrer Unternehmen Chatbot-Quellen und die KI-Engine-Datenbanken. Auf diese Weise können Sie die unstrukturierten Daten Ihres Unternehmens in eine Chatbot-Anwendung des Unternehmens einbetten.
 Einsparungsrechner, um Kosten zu sparen:: Analysieren Sie Ihre aktuellen Implementierungen, die Amazon Elastic Block Store (EBS) oder Elastic File System (EFS) Storage oder Amazon FSX für Windows File Server verwenden, um zu erfahren, wie viel Geld Sie durch einen Wechsel zu Amazon FSX für NetApp ONTAP sparen können. Mit dem Rechner können Sie auch ein Was-wäre-wenn-Szenario für eine zukünftige Bereitstellung, die Sie planen, ausführen.
+Service-Konten zur Förderung der Automatisierung:: Mit Servicekonten können Sie die Werkseinstellungen von BlueXP  Workloads sicher und zuverlässig automatisieren. Servicekonten bieten zuverlässige, langfristige Automatisierung ohne jegliche Beschränkungen beim Benutzermanagement und sind sicherer, da sie nur API-Zugriff bieten.
 
 
 
@@ -64,12 +65,20 @@ Wenn Sie sich zum ersten Mal bei Workload Factory anmelden, werden Sie aufgeford
 
 image:screenshot-account-selection.png["Ein Screenshot des Assistenten für die werkseitige Workload-Einrichtung, der Sie zur Eingabe des werkseitigen Workload-Kontos auffordert."]
 
-Wenn Sie ein Konto erstellen, sind Sie der einzige Account Admin-Benutzer für dieses Konto.
+Wenn Sie ein Konto erstellen, sind Sie der einzige _Account admin_ Benutzer für dieses Konto.
 
 Wenn Ihr Unternehmen zusätzliche Konto- oder Benutzerverwaltung benötigt, wenden Sie sich über den Produktchat an uns.
 
 
 TIP: Wenn Sie NetApp BlueXP  verwenden, gehören Sie bereits zu einem Konto, da bei der Workload Factory BlueXP -Konten verwendet werden.
+
+
+
+==== Servicekonten
+
+Ein Service-Konto fungiert als „Benutzer“, der autorisierte API-Aufrufe an die BlueXP  Workload Factory zu Automatisierungszwecken vornehmen kann. So ist das Management der Automatisierung einfacher, da keine Automatisierungsskripts auf Basis des Benutzerkontos eines echten Mitarbeiters erstellt werden müssen, der das Unternehmen jederzeit verlassen kann. Alle Kontoinhaber in Workload Factory gelten als Kontoadministratoren. Kontoadministratoren können mehrere Dienstkonten erstellen und löschen.
+
+link:manage-service-accounts.html["Erfahren Sie, wie Sie Servicekonten verwalten"].
 
 
 

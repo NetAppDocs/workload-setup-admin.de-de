@@ -15,6 +15,18 @@ Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen für die
 
 
 
+== 05 Januar 2025
+
+
+
+=== Support für Servicekonten in der BlueXP  Workload-Fabrik
+
+Servicekonten werden jetzt in der BlueXP  Workload-Fabrik unterstützt. Sie können Servicekonten erstellen, die als Maschinenbenutzer fungieren, die Infrastrukturvorgänge automatisieren.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-service-accounts.html["Erstellen und Verwalten von Servicekonten"]
+
+
+
 == Bis 11. November 2024
 
 
