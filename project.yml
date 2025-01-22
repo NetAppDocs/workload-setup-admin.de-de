@@ -29,6 +29,8 @@ sidebar:
         url: "/operational-modes.html"
       - title: Konsolenerfahrungen
         url: "/console-experiences.html"
+      - title: Berechtigungen
+        url: "/permissions-reference.html"
     - title: Schnellstart
       url: "/quick-start.html"
     - title: Melden Sie sich für die Workload-Fabrik an

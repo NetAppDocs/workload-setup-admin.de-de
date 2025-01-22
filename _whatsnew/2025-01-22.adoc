@@ -1,0 +1,11 @@
+= BlueXP -Workload-Werkseinstellungen
+:allow-uri-read: 
+
+
+
+
+=== BlueXP -Workload-Werkseinstellungen
+
+Sie können sich jetzt die Berechtigungen anzeigen lassen, die BlueXP -Workload in der Fabrik verwendet, um verschiedene Vorgänge auszuführen. Angefangen bei der Erkennung Ihrer Storage-Umgebungen bis hin zum Implementieren von AWS Ressourcen wie Dateisysteme im Storage oder Wissensdatenbanken für GenAI-Workloads. Sie können IAM-Richtlinien und Berechtigungen für Storage, Datenbanken, VMware und GenAI-Workloads anzeigen.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["BlueXP -Workload-Werkseinstellungen"]
