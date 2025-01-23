@@ -1688,6 +1688,9 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | Zeigen Sie die verfügbaren Fundamentmodelle in einer Region an | Bedrock:ListFoundationModels | Einsatz | Automatisieren 
 
 
+| Überprüfen Sie den Zugriff auf das Basismodell | Bedrock:GetFoundationModelVerfügbarkeit | Einsatz | Automatisieren 
+
+
 | Holen Sie sich Regionen, die FSX und Bedrock unterstützen, während der KI-Engine-Assistent | ssm:GetParametersByPath | Einsatz | Automatisieren 
 
 
@@ -1782,9 +1785,6 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 
 
 | Protokolle:TagResource | Einsatz | Automatisieren 
-
-
-| Überprüfen Sie den Zugriff auf das Basismodell | Bedrock:GetFoundationModelVerfügbarkeit | Fehlerbehebung | Automatisieren 
 |===
 ====
 
