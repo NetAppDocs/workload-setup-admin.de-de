@@ -315,10 +315,18 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 .3+| KMS-Schlüsseldetails erhalten und FSX für ONTAP-Verschlüsselung verwenden | Km:CreateGrant | Einsatz | Automatisieren 
 
 
-| Km:Beschreiben* | Einsatz | Automatisieren 
+| Km:Beschreiben* | Einsatz  a| 
+* Lesen
+* Automatisieren
 
 
-| Km:Liste* | Einsatz | Automatisieren 
+
+
+| Km:Liste* | Einsatz  a| 
+* Lesen
+* Automatisieren
+
+
 
 
 | Elastic File System im Einsparungsrechner beschreiben | Elasticdateisystem:deskribe* | Einsparungen entdecken | Lesen 
