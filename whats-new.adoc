@@ -15,6 +15,12 @@ Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen für die
 
 
 
+== 02 Februar 2025
+
+Einschließen: _whatsnew/2025-02-02.adoc[]
+
+
+
 == 22 Januar 2025
 
 
@@ -27,7 +33,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
-== 05 Januar 2025
+== 5 Januar 2025
 
 
 

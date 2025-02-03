@@ -1373,7 +1373,11 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 | Trennen der Rolle vom bereitgestellten EC2-Instanzprofil | iam:RemoveRoleFromInstanceProfile | Einsatz | Automatisieren 
 
 
-| Validieren Sie die in der Rolle verfügbaren Berechtigungen, und vergleichen Sie sie mit den erforderlichen Berechtigungen | iam:SimulatePrincipalPolicy | Einsatz | Automatisieren 
+| Validieren Sie die in der Rolle verfügbaren Berechtigungen, und vergleichen Sie sie mit den erforderlichen Berechtigungen | iam:SimulatePrincipalPolicy | Einsatz  a| 
+* Lesen
+* Automatisieren
+
+
 |===
 . Die Berechtigung ist auf Ressourcen beschränkt, die mit WLMDB beginnen.
 . „iam:CreateServiceLinkedRole“ begrenzt durch „iam:AWSServiceName“: „ec2.amazonaws.com"*
@@ -2073,3 +2077,9 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für VMware-Wor
 == Änderungsprotokoll
 
 Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den folgenden Abschnitten zur Kenntnis nehmen.
+
+
+
+=== 3 Februar 2025
+
+Die folgende Berechtigung ist jetzt im _read_ Modus für Datenbanken verfügbar: `iam:SimulatePrincipalPolicy`.

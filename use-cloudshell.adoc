@@ -1,0 +1,189 @@
+---
+sidebar: sidebar 
+permalink: use-cloudshell.html 
+keywords: cloudshell, command line, aws cli, ontap cli, bluexp workload factory, workload factory 
+summary: Sie können CloudShell von überall in der Benutzeroberfläche der BlueXP -Workload-Factory verwenden, um AWS- oder ONTAP-CLI-Befehle auszuführen. 
+---
+= Verwenden Sie CloudShell in der BlueXP -Workload-Fabrik
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Öffnen Sie CloudShell, um AWS- oder ONTAP-CLI-Befehle von einem beliebigen Ort in der Benutzeroberfläche der BlueXP -Workload-Werkseinstellungen auszuführen.
+
+
+
+== Über diese Aufgabe
+
+Mit CloudShell können Sie AWS-CLI-Befehle oder ONTAP-CLI-Befehle in einer Shell-ähnlichen Umgebung innerhalb der Benutzeroberfläche der BlueXP -Workload-Factory ausführen. Es simuliert Terminalsitzungen im Browser, stellt Terminalfunktionen bereit und stellt Nachrichten über das Backend der Workload Factory auf. Mit ihr können Sie die AWS Zugangsdaten und ONTAP Zugangsdaten verwenden, die Sie in Ihrem BlueXP  Konto angegeben haben.
+
+Zu den CloudShell-Funktionen gehören:
+
+* Mehrere CloudShell-Sitzungen: Mehrere CloudShell-Sitzungen gleichzeitig bereitstellen, um mehrere Sequenzen von Befehlen parallel auszustellen,
+* Mehrere Ansichten: Teilen Sie CloudShell-Tabulatorsitzungen auf, damit Sie zwei oder mehr Tabulatoren horizontal oder vertikal gleichzeitig anzeigen können
+* Umbenennen von Sitzungen: Benennen Sie die Sitzungen nach Bedarf um
+* Persistenz des Inhalts der letzten Sitzung: Öffnen Sie die letzte Sitzung erneut, wenn Sie sie versehentlich schließen
+* Einstellungen Einstellungen: Ändern Sie die Schriftgröße und den Ausgabetyp
+
+
+
+
+== Bevor Sie beginnen
+
+CloudShell kann mit Ihren AWS-Anmeldeinformationen verwendet werden. Um CloudShell verwenden zu können, müssen Sie mindestens eine AWS-Zertifizierung angeben.
+
+
+NOTE: CloudShell steht Ihnen zur Verfügung, um jeden AWS- oder ONTAP-CLI-Befehl auszuführen. Wenn Sie jedoch im Kontext eines FSX for ONTAP-Dateisystems arbeiten möchten, stellen Sie sicher, dass Sie den folgenden Befehl ausgeben: `using fsx <file-system-name>`.
+
+
+
+== Implementieren von CloudShell
+
+Sie können CloudShell von jedem beliebigen Ort in der BlueXP -Workload-Factory-Konsole bereitstellen. Sie können CloudShell auch aus dem Speicher innerhalb eines FSX für ONTAP-Dateisystems bereitstellen.
+
+[role="tabbed-block"]
+====
+.Bereitstellung über die Arbeitslastwerkkonsole
+--
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Öffnen Sie CloudShell von der oberen Navigationsleiste.
++
+image:screenshot-select-cloudshell-icon.png["Screenshot, der das CloudShell-Symbol in der oberen Navigationsleiste zeigt."]
+
+. Wählen Sie Anmeldeinformationen und Region für die CloudShell-Sitzung aus, und klicken Sie dann auf den Pfeil, um fortzufahren.
++
+image:screenshot-deploy-cloudshell-session.png["Screenshot, der eine neue CloudShell-Sitzung zeigt."]
+
+. Geben Sie ein `help`, um verfügbare CloudShell-Befehle und -Anweisungen anzuzeigen, oder lesen Sie die folgenden CLI-Referenzdokumente für verfügbare Befehle:
++
+** link:https://docs.aws.amazon.com/cli/latest/reference/["AWS CLI-Referenz"^]: Für Befehle im Zusammenhang mit FSX für ONTAP, wählen Sie *fsx*.
+** link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP CLI-Referenz"^]
+
+
+. Geben Sie Befehle innerhalb der CloudShell-Sitzung aus.
+
+
+--
+.Implementieren über Storage
+--
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie unter *Storage* *zum Lagerbestandsverzeichnis* gehen.
+. Wählen Sie im Register *FSX for ONTAP* das drei-Punkt-Menü des Dateisystems aus und wählen Sie dann *CloudShell öffnen*.
++
+Im Kontext des ausgewählten Dateisystems wird eine CloudShell-Sitzung geöffnet.
+
+. Geben Sie ein `help`, um verfügbare CloudShell-Befehle und -Anweisungen anzuzeigen, oder lesen Sie die folgenden CLI-Referenzdokumente für verfügbare Befehle:
++
+** link:https://docs.aws.amazon.com/cli/latest/reference/["AWS CLI-Referenz"^]: Für Befehle im Zusammenhang mit FSX für ONTAP, wählen Sie *fsx*.
+** link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP CLI-Referenz"^]
+
+
+. Geben Sie Befehle innerhalb der CloudShell-Sitzung aus.
+
+
+--
+====
+Die in diesem Screenshot gezeigten CloudShell-Aufgaben können durch Auswahl des drei-Punkt-Menüs einer geöffneten CloudShell-Session-Registerkarte abgeschlossen werden. Die Anweisungen für jede dieser Aufgaben folgen.
+
+image:screenshot-cloudshell-tab-menu.png["Screenshot, der zeigt, CloudShell Registerkarte drei-Punkt-Menü mit Optionen wie umbenennen, duplizieren, schließen andere Registerkarten, und schließen alle."]
+
+
+
+== Benennen Sie eine Registerkarte für CloudShell-Sitzungen um
+
+Sie können eine Registerkarte für CloudShell-Sitzungen umbenennen, um die Sitzung zu identifizieren.
+
+.Schritte
+. Wählen Sie das drei-Punkt-Menü der Registerkarte CloudShell-Sitzung.
+. Wählen Sie *Umbenennen*.
+. Geben Sie einen neuen Namen für die Registerkarte Sitzung ein, und klicken Sie dann außerhalb des Registerkartennamens auf, um den neuen Namen festzulegen.
+
+
+.Ergebnis
+Der neue Name wird auf der Registerkarte CloudShell-Sitzung angezeigt.
+
+
+
+== Doppelte Registerkarte für CloudShell-Sitzung
+
+Sie können eine CloudShell-Sitzungsregisterkarte duplizieren, um eine neue Sitzung mit demselben Namen, denselben Anmeldeinformationen und derselben Region zu erstellen. Der Code aus der ursprünglichen Registerkarte wird auf der duplizierten Registerkarte nicht dupliziert.
+
+.Schritte
+. Wählen Sie das drei-Punkt-Menü der Registerkarte CloudShell-Sitzung.
+. Wählen Sie *Duplizieren*.
+
+
+.Ergebnis
+Die neue Registerkarte wird mit demselben Namen wie die ursprüngliche Registerkarte angezeigt.
+
+
+
+== Schließen Sie die Registerkarten der CloudShell-Sitzung
+
+Sie können CloudShell-Registerkarten nacheinander schließen, andere Registerkarten schließen, an denen Sie nicht arbeiten, oder alle Registerkarten gleichzeitig schließen.
+
+.Schritte
+. Wählen Sie das drei-Punkt-Menü der Registerkarte CloudShell-Sitzung.
+. Wählen Sie eine der folgenden Optionen:
++
+** Wählen Sie „X“ in der Registerkarte CloudShell aus, um jeweils eine Registerkarte zu schließen.
+** Wählen Sie *andere Tabs schließen*, um alle anderen Tabs zu schließen, die außer dem Tabs geöffnet sind, an dem Sie arbeiten.
+** Wählen Sie *Alle Registerkarten schließen*, um alle Registerkarten zu schließen.
+
+
+
+
+.Ergebnis
+Die ausgewählten Registerkarten der CloudShell-Sitzung werden geschlossen.
+
+
+
+== Teilen Sie die Registerkarten der CloudShell-Sitzung auf
+
+Sie können CloudShell-Sitzungsregisterkarten aufteilen, um zwei oder mehr Registerkarten gleichzeitig anzuzeigen.
+
+.Schritt
+Ziehen Sie die Registerkarten der CloudShell-Sitzung nach oben, unten, links oder rechts vom CloudShell-Fenster, um die Ansicht zu teilen.
+
+image:screenshot-cloudshell-split-view.png["Screenshot, der zwei CloudShell-Registerkarten zeigt, die horizontal geteilt werden. Die Registerkarten werden nebeneinander angezeigt."]
+
+
+
+== Öffnen Sie Ihre letzte CloudShell-Sitzung erneut
+
+Wenn Sie Ihre CloudShell-Sitzung versehentlich schließen, können Sie sie erneut öffnen.
+
+.Schritt
+Wählen Sie das CloudShell-Symbol in der oberen Navigationsleiste.
+
+image:screenshot-select-cloudshell-icon.png["Screenshot, der das CloudShell-Symbol in der oberen Navigationsleiste zeigt."]
+
+.Ergebnis
+Die neuesten CloudShell-Sitzungen geöffnet.
+
+
+
+== Einstellungen für eine CloudShell-Sitzung aktualisieren
+
+Sie können Schriftart- und Ausgabetypeinstellungen für CloudShell-Sitzungen aktualisieren.
+
+.Schritte
+. Stellen Sie eine CloudShell-Sitzung bereit.
+. Wählen Sie auf der Registerkarte CloudShell das Symbol für die Einstellungen aus.
++
+Das Einstellungsdialogfeld wird angezeigt.
+
+. Schriftgrad und Ausgabetyp nach Bedarf aktualisieren.
++
+
+NOTE: Die erweiterte Ausgabe gilt für JSON-Objekte und Tabellenformatierung. Alle anderen Ausgaben werden als Klartext angezeigt.
+
+. Wählen Sie *Anwenden*.
+
+
+.Ergebnis
+Die CloudShell-Einstellungen werden aktualisiert.
