@@ -49,11 +49,8 @@ Sie können CloudShell von jedem beliebigen Ort in der BlueXP -Workload-Factory
 --
 .Schritte
 . Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
-. Öffnen Sie CloudShell von der oberen Navigationsleiste.
-+
-image:screenshot-select-cloudshell-icon.png["Screenshot, der das CloudShell-Symbol in der oberen Navigationsleiste zeigt."]
-
-. Wählen Sie Anmeldeinformationen und Region für die CloudShell-Sitzung aus, und klicken Sie dann auf den Pfeil, um fortzufahren.
+. Öffnen Sie CloudShell image:cloudshell-icon.png["Screenshot des Cloudshell-Symbols"] von der oberen Navigationsleiste.
+. Wählen Sie im Fenster CloudShell die Anmeldeinformationen und Region für die CloudShell-Sitzung aus, und klicken Sie dann auf den Pfeil, um fortzufahren.
 +
 image:screenshot-deploy-cloudshell-session.png["Screenshot, der eine neue CloudShell-Sitzung zeigt."]
 
