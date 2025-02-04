@@ -155,9 +155,7 @@ image:screenshot-cloudshell-split-view.png["Screenshot, der zwei CloudShell-Regi
 Wenn Sie Ihre CloudShell-Sitzung versehentlich schließen, können Sie sie erneut öffnen.
 
 .Schritt
-Wählen Sie das CloudShell-Symbol in der oberen Navigationsleiste.
-
-image:screenshot-select-cloudshell-icon.png["Screenshot, der das CloudShell-Symbol in der oberen Navigationsleiste zeigt."]
+Wählen Sie das CloudShell-Symbol image:cloudshell-icon.png["Screenshot des Cloudshell-Symbols"]in der oberen Navigationsleiste aus.
 
 .Ergebnis
 Die neuesten CloudShell-Sitzungen geöffnet.
