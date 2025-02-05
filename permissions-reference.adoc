@@ -140,81 +140,7 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 | ec2:AuthoriseSecurityGroupIngress | Einsatz | Automatisieren 
 
 
-.2+| Ausgang und Ingress der Sicherheitsgruppe für ein FSX für ONTAP Filesystem managen | ec2:RevokeSecurityGroupIngress | Managementvorgänge | Automatisieren 
-
-
-| ec2:DeleteSecurityGroup | Managementvorgänge | Automatisieren 
-
-
-.16+| Erstellen, Anzeigen und Verwalten von FSX for ONTAP-Dateisystemressourcen | fsx:CreateVolume* | Managementvorgänge | Automatisieren 
-
-
-| fsx:TagResource* | Managementvorgänge | Automatisieren 
-
-
-| fsx:CreateStorageVirtualMachine* | Managementvorgänge | Automatisieren 
-
-
-| fsx: DeleteFileSystem* | Managementvorgänge | Automatisieren 
-
-
-| fsx: DeleteStorageVirtualMachine* | Managementvorgänge | Automatisieren 
-
-
-| fsx:DescribeFileSystems* | Inventar  a| 
-* Lesen
-* Automatisieren
-
-
-
-
-| fsx:DescribeStorageVirtualMachines* | Inventar  a| 
-* Lesen
-* Automatisieren
-
-
-
-
-| fsx:UpdateFileSystem* | Managementvorgänge | Automatisieren 
-
-
-| fsx:UpdateStorageVirtualMachine* | Managementvorgänge | Automatisieren 
-
-
-| fsx:DescribeVolumes* | Inventar  a| 
-* Lesen
-* Automatisieren
-
-
-
-
-| fsx:UpdateVolumen* | Managementvorgänge | Automatisieren 
-
-
-| fsx:DeleteVolumen* | Managementvorgänge | Automatisieren 
-
-
-| fsx:UntagResource* | Managementvorgänge | Automatisieren 
-
-
-| fsx:DescribeBackups* | Managementvorgänge  a| 
-* Lesen
-* Automatisieren
-
-
-
-
-| fsx:CreateBackup* | Managementvorgänge | Automatisieren 
-
-
-| fsx: CreateVolumeFromBackup* | Managementvorgänge | Automatisieren 
-
-
-| Listen Sie Tags für FSX for ONTAP-Ressourcen auf | fsx:ListTagsForRessource | Inventar  a| 
-* Lesen
-* Automatisieren
-
-
+| Die gewährte Rolle bietet die Kommunikation zwischen FSX für ONTAP und anderen AWS-Services | iam:CreateServiceLinkedRole | Einsatz | Automatisieren 
 
 
 .7+| Hier erhalten Sie Informationen zum Ausfüllen des Formulars FSX für die Bereitstellung des Dateisystems für ONTAP | ec2:DescribeVpcs  a| 
@@ -294,6 +220,23 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 
 
 
+.3+| KMS-Schlüsseldetails erhalten und FSX für ONTAP-Verschlüsselung verwenden | Km:CreateGrant | Einsatz | Automatisieren 
+
+
+| Km:Beschreiben* | Einsatz  a| 
+* Lesen
+* Automatisieren
+
+
+
+
+| Km:Liste* | Einsatz  a| 
+* Lesen
+* Automatisieren
+
+
+
+
 | Abrufen von Volume-Details für EC2-Instanzen | ec2:DescribeVolumes  a| 
 * Inventar
 * Einsparungen entdecken
@@ -312,24 +255,84 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 
 
 
-.3+| KMS-Schlüsseldetails erhalten und FSX für ONTAP-Verschlüsselung verwenden | Km:CreateGrant | Einsatz | Automatisieren 
-
-
-| Km:Beschreiben* | Einsatz  a| 
-* Lesen
-* Automatisieren
-
-
-
-
-| Km:Liste* | Einsatz  a| 
-* Lesen
-* Automatisieren
-
-
-
-
 | Elastic File System im Einsparungsrechner beschreiben | Elasticdateisystem:deskribe* | Einsparungen entdecken | Lesen 
+
+
+| Listen Sie Tags für FSX for ONTAP-Ressourcen auf | fsx:ListTagsForRessource | Inventar  a| 
+* Lesen
+* Automatisieren
+
+
+
+
+.2+| Ausgang und Ingress der Sicherheitsgruppe für ein FSX für ONTAP Filesystem managen | ec2:RevokeSecurityGroupIngress | Managementvorgänge | Automatisieren 
+
+
+| ec2:DeleteSecurityGroup | Managementvorgänge | Automatisieren 
+
+
+.16+| Erstellen, Anzeigen und Verwalten von FSX for ONTAP-Dateisystemressourcen | fsx:CreateVolume* | Managementvorgänge | Automatisieren 
+
+
+| fsx:TagResource* | Managementvorgänge | Automatisieren 
+
+
+| fsx:CreateStorageVirtualMachine* | Managementvorgänge | Automatisieren 
+
+
+| fsx: DeleteFileSystem* | Managementvorgänge | Automatisieren 
+
+
+| fsx: DeleteStorageVirtualMachine* | Managementvorgänge | Automatisieren 
+
+
+| fsx:DescribeFileSystems* | Inventar  a| 
+* Lesen
+* Automatisieren
+
+
+
+
+| fsx:DescribeStorageVirtualMachines* | Inventar  a| 
+* Lesen
+* Automatisieren
+
+
+
+
+| fsx:UpdateFileSystem* | Managementvorgänge | Automatisieren 
+
+
+| fsx:UpdateStorageVirtualMachine* | Managementvorgänge | Automatisieren 
+
+
+| fsx:DescribeVolumes* | Inventar  a| 
+* Lesen
+* Automatisieren
+
+
+
+
+| fsx:UpdateVolumen* | Managementvorgänge | Automatisieren 
+
+
+| fsx:DeleteVolumen* | Managementvorgänge | Automatisieren 
+
+
+| fsx:UntagResource* | Managementvorgänge | Automatisieren 
+
+
+| fsx:DescribeBackups* | Managementvorgänge  a| 
+* Lesen
+* Automatisieren
+
+
+
+
+| fsx:CreateBackup* | Managementvorgänge | Automatisieren 
+
+
+| fsx: CreateVolumeFromBackup* | Managementvorgänge | Automatisieren 
 
 
 | CloudWatch-Kennzahlen berichten | cloudwatch:PutMetricData | Managementvorgänge | Automatisieren 
