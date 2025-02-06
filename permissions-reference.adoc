@@ -1652,6 +1652,15 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | Markieren Sie Ressourcen, die durch die Stack-Erstellung von KI-Engines erstellt wurden, während der Implementierung oder Wiederherstellung | ec2:CreateTags | Einsatz | Automatisieren 
 
 
+.2+| Veröffentlichen Sie umgeschriebene Ereignisse im WLMAI-Backend aus dem Stack der ai-Engine | Kms:GenerateDataKey | Einsatz | Automatisieren 
+
+
+| KMS:Entschlüsseln | Einsatz | Automatisieren 
+
+
+| So veröffentlichen Sie Ereignisse und benutzerdefinierte Ressourcen im WLMAI-Backend aus dem Stack der ai-Engine | sns:Veröffentlichen | Einsatz | Automatisieren 
+
+
 | VPCs während des Assistenten für die Implementierung einer KI-Engine auflisten | ec2:DescribeVpcs | Einsatz | Automatisieren 
 
 
@@ -1706,6 +1715,9 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | Überprüfen Sie den Zugriff auf das Basismodell | Bedrock:GetFoundationModelVerfügbarkeit | Einsatz | Automatisieren 
 
 
+| Überprüfen Sie, ob die CloudWatch-Protokollgruppe während der Bereitstellung und Neuerstellung erstellt werden muss | Protokolle:DescribeLogGroups | Einsatz | Automatisieren 
+
+
 | Holen Sie sich Regionen, die FSX und Bedrock unterstützen, während der KI-Engine-Assistent | ssm:GetParametersByPath | Einsatz | Automatisieren 
 
 
@@ -1715,13 +1727,10 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | Erhalten Sie die SSM-Antwort vom Befehl, der an die AI-Engine gesendet wird | ssm:GetCommandInvocation | Einsatz | Automatisieren 
 
 
-.3+| Überprüfen Sie die SSM-Verbindung zur AI-Engine | ssm:SendCommand | Einsatz | Automatisieren 
+.2+| Überprüfen Sie die SSM-Verbindung zur AI-Engine | ssm:SendCommand | Einsatz | Automatisieren 
 
 
 | ssm:GetConnectionStatus | Einsatz | Automatisieren 
-
-
-| ssm:SendCommand | Einsatz | Automatisieren 
 
 
 .8+| Erstellung eines Instanzprofils für die KI-Engine bei der Stack-Erstellung während der Implementierung oder Neuerstellung | iam:CreateRollenole | Einsatz | Automatisieren 
@@ -1773,9 +1782,6 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 
 
 | ssm:PutParameter | Einsatz | Automatisieren 
-
-
-| Überprüfen Sie, ob die CloudWatch-Protokollgruppe während der Bereitstellung und Neuerstellung erstellt werden muss | Protokolle:DescribeLogGroups | Einsatz | Automatisieren 
 
 
 .2+| Senden der AI-Engine-Protokolle während der Implementierung und Wiederherstellung an die CloudWatch-Protokollgruppe | Protokolle:CreateLogGroup | Einsatz | Automatisieren 
@@ -1917,6 +1923,30 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für VMware-Wor
 | Zweck | Aktion | Wo verwendet | Modus 
 
 
+| Fügen Sie Sicherheitsgruppen hinzu, und ändern Sie Regeln für die bereitgestellten Knoten | ec2:AuthoriseSecurityGroupIngress | Einsatz | Automatisieren 
+
+
+| Erstellen von EBS Volumes | ec2:CreateVolume | Einsatz | Automatisieren 
+
+
+| Markieren Sie benutzerdefinierte Werte für FSX for NetApp ONTAP-Ressourcen, die von VMware-Workloads erstellt wurden | fsx:TagResource | Einsatz | Automatisieren 
+
+
+| Erstellen und Validieren der CloudFormation-Vorlage | CloudFormation:CreateStack | Einsatz | Automatisieren 
+
+
+| Verwalten von Tags und Netzwerksicherheit auf erstellten Instanzen | ec2:CreateSecurityGroup | Einsatz | Automatisieren 
+
+
+| Starten Sie die erstellten Instanzen | ec2:RunInstances | Einsatz | Automatisieren 
+
+
+| Hier finden Sie Details zur EC2-Instanz | ec2:DescribeInstances | Einsatz | Automatisieren 
+
+
+| Führen Sie während der Stapelerstellung während der Bereitstellung und Neuerstellung Images auf | ec2:DescribeBilder | Einsatz | Automatisieren 
+
+
 | Rufen Sie die VPCs in der ausgewählten Umgebung auf, um das Bereitstellungsformular auszufüllen | ec2:DescribeVpcs  a| 
 * Einsatz
 * Inventar
@@ -2021,13 +2051,16 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für VMware-Wor
 | Automatisieren 
 
 
-.4+| KMS-Kerndetails und Verwendung für Amazon FSX for NetApp ONTAP Verschlüsselung | Km:CreateGrant | Einsatz | Automatisieren 
+.5+| KMS-Kerndetails und Verwendung für Amazon FSX for NetApp ONTAP Verschlüsselung | Km:CreateGrant | Einsatz | Automatisieren 
 
 
 | Km:Beschreiben* | Einsatz | Automatisieren 
 
 
 | Km:Liste* | Einsatz | Automatisieren 
+
+
+| KMS:Entschlüsseln | Einsatz | Automatisieren 
 
 
 | Kms:GenerateDataKey | Einsatz | Automatisieren 
