@@ -1054,4 +1054,18 @@
   <block id="043622d556b2884b98fb152bcf740dcd" category="cell">Erstellen und Validieren der CloudFormation-Vorlage</block>
   <block id="7396fdf6f4dfc93451cc96093ccbe43e" category="cell">Hier finden Sie Details zur EC2-Instanz</block>
   <block id="1be679c04c8e52e60ad090d4b7848d64" category="cell">Führen Sie während der Stapelerstellung während der Bereitstellung und Neuerstellung Images auf</block>
+  <block id="4dcec483cf1f239f85db3400f495b54a" category="cell">Erstellen Sie VPC-Endpunkte, wenn sie für erforderliche Services unabhängig von der öffentlichen Netzwerkkonnektivität auf EC2-Instanzen nicht vorhanden sind</block>
+  <block id="5e5a90d60662f7306336a047b5b3b7f6" category="cell">Überprüfen Sie die Kontenlimits für Ressourcen, bevor Sie die Bereitstellung auslösen</block>
+  <block id="da7dbf1119bff3389296d7d9a38be487" category="cell">Cloudformation:DescribeAccountLimits</block>
+  <block id="e0db06144a611c9dacbb1cbdc47398a2" category="cell">Prüfen Sie, ob das Konto bei AWS Compute Optimizer registriert ist</block>
+  <block id="68f6ffe8302b37908ab1031d603a8537" category="cell">compute-Optimizer:GetEnrollmentStatus</block>
+  <block id="e1b0fb1c7834e30cc2855e9e5978a6b2" category="cell">Aktualisieren Sie in AWS Compute Optimizer eine vorhandene Empfehlung, um die auf SQL Server-Workloads abgestimmten Empfehlungen zu erhalten</block>
+  <block id="e7878b5da7a61064cc75fec0ae2842c4" category="cell">compute-Optimizer:PutRecommendationPreferences</block>
+  <block id="e1faa0bf56d94349eb5128478fc9e6c9" category="cell">Holen Sie sich die empfohlenen Einstellungen für eine bestimmte Ressource von AWS Compute Optimizer</block>
+  <block id="f4003017b8bd9e7024276d1eae7c252d" category="cell">compute-Optimizer:GetEffectiveEmpfehlungPreferences</block>
+  <block id="bb90c212b52ea746f2de78f88fd32dfa" category="cell">Holen Sie sich Empfehlungen ab, die AWS Compute Optimizer für Amazon Elastic Compute Cloud (Amazon EC2) Instanzen generiert</block>
+  <block id="1b9183fc54789ff2117d927730975ee9" category="cell">compute-Optimizer:GetEC2InstanceRecommendations</block>
+  <block id="38b28dd168a209df2daf8eaf5b0fc216" category="cell">Überprüfen Sie die Zuordnung von Instanzen zu Gruppen mit automatischer Skalierung</block>
+  <block id="841ea3d3891ce9dc21992730680d4dac" category="cell">Automatische Skalierung:DescribeAutoScalingGroups</block>
+  <block id="9d85d66bd60c64faffe2799f428cd8b3" category="cell">Automatische Skalierung:DescribeAutoScalingInstances</block>
 </blocks>

@@ -763,6 +763,9 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 
 
+| Erstellen Sie VPC-Endpunkte, wenn sie für erforderliche Services unabhängig von der öffentlichen Netzwerkkonnektivität auf EC2-Instanzen nicht vorhanden sind | ec2:CreateVpcEndpoint | Einsatz | Automatisieren 
+
+
 | Abrufen von Instanztypen in der Region für Validierungsknoten (t2.micro/t3.micro) | ec2:DescribeInstanceTypeOfferings | Einsatz  a| 
 * Lesen
 * Automatisieren
@@ -810,6 +813,13 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 
 | Holen Sie sich eine Liste der CloudFormation Stacks in der Umgebung, um Quota Limit zu überprüfen | CloudFormation:ListenStacks | Einsatz  a| 
+* Lesen
+* Automatisieren
+
+
+
+
+| Überprüfen Sie die Kontenlimits für Ressourcen, bevor Sie die Bereitstellung auslösen | Cloudformation:DescribeAccountLimits | Einsatz  a| 
 * Lesen
 * Automatisieren
 
@@ -948,6 +958,48 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 * Automatisieren
 
 
+
+
+| Prüfen Sie, ob das Konto bei AWS Compute Optimizer registriert ist | compute-Optimizer:GetEnrollmentStatus  a| 
+* Einsparungen entdecken
+* Optimierung
+
+| Automatisieren 
+
+
+| Aktualisieren Sie in AWS Compute Optimizer eine vorhandene Empfehlung, um die auf SQL Server-Workloads abgestimmten Empfehlungen zu erhalten | compute-Optimizer:PutRecommendationPreferences  a| 
+* Einsparungen entdecken
+* Optimierung
+
+| Automatisieren 
+
+
+| Holen Sie sich die empfohlenen Einstellungen für eine bestimmte Ressource von AWS Compute Optimizer | compute-Optimizer:GetEffectiveEmpfehlungPreferences  a| 
+* Einsparungen entdecken
+* Optimierung
+
+| Automatisieren 
+
+
+| Holen Sie sich Empfehlungen ab, die AWS Compute Optimizer für Amazon Elastic Compute Cloud (Amazon EC2) Instanzen generiert | compute-Optimizer:GetEC2InstanceRecommendations  a| 
+* Einsparungen entdecken
+* Optimierung
+
+| Automatisieren 
+
+
+.2+| Überprüfen Sie die Zuordnung von Instanzen zu Gruppen mit automatischer Skalierung | Automatische Skalierung:DescribeAutoScalingGroups  a| 
+* Einsparungen entdecken
+* Optimierung
+
+| Automatisieren 
+
+
+| Automatische Skalierung:DescribeAutoScalingInstances  a| 
+* Einsparungen entdecken
+* Optimierung
+
+| Automatisieren 
 
 
 .4+| Abrufen, Auflisten, Erstellen und Löschen von SSM-Parametern für AD, FSX für ONTAP und SQL-Benutzeranmeldeinformationen, die während der Bereitstellung verwendet oder in Ihrem AWS-Konto verwaltet werden | ssm:GetParameter ^1^  a| 
