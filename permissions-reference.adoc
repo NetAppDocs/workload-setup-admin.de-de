@@ -1558,6 +1558,7 @@ GenAI IAM-Richtlinien sind nur im Betriebsmodus verfügbar:
         "bedrock:InvokeModelWithResponseStream",
         "bedrock:InvokeModel",
         "bedrock:ListFoundationModels",
+        "bedrock:GetFoundationModel",
         "bedrock:GetFoundationModelAvailability",
         "bedrock:GetModelInvocationLoggingConfiguration"
       ],
@@ -1764,6 +1765,9 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | Zeigen Sie die verfügbaren Fundamentmodelle in einer Region an | Bedrock:ListFoundationModels | Einsatz | Automatisieren 
 
 
+| Informationen zu einem Basismodell abrufen | Bedrock:GetFoundationModel | Einsatz | Automatisieren 
+
+
 | Überprüfen Sie den Zugriff auf das Basismodell | Bedrock:GetFoundationModelVerfügbarkeit | Einsatz | Automatisieren 
 
 
@@ -1773,7 +1777,7 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | Holen Sie sich Regionen, die FSX und Bedrock unterstützen, während der KI-Engine-Assistent | ssm:GetParametersByPath | Einsatz | Automatisieren 
 
 
-| Nutzen Sie das aktuelle Amazon Linux-Image für die Implementierung der KI-Engine während der Implementierung und Neuerstellung | ssm:GetParameters | Einsatz | Automatisieren 
+| Nutzen Sie das aktuelle Amazon Linux Image für die Implementierung der KI-Engine während des Implementierungs- und Neuerstellungsvorgangs | ssm:GetParameters | Einsatz | Automatisieren 
 
 
 | Erhalten Sie die SSM-Antwort vom Befehl, der an die AI-Engine gesendet wird | ssm:GetCommandInvocation | Einsatz | Automatisieren 
@@ -2165,6 +2169,12 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für VMware-Wor
 == Änderungsprotokoll
 
 Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den folgenden Abschnitten zur Kenntnis nehmen.
+
+
+
+=== 2 März 2025
+
+Die folgende Berechtigung ist jetzt im _read_ Modus für Datenbanken verfügbar: `iam:SimulatePrincipalPolicy`. Die folgende Berechtigung ist jetzt im _Automate_ Modus für GenAI verfügbar: `bedrock:GetFoundationModel`.
 
 
 

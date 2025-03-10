@@ -895,7 +895,6 @@
   <block id="65294ced72c6aa8f05b632194559e081" category="cell">Zeigen Sie die verfügbaren Fundamentmodelle in einer Region an</block>
   <block id="66613086b6208ec265a60220a21ff40a" category="cell">Bedrock:ListFoundationModels</block>
   <block id="77771f1732da043133eab422a7e43291" category="cell">Holen Sie sich Regionen, die FSX und Bedrock unterstützen, während der KI-Engine-Assistent</block>
-  <block id="d4f0fee980f03c8a663dda4a1d3623de" category="cell">Nutzen Sie das aktuelle Amazon Linux-Image für die Implementierung der KI-Engine während der Implementierung und Neuerstellung</block>
   <block id="302112cb321a929a6d9830e917817acb" category="cell">ssm:GetParameters</block>
   <block id="37cc48b6baed18a8130ec18d97544390" category="cell">Erhalten Sie die SSM-Antwort vom Befehl, der an die AI-Engine gesendet wird</block>
   <block id="97128676550f404369a4900a6b92a6a7" category="cell">Überprüfen Sie die SSM-Verbindung zur AI-Engine</block>
@@ -1068,4 +1067,9 @@
   <block id="bf2cca138f5e3f74f2e6b73d8e8b2452" category="paragraph">RSS-Abonnement ist über die verfügbar<block ref="a65cf6b405017af965199f55f7b4fce1" category="inline-link-macro-rx"></block>. Durch die Verwendung eines RSS-Feeds können Sie auf einfache Weise von Änderungen in der BlueXP  Workload Factory Gebrauch machen.</block>
   <block id="1a88151efda7b7ae7945b1161fe70fdc" category="paragraph"><block ref="1a88151efda7b7ae7945b1161fe70fdc" category="inline-link-macro-rx"></block></block>
   <block id="cf1f4a083afa7ccb1141e827deb4cdc2" category="paragraph">Sie haben nun die Möglichkeit, die Workload Factory aus der <block ref="4623dd80d89c29fbf0d2b04387a56c33" category="inline-link-macro-rx"></block>zu verwenden. Die BlueXP -Konsole bietet die gleiche Funktionalität wie die Arbeitslastwerkkonsole.</block>
+  <block id="fb2b74ed81679192134e9c2c07019b42" category="cell">Informationen zu einem Basismodell abrufen</block>
+  <block id="1311c4cbbe5b925c15d25fe5ff7b022b" category="cell">Bedrock:GetFoundationModel</block>
+  <block id="dec23cffbd0de1b8096bc26072eb0b7d" category="cell">Nutzen Sie das aktuelle Amazon Linux Image für die Implementierung der KI-Engine während des Implementierungs- und Neuerstellungsvorgangs</block>
+  <block id="6928ceecf566ab44f308d64b3806a0bc" category="section-title">2 März 2025</block>
+  <block id="be728667d7e3ba95278ef62ba5d75639" category="paragraph">Die folgende Berechtigung ist jetzt im _read_ Modus für Datenbanken verfügbar:<block ref="19f5de89e4c667692a153296018e225f" prefix=" " category="inline-code"></block>. Die folgende Berechtigung ist jetzt im _Automate_ Modus für GenAI verfügbar:<block ref="1311c4cbbe5b925c15d25fe5ff7b022b" prefix=" " category="inline-code"></block>.</block>
 </blocks>
