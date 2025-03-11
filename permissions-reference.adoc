@@ -2174,7 +2174,7 @@ Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den fo
 
 === 2 März 2025
 
-Die folgende Berechtigung ist jetzt im _read_ Modus für Datenbanken verfügbar: `iam:SimulatePrincipalPolicy`. Die folgende Berechtigung ist jetzt im _Automate_ Modus für GenAI verfügbar: `bedrock:GetFoundationModel`.
+Die folgende Berechtigung ist jetzt im _Automate_ Modus für GenAI verfügbar: `bedrock:GetFoundationModel`.
 
 
 
