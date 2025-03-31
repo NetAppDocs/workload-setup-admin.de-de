@@ -26,6 +26,57 @@ Zu den CloudShell-Funktionen gehören:
 * Umbenennen von Sitzungen: Benennen Sie die Sitzungen nach Bedarf um
 * Persistenz des Inhalts der letzten Sitzung: Öffnen Sie die letzte Sitzung erneut, wenn Sie sie versehentlich schließen
 * Einstellungen Einstellungen: Ändern Sie die Schriftgröße und den Ausgabetyp
+* KI-generierte Fehlermeldungen für ONTAP-CLI-Befehle
+
+
+
+
+=== CloudShell-Befehle
+
+In der GUI von CloudShell können Sie eingeben `help`, um verfügbare CloudShell-Befehle anzuzeigen. Nachdem Sie den Befehl ausgegeben `help` haben, wird die folgende Referenz angezeigt.
+
+Beschreibung:: NetApp CloudShell ist eine in die BlueXP -Workload-Fabrik integrierte GUI-Schnittstelle, mit der Sie AWS-CLI-Befehle oder ONTAP-CLI-Befehle in einer Shell-ähnlichen Umgebung ausführen können. Es simuliert Terminalsitzungen im Browser, stellt Terminalfunktionen bereit und stellt Nachrichten über das Backend in Workload Factory aus. Damit können Sie die in Ihrem BlueXP -Konto angegebenen AWS-Zugangsdaten und ONTAP-Anmeldedaten verwenden.
+Verfügbare Befehle::
++
+--
+* `clear`
+* `help`
+* `[--fsx <fsxId>] <ontap-command> [parameters]`
+* `aws <aws-command> <aws-sub-command> [parameters]`
+
+
+--
+Kontext:: Jede Terminalsitzung wird in einem bestimmten Kontext ausgeführt: Anmeldeinformationen, Region und optional FSX for ONTAP-Dateisystem.
++
+--
+Alle AWS-Befehle werden im angegebenen Kontext ausgeführt. AWS-Befehle werden nur erfolgreich ausgeführt, wenn die angegebenen Anmeldeinformationen Berechtigungen in der angegebenen Region haben.
+
+Sie können ONTAP-Befehle mit einem optionalen angeben `fsxId`. Wenn Sie einen mit einem individuellen ONTAP-Befehl angeben `fsxId`, setzt diese ID die ID im Kontext außer Kraft. Wenn die Terminalsitzung keinen FSX for ONTAP-Dateisystem-ID-Kontext hat, müssen Sie jeden ONTAP-Befehl bereitstellen `fsxId`.
+
+Um unterschiedliche Kontextinformationen zu aktualisieren, gehen Sie folgendermaßen vor: * Um die Zugangsdaten zu ändern: "Using credentials <credentialId>" * um die Region zu ändern: "Using Region <regionCode>" * um das Dateisystem fsx for ONTAP zu ändern: "Using fsx <fileSystemId>"
+
+--
+Elemente Werden Angezeigt::
++
+--
+* So zeigen Sie die verfügbaren Anmeldeinformationen an: „Anmeldedaten anzeigen“
+* So zeigen Sie verfügbare Regionen an: „Regionen anzeigen“
+* So zeigen Sie den Befehlsverlauf an: "Verlauf anzeigen"
+
+
+--
+Variablen:: Im Folgenden finden Sie Beispiele zum Festlegen und Verwenden von Variablen. Wenn ein variabler Wert Leerzeichen enthält, sollten Sie ihn in Anführungszeichen setzen.
++
+--
+* So legen Sie eine Variable fest: <variable> = <value>
+* Um eine Variable zu verwenden: <variable>
+* Beispiel für die Einstellung einer Variablen: Svm1 = svm123
+* Beispiel mit einer Variablen: --fsx Dateisystem-1 Volumen zeigen --vserver svm1
+* Beispiel für die Einstellung einer Variable mit Zeichenfolgenwert 1 USD = „Kommentar mit Leerzeichen“
+
+
+--
+Operatoren:: Shell-Operatoren wie Pipe `|`, Hintergrundausführung `&` und Umleitung `>` werden nicht unterstützt. Befehlsausführung schlägt fehl, wenn Sie diese Operatoren einbeziehen.
 
 
 
@@ -54,13 +105,16 @@ Sie können CloudShell von jedem beliebigen Ort in der BlueXP -Workload-Factory
 +
 image:screenshot-deploy-cloudshell-session.png["Screenshot, der eine neue CloudShell-Sitzung zeigt."]
 
-. Geben Sie ein `help`, um verfügbare CloudShell-Befehle und -Anweisungen anzuzeigen, oder lesen Sie die folgenden CLI-Referenzdokumente für verfügbare Befehle:
+. Geben Sie ein `help`, um verfügbare Befehle und Anweisungen anzuzeigen, <<CloudShell-Befehle,CloudShell-Befehle>>oder lesen Sie die folgenden CLI-Referenzdokumente für verfügbare Befehle:
 +
 ** link:https://docs.aws.amazon.com/cli/latest/reference/["AWS CLI-Referenz"^]: Für Befehle im Zusammenhang mit FSX für ONTAP, wählen Sie *fsx*.
 ** link:https://docs.netapp.com/us-en/ontap-cli/["ONTAP CLI-Referenz"^]
 
 
 . Geben Sie Befehle innerhalb der CloudShell-Sitzung aus.
++
+Wenn nach der Ausgabe eines ONTAP-CLI-Befehls ein Fehler auftritt, wählen Sie das Leuchtstoffsymbol aus, um eine kurze, von der KI generierte Fehlermeldung mit einer Beschreibung des Fehlers, der Ursache des Fehlers und einer detaillierten Auflösung anzuzeigen. Wählen Sie *Mehr lesen* für weitere Details.
+
 
 
 --
@@ -80,6 +134,9 @@ Im Kontext des ausgewählten Dateisystems wird eine CloudShell-Sitzung geöffnet
 
 
 . Geben Sie Befehle innerhalb der CloudShell-Sitzung aus.
++
+Wenn nach der Ausgabe eines ONTAP-CLI-Befehls ein Fehler auftritt, wählen Sie das Leuchtstoffsymbol aus, um eine kurze, von der KI generierte Fehlermeldung mit einer Beschreibung des Fehlers, der Ursache des Fehlers und einer detaillierten Auflösung anzuzeigen. Wählen Sie *Mehr lesen* für weitere Details.
+
 
 
 --

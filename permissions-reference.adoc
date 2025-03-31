@@ -63,6 +63,13 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
         "cloudwatch:GetMetricStatistics"
       ],
       "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
     }
   ]
 }
@@ -89,6 +96,7 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
         "kms:CreateGrant",
         "cloudwatch:PutMetricData",
         "cloudwatch:GetMetricData",
+        "iam:SimulatePrincipalPolicy",
         "cloudwatch:GetMetricStatistics"
       ],
       "Resource": "*"
@@ -407,6 +415,7 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
         "ssm:GetParametersByPath",
         "ssm:GetCommandInvocation",
         "ssm:SendCommand",
+        "ssm:GetConnectionStatus",
         "ssm:DescribePatchBaselines",
         "ssm:DescribeInstancePatchStates",
         "ssm:ListCommands",
@@ -426,6 +435,14 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
         "ssm:DeleteParameters"
       ],
       "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
+    },
+    {
+      "Sid": "IAMGroup",
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
     }
   ]
 }
@@ -1428,7 +1445,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 | Trennen der Rolle vom bereitgestellten EC2-Instanzprofil | iam:RemoveRoleFromInstanceProfile | Einsatz | Automatisieren 
 
 
-| Validieren Sie die in der Rolle verfügbaren Berechtigungen, und vergleichen Sie sie mit den erforderlichen Berechtigungen | iam:SimulatePrincipalPolicy | Einsatz  a| 
+| Simulieren Sie Workload-Vorgänge, um verfügbare Berechtigungen zu validieren und sie mit den erforderlichen AWS Kontoberechtigungen zu vergleichen | iam:SimulatePrincipalPolicy | Einsatz  a| 
 * Lesen
 * Automatisieren
 
@@ -1507,10 +1524,10 @@ GenAI IAM-Richtlinien sind nur im Betriebsmodus verfügbar:
       "Effect": "Allow",
       "Action": [
         "iam:CreateRole",
+        "iam:CreatePolicy",
         "iam:CreateInstanceProfile",
         "iam:AddRoleToInstanceProfile",
         "iam:PutRolePolicy",
-        "iam:SimulatePrincipalPolicy",
         "iam:GetRolePolicy",
         "iam:GetRole",
         "iam:TagRole"
@@ -1550,19 +1567,6 @@ GenAI IAM-Richtlinien sind nur im Betriebsmodus verfügbar:
         "arn:aws:fsx:*:*:volume/*/*",
         "arn:aws:fsx:*:*:storage-virtual-machine/*/*"
       ]
-    },
-    {
-      "Sid": "BedrockGroup",
-      "Effect": "Allow",
-      "Action": [
-        "bedrock:InvokeModelWithResponseStream",
-        "bedrock:InvokeModel",
-        "bedrock:ListFoundationModels",
-        "bedrock:GetFoundationModel",
-        "bedrock:GetFoundationModelAvailability",
-        "bedrock:GetModelInvocationLoggingConfiguration"
-      ],
-      "Resource": "*"
     },
     {
       "Sid": "SSMParameterStore",
@@ -1661,7 +1665,21 @@ GenAI IAM-Richtlinien sind nur im Betriebsmodus verfügbar:
       "Resource": "arn:aws:logs:*:*:log-group:/netapp/wlmai*:*"
     },
     {
-      "Sid": "CloudWatch2",
+      "Sid": "BedrockGroup",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModelWithResponseStream",
+        "bedrock:InvokeModel",
+        "bedrock:ListFoundationModels",
+        "bedrock:GetFoundationModelAvailability",
+        "bedrock:GetModelInvocationLoggingConfiguration",
+        "bedrock:PutModelInvocationLoggingConfiguration",
+        "bedrock:ListInferenceProfiles"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "CloudWatchBedrock",
       "Effect": "Allow",
       "Action": [
         "logs:CreateLogGroup",
@@ -1669,6 +1687,22 @@ GenAI IAM-Richtlinien sind nur im Betriebsmodus verfügbar:
         "logs:TagResource"
       ],
       "Resource": "arn:aws:logs:*:*:log-group:/aws/bedrock*"
+    },
+    {
+      "Sid": "BedrockLoggingAttachRole",
+      "Effect": "Allow",
+      "Action": [
+        "iam:AttachRolePolicy",
+        "iam:PassRole"
+      ],
+      "Resource": "arn:aws:iam::*:role/NetApp_AI_Bedrock*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
     }
   ]
 }
@@ -1705,19 +1739,19 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | Markieren Sie Ressourcen, die durch die Stack-Erstellung von KI-Engines erstellt wurden, während der Implementierung oder Wiederherstellung | ec2:CreateTags | Einsatz | Automatisieren 
 
 
-.2+| Veröffentlichen Sie umgeschriebene Ereignisse im WLMAI-Backend aus dem Stack der ai-Engine | Kms:GenerateDataKey | Einsatz | Automatisieren 
+.2+| Veröffentlichen Sie verschlüsselte Ereignisse im WLMAI-Backend aus dem AI-Engine-Stack | Kms:GenerateDataKey | Einsatz | Automatisieren 
 
 
 | KMS:Entschlüsseln | Einsatz | Automatisieren 
 
 
-| So veröffentlichen Sie Ereignisse und benutzerdefinierte Ressourcen im WLMAI-Backend aus dem Stack der ai-Engine | sns:Veröffentlichen | Einsatz | Automatisieren 
+| Veröffentlichen Sie Ereignisse und benutzerdefinierte Ressourcen im WLMAI-Backend aus dem Stack der ai-Engine | sns:Veröffentlichen | Einsatz | Automatisieren 
 
 
 | VPCs während des Assistenten für die Implementierung einer KI-Engine auflisten | ec2:DescribeVpcs | Einsatz | Automatisieren 
 
 
-| Um Subnetze im Assistenten für die Bereitstellung der ai-Engine aufzulisten | ec2:DescribeSubnets | Einsatz | Automatisieren 
+| Subnetze im Assistenten für die Bereitstellung der ai-Engine auflisten | ec2:DescribeSubnets | Einsatz | Automatisieren 
 
 
 | Routingtabellen werden bei der Implementierung und beim Rebuild der KI-Engine abgerufen | ec2:DescribeRouteTables | Einsatz | Automatisieren 
@@ -1738,7 +1772,7 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | Listet Images während der Erstellung des AI-Engine-Stacks bei Implementierungen und Neuerstellungen auf | ec2:DescribeBilder | Einsatz | Automatisieren 
 
 
-.2+| Erstellen und Aktualisieren von Sicherheitsgruppen für KI-Instanzen und private Endpunkte während der Erstellung des KI-Instanz-Stacks bei Implementierungen und Neuerstellungen | ec2:RevokeSecurityGroupEgress | Einsatz | Automatisieren 
+.2+| Erstellung und Aktualisierung von Sicherheitsgruppen für AI-Instanzen und private Endpunkte während der Erstellung des KI-Instanz-Stacks bei Implementierungen und Neuerstellungen | ec2:RevokeSecurityGroupEgress | Einsatz | Automatisieren 
 
 
 | ec2:RevokeSecurityGroupIngress | Einsatz | Automatisieren 
@@ -1756,7 +1790,7 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | Abfrage des Protokollierungsstatus von Amazon Bedrock/Amazon CloudWatch während der Implementierung der KI-Engine | Bedrock:GetModelInvocationLoggingKonfiguration | Einsatz | Automatisieren 
 
 
-| Um eine Chat-Anfrage an eines der Foundation-Modelle zu initiieren | Bedrock:InvokeModelWithin ResponseStream | Einsatz | Automatisieren 
+| Initiieren Sie eine Chat-Anfrage an eines der Basismodelle | Bedrock:InvokeModelWithin ResponseStream | Einsatz | Automatisieren 
 
 
 | Chat-/Einbettungsanfrage für Grundmodelle starten | Bedrock:InvokeModel | Einsatz | Automatisieren 
@@ -1765,16 +1799,13 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | Zeigen Sie die verfügbaren Fundamentmodelle in einer Region an | Bedrock:ListFoundationModels | Einsatz | Automatisieren 
 
 
-| Informationen zu einem Basismodell abrufen | Bedrock:GetFoundationModel | Einsatz | Automatisieren 
-
-
 | Überprüfen Sie den Zugriff auf das Basismodell | Bedrock:GetFoundationModelVerfügbarkeit | Einsatz | Automatisieren 
 
 
-| Überprüfen Sie, ob die CloudWatch-Protokollgruppe während der Bereitstellung und Neuerstellung erstellt werden muss | Protokolle:DescribeLogGroups | Einsatz | Automatisieren 
+| Überprüfen Sie, ob die Amazon CloudWatch-Protokollgruppe während der Bereitstellung und Neuerstellung erstellt werden muss | Protokolle:DescribeLogGroups | Einsatz | Automatisieren 
 
 
-| Holen Sie sich Regionen, die FSX und Bedrock unterstützen, während der KI-Engine-Assistent | ssm:GetParametersByPath | Einsatz | Automatisieren 
+| Holen Sie sich Regionen, die FSX und Amazon Bedrock unterstützen, während der KI-Engine-Assistent | ssm:GetParametersByPath | Einsatz | Automatisieren 
 
 
 | Nutzen Sie das aktuelle Amazon Linux Image für die Implementierung der KI-Engine während des Implementierungs- und Neuerstellungsvorgangs | ssm:GetParameters | Einsatz | Automatisieren 
@@ -1813,19 +1844,19 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | iam:PassRole | Einsatz | Automatisieren 
 
 
-| Validieren Sie die in der Rolle verfügbaren Berechtigungen und vergleichen Sie sie mit den erforderlichen Berechtigungen während der Bereitstellung und Neuerstellung | iam:SimulatePrincipalPolicy | Einsatz | Automatisieren 
+| Simulieren Sie Workload-Vorgänge, um verfügbare Berechtigungen zu validieren und sie mit den erforderlichen AWS Kontoberechtigungen zu vergleichen | iam:SimulatePrincipalPolicy | Einsatz | Automatisieren 
 
 
-| Listen Sie FSX Dateisysteme während des Assistenten „Create Knowledge Base“ auf | fsx:DescribeVolumes | Erstellung einer Wissensdatenbank | Automatisieren 
+| Listen Sie FSX für ONTAP-Dateisysteme während des Assistenten „Create Knowledge Base“ auf | fsx:DescribeVolumes | Erstellung einer Wissensdatenbank | Automatisieren 
 
 
-| Listen Sie FSX Dateisystem-Volumes während des Assistenten „Create Knowledge Base“ auf | fsx:DescribeFileSystems | Erstellung einer Wissensdatenbank | Automatisieren 
+| Listen Sie FSX für ONTAP-Dateisystem-Volumes während des Assistenten „Create Knowledge Base“ auf | fsx:DescribeFileSystems | Erstellung einer Wissensdatenbank | Automatisieren 
 
 
-| Managen Sie Wissensdatenbanken basierend auf der KI-Engine bei Neuerstellungen | fsx:ListTagsForRessource | Fehlerbehebung | Automatisieren 
+| Management von Wissensdatenbanken auf Basis der KI-Engine bei Neuerstellungen | fsx:ListTagsForRessource | Fehlerbehebung | Automatisieren 
 
 
-| Listen Sie im Assistenten „Create Knowledge Base“ FSX File System Storage Virtual Machines auf | fsx:DescribeStorageVirtualMachines | Einsatz | Automatisieren 
+| Listen Sie FSX für ONTAP Dateisystem Speicher virtuelle Maschinen während des „Create Knowledge“-Knowledgebase-Assistenten auf | fsx:DescribeStorageVirtualMachines | Einsatz | Automatisieren 
 
 
 | Verschieben Sie die Wissensdatenbank in eine neue Instanz | fsx:UntagResource | Fehlerbehebung | Automatisieren 
@@ -1840,28 +1871,43 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | ssm:PutParameter | Einsatz | Automatisieren 
 
 
-.2+| Senden der AI-Engine-Protokolle während der Implementierung und Wiederherstellung an die CloudWatch-Protokollgruppe | Protokolle:CreateLogGroup | Einsatz | Automatisieren 
+.2+| Bei der Implementierung und Wiederherstellung werden die AI-Engine-Protokolle an die Amazon CloudWatch Protokollgruppe gesendet | Protokolle:CreateLogGroup | Einsatz | Automatisieren 
 
 
 | Protokolle:PutRetentionPolicy | Einsatz | Automatisieren 
 
 
-| Senden Sie die AI-Engine-Protokolle an die CloudWatch-Protokollgruppe | Protokolle:TagResource | Fehlerbehebung | Automatisieren 
+| Senden Sie die AI-Engine-Protokolle an die Amazon CloudWatch-Protokollgruppe | Protokolle:TagResource | Fehlerbehebung | Automatisieren 
 
 
-| SSM-Antwort von CloudWatch abrufen (wenn die Antwort zu lang ist) | Protokolle:DescribeLogStreams | Fehlerbehebung | Automatisieren 
+| SSM-Antwort von Amazon CloudWatch abrufen (wenn die Antwort zu lang ist) | Protokolle:DescribeLogStreams | Fehlerbehebung | Automatisieren 
 
 
-| Holen Sie sich die SSM-Antwort von CloudWatch | Protokolle:GetLogEvents | Fehlerbehebung | Automatisieren 
+| Erhalten Sie die SSM-Antwort von Amazon CloudWatch | Protokolle:GetLogEvents | Fehlerbehebung | Automatisieren 
 
 
-.3+| Erstellung der CloudWatch-Protokollgruppe für Bedrock-Protokolle während der Stack-Reation während der Bereitstellung und Neuerstellung | Protokolle:CreateLogGroup | Einsatz | Automatisieren 
+.3+| Erstellen einer Amazon CloudWatch-Protokollgruppe für Amazon Bedrock-Protokolle während der Stack-Reation während der Bereitstellung und Neuerstellung | Protokolle:CreateLogGroup | Einsatz | Automatisieren 
 
 
 | Protokolle:PutRetentionPolicy | Einsatz | Automatisieren 
 
 
 | Protokolle:TagResource | Einsatz | Automatisieren 
+
+
+| Senden Sie Bedrock-Protokolle an Amazon CloudWatch | Bedrock:PutModelInvocationLoggingKonfiguration | Fehlerbehebung | Automatisieren 
+
+
+| Erstellen Sie die Rolle, die das Senden von Amazon Bedrock-Protokollen an Amazon CloudWatch ermöglicht | iam:AttachRolePolicy | Fehlerbehebung | Automatisieren 
+
+
+| Erstellen Sie die Rolle, die das Senden von Amazon Bedrock-Protokollen an Amazon CloudWatch ermöglicht | iam:PassRole | Fehlerbehebung | Automatisieren 
+
+
+| Erstellen Sie die Rolle, die das Senden von Amazon Bedrock-Protokollen an Amazon CloudWatch ermöglicht | iam:CreatePolicy | Fehlerbehebung | Automatisieren 
+
+
+| Inferenzprofile für das Modell auflisten | Bedrock:ListInferenceProfiles | Fehlerbehebung | Automatisieren 
 |===
 ====
 
@@ -1882,23 +1928,35 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
 [source, json]
 ----
 {
-  "Effect": "Allow",
-  "Action": [
-    "ec2:DescribeRegions",
-    "ec2:DescribeAvailabilityZones",
-    "ec2:DescribeVpcs",
-    "ec2:DescribeSecurityGroups",
-    "ec2:DescribeSubnets",
-    "ssm:GetParametersByPath",
-    "kms:DescribeKey",
-    "kms:ListKeys",
-    "kms:ListAliases"
-  ],
-  "Resource": "*"
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:DescribeRegions",
+        "ec2:DescribeAvailabilityZones",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeSubnets",
+        "ssm:GetParametersByPath",
+        "kms:DescribeKey",
+        "kms:ListKeys",
+        "kms:ListAliases"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ----
 --
-.Betriebsmodus
+.Automate-Modus
 --
 [source, json]
 ----
@@ -2132,7 +2190,7 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für VMware-Wor
 | Automatisieren 
 
 
-| SimulatePrincipalPolicy ist erforderlich, um die in der Rolle verfügbaren Berechtigungen zu validieren und mit den erforderlichen Permisionen zu vergleichen | iam:SimulatePrincipalPolicy | Einsatz | Automatisieren 
+| Simulieren Sie Workload-Vorgänge, um verfügbare Berechtigungen zu validieren und sie mit den erforderlichen AWS Kontoberechtigungen zu vergleichen | iam:SimulatePrincipalPolicy | Einsatz | Automatisieren 
 
 
 .4+| SSM-Parameterspeicher wird verwendet, um Anmeldeinformationen von Amazon FSX für NetApp ONTAP zu speichern | ssm:GetParameter  a| 
@@ -2169,6 +2227,31 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für VMware-Wor
 == Änderungsprotokoll
 
 Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den folgenden Abschnitten zur Kenntnis nehmen.
+
+
+
+=== 30 März 2025
+
+
+
+==== Aktualisierung der GenAI-Workload-Berechtigungen
+
+Die folgenden Berechtigungen stehen jetzt im _Automate-Modus_ für GenAI zur Verfügung:
+
+* `bedrock:PutModelInvocationLoggingConfiguration`
+* `iam:AttachRolePolicy`
+* `iam:PassRole`
+* `iam:createPolicy`
+* `bedrock:ListInferenceProfiles`
+
+
+Die folgende Berechtigung wurde für GenAI aus _Automate Mode_ entfernt: `Bedrock:GetFoundationModel`.
+
+
+
+==== iam:SimulatePrincipalPolicy-Berechtigungsaktualisierung
+
+Die `iam:SimulatePrincipalPolicy` Berechtigung ist Teil aller Workload-Berechtigungsrichtlinien, wenn Sie die automatische Berechtigungssüberprüfung aktivieren, wenn Sie zusätzliche AWS-Kontoanmeldeinformationen hinzufügen oder eine neue Workload-Funktion von der Arbeitslastwerkkonsole hinzufügen. Die Berechtigung simuliert Workload-Vorgänge und prüft, ob Sie über die erforderlichen AWS-Kontoberechtigungen verfügen, bevor Sie Ressourcen aus der Workload-Werkseinstellung bereitstellen. Durch die Aktivierung dieser Prüfung wird der Zeitaufwand und der Aufwand verringert, den Sie möglicherweise benötigen, um Ressourcen von fehlgeschlagenen Vorgängen zu bereinigen und fehlende Berechtigungen hinzuzufügen.
 
 
 

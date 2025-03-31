@@ -1,0 +1,19 @@
+= CloudShell meldet von der KI generierte Fehler für ONTAP-CLI-Befehle
+:allow-uri-read: 
+
+
+
+
+=== CloudShell meldet von der KI generierte Fehler für ONTAP-CLI-Befehle
+
+Bei der Verwendung von CloudShell können Sie jedes Mal, wenn Sie einen ONTAP-CLI-Befehl ausgeben und ein Fehler auftritt, AI-generierte Fehlermeldungen erhalten, die eine Beschreibung des Fehlers, die Ursache des Fehlers und eine detaillierte Lösung enthalten.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["Verwenden Sie CloudShell"]
+
+
+
+=== iam:SimulatePermissionPolicy-Berechtigungsaktualisierung
+
+Sie können jetzt die Berechtigung über die Konsole für die Werkseinstellungen managen `iam:SimulatePrincipalPolicy`, wenn Sie zusätzliche AWS-Kontoinformationen hinzufügen oder eine neue Workload-Funktion hinzufügen, z. B. den GenAI-Workload.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["Änderungsprotokoll für Berechtigungen"]
