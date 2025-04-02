@@ -419,6 +419,7 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
         "ssm:DescribePatchBaselines",
         "ssm:DescribeInstancePatchStates",
         "ssm:ListCommands",
+        "ssm:DescribeInstanceInformation",
         "fsx:ListTagsForResource"
       ],
       "Resource": [
@@ -437,7 +438,6 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
       "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
     },
     {
-      "Sid": "IAMGroup",
       "Effect": "Allow",
       "Action": [
         "iam:SimulatePrincipalPolicy"
@@ -954,6 +954,9 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 * Automatisieren
 
 
+
+
+| Abrufen des SSM-Zuordnungsstatus für eine Gruppe von gemanagten EC2-Instanzen (SQL-Nodes) | ssm:DescribeInstanceInformation | Inventar | Lesen 
 
 
 | Liste der verfügbaren Patch-Basispläne für die Bewertung von Patches des Betriebssystems abrufen | ssm:DescribePatchBaselines | Optimierung  a| 
@@ -2227,6 +2230,12 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für VMware-Wor
 == Änderungsprotokoll
 
 Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den folgenden Abschnitten zur Kenntnis nehmen.
+
+
+
+=== Bis 2. April 2025
+
+Die folgende Berechtigung ist jetzt im _read-Modus_ für Datenbanken verfügbar: 'sSM:DescribeInstanceInformation'.
 
 
 

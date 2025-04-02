@@ -1126,4 +1126,8 @@
   <block id="bc7864e70344eae19121f3e6408c5e04" category="list-text">Geben Sie ein<block ref="657f8b8da628ef83cf69101b6817150a" prefix=" " category="inline-code"></block>, um verfügbare Befehle und Anweisungen anzuzeigen, <block ref="0bdecf44265be755040a6284b4703b71" category="inline-xref-macro-rx"></block>oder lesen Sie die folgenden CLI-Referenzdokumente für verfügbare Befehle:</block>
   <block id="34b14d4981e88ee13798aea3eecf0674" category="paragraph">Wenn nach der Ausgabe eines ONTAP-CLI-Befehls ein Fehler auftritt, wählen Sie das Leuchtstoffsymbol aus, um eine kurze, von der KI generierte Fehlermeldung mit einer Beschreibung des Fehlers, der Ursache des Fehlers und einer detaillierten Auflösung anzuzeigen. Wählen Sie *Mehr lesen* für weitere Details.</block>
   <block id="ef74d01649997b60252254da8a1573fd" category="doc">CloudShell meldet AI-generierte Fehlermeldungen für ONTAP-CLI-Befehle</block>
+  <block id="e388026a0cea886de58a344e102aff29" category="cell">Abrufen des SSM-Zuordnungsstatus für eine Gruppe von gemanagten EC2-Instanzen (SQL-Nodes)</block>
+  <block id="3320749a6854264e1889d72d7f41a0bf" category="cell">ssm:DescribeInstanceInformation</block>
+  <block id="99e26a6b02df18a6d3fcaa201c832eff" category="section-title">Bis 2. April 2025</block>
+  <block id="3721724ce177d539f2733638cda0c562" category="paragraph">Die folgende Berechtigung ist jetzt im _read-Modus_ für Datenbanken verfügbar: 'sSM:DescribeInstanceInformation'.</block>
 </blocks>
