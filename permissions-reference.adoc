@@ -2235,7 +2235,7 @@ Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den fo
 
 === Bis 2. April 2025
 
-Die folgende Berechtigung ist jetzt im _read-Modus_ für Datenbanken verfügbar: 'sSM:DescribeInstanceInformation'.
+Die folgende Berechtigung ist jetzt im _read-Modus_ für Datenbanken verfügbar: `ssm:DescribeInstanceInformation`.
 
 
 
