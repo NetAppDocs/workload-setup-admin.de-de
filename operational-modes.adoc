@@ -24,7 +24,7 @@ Lesemodus:: Verbessert die Erfahrung des Grundmodus durch Hinzufügen von schrei
 Automate-Modus:: Stellt eine vollständige Vertrauensbeziehung dar, sodass die Arbeitslastwerkstätte mit vollständigen Berechtigungen zugewiesen wird. Auf diese Weise können die Workload-Factory in Ihrem Namen Vorgänge in AWS ausführen und automatisieren sowie zugewiesene Zugangsdaten angeben, die über die erforderlichen Berechtigungen zur Ausführung verfügen.
 
 
-Erfahren Sie mehr über link:https://review.docs.netapp.com/us-en/workload-setup-admin_simulation-permission-update/permissions-reference.html["Berechtigungen für die BlueXP -Workload-Fabrik"].
+Erfahren Sie mehr über link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Berechtigungen für die BlueXP -Workload-Fabrik"].
 
 
 
