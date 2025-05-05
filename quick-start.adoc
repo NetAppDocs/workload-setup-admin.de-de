@@ -24,7 +24,7 @@ link:sign-up-saas.html["Erfahren Sie, wie Sie sich anmelden und ein Konto erstel
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] Fügen Sie AWS-Anmeldedaten zu der Workload-Factory hinzu
 [role="quick-margin-para"]
-Dieser Schritt ist optional. Sie können die Workload-Fabrik im Modus _Basic_ verwenden, ohne Anmeldedaten für den Zugriff auf Ihr AWS-Konto hinzuzufügen. Durch das Hinzufügen von AWS Zugangsdaten zur Workload-Fabrik im Modus _Lesen_ oder _Automatisieren_ erhält Ihr Workload-werksseitig die Berechtigungen, die zum Erstellen und Managen von FSX für ONTAP-Filesysteme sowie zum Implementieren und Managen bestimmter Workloads wie Datenbanken und GenAI erforderlich sind.
+Dieser Schritt ist optional. Sie können die Workload-Fabrik im Modus _Basic_ verwenden, ohne Anmeldedaten für den Zugriff auf Ihr AWS-Konto hinzuzufügen. Durch das Hinzufügen von AWS Zugangsdaten zur Workload-Fabrik im Modus „nur Lesezugriff“ oder „Lesen/Schreiben“ erhält Ihre Workload-werkseitige Konto die Berechtigungen, die zum Erstellen und Managen von FSX für ONTAP-Filesystemen sowie zum Bereitstellen und Managen spezifischer Workloads wie Datenbanken und GenAI erforderlich sind.
 
 [role="quick-margin-para"]
 link:add-credentials.html["Hier erfahren Sie, wie Sie Ihrem Konto Anmeldeinformationen hinzufügen"].

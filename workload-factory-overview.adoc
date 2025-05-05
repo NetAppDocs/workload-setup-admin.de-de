@@ -87,8 +87,8 @@ link:manage-service-accounts.html["Erfahren Sie, wie Sie Servicekonten verwalten
 Workload-Fabrik bietet drei Betriebsmodi, mit denen Sie den Zugriff auf Ihren Cloud-Bestand sorgfältig steuern und basierend auf Ihren IT-Richtlinien inkrementell der Workload-Fabrik zuweisen können.
 
 * *Basic-Modus* stellt eine Zero-Trust-Beziehung dar und ist für die frühzeitige Untersuchung der Arbeitslast-Fabrik und die Verwendung der verschiedenen Assistenten zur Erstellung der benötigten Infrastruktur als Code konzipiert. Dieser Code kann zusammen mit den relevanten AWS-Zugangsdaten vom Benutzer kopiert und manuell verwendet werden.
-* *Lesemodus* verbessert die Erfahrung des Basic-Modus, indem er den Benutzer bei der Erkennung verschiedener Ressourcen und Tools unterstützt und damit hilft, relevante Assistenten zu vervollständigen.
-* *Automate-Modus* ist eine vollständige Vertrauensbeziehung und wurde entwickelt, um im Namen des Benutzers zusammen mit den zugewiesenen Anmeldeinformationen auszuführen und zu automatisieren, die über die erforderlichen und validierten Berechtigungen für die Ausführung verfügen.
+* *Schreibgeschützter Modus* verbessert die Erfahrung des Basic-Modus, indem er den Benutzer bei der Erkennung verschiedener Ressourcen und Tools unterstützt und damit hilft, relevante Assistenten zu vervollständigen.
+* *Lese-/Schreibmodus* stellt eine vollständige Vertrauensbeziehung dar und wurde entwickelt, um im Namen des Benutzers zusammen mit den zugewiesenen Anmeldeinformationen auszuführen und zu automatisieren, die die erforderlichen und validierten Berechtigungen für die Ausführung haben.
 
 
 link:operational-modes.html["Erfahren Sie mehr über die Betriebsmodi der Workload-Farm"].
@@ -127,18 +127,7 @@ Workload Factory bietet Einsparungsrechner, mit denen Sie die Kosten Ihrer Stora
 * link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Erfahren Sie, welche Einsparungen Sie für Ihre Datenbank-Workloads erzielen können"^]
 
 
-
-
-== Tools zur Verwendung der Workload Factory
-
-Sie können die BlueXP -Workload-Fabrik mit den folgenden Tools verwenden:
-
-* *Workload Factory Konsole*: Die Workload Factory Konsole bietet eine visuelle Schnittstelle, die Ihnen einen ganzheitlichen Blick auf Ihre Anwendungen und Projekte gibt
-* *BlueXP -Konsole*: Die BlueXP -Konsole bietet eine Hybrid-Interface-Erfahrung, so dass Sie BlueXP  Workload Factory zusammen mit anderen BlueXP -Diensten nutzen können
-* *REST-API*: Mit REST-APIs für Workload Factory können Sie Ihre FSX for ONTAP-Dateisysteme und andere AWS-Ressourcen implementieren und managen
-* *CloudFormation*: AWS CloudFormation-Code ermöglicht die Durchführung der in der Workload-Factory-Konsole definierten Aktionen für die Modellierung, Bereitstellung und das Management von AWS- und Drittanbieterressourcen vom CloudFormation-Stack in Ihrem AWS-Konto
-* *Terraform BlueXP -Workload-Factory-Provider*: Mit Terraform können Sie Infrastruktur-Workflows erstellen und managen, die in der Workload-Factory-Konsole generiert werden
-
+https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/learn-about-tools.adoc[]
 
 
 

@@ -21,7 +21,7 @@ Der Betriebsmodus stellt eine logische Organisation der von der Workload Factory
 
 Grundmodus:: Stellt eine Zero-Trust-Beziehung dar, bei der der Workload-Fabrik keine AWS-Berechtigungen zugewiesen werden. Es wurde für eine frühzeitige Untersuchung der Workload-Fabrik und die Verwendung der verschiedenen Assistenten zur Erstellung des erforderlichen Infrastructure-as-Code (IAC) entwickelt. Sie können den Code kopieren und in AWS verwenden, indem Sie Ihre AWS Zugangsdaten manuell eingeben.
 Lesemodus:: Verbessert die Erfahrung des Grundmodus durch Hinzufügen von schreibgeschützten Berechtigungen, sodass die IAC-Vorlagen mit Ihren spezifischen Variablen (z. B. VPC, Sicherheitsgruppen usw.) gefüllt werden. Auf diese Weise können Sie die IAC direkt über Ihr AWS-Konto ausführen, ohne Berechtigungen für Änderungen an den Werkseinstellungen des Workloads bereitstellen zu müssen.
-Automate-Modus:: Stellt eine vollständige Vertrauensbeziehung dar, sodass die Arbeitslastwerkstätte mit vollständigen Berechtigungen zugewiesen wird. Auf diese Weise können die Workload-Factory in Ihrem Namen Vorgänge in AWS ausführen und automatisieren sowie zugewiesene Zugangsdaten angeben, die über die erforderlichen Berechtigungen zur Ausführung verfügen.
+Lese-/Schreibmodus:: Stellt eine vollständige Vertrauensbeziehung dar, sodass die Arbeitslastwerkstätte mit vollständigen Berechtigungen zugewiesen wird. Auf diese Weise können die Workload-Factory in Ihrem Namen Vorgänge in AWS ausführen und automatisieren sowie zugewiesene Zugangsdaten angeben, die über die erforderlichen Berechtigungen zur Ausführung verfügen.
 
 
 Erfahren Sie mehr über link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Berechtigungen für die BlueXP -Workload-Fabrik"].
@@ -40,10 +40,10 @@ Die verfügbaren Funktionen in den einzelnen Modi werden mit jedem Modus erweite
 | Basic | Nein | Minimal vollständige IAC-Vorlage | Nein | Nein 
 
 
-| Lesen | Nein | Mäßig vollständige IAC-Vorlage | Ja. | Ja. 
+| Schreibgeschützt | Nein | Mäßig vollständige IAC-Vorlage | Ja. | Ja. 
 
 
-| Automatisieren | Volle Automatisierung | Vollständige IAC-Vorlage mit vollständiger Automatisierung | Ja. | Ja. 
+| Lese-/Schreibzugriff | Volle Automatisierung | Vollständige IAC-Vorlage mit vollständiger Automatisierung | Ja. | Ja. 
 |===
 
 
@@ -59,10 +59,10 @@ Es gibt keine Auswahl, die Sie in der Arbeitslastfabrik festlegen müssen, um zu
 | Basic | Nicht erforderlich | Nicht erforderlich 
 
 
-| Lesen | Schreibgeschützt | Nicht erforderlich 
+| Schreibgeschützt | Schreibgeschützt | Nicht erforderlich 
 
 
-| Automatisieren | Lese-/Schreibberechtigung | Erforderlich 
+| Lese-/Schreibzugriff | Lese-/Schreibberechtigung | Erforderlich 
 |===
 https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Weitere Informationen zu Links"^]
 
@@ -70,7 +70,7 @@ https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Weitere In
 
 === Beispiele für den Betriebsmodus
 
-Sie können Ihre Anmeldeinformationen so einrichten, dass ein Modus für eine Workload-Komponente und ein anderer Modus für eine andere Komponente bereitgestellt wird. Sie können beispielsweise den Automatisierungsmodus für Vorgänge konfigurieren, bei denen Sie FSX für ONTAP-Dateisysteme implementieren und verwalten, jedoch nur den Lesemodus zum Erstellen und Bereitstellen von Datenbank-Workloads mit werkseitiger Workload-Nutzung konfigurieren.
+Sie können Ihre Anmeldeinformationen so einrichten, dass ein Modus für eine Workload-Komponente und ein anderer Modus für eine andere Komponente bereitgestellt wird. Sie können beispielsweise den Lese-/Schreibmodus für Vorgänge konfigurieren, bei denen Sie FSX für ONTAP-Dateisysteme bereitstellen und verwalten, aber nur den Lesemodus für die Erstellung und Bereitstellung von Datenbank-Workloads mit der Workload Factory konfigurieren.
 
 Sie können diese Funktionen in einem einzigen Satz von Anmeldeinformationen in einem Workload-Factory-Konto bereitstellen oder Sie können mehrere Sätze von Anmeldeinformationen erstellen, wenn jede Anmeldeinformation einzigartige Workload-Bereitstellungsfunktionen bereitstellt.
 
@@ -78,11 +78,11 @@ Sie können diese Funktionen in einem einzigen Satz von Anmeldeinformationen in 
 
 ==== Beispiel 1
 
-Kontonutzer, die die Zugangsdaten verwenden, denen die folgenden Berechtigungen erteilt wurden, haben volle Kontrolle (Automatisierungsmodus) über die Erstellung von FSX für ONTAP-Dateisysteme, die Bereitstellung von Datenbanken und die Anzeige anderer Arten von AWS-Storage, der im Konto verwendet wird.
+Kontonutzer, die die Zugangsdaten verwenden, denen die folgenden Berechtigungen erteilt wurden, haben volle Kontrolle (Lese-/Schreibmodus) für die Erstellung von FSX für ONTAP-Dateisysteme, die Bereitstellung von Datenbanken und die Anzeige anderer im Konto verwendeter AWS-Storage-Typen.
 
 image:screenshot-credentials1.png["Ein Screenshot mit einem Satz von Anmeldeinformationen, der zwei Arten von Workload-Berechtigungen bietet."]
 
-Sie verfügen jedoch über keine Automatisierungspsteuerungen zur Erstellung und Implementierung von VMware-Workloads (Basis-Modus) aus der Workload-Werkseinstellung. Um VMware-Workloads zu erstellen, müssen sie den Code aus der Codebox kopieren, sich manuell bei ihrem AWS-Konto anmelden und die fehlenden Einträge manuell in den generierten Code einfügen, um diese Funktion nutzen zu können.
+Sie verfügen jedoch über keine Automatisierungspsteuerungen zur Erstellung und Implementierung von VMware-Workloads (Basismodus) aus der Workload-Werkseinstellung. Um VMware-Workloads zu erstellen, müssen sie den Code aus der Codebox kopieren, sich manuell bei ihrem AWS-Konto anmelden und die fehlenden Einträge manuell in den generierten Code einfügen, um diese Funktion nutzen zu können.
 
 
 

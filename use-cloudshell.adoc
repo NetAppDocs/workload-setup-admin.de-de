@@ -27,6 +27,7 @@ Zu den CloudShell-Funktionen gehören:
 * Persistenz des Inhalts der letzten Sitzung: Öffnen Sie die letzte Sitzung erneut, wenn Sie sie versehentlich schließen
 * Einstellungen Einstellungen: Ändern Sie die Schriftgröße und den Ausgabetyp
 * KI-generierte Fehlermeldungen für ONTAP-CLI-Befehle
+* Autocomplete-Unterstützung: Starten Sie die Eingabe eines Befehls und verwenden Sie die *Tab*-Taste, um verfügbare Optionen anzuzeigen
 
 
 
