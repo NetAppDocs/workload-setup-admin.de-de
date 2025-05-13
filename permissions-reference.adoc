@@ -1356,7 +1356,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 | Schreibgeschützt 
 
 
-| Ermöglicht es der Workload Factory, eine eintägige Aufbewahrungsrichtlinie für Protokollgruppen festzulegen, die von der Workload Factory erstellt wurden, um unnötige Anhäufung von Protokollströmen für SSM-Befehlsausgaben zu vermeiden | Protokolle:PutRetentionPolicy  a| 
+| Erlauben Sie der Workload Factory, eine eintägige Aufbewahrungsrichtlinie für Protokollgruppen festzulegen, die von der Workload Factory erstellt wurden, um unnötige Anhäufung von Protokollströmen für SSM-Befehlsausgaben zu vermeiden | Protokolle:PutRetentionPolicy  a| 
 * Storage-Bewertung (Optimierung)
 * Inventar
 
