@@ -421,6 +421,7 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
         "ssm:ListCommands",
         "ssm:DescribeInstanceInformation",
         "fsx:ListTagsForResource"
+        "logs:DescribeLogGroups"
       ],
       "Resource": [
         "*"
@@ -568,6 +569,7 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
         "logs:ListLogDeliveries",
         "logs:PutLogEvents",
         "logs:TagResource",
+        "logs:PutRetentionPolicy",
         "servicequotas:ListServiceQuotas",
         "sns:ListTopics",
         "sns:Publish",
@@ -674,17 +676,6 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 [cols="2, 2, 1, 1"]
 |===
 | Zweck | Aktion | Wo verwendet | Modus 
-
-
-| Workload Factory wechselt zu Amazon CloudWatch-Protokollen für die SQL-Instanz, wenn eine SSM-Ausgabe-Kürzung auftritt. | Protokolle:GetLogEvents  a| 
-* Storage-Bewertung
-* Inventar
-
- a| 
-* Schreibgeschützt
-* Lese-/Schreibzugriff
-
-
 
 
 | Abrufen von metrischen Statistiken für FSX für ONTAP, EBS und FSX für Windows File Server | cloudwatch:GetMetricStatistics  a| 
@@ -1345,6 +1336,35 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 
 | Protokolle:TagResource | Einsatz | Lese-/Schreibzugriff 
+
+
+| Workload Factory wechselt zu Amazon CloudWatch-Protokollen für die SQL-Instanz, wenn eine SSM-Ausgabe-Kürzung auftritt | Protokolle:GetLogEvents  a| 
+* Storage-Bewertung (Optimierung)
+* Inventar
+
+ a| 
+* Schreibgeschützt
+* Lese-/Schreibzugriff
+
+
+
+
+| Zulassen, dass die Workload Factory aktuelle Protokollgruppen abrufen kann und dass die Aufbewahrung für Protokollgruppen festgelegt ist, die von der Workload Factory erstellt wurden | Protokolle:DescribeLogGroups  a| 
+* Storage-Bewertung (Optimierung)
+* Inventar
+
+| Schreibgeschützt 
+
+
+| Ermöglicht es der Workload Factory, eine eintägige Aufbewahrungsrichtlinie für Protokollgruppen festzulegen, die von der Workload Factory erstellt wurden, um unnötige Anhäufung von Protokollströmen für SSM-Befehlsausgaben zu vermeiden | Protokolle:PutRetentionPolicy  a| 
+* Storage-Bewertung (Optimierung)
+* Inventar
+
+ a| 
+* Schreibgeschützt
+* Lese-/Schreibzugriff
+
+
 
 
 | Erstellen Sie Geheimnisse in einem Benutzerkonto für die Anmeldeinformationen für SQL, Domäne und FSX für ONTAP | Service-Equotas:ListServiceQuotas | Einsatz | Lese-/Schreibzugriff 
@@ -2284,7 +2304,14 @@ Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den fo
 
 Die folgende Berechtigung ist jetzt im _Read/Write_ Modus für GenAI verfügbar: `qbusiness:ListApplications`.
 
-Die folgende Berechtigung ist jetzt im _Read-Only_ Modus für Datenbanken verfügbar: `logs:GetLogEvents`.
+Die folgenden Berechtigungen stehen nun im _Read-Only_ Modus für Datenbanken zur Verfügung:
+
+* `logs:GetLogEvents`
+* `logs:DescribeLogGroups`
+
+
+Die folgende Berechtigung ist jetzt im _Read/Write_ Modus für Datenbanken verfügbar:
+`logs:PutRetentionPolicy`.
 
 
 

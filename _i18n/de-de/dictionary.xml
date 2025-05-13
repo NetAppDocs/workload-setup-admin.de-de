@@ -1116,8 +1116,6 @@
   <block id="c0ee691320caa89b529bc0bcaf9cc696" category="paragraph">Sie verfügen jedoch über keine Automatisierungspsteuerungen zur Erstellung und Implementierung von VMware-Workloads (Basismodus) aus der Workload-Werkseinstellung. Um VMware-Workloads zu erstellen, müssen sie den Code aus der Codebox kopieren, sich manuell bei ihrem AWS-Konto anmelden und die fehlenden Einträge manuell in den generierten Code einfügen, um diese Funktion nutzen zu können.</block>
   <block id="b91c58f3e94e0488074053d96cd4bbec" category="paragraph">Wenn Sie Lesemodus oder Lese-/Schreibmodus-Berechtigungen bereitstellen, hängt die Workload-Fabrik eine Richtlinie mit Berechtigungen zum Managen von Ressourcen und Prozessen in diesem AWS-Konto an die Instanz an. Auf diese Weise können die Workload-Fabrik verschiedene Operationen ausführen, angefangen bei der Erkennung Ihrer Storage-Umgebungen bis hin zur Bereitstellung von AWS-Ressourcen wie Dateisysteme im Storage-Management oder Wissensdatenbanken für GenAI-Workloads.</block>
   <block id="4d372922f30597b3e046274dbb3cecd2" category="list-text">Schreibgeschützt</block>
-  <block id="d066bc059c61c75a41706f175a5b3f8b" category="cell">Workload Factory wechselt zu Amazon CloudWatch-Protokollen für die SQL-Instanz, wenn eine SSM-Ausgabe-Kürzung auftritt.</block>
-  <block id="2e50818bd890a03b645105690ca2ee60" category="list-text">Storage-Bewertung</block>
   <block id="38ef2c2517cd341233b9181c09ba8071" category="paragraph">GenAI IAM-Richtlinien sind nur im Lese-/Schreibmodus verfügbar:</block>
   <block id="123ce9aa4e0770ecb435c005fa9b436c" category="cell">Listen Sie die Anwendungen von Amazon Q Business auf</block>
   <block id="4f3c534c90392632c7d275f54d5b35a0" category="cell">QBusiness:ListenApplications</block>
@@ -1127,7 +1125,6 @@
   <block id="9dd35b54afccc27a1cc96eab777dbc8e" category="cell">Erstellen einer Amazon CloudWatch-Protokollgruppe für Amazon Bedrock-Protokolle während der Stack-Erstellung bei Bereitstellungs- und Neuerstellungsvorgängen</block>
   <block id="dac96c84baa92faab0eb342df5283a1b" category="section-title">4 Mai 2025</block>
   <block id="b1351fb22e71d3c2b886e8e0819e632f" category="paragraph">Die folgende Berechtigung ist jetzt im _Read/Write_ Modus für GenAI verfügbar:<block ref="4f3c534c90392632c7d275f54d5b35a0" prefix=" " category="inline-code"></block>.</block>
-  <block id="17cf827d0ea669f390d3f954ed27424d" category="paragraph">Die folgende Berechtigung ist jetzt im _Read-Only_ Modus für Datenbanken verfügbar:<block ref="6d952035baa97bd601f4d280f10fcc53" prefix=" " category="inline-code"></block>.</block>
   <block id="83300e091c617144cede34b6c898e63b" category="paragraph">Die folgende Berechtigung ist jetzt im _Read-Only_ Modus für Datenbanken verfügbar:<block ref="3320749a6854264e1889d72d7f41a0bf" prefix=" " category="inline-code"></block>.</block>
   <block id="be999711faeee231a254e996141ed09f" category="paragraph">Die folgenden Berechtigungen stehen jetzt im _Lese-/Schreibmodus_ für GenAI zur Verfügung:</block>
   <block id="9f4fc0ded0d1671253e5c8e38cd9464f" category="paragraph">Die folgende Berechtigung wurde für GenAI aus dem _Lese-/Schreibmodus_ entfernt:<block ref="8a44b1c8d2e06b1acd7404fbb70437cc" prefix=" " category="inline-code"></block>.</block>
@@ -1140,4 +1137,12 @@
   <block id="7a0e532396f167d85a7b425f941d0613" category="list-text">*Schreibgeschützter Modus* verbessert die Erfahrung des Basic-Modus, indem er den Benutzer bei der Erkennung verschiedener Ressourcen und Tools unterstützt und damit hilft, relevante Assistenten zu vervollständigen.</block>
   <block id="4951a0172d4fd2c8116296e71073f31c" category="list-text">*Lese-/Schreibmodus* stellt eine vollständige Vertrauensbeziehung dar und wurde entwickelt, um im Namen des Benutzers zusammen mit den zugewiesenen Anmeldeinformationen auszuführen und zu automatisieren, die die erforderlichen und validierten Berechtigungen für die Ausführung haben.</block>
   <block id="1c9640aa9075334712c6c2b922771c50" category="paragraph"><block ref="1c9640aa9075334712c6c2b922771c50" category="inline-link-rx"></block></block>
+  <block id="5474924c6e07cdae5b2fb3dcc561d06d" category="cell">Workload Factory wechselt zu Amazon CloudWatch-Protokollen für die SQL-Instanz, wenn eine SSM-Ausgabe-Kürzung auftritt</block>
+  <block id="5d1d5ff6c3c427c682d491550e8f89b3" category="list-text">Storage-Bewertung (Optimierung)</block>
+  <block id="515b5649d13529809187e8bce4dca692" category="cell">Zulassen, dass die Workload Factory aktuelle Protokollgruppen abrufen kann und dass die Aufbewahrung für Protokollgruppen festgelegt ist, die von der Workload Factory erstellt wurden</block>
+  <block id="c1fe33a4a51fbfbc7672aeed10dd19b9" category="cell">Ermöglicht es der Workload Factory, eine eintägige Aufbewahrungsrichtlinie für Protokollgruppen festzulegen, die von der Workload Factory erstellt wurden, um unnötige Anhäufung von Protokollströmen für SSM-Befehlsausgaben zu vermeiden</block>
+  <block id="19c89da108a378e8d938a37afe67bcab" category="paragraph">Die folgenden Berechtigungen stehen nun im _Read-Only_ Modus für Datenbanken zur Verfügung:</block>
+  <block id="1636ccb01570c55081666deb02ddfb9c" category="list-text"><block ref="6d952035baa97bd601f4d280f10fcc53" prefix="" category="inline-code"></block></block>
+  <block id="c4a094604e7db845f5356b4563efc223" category="list-text"><block ref="99a70cb6d5b807589a0a1aa9bbcfea7d" prefix="" category="inline-code"></block></block>
+  <block id="555669c70b999168141bdf48d9c2de24" category="paragraph">Die folgende Berechtigung ist jetzt im _Read/Write_ Modus für Datenbanken verfügbar:<block ref="9c72603737d6e2074ae7fab048b5d3d1" prefix=" " category="inline-code"></block>.</block>
 </blocks>
