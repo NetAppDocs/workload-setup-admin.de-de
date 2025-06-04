@@ -1762,6 +1762,14 @@ GenAI IAM-Richtlinien sind nur im Lese-/Schreibmodus verfügbar:
       "Resource": "*"
     },
     {
+      "Sid": "S3",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListAllMyBuckets"
+      ],
+      "Resource": "*"
+    },
+    {
       "Effect": "Allow",
       "Action": [
         "iam:SimulatePrincipalPolicy"
@@ -1792,6 +1800,9 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 
 
 | Anzeigen von KI-Engine-Tags | ec2:DescribeTags | Einsatz | Lese-/Schreibzugriff 
+
+
+| S3-Buckets auflisten | s3:ListAllMyBuchs | Einsatz | Lese-/Schreibzugriff 
 
 
 | VPC-Endpunkte vor der Erstellung des AI-Engine-Stacks auflisten | ec2:CreateVpcEndpoint | Einsatz | Lese-/Schreibzugriff 
@@ -2297,6 +2308,12 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für VMware-Wor
 == Änderungsprotokoll
 
 Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den folgenden Abschnitten zur Kenntnis nehmen.
+
+
+
+=== 3 Juni 2025
+
+Die folgende Berechtigung ist jetzt im _Read/Write_ Modus für GenAI verfügbar: `s3:ListAllMyBuckets`.
 
 
 
