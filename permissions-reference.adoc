@@ -20,7 +20,7 @@ Um Funktionen und Services für die BlueXP -Workload-Farm verwenden zu können,
 
 == Warum Berechtigungen verwenden
 
-Wenn Sie Lesemodus oder Lese-/Schreibmodus-Berechtigungen bereitstellen, hängt die Workload-Fabrik eine Richtlinie mit Berechtigungen zum Managen von Ressourcen und Prozessen in diesem AWS-Konto an die Instanz an. Auf diese Weise können die Workload-Fabrik verschiedene Operationen ausführen, angefangen bei der Erkennung Ihrer Storage-Umgebungen bis hin zur Bereitstellung von AWS-Ressourcen wie Dateisysteme im Storage-Management oder Wissensdatenbanken für GenAI-Workloads.
+Wenn Sie Berechtigungen für den _Nur-Lese-_ oder _Lese-/Schreibmodus_ erteilen, fügt Workload Factory der Instanz eine Richtlinie mit Berechtigungen zum Verwalten von Ressourcen und Prozessen innerhalb dieses AWS-Kontos hinzu. Auf diese Weise können die Workload-Fabrik verschiedene Operationen ausführen, angefangen bei der Erkennung Ihrer Storage-Umgebungen bis hin zur Bereitstellung von AWS-Ressourcen wie Dateisysteme im Storage-Management oder Wissensdatenbanken für GenAI-Workloads.
 
 Wenn beispielsweise die Workload-Farm mit den erforderlichen Berechtigungen erteilt wird, durchsucht er alle EC2-Instanzen in einem bestimmten Konto und einer bestimmten Region und filtert alle Windows-basierten Maschinen. Wenn der AWS Systems Manager (SSM) Agent installiert ist und auf dem Host ausgeführt wird und das System Manager-Netzwerk ordnungsgemäß konfiguriert ist, kann die Workload Factory auf den Windows-Rechner zugreifen und überprüfen, ob die SQL Server-Software installiert ist oder nicht.
 
@@ -2327,14 +2327,14 @@ Die folgenden Berechtigungen stehen nun im _Read-Only_ Modus für Datenbanken zu
 * `logs:DescribeLogGroups`
 
 
-Die folgende Berechtigung ist jetzt im _Read/Write_ Modus für Datenbanken verfügbar:
-`logs:PutRetentionPolicy`.
+Die folgende Berechtigung ist jetzt im Lese-/Schreibmodus für Datenbanken verfügbar: 
+`logs:PutRetentionPolicy` .
 
 
 
 === Bis 2. April 2025
 
-Die folgende Berechtigung ist jetzt im _Read-Only_ Modus für Datenbanken verfügbar: `ssm:DescribeInstanceInformation`.
+Die folgende Berechtigung ist jetzt im _schreibgeschützten_ Modus für Datenbanken verfügbar:  `ssm:DescribeInstanceInformation` .
 
 
 
@@ -2344,7 +2344,7 @@ Die folgende Berechtigung ist jetzt im _Read-Only_ Modus für Datenbanken verfü
 
 ==== Aktualisierung der GenAI-Workload-Berechtigungen
 
-Die folgenden Berechtigungen stehen jetzt im _Lese-/Schreibmodus_ für GenAI zur Verfügung:
+Die folgenden Berechtigungen sind jetzt im Lese-/Schreibmodus für GenAI verfügbar:
 
 * `bedrock:PutModelInvocationLoggingConfiguration`
 * `iam:AttachRolePolicy`
@@ -2353,7 +2353,7 @@ Die folgenden Berechtigungen stehen jetzt im _Lese-/Schreibmodus_ für GenAI zur
 * `bedrock:ListInferenceProfiles`
 
 
-Die folgende Berechtigung wurde für GenAI aus dem _Lese-/Schreibmodus_ entfernt: `Bedrock:GetFoundationModel`.
+Die folgende Berechtigung wurde aus dem Lese-/Schreibmodus für GenAI entfernt:  `Bedrock:GetFoundationModel` .
 
 
 
@@ -2365,10 +2365,10 @@ Die `iam:SimulatePrincipalPolicy` Berechtigung ist Teil aller Workload-Berechtig
 
 === 2 März 2025
 
-Die folgende Berechtigung ist jetzt im _Read/Write_ Modus für GenAI verfügbar: `bedrock:GetFoundationModel`.
+Die folgende Berechtigung ist jetzt im Lese-/Schreibmodus für GenAI verfügbar:  `bedrock:GetFoundationModel` .
 
 
 
 === 3 Februar 2025
 
-Die folgende Berechtigung ist jetzt im _Read-Only_ Modus für Datenbanken verfügbar: `iam:SimulatePrincipalPolicy`.
+Die folgende Berechtigung ist jetzt im _schreibgeschützten_ Modus für Datenbanken verfügbar:  `iam:SimulatePrincipalPolicy` .

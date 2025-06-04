@@ -13,7 +13,7 @@ summary: Sie können Codebox verwenden, um den Code zu generieren, der für die 
 [role="lead"]
 Sie können Codebox verwenden, um den Code zu generieren, der für die Ausführung eines Vorgangs benötigt wird, der von der BlueXP  Workload Factory unterstützt wird. Mit REST-APIs für die Workload-Farm, der AWS-CLI und AWS CloudFormation kann Code generiert werden, der genutzt und ausgeführt werden kann.
 
-Codebox ist an den Betriebsmodi für den Workload-Betrieb (Basic, Read-Only und Read/Write) ausgerichtet, indem die entsprechenden Daten auf der Grundlage der AWS-Berechtigungen, die im Arbeitslastwerkskonto für jeden Benutzer bereitgestellt werden, in den Code eingetragen werden. Der Code kann wie eine Vorlage verwendet werden, in der Sie fehlende Informationen (z. B. Anmeldeinformationen) eingeben oder bestimmte Daten anpassen können, bevor Sie den Code ausführen.
+Codebox ist auf die Betriebsmodi der Workload Factory (_Basic_, _Read-Only_ und _Read/Write_) abgestimmt, indem die entsprechenden Daten im Code basierend auf den AWS-Berechtigungen aufgefüllt werden, die im Workload Factory-Konto für jeden Benutzer bereitgestellt werden. Der Code kann wie eine Vorlage verwendet werden, in der Sie fehlende Informationen (z. B. Anmeldeinformationen) eingeben oder bestimmte Daten anpassen können, bevor Sie den Code ausführen.
 
 
 

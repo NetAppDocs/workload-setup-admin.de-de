@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: operational-modes.html 
-keywords: modes, zero-trust, full-trust, read, basic, automate, aws, aws accounts, keys, multiple accounts, permissions, aws permissions, policy, policies, credentials 
-summary: Workload-Fabrik bietet drei Betriebsmodi, mit denen Sie den Zugriff zwischen der Workload-Fabrik und Ihrem Cloud-Bestand anhand Ihrer IT-Richtlinien sorgfältig steuern können. Der von Ihnen verwendete Betriebsmodus wird durch die Level der AWS-Berechtigungen bestimmt, die Sie für die Werkseinstellungen des Workloads bereitstellen. 
+keywords: modes, zero-trust, full-trust, read-only, basic, read/write, aws, aws accounts, keys, multiple accounts, permissions, aws permissions, policy, policies, credentials 
+summary: Workload-Fabrik bietet drei Betriebsmodi, mit denen Sie den Zugriff zwischen der Workload-Fabrik und Ihrem Cloud-Bestand anhand Ihrer IT-Richtlinien sorgfältig steuern können. 
 ---
 = Informieren Sie sich über Betriebsmodi und AWS Zugangsdaten
 :allow-uri-read: 
@@ -62,7 +62,7 @@ Es gibt keine Auswahl, die Sie in der Arbeitslastfabrik festlegen müssen, um zu
 | Schreibgeschützt | Schreibgeschützt | Nicht erforderlich 
 
 
-| Lese-/Schreibzugriff | Lese-/Schreibberechtigung | Erforderlich 
+| Lese-/Schreibzugriff | Lese-/Schreibberechtigungen | Erforderlich 
 |===
 https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Weitere Informationen zu Links"^]
 
@@ -70,7 +70,7 @@ https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Weitere In
 
 === Beispiele für den Betriebsmodus
 
-Sie können Ihre Anmeldeinformationen so einrichten, dass ein Modus für eine Workload-Komponente und ein anderer Modus für eine andere Komponente bereitgestellt wird. Sie können beispielsweise den Lese-/Schreibmodus für Vorgänge konfigurieren, bei denen Sie FSX für ONTAP-Dateisysteme bereitstellen und verwalten, aber nur den Lesemodus für die Erstellung und Bereitstellung von Datenbank-Workloads mit der Workload Factory konfigurieren.
+Sie können Ihre Anmeldeinformationen so einrichten, dass ein Modus für eine Workload-Komponente und ein anderer Modus für eine andere Komponente bereitgestellt wird. Sie können beispielsweise den Lese-/Schreibmodus für Vorgänge konfigurieren, bei denen Sie FSx für ONTAP-Dateisysteme bereitstellen und verwalten, den schreibgeschützten Modus jedoch nur zum Erstellen und Bereitstellen von Datenbank-Workloads mithilfe der Workload Factory konfigurieren.
 
 Sie können diese Funktionen in einem einzigen Satz von Anmeldeinformationen in einem Workload-Factory-Konto bereitstellen oder Sie können mehrere Sätze von Anmeldeinformationen erstellen, wenn jede Anmeldeinformation einzigartige Workload-Bereitstellungsfunktionen bereitstellt.
 
@@ -78,7 +78,7 @@ Sie können diese Funktionen in einem einzigen Satz von Anmeldeinformationen in 
 
 ==== Beispiel 1
 
-Kontonutzer, die die Zugangsdaten verwenden, denen die folgenden Berechtigungen erteilt wurden, haben volle Kontrolle (Lese-/Schreibmodus) für die Erstellung von FSX für ONTAP-Dateisysteme, die Bereitstellung von Datenbanken und die Anzeige anderer im Konto verwendeter AWS-Storage-Typen.
+Kontobenutzer, die die Anmeldeinformationen verwenden, denen die folgenden Berechtigungen erteilt wurden, haben die volle Kontrolle (Lese-/Schreibmodus) zum Erstellen von FSx für ONTAP-Dateisystemen, zum Bereitstellen von Datenbanken und zum Anzeigen anderer Arten von AWS-Speicher, die im Konto verwendet werden.
 
 image:screenshot-credentials1.png["Ein Screenshot mit einem Satz von Anmeldeinformationen, der zwei Arten von Workload-Berechtigungen bietet."]
 
@@ -90,7 +90,7 @@ Sie verfügen jedoch über keine Automatisierungspsteuerungen zur Erstellung und
 
 Hier hat der Benutzer zwei Sätze von Anmeldeinformationen erstellt, um je nach ausgewähltem Satz von Anmeldeinformationen verschiedene Betriebsfunktionen zu ermöglichen. In der Regel ist jeder Satz von Anmeldeinformationen mit einem anderen AWS Konto gekoppelt.
 
-Der erste Satz von Anmeldeinformationen umfasst Berechtigungen, die den Benutzern die vollständige Kontrolle über die Erstellung von FSX für ONTAP-Dateisysteme geben (und die Möglichkeit, andere im Konto verwendete Typen von AWS-Storage anzuzeigen), aber nur Leseberechtigungen, wenn sie mit VMware-Workloads arbeiten.
+Der erste Satz Anmeldeinformationen umfasst Berechtigungen, die Benutzern die volle Kontrolle über die Erstellung von FSx für ONTAP-Dateisystemen geben (und die Möglichkeit, andere im Konto verwendete AWS-Speichertypen anzuzeigen), jedoch nur Leseberechtigungen beim Arbeiten mit VMware-Workloads.
 
 image:screenshot-credentials-comparison-example-1.png["Ein Screenshot mit einem Satz von Anmeldeinformationen, der zwei Arten von Workload-Berechtigungen bietet."]
 
