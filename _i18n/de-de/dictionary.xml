@@ -406,12 +406,9 @@
   <block id="7c885f0d7689b3eaa27baf9e745bd117" category="list-text">*BlueXP -Konsole*: Bietet ein hybrides Erlebnis, in dem Sie Ihre Arbeitsumgebungen und Arbeitslasten am gleichen Ort verwalten können.</block>
   <block id="d6cbd5ec207032cc9ad715f4df3e1ee7" category="list-text">*Arbeitslastwerkkonsole*: Bietet eine dedizierte Arbeitslastwerkumgebung, die sich auf Workloads konzentriert, die auf Amazon FSX for NetApp ONTAP ausgeführt werden.</block>
   <block id="bf8cfad5e1358abe0fd4e5fef21dd9f4" category="section-title">Zugriff auf die Workload Factory in der BlueXP -Konsole</block>
-  <block id="3157f6c73ade7ecbbcac5d33056a5d8f" category="paragraph">Sie können über BlueXP  auf die Workload-Farm zugreifen. Neben den Storage- und Workload-Funktionen von BluXP Workload Factory für AWS können Sie auch auf andere BlueXP  Plattform-Services wie Copy und Sync, Digital Wallet und viele mehr zugreifen.</block>
-  <block id="24ce5e66a7f3b6327369dda310753d6b" category="list-text">Melden Sie sich beim an <block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block></block>
   <block id="e9b538368b121a44c13005613e75a0bc" category="list-text">Navigieren Sie zu dem Workload, den Sie verwenden möchten, und wählen Sie eine Option aus, um zu beginnen.</block>
   <block id="61a543bd3a5368f0882b3ec3b11123da" category="section-title">Greifen Sie in der Workload Factory-Konsole auf die Workload Factory zu</block>
   <block id="3e17b2b248f83510c2368a4d20dddc41" category="paragraph">Sie können über die Workload Factory-Konsole auf die Workload Factory zugreifen.</block>
-  <block id="a5d4e8da7b06fff401452c5df2871465" category="list-text">Melden Sie sich beim an <block ref="391de7a3bac2bc77fa53dffb3f53801a" category="inline-link-macro-rx"></block></block>
   <block id="8f4910cf6ea086594183ea8e5bb4539b" category="list-text">Wählen Sie in der linken Navigation *Workloads* aus.</block>
   <block id="08b9f59ea9ae19318566e44120b9fb3f" category="list-text">Wählen Sie *Home*, um alle Workloads anzuzeigen, oder wählen Sie einen Workload wie *Storage* oder *Databases* aus.</block>
   <block id="cc8da163faea82ccff66b041eb816fa5" category="list-text">Wählen Sie eine Option aus, um mit dem Workload zu beginnen.</block>
@@ -1158,4 +1155,66 @@
   <block id="55f22225cc1ccda19b672a8426d01c4f" category="paragraph">Dieser Schritt ist optional. Sie können die Workload-Fabrik im Modus _Basic_ verwenden, ohne Anmeldedaten für den Zugriff auf Ihr AWS-Konto hinzuzufügen. Durch das Hinzufügen von AWS-Anmeldeinformationen zur Workload Factory im _Nur-Lese-Modus_ oder _Lese-/Schreib-Modus_ erhält Ihr Workload Factory-Konto die erforderlichen Berechtigungen zum Erstellen und Verwalten von FSx für ONTAP-Dateisystemen und zum Bereitstellen und Verwalten bestimmter Workloads wie Datenbanken und GenAI.</block>
   <block id="645b29e11b1f5ed9b9e706422adfcc73" category="paragraph">Codebox ist auf die Betriebsmodi der Workload Factory (_Basic_, _Read-Only_ und _Read/Write_) abgestimmt, indem die entsprechenden Daten im Code basierend auf den AWS-Berechtigungen aufgefüllt werden, die im Workload Factory-Konto für jeden Benutzer bereitgestellt werden. Der Code kann wie eine Vorlage verwendet werden, in der Sie fehlende Informationen (z. B. Anmeldeinformationen) eingeben oder bestimmte Daten anpassen können, bevor Sie den Code ausführen.</block>
   <block id="81e8b2bcfbc370ff332013804c18a385" category="paragraph">Codebox ist auf die Betriebsmodi der Workload-Factory (_Basic_, _Read-Only_ und _Read/Write_) abgestimmt und legt einen klaren Pfad für die Ausführungsbereitschaft sowie einen Automatisierungskatalog für die schnelle zukünftige Wiederverwendung fest.</block>
+  <block id="64c17706e0528a5c44c7beee628cc101" category="doc">Unterstützung des BlueXP Workload Factory-Benachrichtigungsdienstes</block>
+  <block id="c0ae6f0ec7cb1322a1c6b72f77e783f2" category="paragraph">Der Benachrichtigungsdienst der BlueXP Workload Factory ermöglicht es der Workload Factory, Benachrichtigungen an den BlueXP-Warndienst oder an ein Amazon SNS-Thema zu senden. An BlueXP-Warnmeldungen gesendete Benachrichtigungen werden im BlueXP-Warnmeldungsbereich angezeigt. Wenn die Workload Factory Benachrichtigungen an ein Amazon SNS-Thema veröffentlicht, erhalten Abonnenten des Themas (z. B. Benutzer oder andere Anwendungen) die Benachrichtigungen an den für das Thema konfigurierten Endpunkten (z. B. per E-Mail oder SMS).</block>
+  <block id="76490568879e4523bb6bd6d8263472a9" category="inline-link">Konfigurieren Sie die Benachrichtigungen der BlueXP-Workload-Factory</block>
+  <block id="533a43c23a4d81612b2392465e022a51" category="paragraph"><block ref="533a43c23a4d81612b2392465e022a51" category="inline-link-rx"></block></block>
+  <block id="2dda35be60147096ab6dcce42dede6b8" category="summary">Sie können die BlueXP-Workload-Factory so konfigurieren, dass beim Eintreten bestimmter Ereignistypen Benachrichtigungen an eine Person oder eine andere Anwendung gesendet werden.</block>
+  <block id="72d9710675d7970263ff88acdf0fcb66" category="paragraph">Sie können den Benachrichtigungsdienst der BlueXP Workload Factory so konfigurieren, dass Benachrichtigungen an den BlueXP-Warndienst oder an ein Amazon SNS-Thema gesendet werden. An BlueXP-Warnmeldungen gesendete Benachrichtigungen werden im BlueXP-Warnmeldungsbereich angezeigt. Wenn die Workload Factory Benachrichtigungen an ein Amazon SNS-Thema veröffentlicht, erhalten Abonnenten des Themas (z. B. Benutzer oder andere Anwendungen) die Benachrichtigungen an den für das Thema konfigurierten Endpunkten (z. B. per E-Mail oder SMS).</block>
+  <block id="0a7323d1562ccdc63a56a3101b1dfc69" category="section-title">Benachrichtigungstypen und Nachrichten</block>
+  <block id="5a7513075d19cc4be93d3cf73f88603e" category="paragraph">Workload Factory sendet Benachrichtigungen für die folgenden Ereignisse:</block>
+  <block id="a4ecfc70574394990cf17bd83df499f7" category="cell">Ereignis</block>
+  <block id="9e89e978c220a2a733d027866cb12907" category="cell">Benachrichtigungstyp</block>
+  <block id="007cc9547ae8884ad597cd92ba505422" category="cell">Schweregrad</block>
+  <block id="68eaabb91b0d1c52be44217a24f27b91" category="cell">Workload</block>
+  <block id="53a002434dc37d0a5f8e2aac58da6296" category="cell">Ressourcentyp</block>
+  <block id="05c77d02041a1213dcefbe713f2f79fc" category="cell">Einige Datenbankinstanzen in Ihrem Konto sind nicht gut strukturiert</block>
+  <block id="11091ad57516013f76674cb4ef3a9a6a" category="cell">Alle Microsoft SQL Server-Instanzen in Ihrem Konto wurden auf Probleme mit der guten Architektur analysiert. Die Beschreibung dieses Ereignisses gibt die Anzahl der gut konzipierten und nicht optimierten Instanzen an. Überprüfen Sie die Ergebnisse und Empfehlungen zum Status der guten Architektur im Datenbankinventar der Workload Factory-Konsole.</block>
+  <block id="64096d5dd63fb80716eda8d7d149213d" category="cell">Gut gestaltet</block>
+  <block id="c76e3867213cff8946148c6510af0736" category="cell">Empfehlung</block>
+  <block id="ea2ef9b0d095bf991f4973633b485340" category="cell">Datenbanken</block>
+  <block id="49e4c802abd20d6ed77d1f0421411716" category="cell">Microsoft SQL Server-Instanz</block>
+  <block id="434aae113a8df34dcafb760acae04817" category="cell">Die Bereitstellung des Microsoft SQL Server/PostgreSQL-Servers war erfolgreich</block>
+  <block id="9f65a8622771b19d6c80a1fea621d39f" category="cell">Die Bereitstellung des Microsoft SQL Server- oder PostgreSQL-Hosts war erfolgreich. Weitere Informationen finden Sie in der Jobüberwachung.</block>
+  <block id="505a83f220c02df2f85c3810cd9ceb38" category="cell">Erfolg</block>
+  <block id="a2e86ce39492ca1b92893ce168dc6fbb" category="cell">FSx für ONTAP, DB-Host</block>
+  <block id="1ec0c15b651e4cd44325912e997a204c" category="cell">Die Bereitstellung des Microsoft SQL Server/PostgreSQL-Servers ist fehlgeschlagen</block>
+  <block id="3a966eb1052bbc81baf1db313011eddf" category="cell">Die Bereitstellung des Microsoft SQL Server- oder PostgreSQL-Hosts ist fehlgeschlagen. Weitere Informationen finden Sie in der Jobüberwachung.</block>
+  <block id="902b0d55fddef6f8d651fe1035b7d4bd" category="cell">Fehler</block>
+  <block id="237aaa83425818925b08506a76908e10" category="section-title">Konfigurieren von Workload Factory-Benachrichtigungen</block>
+  <block id="cd052ec21a26111d70b96d3c1780fed2" category="paragraph">Konfigurieren Sie Workload Factory-Benachrichtigungen über die BlueXP-Konsole oder die Workload Factory-Konsole. Wenn Sie die BlueXP-Konsole verwenden, können Sie Workload Factory so konfigurieren, dass Benachrichtigungen an BlueXP-Warnmeldungen oder an ein Amazon SNS-Thema gesendet werden. Sie können BlueXP-Warnmeldungen im Bereich „Warn- und Benachrichtigungseinstellungen“ in BlueXP konfigurieren.</block>
+  <block id="9ccebe6954a81c5c1f9a57ddc658596a" category="list-text">Sie müssen Amazon SNS konfigurieren und Amazon SNS-Themen entweder über die Amazon SNS-Konsole oder die AWS CLI erstellen.</block>
+  <block id="b5dff08e1a7f13984de22b0326ba3d57" category="list-text">Beachten Sie, dass die Workload Factory den Thementyp *Standard* unterstützt. Dieser Thementyp stellt nicht sicher, dass Benachrichtigungen in der Reihenfolge ihres Eingangs an Abonnenten gesendet werden. Berücksichtigen Sie dies daher bei kritischen oder dringenden Benachrichtigungen.</block>
+  <block id="5d146607ad7e1a4c8178f137a935e71b" category="open-title">Konfigurieren Sie Benachrichtigungen von der BlueXP-Konsole</block>
+  <block id="413b76e8d3566fbbd4af2e2a84ed79cb" category="list-text">Melden Sie sich beim an <block ref="391de7a3bac2bc77fa53dffb3f53801a" category="inline-link-macro-rx"></block>.</block>
+  <block id="7330391de12fa6f64dbbe05f2bf2943a" category="list-text">Wählen Sie in der Menüleiste der Workload Factory das Konfigurationsmenü aus.</block>
+  <block id="ebb0c20a2883844bf338eec0442bd3d9" category="list-text">Wählen Sie im Menü *Workload Factory-Benachrichtigungs-Setup* aus.</block>
+  <block id="c1f26547e61b3cf682eb671f8d31e7ea" category="list-text">Optional: Wählen Sie *BlueXP-Benachrichtigungen aktivieren*, um die Workload Factory so zu konfigurieren, dass Benachrichtigungen an BlueXP-Warnmeldungen gesendet werden.</block>
+  <block id="9bc635b321d7a10ffec6283dfaa84aa0" category="list-text">Wählen Sie *SNS-Benachrichtigungen aktivieren*.</block>
+  <block id="677c7dc689b0afdcb0633b635edd3a87" category="list-text">Befolgen Sie die Anweisungen zum Konfigurieren von Amazon SNS über die Amazon SNS-Konsole.</block>
+  <block id="5fda11ac3857aaeb1a1a9e3bb6aedef5" category="paragraph">Nachdem Sie das Thema erstellt haben, kopieren Sie die Themen-ARN und geben Sie sie in das Feld *SNS-Thema-ARN* im Dialogfeld *Benachrichtigungseinrichtung* ein.</block>
+  <block id="2339afaee28d73e91f81e490b67a4b5c" category="list-text">Nachdem Sie die Konfiguration durch Senden einer Testbenachrichtigung überprüft haben, wählen Sie *Übernehmen*.</block>
+  <block id="a596c719a1239c601cd009ed03cda388" category="paragraph">Die Workload Factory ist so konfiguriert, dass Benachrichtigungen an das von Ihnen angegebene Amazon SNS-Thema gesendet werden.</block>
+  <block id="99405553b799dda5850e27264cbad120" category="open-title">Konfigurieren von Benachrichtigungen über die Workload Factory-Konsole</block>
+  <block id="2e600fc81eb21acd31aa44d1697dc84f" category="list-text">Melden Sie sich beim an <block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block>.</block>
+  <block id="bbb5c9d7fd1535e42e50af70cae99495" category="list-text">Öffnen Sie das Kontomenü über die obere Navigationsleiste.</block>
+  <block id="5bbc9d3e1cf8f1e46acf248093877f06" category="list-text">Wählen Sie im Menü *Benachrichtigungseinrichtung* aus.</block>
+  <block id="5e5392f4dcdf5502f0937be76da274d0" category="section-title">Abonnieren Sie das Amazon SNS-Thema</block>
+  <block id="cbde2df6a7c89370edc449dc5705d30c" category="inline-link">Anweisungen</block>
+  <block id="f796ddcb3cbbbd6b219cbc54c800ab86" category="paragraph">Nachdem Sie die Workload Factory so konfiguriert haben, dass Benachrichtigungen an ein Thema gesendet werden, folgen Sie den <block ref="88c7b6108316e02c36e39863bedc2019" category="inline-link-rx"></block> in der Amazon SNS-Dokumentation, um das Thema zu abonnieren, damit Sie Benachrichtigungen von der Workload Factory erhalten können.</block>
+  <block id="e457faf451b04c78c6b2c6bc25491ad1" category="section-title">Benachrichtigungen filtern</block>
+  <block id="3180a00483bf6ffa5db8c6178c4eb67a" category="paragraph">Sie können unnötigen Benachrichtigungsverkehr reduzieren und bestimmte Benachrichtigungstypen gezielt an bestimmte Benutzer senden, indem Sie Filter auf die Benachrichtigungen anwenden. Dies können Sie mithilfe einer Amazon SNS-Richtlinie für SNS-Benachrichtigungen und mithilfe der BlueXP-Benachrichtigungseinstellungen für BlueXP-Benachrichtigungen erreichen.</block>
+  <block id="4ccc3070ee3f76f6afb040d5f99b3bdd" category="section-title">Filtern von Amazon SNS-Benachrichtigungen</block>
+  <block id="103130451f8943db9cb57de31a66dc79" category="paragraph">Wenn Sie ein Amazon SNS-Thema abonnieren, erhalten Sie standardmäßig alle zu diesem Thema veröffentlichten Benachrichtigungen. Wenn Sie nur bestimmte Benachrichtigungen zu diesem Thema erhalten möchten, können Sie mithilfe einer Filterrichtlinie steuern, welche Benachrichtigungen Sie erhalten.</block>
+  <block id="3f6971d458153040675cf8e95795f3b0" category="inline-link">Amazon SNS-Dokumentation</block>
+  <block id="c7fbd94f814dfe1f2c13e1ea015a39d7" category="paragraph">Weitere Informationen zum Erstellen von Filterrichtlinien finden Sie im <block ref="c589c7fc86bb393dc58d099c6c8ea47e" category="inline-link-rx"></block> .</block>
+  <block id="aacb2329b4899fc1a4b8f0f2f67b0398" category="inline-link">Beispielfilterrichtlinien für Amazon SNS</block>
+  <block id="0ef8ad02e6dcecafa6e5e696fe553279" category="paragraph">Beispiele für Filterrichtlinien finden Sie unter <block ref="7c3f3bfbc0dabec1aca15cb9aeb0e326" category="inline-link-rx"></block> .</block>
+  <block id="92bb95ca7ce65dc7bedcbf84528f75fd" category="section-title">BlueXP-Benachrichtigungen filtern</block>
+  <block id="ac6e44b462d88f56828f381faa7907ca" category="paragraph">Sie können die Warn- und Benachrichtigungseinstellungen von BlueXP verwenden, um die Warn- und Benachrichtigungen, die Sie in BlueXP erhalten, nach Schweregrad zu filtern, z. B. „Kritisch“, „Info“ oder „Warnung“.</block>
+  <block id="eeb8e055593f1709925a03e2ebb13265" category="inline-link">BlueXP-Dokumentation</block>
+  <block id="7572b4e37ed025014a17bc1ae86c60a9" category="paragraph">Weitere Informationen zum Filtern von Benachrichtigungen in BlueXP finden Sie im <block ref="f8c744992c7f60894906e0753601fc52" category="inline-link-rx"></block> .</block>
+  <block id="cec87015738d7f42431131824e107880" category="paragraph">Sie können über BlueXP  auf die Workload-Farm zugreifen. Zusätzlich zur Verwendung von BlueXP Workload Factory für AWS-Speicher- und Workload-Funktionen können Sie auch auf andere Dienste der BlueXP-Plattform wie Copy and Sync, Digital Wallet und mehr zugreifen.</block>
+  <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">03 Juni 2025</block>
+  <block id="19a5158f1235c29843008925adb7baf8" category="sidebar">Konfigurieren Sie Benachrichtigungen</block>
 </blocks>

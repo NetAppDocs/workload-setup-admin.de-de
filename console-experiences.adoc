@@ -23,10 +23,10 @@ Sie können zwei Konsolen für den Zugriff auf die BlueXP -Workload-Fabrik verw
 
 == Zugriff auf die Workload Factory in der BlueXP -Konsole
 
-Sie können über BlueXP  auf die Workload-Farm zugreifen. Neben den Storage- und Workload-Funktionen von BluXP Workload Factory für AWS können Sie auch auf andere BlueXP  Plattform-Services wie Copy und Sync, Digital Wallet und viele mehr zugreifen.
+Sie können über BlueXP  auf die Workload-Farm zugreifen. Zusätzlich zur Verwendung von BlueXP Workload Factory für AWS-Speicher- und Workload-Funktionen können Sie auch auf andere Dienste der BlueXP-Plattform wie Copy and Sync, Digital Wallet und mehr zugreifen.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.workloads.netapp.com["Arbeitslastwerkkonsole"^]
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Arbeitslastwerkkonsole"^].
 . Navigieren Sie zu dem Workload, den Sie verwenden möchten, und wählen Sie eine Option aus, um zu beginnen.
 
 
@@ -37,7 +37,7 @@ Sie können über BlueXP  auf die Workload-Farm zugreifen. Neben den Storage- u
 Sie können über die Workload Factory-Konsole auf die Workload Factory zugreifen.
 
 .Schritte
-. Melden Sie sich beim an link:https://console.bluexp.netapp.com["BlueXP-Konsole"^]
+. Melden Sie sich beim an link:https://console.bluexp.netapp.com["BlueXP-Konsole"^].
 . Wählen Sie in der linken Navigation *Workloads* aus.
 . Wählen Sie *Home*, um alle Workloads anzuzeigen, oder wählen Sie einen Workload wie *Storage* oder *Databases* aus.
 . Wählen Sie eine Option aus, um mit dem Workload zu beginnen.
