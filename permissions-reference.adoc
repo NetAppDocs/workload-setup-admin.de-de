@@ -364,7 +364,7 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 
 === Berechtigungen für Datenbank-Workloads
 
-Die für Datenbank-Workloads verfügbaren IAM-Richtlinien bieten die Berechtigungen, die die Workload-Fabrik für das Management von Ressourcen und Prozessen in Ihrer Public-Cloud-Umgebung basierend auf dem Betriebsmodus benötigt.
+Die für Datenbank-Workloads verfügbaren IAM-Richtlinien bieten die Berechtigungen, die die Workload Factory benötigt, um Ressourcen und Prozesse in Ihrer öffentlichen Cloud-Umgebung basierend auf dem Betriebsmodus zu verwalten, in dem Sie arbeiten.
 
 Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuzeigen:
 
@@ -385,6 +385,7 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
       "Effect": "Allow",
       "Action": [
         "cloudwatch:GetMetricStatistics",
+        "cloudwatch:GetMetricData",
         "sns:ListTopics",
         "ec2:DescribeInstances",
         "ec2:DescribeVpcs",
@@ -678,7 +679,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 | Zweck | Aktion | Wo verwendet | Modus 
 
 
-| Abrufen von metrischen Statistiken für FSX für ONTAP, EBS und FSX für Windows File Server | cloudwatch:GetMetricStatistics  a| 
+| Erhalten Sie Metrikstatistiken für FSx für ONTAP, EBS und FSx für Windows File Server sowie Empfehlungen zur Rechenoptimierung. | cloudwatch:GetMetricStatistics  a| 
 * Inventar
 * Einsparungen entdecken
 
@@ -687,6 +688,9 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 * Lese-/Schreibzugriff
 
 
+
+
+| Sammeln Sie in Amazon CloudWatch gespeicherte Leistungsmetriken von registrierten SQL-Knoten. Die Daten werden in Leistungstrenddiagrammen auf dem Bildschirm „Instanzverwaltung“ für registrierte SQL-Instanzen generiert. | cloudwatch:GetMetricData | Inventar | Schreibgeschützt 
 
 
 | Listen Sie Auslöser für Ereignisse auf und legen Sie sie fest | sns:listTopics | Einsatz  a| 
@@ -1209,9 +1213,6 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 
 | Cloudformation:ValidierteVorlage | Einsatz | Lese-/Schreibzugriff 
-
-
-| Holen Sie sich Metriken zur Empfehlung zur Compute-Optimierung ab | cloudwatch:GetMetricStatistics | Einsparungen entdecken | Lese-/Schreibzugriff 
 
 
 | Holen Sie die in der Region verfügbaren Verzeichnisse ab | ds:DescribeDirectories | Einsatz | Lese-/Schreibzugriff 
@@ -2311,17 +2312,23 @@ Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den fo
 
 
 
+=== 29 Juni 2025
+
+Die folgende Berechtigung ist jetzt im _schreibgeschützten_ Modus für Datenbanken verfügbar:  `cloudwatch:GetMetricData` .
+
+
+
 === 3 Juni 2025
 
-Die folgende Berechtigung ist jetzt im _Read/Write_ Modus für GenAI verfügbar: `s3:ListAllMyBuckets`.
+Die folgende Berechtigung ist jetzt im Lese-/Schreibmodus für GenAI verfügbar:  `s3:ListAllMyBuckets` .
 
 
 
 === 4 Mai 2025
 
-Die folgende Berechtigung ist jetzt im _Read/Write_ Modus für GenAI verfügbar: `qbusiness:ListApplications`.
+Die folgende Berechtigung ist jetzt im Lese-/Schreibmodus für GenAI verfügbar:  `qbusiness:ListApplications` .
 
-Die folgenden Berechtigungen stehen nun im _Read-Only_ Modus für Datenbanken zur Verfügung:
+Die folgenden Berechtigungen sind jetzt im _schreibgeschützten_ Modus für Datenbanken verfügbar:
 
 * `logs:GetLogEvents`
 * `logs:DescribeLogGroups`

@@ -1,6 +1,14 @@
-= Unterstützung des BlueXP Workload Factory-Benachrichtigungsdienstes
+= Berechtigungsaktualisierung für Datenbanken
 :allow-uri-read: 
 
+
+
+
+=== Berechtigungsaktualisierung für Datenbanken
+
+Die folgende Berechtigung ist jetzt im _schreibgeschützten_ Modus für Datenbanken verfügbar:  `cloudwatch:GetMetricData` .
+
+https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["Änderungsprotokoll für Berechtigungen"]
 
 
 
