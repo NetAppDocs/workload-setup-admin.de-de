@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: configure-notifications.html 
+keywords: amazon, sns, notification, topic, notifications, notifications service, alerts 
+summary: Sie können die BlueXP-Workload-Factory so konfigurieren, dass beim Eintreten bestimmter Ereignistypen Benachrichtigungen an eine Person oder eine andere Anwendung gesendet werden. 
+---
+= Konfigurieren Sie die Benachrichtigungen der BlueXP-Workload-Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können den Benachrichtigungsdienst der BlueXP Workload Factory so konfigurieren, dass Benachrichtigungen an den BlueXP-Warndienst oder an ein Amazon SNS-Thema gesendet werden. An BlueXP-Warnmeldungen gesendete Benachrichtigungen werden im BlueXP-Warnmeldungsbereich angezeigt. Wenn die Workload Factory Benachrichtigungen an ein Amazon SNS-Thema veröffentlicht, erhalten Abonnenten des Themas (z. B. Benutzer oder andere Anwendungen) die Benachrichtigungen an den für das Thema konfigurierten Endpunkten (z. B. per E-Mail oder SMS).
+
+
+
+== Benachrichtigungstypen und Nachrichten
+
+Workload Factory sendet Benachrichtigungen für die folgenden Ereignisse:
+
+[cols="6*"]
+|===
+| Ereignis | Beschreibung | Benachrichtigungstyp | Schweregrad | Workload | Ressourcentyp 
+
+
+| Einige Datenbankinstanzen in Ihrem Konto sind nicht gut strukturiert | Alle Microsoft SQL Server-Instanzen in Ihrem Konto wurden auf Probleme mit der guten Architektur analysiert. Die Beschreibung dieses Ereignisses gibt die Anzahl der gut konzipierten und nicht optimierten Instanzen an. Überprüfen Sie die Ergebnisse und Empfehlungen zum Status der guten Architektur im Datenbankinventar der Workload Factory-Konsole. | Gut gestaltet | Empfehlung | Datenbanken | Microsoft SQL Server-Instanz 
+
+
+| Die Bereitstellung des Microsoft SQL Server/PostgreSQL-Servers war erfolgreich | Die Bereitstellung des Microsoft SQL Server- oder PostgreSQL-Hosts war erfolgreich. Weitere Informationen finden Sie in der Jobüberwachung. | Einsatz | Erfolg | Datenbanken | FSx für ONTAP, DB-Host 
+
+
+| Die Bereitstellung des Microsoft SQL Server/PostgreSQL-Servers ist fehlgeschlagen | Die Bereitstellung des Microsoft SQL Server- oder PostgreSQL-Hosts ist fehlgeschlagen. Weitere Informationen finden Sie in der Jobüberwachung. | Einsatz | Fehler | Datenbanken | FSx für ONTAP, DB-Host 
+|===
+
+
+== Konfigurieren von Workload Factory-Benachrichtigungen
+
+Konfigurieren Sie Workload Factory-Benachrichtigungen über die BlueXP-Konsole oder die Workload Factory-Konsole. Wenn Sie die BlueXP-Konsole verwenden, können Sie Workload Factory so konfigurieren, dass Benachrichtigungen an BlueXP-Warnmeldungen oder an ein Amazon SNS-Thema gesendet werden. Sie können BlueXP-Warnmeldungen im Bereich „Warn- und Benachrichtigungseinstellungen“ in BlueXP konfigurieren.
+
+.Bevor Sie beginnen
+* Sie müssen Amazon SNS konfigurieren und Amazon SNS-Themen entweder über die Amazon SNS-Konsole oder die AWS CLI erstellen.
+* Beachten Sie, dass die Workload Factory den Thementyp *Standard* unterstützt. Dieser Thementyp stellt nicht sicher, dass Benachrichtigungen in der Reihenfolge ihres Eingangs an Abonnenten gesendet werden. Berücksichtigen Sie dies daher bei kritischen oder dringenden Benachrichtigungen.
+
+
+[role="tabbed-block"]
+====
+.Konfigurieren Sie Benachrichtigungen von der BlueXP-Konsole
+--
+.Schritte
+. Melden Sie sich beim an link:https://console.bluexp.netapp.com["BlueXP-Konsole"^].
+. Wählen Sie in der linken Navigation *Workloads* aus.
+. Wählen Sie *Home*, um alle Workloads anzuzeigen, oder wählen Sie einen Workload wie *Storage* oder *Databases* aus.
+. Wählen Sie in der Menüleiste der Workload Factory das Konfigurationsmenü aus.
+. Wählen Sie im Menü *Workload Factory-Benachrichtigungs-Setup* aus.
+. Optional: Wählen Sie *BlueXP-Benachrichtigungen aktivieren*, um die Workload Factory so zu konfigurieren, dass Benachrichtigungen an BlueXP-Warnmeldungen gesendet werden.
+. Wählen Sie *SNS-Benachrichtigungen aktivieren*.
+. Befolgen Sie die Anweisungen zum Konfigurieren von Amazon SNS über die Amazon SNS-Konsole.
++
+Nachdem Sie das Thema erstellt haben, kopieren Sie die Themen-ARN und geben Sie sie in das Feld *SNS-Thema-ARN* im Dialogfeld *Benachrichtigungseinrichtung* ein.
+
+. Nachdem Sie die Konfiguration durch Senden einer Testbenachrichtigung überprüft haben, wählen Sie *Übernehmen*.
+
+
+.Ergebnis
+Die Workload Factory ist so konfiguriert, dass Benachrichtigungen an das von Ihnen angegebene Amazon SNS-Thema gesendet werden.
+
+--
+.Konfigurieren von Benachrichtigungen über die Workload Factory-Konsole
+--
+.Schritte
+. Melden Sie sich beim an link:https://console.workloads.netapp.com["Arbeitslastwerkkonsole"^].
+. Öffnen Sie das Kontomenü über die obere Navigationsleiste.
+. Wählen Sie im Menü *Benachrichtigungseinrichtung* aus.
+. Wählen Sie *SNS-Benachrichtigungen aktivieren*.
+. Befolgen Sie die Anweisungen zum Konfigurieren von Amazon SNS über die Amazon SNS-Konsole.
+. Nachdem Sie die Konfiguration durch Senden einer Testbenachrichtigung überprüft haben, wählen Sie *Übernehmen*.
+
+
+.Ergebnis
+Die Workload Factory ist so konfiguriert, dass Benachrichtigungen an das von Ihnen angegebene Amazon SNS-Thema gesendet werden.
+
+--
+====
+
+
+== Abonnieren Sie das Amazon SNS-Thema
+
+Nachdem Sie die Workload Factory so konfiguriert haben, dass Benachrichtigungen an ein Thema gesendet werden, folgen Sie den  https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html["Anweisungen"] in der Amazon SNS-Dokumentation, um das Thema zu abonnieren, damit Sie Benachrichtigungen von der Workload Factory erhalten können.
+
+
+
+== Benachrichtigungen filtern
+
+Sie können unnötigen Benachrichtigungsverkehr reduzieren und bestimmte Benachrichtigungstypen gezielt an bestimmte Benutzer senden, indem Sie Filter auf die Benachrichtigungen anwenden. Dies können Sie mithilfe einer Amazon SNS-Richtlinie für SNS-Benachrichtigungen und mithilfe der BlueXP-Benachrichtigungseinstellungen für BlueXP-Benachrichtigungen erreichen.
+
+
+
+=== Filtern von Amazon SNS-Benachrichtigungen
+
+Wenn Sie ein Amazon SNS-Thema abonnieren, erhalten Sie standardmäßig alle zu diesem Thema veröffentlichten Benachrichtigungen. Wenn Sie nur bestimmte Benachrichtigungen zu diesem Thema erhalten möchten, können Sie mithilfe einer Filterrichtlinie steuern, welche Benachrichtigungen Sie erhalten.
+
+Weitere Informationen zum Erstellen von Filterrichtlinien finden Sie im  https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html["Amazon SNS-Dokumentation"^] .
+
+Beispiele für Filterrichtlinien finden Sie unter  https://docs.aws.amazon.com/sns/latest/dg/example-filter-policies.html["Beispielfilterrichtlinien für Amazon SNS"^] .
+
+
+
+=== BlueXP-Benachrichtigungen filtern
+
+Sie können die Warn- und Benachrichtigungseinstellungen von BlueXP verwenden, um die Warn- und Benachrichtigungen, die Sie in BlueXP erhalten, nach Schweregrad zu filtern, z. B. „Kritisch“, „Info“ oder „Warnung“.
+
+Weitere Informationen zum Filtern von Benachrichtigungen in BlueXP finden Sie im  https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#filter-notifications["BlueXP-Dokumentation"^] .
