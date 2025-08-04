@@ -98,11 +98,79 @@ Sie können unnötigen Benachrichtigungsverkehr reduzieren und bestimmte Benachr
 
 === Filtern von Amazon SNS-Benachrichtigungen
 
-Wenn Sie ein Amazon SNS-Thema abonnieren, erhalten Sie standardmäßig alle zu diesem Thema veröffentlichten Benachrichtigungen. Wenn Sie nur bestimmte Benachrichtigungen zu diesem Thema erhalten möchten, können Sie mithilfe einer Filterrichtlinie steuern, welche Benachrichtigungen Sie erhalten.
+Wenn Sie ein Amazon SNS-Thema abonnieren, erhalten Sie standardmäßig alle zu diesem Thema veröffentlichten Benachrichtigungen.  Wenn Sie nur bestimmte Benachrichtigungen zum Thema erhalten möchten, können Sie mithilfe einer Filterrichtlinie steuern, welche Benachrichtigungen Sie erhalten.  Filterrichtlinien bewirken, dass Amazon SNS dem Abonnenten nur die Benachrichtigungen übermittelt, die der Filterrichtlinie entsprechen.
 
-Weitere Informationen zum Erstellen von Filterrichtlinien finden Sie im  https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html["Amazon SNS-Dokumentation"^] .
+Sie können Amazon SNS-Benachrichtigungen nach den folgenden Kriterien filtern:
 
-Beispiele für Filterrichtlinien finden Sie unter  https://docs.aws.amazon.com/sns/latest/dg/example-filter-policies.html["Beispielfilterrichtlinien für Amazon SNS"^] .
+[cols="3*"]
+|===
+| Beschreibung | Feldname der Filterrichtlinie | Mögliche Werte 
+
+
+| Ressourcentyp | `resourceType`  a| 
+* `DB`
+* `Microsoft SQL Server host`
+* `PostgreSQL Server host`
+
+
+
+
+| Workload | `workload` | `WLMDB` 
+
+
+| Priorität | `priority`  a| 
+* `Success`
+* `Info`
+* `Recommendation`
+* `Warning`
+* `Error`
+* `Critical`
+
+
+
+
+| Benachrichtigungstyp | `notificationType`  a| 
+* `Deployment`
+* `Well-architected`
+
+
+|===
+.Schritte
+. Bearbeiten Sie in der Amazon SNS-Konsole die Abonnementdetails für das SNS-Thema.
+. Wählen Sie im Bereich *Abonnementfilterrichtlinie* die Option zum Filtern nach *Nachrichtenattributen* aus.
+. Aktivieren Sie die Option *Abonnementfilterrichtlinie*.
+. Geben Sie eine JSON-Filterrichtlinie in das Feld *JSON-Editor* ein.
++
+Beispielsweise akzeptiert die folgende JSON-Filterrichtlinie Benachrichtigungen von der Microsoft SQL Server-Ressource, die sich auf die WLMDB-Arbeitslast beziehen, die Priorität „Erfolgreich“ oder „Fehler“ haben und Details zum Status „Gut konzipiert“ bereitstellen:
+
++
+[source, json]
+----
+{
+  "accountId": [
+    "account-a"
+  ],
+  "resourceType": [
+    "Microsoft SQL Server host"
+  ],
+  "workload": [
+    "WLMDB"
+  ],
+  "priority": [
+    "Success",
+    "Error"
+  ],
+  "notificationType": [
+    "Well-architected"
+  ]
+}
+----
+. Wählen Sie *Änderungen speichern*.
+
+
+Weitere Beispiele für Filterrichtlinien finden Sie unter https://docs.aws.amazon.com/sns/latest/dg/example-filter-policies.html["Beispielfilterrichtlinien für Amazon SNS"^] .
+
+Weitere Informationen zum Erstellen von Filterrichtlinien finden Sie im https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html["Amazon SNS-Dokumentation"^] .
 
 
 
