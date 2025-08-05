@@ -31,6 +31,12 @@ Workload Factory sendet Benachrichtigungen für die folgenden Ereignisse:
 
 
 | Die Bereitstellung des Microsoft SQL Server/PostgreSQL-Servers ist fehlgeschlagen | Die Bereitstellung des Microsoft SQL Server- oder PostgreSQL-Hosts ist fehlgeschlagen. Weitere Informationen finden Sie in der Jobüberwachung. | Einsatz | Fehler | Datenbanken | FSx für ONTAP, DB-Host 
+
+
+| Fehler beim Erstellen der Replikationsbeziehung | Die Erstellung einer SnapMirror Replikationsbeziehung ist fehlgeschlagen.  Weitere Informationen finden Sie unter Tracker. | Replikation | Kritisch | Allgemeine Lagerung | FSx für ONTAP 
+
+
+| FSx für ONTAP -Erstellungsfehler | Ein FSx for ONTAP Dateisystemerstellungsprozess ist fehlgeschlagen.  Weitere Informationen finden Sie unter Tracker. | FSx für ONTAP -Dateisystemaktion | Kritisch | Allgemeine Lagerung | FSx für ONTAP 
 |===
 
 
