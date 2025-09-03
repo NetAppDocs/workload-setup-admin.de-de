@@ -31,23 +31,7 @@ link:add-credentials.html["Hier erfahren Sie, wie Sie Ihrem Konto Anmeldeinforma
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drittens"] Mit FSX for ONTAP können Sie Ihre Workloads optimieren
 [role="quick-margin-para"]
-Nachdem Sie sich jetzt angemeldet, ein Konto erstellt und optional AWS-Anmeldedaten hinzugefügt haben, können Sie mit der Workload-Farm Ihre Workloads mit FSX für ONTAP optimieren. Mithilfe der folgenden Links folgen Sie den Schritt-für-Schritt-Anweisungen für jeden Workload-Typ.
+Nachdem Sie sich angemeldet, ein Konto erstellt und optional AWS-Anmeldeinformationen hinzugefügt haben, können Sie mit der Verwendung von Workload Factory beginnen, um Ihre Workloads mit FSx for ONTAP zu optimieren.
 
-[role="quick-margin-list"]
-* https://docs.netapp.com/us-en/workload-fsx-ontap/index.html["Amazon FSX für NetApp ONTAP"^]
-+
-Bewerten und analysieren Sie aktuelle Datenbestände auf mögliche Kosteneinsparungen durch Einsatz von FSX for ONTAP als Storage-Infrastruktur, Bereitstellung und Vorlagenatisierung von FSX für ONTAP Implementierungen basierend auf Best Practices und Zugriff auf erweiterte Managementfunktionen.
-
-* https://docs.netapp.com/us-en/workload-genai/index.html["GenAI"^]
-+
-Durch die Implementierung und das Management einer RAG-Infrastruktur (Retrieval-Augmented Generation) werden die Genauigkeit und Einzigartigkeit Ihrer KI-Applikationen verbessert. Erstellen Sie eine RAG Knowledge Base auf FSX for ONTAP mit integrierter Datensicherheit und Compliance.
-
-* https://docs.netapp.com/us-en/workload-databases/index.html["Datenbank-Workloads"^]
-+
-Erkennen Sie Ihren vorhandenen Datenbankbestand auf AWS, bewerten Sie potenzielle Kosteneinsparungen mit FSX für ONTAP, implementieren Sie Datenbanken durchgängig mit integrierten Best Practices zur Optimierung und automatisieren Sie Thin Cloning für CI/CD-Pipelines.
-
-* https://docs.netapp.com/us-en/workload-vmware/index.html["VMware-Workloads"^]
-+
-Optimieren Sie Migrationen und Betriebsabläufe mithilfe intelligenter Empfehlungen und automatischer Problembehebung. Implementieren Sie effiziente Backups und zuverlässige Disaster Recovery. Überwachen Sie Ihre VMs und beheben Sie Fehler.
-
-
+[role="quick-margin-para"]
+link:whats-next.html["Optimieren Sie Ihre Workloads mit FSx für ONTAP"] .
