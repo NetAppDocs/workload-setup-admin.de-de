@@ -2,16 +2,44 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
-summary: 'Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen für die Workload-Farm: Zugangsdaten für Cloud-Provider, Codebox-Verbesserungen und vieles mehr.' 
+summary: 'Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen von Workload Factory: Anmeldeinformationen des Cloud-Anbieters, Codebox-Erweiterungen und mehr.' 
 ---
-= Was ist neu bei den BlueXP -Funktionen für die werkseitige Administration von Workloads
+= Was ist neu bei den Verwaltungsfunktionen von NetApp Workload Factory?
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen für die Workload-Farm: Zugangsdaten für Cloud-Provider, Codebox-Verbesserungen und vieles mehr.
+Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen von Workload Factory: Anmeldeinformationen des Cloud-Anbieters, Codebox-Erweiterungen und mehr.
+
+
+
+== 06. Oktober 2025
+
+
+
+=== BlueXP workload factory jetzt NetApp Workload Factory
+
+BlueXP wurde umbenannt und neu gestaltet, um seine Rolle bei der Verwaltung Ihrer Dateninfrastruktur besser widerzuspiegeln. Aus diesem Grund wurde die BlueXP workload factory in NetApp Workload Factory umbenannt.
+
+
+
+=== Ask Me-Integration mit MCP
+
+Ask Me, der KI-Assistent von Workload Factory, ist in das Model Context Protocol (MCP) integriert.  Mithilfe von MCP stellt Ask Me eine sichere Schnittstelle zu externen Umgebungen und Abfrage-API-Tools her, um Antworten zu liefern, die auf Ihre spezifische Speicherumgebung zugeschnitten sind.
+
+
+
+== 05. Oktober 2025
+
+
+
+=== Neue Benachrichtigung für Speicher
+
+Der Benachrichtigungsdienst von NetApp Workload Factory umfasst die Benachrichtigung bei gut strukturierten Problemen für Storage.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Benachrichtigungen für NetApp Workload Factory"]
 
 
 

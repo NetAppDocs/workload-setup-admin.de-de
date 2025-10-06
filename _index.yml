@@ -1,24 +1,24 @@
 ---
 indexpage:
-  title: Dokumentation zur werkseitigen Einrichtung und Administration von BlueXP -Workloads
-  summary: Erste Schritte mit der BlueXP -Workload-Farm, mit der Sie Ihre Workloads
-    optimal nutzen können, wenn Sie Amazon FSX für NetApp ONTAP verwenden Nach der
-    Einrichtung können Sie FSX für ONTAP-Filesysteme für Ihre Workloads erstellen,
-    optimieren und managen, mit FSX für ONTAP Kosteneinsparungen erkunden, das integrierte
-    IaaS-als-Code-Co-Pilot für die plattformübergreifende Automatisierung verwenden
-    und Ihre Workloads an der Fabrik managen.
-  keywords: workload factory, fsx, account, credentials, users, permissions, log in,
+  title: Dokumentation zur Einrichtung und Administration von NetApp Workload Factory
+  summary: Beginnen Sie mit NetApp Workload Factory, damit Sie bei der Verwendung
+    von Amazon FSx for NetApp ONTAP das Beste aus Ihren Workloads herausholen können.  Nach
+    Abschluss der Einrichtung können Sie FSx for ONTAP -Dateisysteme für Ihre Workloads
+    erstellen, optimieren und verwalten, Kosteneinsparungen mit FSx for ONTAP erkunden,
+    den integrierten Infrastructure-as-Code-Co-Piloten für die plattformübergreifende
+    Automatisierung verwenden und Ihre Workloads in Workload Factory verwalten.
+  keywords: Workload Factory, fsx, account, credentials, users, permissions, log in,
     calculator, codebox
-  lead: Erste Schritte mit der BlueXP -Workload-Farm, mit der Sie Ihre Workloads optimal
-    nutzen können, wenn Sie Amazon FSX für NetApp ONTAP verwenden Nach der Einrichtung
-    können Sie FSX für ONTAP-Filesysteme für Ihre Workloads erstellen, optimieren
-    und managen, mit FSX für ONTAP Kosteneinsparungen erkunden, das integrierte IaaS-als-Code-Co-Pilot
-    für die plattformübergreifende Automatisierung verwenden und Ihre Workloads an
-    der Fabrik managen.
+  lead: Beginnen Sie mit NetApp Workload Factory, damit Sie bei der Verwendung von
+    Amazon FSx for NetApp ONTAP das Beste aus Ihren Workloads herausholen können.  Nach
+    Abschluss der Einrichtung können Sie FSx for ONTAP -Dateisysteme für Ihre Workloads
+    erstellen, optimieren und verwalten, Kosteneinsparungen mit FSx for ONTAP erkunden,
+    den integrierten Infrastructure-as-Code-Co-Piloten für die plattformübergreifende
+    Automatisierung verwenden und Ihre Workloads in Workload Factory verwalten.
   tiles:
   - title: Los geht's
     links:
-    - title: Erfahren Sie mehr über die BlueXP  Workload-Fabrik
+    - title: Erfahren Sie mehr über NetApp Workload Factory
       url: workload-factory-overview.html
     - title: Melden Sie sich an
       url: sign-up-saas.html
@@ -38,9 +38,9 @@ indexpage:
       url: use-codebox.html
   - title: Blogs und Community
     links:
+    - title: NetApp Konsole
+      url: https://www.netapp.com/console
+    - title: NetApp Datenservices
+      url: https://www.netapp.com/data-services/
     - title: NetApp Community
-      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
-    - title: BlueXP Blogs
-      url: https://bluexp.netapp.com/blog
-    - title: Cloud-Webinare
-      url: https://bluexp.netapp.com/events
+      url: https://community.netapp.com/

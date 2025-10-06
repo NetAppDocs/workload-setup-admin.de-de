@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: permissions-reference.html 
 keywords: permissions, actions 
-summary: Um Funktionen und Services für die BlueXP -Workload-Farm verwenden zu können, müssen Sie Berechtigungen bereitstellen, damit die Workload-Factory Vorgänge in Ihrer Cloud-Umgebung ausführen kann. 
+summary: Um die Funktionen und Dienste von NetApp Workload Factory nutzen zu können, müssen Sie Berechtigungen erteilen, damit Workload Factory Vorgänge in Ihrer Cloud-Umgebung ausführen kann. 
 ---
-= Berechtigungen für die BlueXP -Workload-Fabrik
+= Berechtigungen für NetApp Workload Factory
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,27 +14,27 @@ summary: Um Funktionen und Services für die BlueXP -Workload-Farm verwenden zu
 
 
 [role="lead"]
-Um Funktionen und Services für die BlueXP -Workload-Farm verwenden zu können, müssen Sie Berechtigungen bereitstellen, damit die Workload-Factory Vorgänge in Ihrer Cloud-Umgebung ausführen kann.
+Um die Funktionen und Dienste von NetApp Workload Factory nutzen zu können, müssen Sie Berechtigungen erteilen, damit Workload Factory Vorgänge in Ihrer Cloud-Umgebung ausführen kann.
 
 
 
 == Warum Berechtigungen verwenden
 
-Wenn Sie Berechtigungen für den _Nur-Lese-_ oder _Lese-/Schreibmodus_ erteilen, fügt Workload Factory der Instanz eine Richtlinie mit Berechtigungen zum Verwalten von Ressourcen und Prozessen innerhalb dieses AWS-Kontos hinzu. Auf diese Weise können die Workload-Fabrik verschiedene Operationen ausführen, angefangen bei der Erkennung Ihrer Storage-Umgebungen bis hin zur Bereitstellung von AWS-Ressourcen wie Dateisysteme im Storage-Management oder Wissensdatenbanken für GenAI-Workloads.
+Wenn Sie Berechtigungen für den Nur-Lese- oder Lese-/Schreibmodus erteilen, fügt Workload Factory der Instanz eine Richtlinie mit Berechtigungen zum Verwalten von Ressourcen und Prozessen innerhalb dieses AWS-Kontos hinzu.  Dadurch kann Workload Factory verschiedene Vorgänge ausführen, angefangen von der Erkennung Ihrer Speicherumgebungen bis hin zur Bereitstellung von AWS-Ressourcen wie Dateisystemen in der Speicherverwaltung oder Wissensdatenbanken für GenAI-Workloads.
 
-Wenn beispielsweise die Workload-Farm mit den erforderlichen Berechtigungen erteilt wird, durchsucht er alle EC2-Instanzen in einem bestimmten Konto und einer bestimmten Region und filtert alle Windows-basierten Maschinen. Wenn der AWS Systems Manager (SSM) Agent installiert ist und auf dem Host ausgeführt wird und das System Manager-Netzwerk ordnungsgemäß konfiguriert ist, kann die Workload Factory auf den Windows-Rechner zugreifen und überprüfen, ob die SQL Server-Software installiert ist oder nicht.
+Wenn Workload Factory beispielsweise bei Datenbank-Workloads über die erforderlichen Berechtigungen verfügt, scannt es alle EC2-Instanzen in einem bestimmten Konto und einer bestimmten Region und filtert alle Windows-basierten Maschinen.  Wenn der AWS Systems Manager (SSM)-Agent installiert ist und auf dem Host ausgeführt wird und das System Manager-Netzwerk ordnungsgemäß konfiguriert ist, kann Workload Factory auf die Windows-Maschine zugreifen und überprüfen, ob die SQL Server-Software installiert ist oder nicht.
 
 
 
 == Berechtigungen nach Workload
 
-Jeder Workload verwendet Berechtigungen, um bestimmte Aufgaben in der Workload-Fabrik auszuführen. Blättern Sie zu der Arbeitslast, die Sie verwenden, um die Liste der Berechtigungen, deren Zweck, wo sie verwendet werden und welche Modi sie unterstützen anzuzeigen.
+Jede Workload verwendet Berechtigungen, um bestimmte Aufgaben in Workload Factory auszuführen.  Scrollen Sie zu der von Ihnen verwendeten Arbeitslast, um die Liste der Berechtigungen, ihren Zweck, wo sie verwendet werden und welche Modi sie unterstützen, anzuzeigen.
 
 
 
 === Berechtigungen für Speicher
 
-Die für Storage verfügbaren IAM-Richtlinien bieten die Berechtigungen, die die Workload-Fabrik für das Management von Ressourcen und Prozessen in Ihrer Public Cloud-Umgebung basierend auf dem von Ihnen verwendeten Betriebsmodus benötigt.
+Die für Storage verfügbaren IAM-Richtlinien bieten die Berechtigungen, die Workload Factory benötigt, um Ressourcen und Prozesse in Ihrer öffentlichen Cloud-Umgebung basierend auf dem Betriebsmodus zu verwalten, in dem Sie arbeiten.
 
 Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuzeigen:
 
@@ -364,7 +364,7 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 
 === Berechtigungen für Datenbank-Workloads
 
-Die für Datenbank-Workloads verfügbaren IAM-Richtlinien bieten die Berechtigungen, die die Workload Factory benötigt, um Ressourcen und Prozesse in Ihrer öffentlichen Cloud-Umgebung basierend auf dem Betriebsmodus zu verwalten, in dem Sie arbeiten.
+Die für Datenbank-Workloads verfügbaren IAM-Richtlinien bieten die Berechtigungen, die Workload Factory benötigt, um Ressourcen und Prozesse in Ihrer öffentlichen Cloud-Umgebung basierend auf dem Betriebsmodus zu verwalten, in dem Sie arbeiten.
 
 Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuzeigen:
 
@@ -467,7 +467,7 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "EC2Group",
+      "Sid": "EC2TagGroup",
       "Effect": "Allow",
       "Action": [
         "ec2:AllocateAddress",
@@ -539,6 +539,7 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
         "cloudformation:ValidateTemplate",
         "cloudformation:DescribeAccountLimits",
         "cloudwatch:GetMetricStatistics",
+        "cloudwatch:GetMetricData",
         "ds:DescribeDirectories",
         "ec2:CreateLaunchTemplate",
         "ec2:CreateLaunchTemplateVersion",
@@ -546,27 +547,50 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
         "ec2:CreateSecurityGroup",
         "ec2:CreateTags",
         "ec2:CreateVpcEndpoint",
-        "ec2:Describe*",
-        "ec2:Get*",
+        "ec2:DescribeInstances",
+        "ec2:DescribeVolumes",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeImages",
+        "ec2:DescribeKeyPairs",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeTags",
+        "ec2:DescribeAddresses",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DescribeRegions",
+        "ec2:DescribeRouteTables",
+        "ec2:DescribeInstanceTypes",
+        "ec2:DescribeVpcEndpoints",
+        "ec2:DescribeInstanceTypeOfferings",
+        "ec2:DescribeSnapshots",
+        "ec2:DescribeLaunchTemplates",
         "ec2:RunInstances",
         "ec2:ModifyVpcAttribute",
-        "ec2messages:*",
         "fsx:CreateFileSystem",
         "fsx:UpdateFileSystem",
         "fsx:CreateStorageVirtualMachine",
         "fsx:CreateVolume",
         "fsx:UpdateVolume",
-        "fsx:Describe*",
-        "fsx:List*",
+        "fsx:DescribeFileSystems",
+        "fsx:DescribeStorageVirtualMachines",
+        "fsx:DescribeVolumes",
+        "fsx:DescribeFileSystemAliases",
+        "fsx:DescribeBackups",
+        "fsx:ListTagsForResource",
         "kms:CreateGrant",
-        "kms:Describe*",
-        "kms:List*",
+        "kms:DescribeKey",
+        "kms:DescribeCustomKeyStores",
+        "kms:ListAliases",
+        "kms:ListKeys",
         "kms:GenerateDataKey",
         "kms:Decrypt",
         "logs:CreateLogGroup",
         "logs:CreateLogStream",
-        "logs:DescribeLog*",
-        "logs:GetLog*",
+        "logs:DescribeLogGroups",
+        "logs:DescribeLogStreams",
+        "logs:GetLogEvents",
+        "logs:GetLogGroupFields",
+        "logs:GetLogRecord",
         "logs:ListLogDeliveries",
         "logs:PutLogEvents",
         "logs:TagResource",
@@ -574,9 +598,13 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
         "servicequotas:ListServiceQuotas",
         "sns:ListTopics",
         "sns:Publish",
-        "ssm:Describe*",
-        "ssm:Get*",
-        "ssm:List*",
+        "ssm:DescribeInstanceInformation",
+        "ssm:DescribeInstancePatchStates",
+        "ssm:DescribePatchBaselines",
+        "ssm:GetParametersByPath",
+        "ssm:GetCommandInvocation",
+        "ssm:GetConnectionStatus",
+        "ssm:ListCommands",
         "ssm:PutComplianceItems",
         "ssm:PutConfigurePackageResult",
         "ssm:PutInventory",
@@ -584,13 +612,23 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
         "ssm:UpdateAssociationStatus",
         "ssm:UpdateInstanceAssociationStatus",
         "ssm:UpdateInstanceInformation",
-        "ssmmessages:*",
+        "ssmmessages:CreateControlChannel",
+        "ssmmessages:CreateDataChannel",
+        "ssmmessages:OpenControlChannel",
+        "ssmmessages:OpenDataChannel",
         "compute-optimizer:GetEnrollmentStatus",
         "compute-optimizer:PutRecommendationPreferences",
         "compute-optimizer:GetEffectiveRecommendationPreferences",
         "compute-optimizer:GetEC2InstanceRecommendations",
         "autoscaling:DescribeAutoScalingGroups",
-        "autoscaling:DescribeAutoScalingInstances"
+        "autoscaling:DescribeAutoScalingInstances",
+        "bedrock:GetFoundationModelAvailability",
+        "bedrock:ListInferenceProfiles",
+        "iam:GetPolicy",
+        "iam:GetPolicyVersion",
+        "iam:GetRole",
+        "iam:GetRolePolicy",
+        "iam:GetUser"
       ],
       "Resource": "*"
     },
@@ -606,28 +644,28 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
       ]
     },
     {
-      "Sid": "IAMGroup",
+      "Sid": "IAMGroup1",
       "Effect": "Allow",
       "Action": [
         "iam:AddRoleToInstanceProfile",
         "iam:CreateInstanceProfile",
-        "iam:CreateRole",
         "iam:DeleteInstanceProfile",
-        "iam:GetPolicy",
-        "iam:GetPolicyVersion",
-        "iam:GetRole",
-        "iam:GetRolePolicy",
-        "iam:GetUser",
         "iam:PutRolePolicy",
         "iam:RemoveRoleFromInstanceProfile"
       ],
-      "Resource": "*"
+      "Resource": [
+        "arn:aws:iam::*:instance-profile/*",
+        "arn:aws:iam::*:role/WLMDB*"
+      ]
     },
     {
-      "Sid": "IAMGroup1",
+      "Sid": "IAMGroup2",
       "Effect": "Allow",
       "Action": "iam:CreateServiceLinkedRole",
-      "Resource": "*",
+      "Resource": [
+        "arn:aws:iam::*:instance-profile/*",
+        "arn:aws:iam::*:role/WLMDB*"
+      ],
       "Condition": {
         "StringLike": {
           "iam:AWSServiceName": "ec2.amazonaws.com"
@@ -635,15 +673,24 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
       }
     },
     {
-      "Sid": "IAMGroup2",
+      "Sid": "IAMGroup3",
       "Effect": "Allow",
       "Action": "iam:PassRole",
-      "Resource": "*",
+      "Resource": [
+        "arn:aws:iam::*:instance-profile/*",
+        "arn:aws:iam::*:role/WLMDB*"
+      ],
       "Condition": {
         "StringEquals": {
           "iam:PassedToService": "ec2.amazonaws.com"
         }
       }
+    },
+    {
+      "Sid": "IAMGroup4",
+      "Effect": "Allow",
+      "Action": "iam:CreateRole",
+      "Resource": "arn:aws:iam::*:role/WLMDB*"
     },
     {
       "Sid": "SSMParameterStore",
@@ -1242,29 +1289,17 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 | Löschen Sie die Sicherheitsgruppe, die vorübergehend für Validierungsknoten erstellt wurde | ec2:DeleteSecurityGroup | Einsatz | Lese-/Schreibzugriff 
 
 
-.2+| Abrufen von Instanzdetails für die Bereitstellung | ec2: Beschreiben*  a| 
-* Einsatz
-* Inventar
-* Einsparungen entdecken
-
+.2+| Abrufen von Instanzdetails für die Bereitstellung | ec2:DescribeAddresses  a| 
+Einsatz
 | Lese-/Schreibzugriff 
 
 
-| ec2:get*  a| 
-* Einsatz
-* Inventar
-* Einsparungen entdecken
-
+| ec2:DescribeLaunchTemplates  a| 
+Einsatz
 | Lese-/Schreibzugriff 
 
 
 | Starten Sie die erstellten Instanzen | ec2:RunInstances | Einsatz | Lese-/Schreibzugriff 
-
-
-| System Manager verwendet den AWS Endpunkt des Nachrichtenbereitstellungsservices für API-Vorgänge | Ec2messages:*  a| 
-* Bereitstellung * Inventar
-
-| Lese-/Schreibzugriff 
 
 
 .3+| Erstellen Sie FSX for ONTAP-Ressourcen, die für die Bereitstellung erforderlich sind. Für bestehende FSX for ONTAP Systeme wird eine neue SVM erstellt, die SQL Volumes hostet. | fsx:CreateFileSystem | Einsatz | Lese-/Schreibzugriff 
@@ -1280,226 +1315,206 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 | Lese-/Schreibzugriff 
 
 
-.2+| FSX for ONTAP – Details | fsx:Beschreiben*  a| 
-* Einsatz
-* Inventar
-* Managen von Abläufen
-* Einsparungen entdecken
-
+.2+| FSX for ONTAP – Details | fsx:DescribeFileSystemAliases  a| 
+Einsatz
 | Lese-/Schreibzugriff 
 
 
-| fsx:Liste*  a| 
+| Ändern der Größe von FSX für ONTAP-Dateisystem, um Reserve des Dateisystems zu beheben | fsx:UpdateFilesystem | Optimierung 
+
+
+| Lese-/Schreibzugriff | Ändern Sie die Größe von Volumes zur Korrektur von Protokoll- und tempdb-Laufwerkgrößen | fsx:UpdateVolumen | Optimierung 
+
+
+| Lese-/Schreibzugriff .3+| KMS-Schlüsseldetails erhalten und FSX für ONTAP-Verschlüsselung verwenden | Km:CreateGrant | Einsatz 
+
+
+| Lese-/Schreibzugriff | kms:DescribeCustomKeyStores | Einsatz 
+
+
+| Lese-/Schreibzugriff | Kms:GenerateDataKey | Einsatz 
+
+
+| Lese-/Schreibzugriff .8+| Erstellen Sie CloudWatch-Protokolle für Validierungs- und Bereitstellungsskripte, die auf EC2-Instanzen ausgeführt werden | Protokolle:CreateLogGroup | Einsatz 
+
+
+| Lese-/Schreibzugriff | Protokolle:CreateLogStream | Einsatz 
+
+
+| Lese-/Schreibzugriff | Protokolle:DescribeLogStreams  a| 
 * Einsatz
-* Inventar
-
-| Lese-/Schreibzugriff 
+* Bewertung
 
 
-| Ändern der Größe von FSX für ONTAP-Dateisystem, um Reserve des Dateisystems zu beheben | fsx:UpdateFilesystem | Optimierung | Lese-/Schreibzugriff 
 
 
-| Ändern Sie die Größe von Volumes zur Korrektur von Protokoll- und tempdb-Laufwerkgrößen | fsx:UpdateVolumen | Optimierung | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | Protokolle:GetLogGroupFields | Einsatz 
 
 
-.4+| KMS-Schlüsseldetails erhalten und FSX für ONTAP-Verschlüsselung verwenden | Km:CreateGrant | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | Protokolle:GetLogRecord | Einsatz 
 
 
-| Km:Beschreiben* | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | Protokolle:ListLogDeliveries | Einsatz 
 
 
-| Km:Liste* | Einsatz | Lese-/Schreibzugriff 
-
-
-| Kms:GenerateDataKey | Einsatz | Lese-/Schreibzugriff 
-
-
-.7+| Erstellen Sie CloudWatch-Protokolle für Validierungs- und Bereitstellungsskripte, die auf EC2-Instanzen ausgeführt werden | Protokolle:CreateLogGroup | Einsatz | Lese-/Schreibzugriff 
-
-
-| Protokolle:CreateLogStream | Einsatz | Lese-/Schreibzugriff 
-
-
-| Protokolle:DescribeLog* | Einsatz | Lese-/Schreibzugriff 
-
-
-| Protokolle:getlog* | Einsatz | Lese-/Schreibzugriff 
-
-
-| Protokolle:ListLogDeliveries | Einsatz | Lese-/Schreibzugriff 
-
-
-| Protokolle:PutLogEvents  a| 
+| Lese-/Schreibzugriff | Protokolle:PutLogEvents  a| 
 * Einsatz
 * Managen von Abläufen
 
-| Lese-/Schreibzugriff 
 
 
-| Protokolle:TagResource | Einsatz | Lese-/Schreibzugriff 
+
+| Lese-/Schreibzugriff | Protokolle:TagResource | Einsatz 
 
 
-| Workload Factory wechselt zu Amazon CloudWatch-Protokollen für die SQL-Instanz, wenn eine SSM-Ausgabe-Kürzung auftritt | Protokolle:GetLogEvents  a| 
+| Lese-/Schreibzugriff | Workload Factory wechselt zu Amazon CloudWatch-Protokollen für die SQL-Instanz, wenn eine Kürzung der SSM-Ausgabe auftritt | Protokolle:GetLogEvents  a| 
 * Storage-Bewertung (Optimierung)
 * Inventar
+
+
+
 
  a| 
 * Schreibgeschützt
 * Lese-/Schreibzugriff
 
-
-
-
-| Zulassen, dass die Workload Factory aktuelle Protokollgruppen abrufen kann und dass die Aufbewahrung für Protokollgruppen festgelegt ist, die von der Workload Factory erstellt wurden | Protokolle:DescribeLogGroups  a| 
+| Erlauben Sie Workload Factory, aktuelle Protokollgruppen abzurufen und zu überprüfen, ob die Aufbewahrung für von Workload Factory erstellte Protokollgruppen festgelegt ist | Protokolle:DescribeLogGroups  a| 
 * Storage-Bewertung (Optimierung)
 * Inventar
 
-| Schreibgeschützt 
 
 
-| Erlauben Sie der Workload Factory, eine eintägige Aufbewahrungsrichtlinie für Protokollgruppen festzulegen, die von der Workload Factory erstellt wurden, um unnötige Anhäufung von Protokollströmen für SSM-Befehlsausgaben zu vermeiden | Protokolle:PutRetentionPolicy  a| 
+
+| Schreibgeschützt | Erlauben Sie Workload Factory, eine eintägige Aufbewahrungsrichtlinie für von Workload Factory erstellte Protokollgruppen festzulegen, um eine unnötige Ansammlung von Protokollströmen für SSM-Befehlsausgaben zu vermeiden. | Protokolle:PutRetentionPolicy  a| 
 * Storage-Bewertung (Optimierung)
 * Inventar
+
+
+
 
  a| 
 * Schreibgeschützt
 * Lese-/Schreibzugriff
 
+| Erstellen Sie Geheimnisse in einem Benutzerkonto für die Anmeldeinformationen für SQL, Domäne und FSX für ONTAP | Service-Equotas:ListServiceQuotas | Einsatz 
 
 
-
-| Erstellen Sie Geheimnisse in einem Benutzerkonto für die Anmeldeinformationen für SQL, Domäne und FSX für ONTAP | Service-Equotas:ListServiceQuotas | Einsatz | Lese-/Schreibzugriff 
-
-
-.2+| Führen Sie die SNS-Themen des Kunden auf und veröffentlichen Sie sie in WLMDB-Backend-SNS sowie in Kunden-SNS, falls ausgewählt | sns:listTopics | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff .2+| Führen Sie die SNS-Themen des Kunden auf und veröffentlichen Sie sie in WLMDB-Backend-SNS sowie in Kunden-SNS, falls ausgewählt | sns:listTopics | Einsatz 
 
 
-| sns:Veröffentlichen | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | sns:Veröffentlichen | Einsatz 
 
 
-.11+| Erforderliche SSM-Berechtigungen, um das Erkennungsskript auf bereitgestellten SQL-Instanzen auszuführen und die aktuelle Liste von FSX für von ONTAP unterstützte AWS-Regionen abzurufen. | ssm:Beschreiben* | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff .11+| Erforderliche SSM-Berechtigungen, um das Erkennungsskript auf bereitgestellten SQL-Instanzen auszuführen und die aktuelle Liste von FSX für von ONTAP unterstützte AWS-Regionen abzurufen. | ssm:PutComplianceItems | Einsatz 
 
 
-| ssm:get*  a| 
-* Einsatz
-* Managen von Abläufen
-
-| Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | ssm:PutConfigurePackageResult | Einsatz 
 
 
-| ssm:Liste* | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | ssm:PutInventory | Einsatz 
 
 
-| ssm:PutComplianceItems | Einsatz | Lese-/Schreibzugriff 
-
-
-| ssm:PutConfigurePackageResult | Einsatz | Lese-/Schreibzugriff 
-
-
-| ssm:PutInventory | Einsatz | Lese-/Schreibzugriff 
-
-
-| ssm:SendCommand  a| 
+| Lese-/Schreibzugriff | ssm:SendCommand  a| 
 * Einsatz
 * Inventar
 * Managen von Abläufen
 
-| Lese-/Schreibzugriff 
 
 
-| ssm:UpdateAssociationStatus | Einsatz | Lese-/Schreibzugriff 
+
+| Lese-/Schreibzugriff | ssm:UpdateAssociationStatus | Einsatz 
 
 
-| ssm:UpdateInstanceAssociationStatus | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | ssm:UpdateInstanceAssociationStatus | Einsatz 
 
 
-| ssm:UpdateInstanceInformation | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | ssm:UpdateInstanceInformation | Einsatz 
 
 
-| Ssmmessages:*  a| 
+| Lese-/Schreibzugriff | ssmmesages:CreateControlChannel | Einsatz 
+
+
+| Lese-/Schreibzugriff | ssmmesages:CreateDataChannel | Einsatz 
+
+
+| Lese-/Schreibzugriff | ssmmesages:OpenControlChannel | Einsatz 
+
+
+| Lese-/Schreibzugriff | ssmmesages:OpenDataChannel | Einsatz 
+
+
+| Lese-/Schreibzugriff .4+| Anmeldedaten für FSX für ONTAP-, Active Directory- und SQL-Benutzer speichern (nur für SQL-Benutzerauthentifizierung) | ssm:GetParameter ^1^  a| 
 * Einsatz
-* Inventar
 * Managen von Abläufen
-
-| Lese-/Schreibzugriff 
-
-
-.4+| Anmeldedaten für FSX für ONTAP-, Active Directory- und SQL-Benutzer speichern (nur für SQL-Benutzerauthentifizierung) | ssm:GetParameter ^1^  a| 
-* Einsatz
-* Managen von Abläufen
-* Inventar
-
-| Lese-/Schreibzugriff 
-
-
-| ssm:GetParameters ^1^  a| 
-* Einsatz
 * Inventar
 
-| Lese-/Schreibzugriff 
 
 
-| ssm:PutParameter ^1^  a| 
+
+| Lese-/Schreibzugriff | ssm:GetParameters ^1^  a| 
+* Einsatz
+* Inventar
+
+
+
+
+| Lese-/Schreibzugriff | ssm:PutParameter ^1^  a| 
 * Einsatz
 * Managen von Abläufen
 
-| Lese-/Schreibzugriff 
 
 
-| ssm:DeleteParameters ^1^  a| 
+
+| Lese-/Schreibzugriff | ssm:DeleteParameters ^1^  a| 
 * Einsatz
 * Managen von Abläufen
 
-| Lese-/Schreibzugriff 
 
 
-| Signal CloudFormation Stack auf Erfolg oder Misserfolg. | Cloudformation:SignalRessource ^1^ | Einsatz | Lese-/Schreibzugriff 
+
+| Lese-/Schreibzugriff | Signal CloudFormation Stack auf Erfolg oder Misserfolg. | Cloudformation:SignalRessource ^1^ | Einsatz 
 
 
-| Fügen Sie die von Vorlage erstellte EC2-Rolle zum Instanzprofil von EC2 hinzu, um Skripts auf EC2 Zugriff auf die für die Implementierung erforderlichen Ressourcen zu ermöglichen. | iam:AddRoleToInstanceProfile | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | Fügen Sie die von Vorlage erstellte EC2-Rolle zum Instanzprofil von EC2 hinzu, um Skripts auf EC2 Zugriff auf die für die Implementierung erforderlichen Ressourcen zu ermöglichen. | iam:AddRoleToInstanceProfile | Einsatz 
 
 
-| Instanzprofil für EC2 erstellen und erstellte EC2-Rolle zuweisen. | iam:CreateInstanceProfil | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | Instanzprofil für EC2 erstellen und erstellte EC2-Rolle zuweisen. | iam:CreateInstanceProfil | Einsatz 
 
 
-| EC2-Rolle über Vorlage mit den unten aufgeführten Berechtigungen erstellen | iam:CreateRollenole | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | EC2-Rolle über Vorlage mit den unten aufgeführten Berechtigungen erstellen | iam:CreateRollenole | Einsatz 
 
 
-| Mit EC2-Service verknüpfte Rolle erstellen | iam:CreateServiceLinkedRole ^2^ | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | Mit EC2-Service verknüpfte Rolle erstellen | iam:CreateServiceLinkedRole ^2^ | Einsatz 
 
 
-| Löschen Sie das während der Bereitstellung speziell für die Validierungsknoten erstellte Instanzprofil | iam:DeleteInstanceProfil | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | Löschen Sie das während der Bereitstellung speziell für die Validierungsknoten erstellte Instanzprofil | iam:DeleteInstanceProfil | Einsatz 
 
 
-.5+| Rufen Sie die Rollen- und Richtliniendetails ab, um Lücken in der Berechtigung zu ermitteln und die Bereitstellung zu validieren | iam:GetPolicy | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff .5+| Rufen Sie die Rollen- und Richtliniendetails ab, um Lücken in der Berechtigung zu ermitteln und die Bereitstellung zu validieren | iam:GetPolicy | Einsatz 
 
 
-| iam:GetPolicyVersion | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | iam:GetPolicyVersion | Einsatz 
 
 
-| iam:GetRole | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | iam:GetRole | Einsatz 
 
 
-| iam:GetRolePolicy | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | iam:GetRolePolicy | Einsatz 
 
 
-| iam:GetUser | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | iam:GetUser | Einsatz 
 
 
-| Übergeben Sie die erstellte Rolle an EC2-Instanz | iam:PassRole ^3^ | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | Übergeben Sie die erstellte Rolle an EC2-Instanz | iam:PassRole ^3^ | Einsatz 
 
 
-| Fügen Sie der erstellten EC2-Rolle eine Richtlinie mit den erforderlichen Berechtigungen hinzu | iam:PuttePolicy | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | Fügen Sie der erstellten EC2-Rolle eine Richtlinie mit den erforderlichen Berechtigungen hinzu | iam:PuttePolicy | Einsatz 
 
 
-| Trennen der Rolle vom bereitgestellten EC2-Instanzprofil | iam:RemoveRoleFromInstanceProfile | Einsatz | Lese-/Schreibzugriff 
+| Lese-/Schreibzugriff | Trennen der Rolle vom bereitgestellten EC2-Instanzprofil | iam:RemoveRoleFromInstanceProfile | Einsatz 
 
 
-| Simulieren Sie Workload-Vorgänge, um verfügbare Berechtigungen zu validieren und sie mit den erforderlichen AWS Kontoberechtigungen zu vergleichen | iam:SimulatePrincipalPolicy | Einsatz  a| 
-* Schreibgeschützt
-* Lese-/Schreibzugriff
-
-
+| Lese-/Schreibzugriff | Simulieren Sie Workload-Vorgänge, um verfügbare Berechtigungen zu validieren und sie mit den erforderlichen AWS Kontoberechtigungen zu vergleichen | iam:SimulatePrincipalPolicy | Einsatz 
 |===
 . Die Berechtigung ist auf Ressourcen beschränkt, die mit WLMDB beginnen.
 . „iam:CreateServiceLinkedRole“ begrenzt durch „iam:AWSServiceName“: „ec2.amazonaws.com"*
@@ -1511,7 +1526,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 === Berechtigungen für GenAI-Workloads
 
-Die IAM-Richtlinien für VMware-Workloads bieten die Berechtigungen, die die Workload-Farm für VMware benötigt, um Ressourcen und Prozesse in Ihrer Public-Cloud-Umgebung basierend auf dem von Ihnen verwendeten Betriebsmodus zu managen.
+Die IAM-Richtlinien für VMware-Workloads bieten die Berechtigungen, die Workload Factory für VMware benötigt, um Ressourcen und Prozesse in Ihrer öffentlichen Cloud-Umgebung basierend auf dem Betriebsmodus zu verwalten, in dem Sie arbeiten.
 
 GenAI IAM-Richtlinien sind nur im Lese-/Schreibmodus verfügbar:
 
@@ -1866,9 +1881,6 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | ec2:AuthoriseSecurityGroupIngress | Einsatz | Lese-/Schreibzugriff 
 
 
-| Abfrage des Protokollierungsstatus von Amazon Bedrock/Amazon CloudWatch während der Implementierung der KI-Engine | Bedrock:GetModelInvocationLoggingKonfiguration | Einsatz | Lese-/Schreibzugriff 
-
-
 | Initiieren Sie eine Chat-Anfrage an eines der Basismodelle | Bedrock:InvokeModelWithin ResponseStream | Einsatz | Lese-/Schreibzugriff 
 
 
@@ -1977,18 +1989,6 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 | Protokolle:TagResource | Einsatz | Lese-/Schreibzugriff 
 
 
-| Senden Sie Bedrock-Protokolle an Amazon CloudWatch | Bedrock:PutModelInvocationLoggingKonfiguration | Fehlerbehebung | Lese-/Schreibzugriff 
-
-
-| Erstellen Sie die Rolle, die das Senden von Amazon Bedrock-Protokollen an Amazon CloudWatch ermöglicht | iam:AttachRolePolicy | Fehlerbehebung | Lese-/Schreibzugriff 
-
-
-| Erstellen Sie die Rolle, die das Senden von Amazon Bedrock-Protokollen an Amazon CloudWatch ermöglicht | iam:PassRole | Fehlerbehebung | Lese-/Schreibzugriff 
-
-
-| Erstellen Sie die Rolle, die das Senden von Amazon Bedrock-Protokollen an Amazon CloudWatch ermöglicht | iam:CreatePolicy | Fehlerbehebung | Lese-/Schreibzugriff 
-
-
 | Inferenzprofile für das Modell auflisten | Bedrock:ListInferenceProfiles | Fehlerbehebung | Lese-/Schreibzugriff 
 |===
 ====
@@ -1996,7 +1996,7 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 
 === Berechtigungen für VMware-Workloads
 
-Die IAM-Richtlinien für VMware-Workloads bieten die Berechtigungen, die die Workload-Farm für VMware benötigt, um Ressourcen und Prozesse in Ihrer Public-Cloud-Umgebung basierend auf dem von Ihnen verwendeten Betriebsmodus zu managen.
+Die IAM-Richtlinien für VMware-Workloads bieten die Berechtigungen, die Workload Factory für VMware benötigt, um Ressourcen und Prozesse in Ihrer öffentlichen Cloud-Umgebung basierend auf dem Betriebsmodus zu verwalten, in dem Sie arbeiten.
 
 Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuzeigen:
 
@@ -2312,6 +2312,19 @@ Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den fo
 
 
 
+=== 5. Oktober 2025
+
+Die folgenden Berechtigungen wurden aus GenAI entfernt und werden jetzt von der GenAI-Engine verwaltet:
+
+* `bedrock:GetModelInvocationLoggingConfiguration`
+* `bedrock:PutModelInvocationLoggingConfiguration`
+* `iam:AttachRolePolicy`
+* `iam:PassRole`
+* `iam:CreatePolicy`
+
+
+
+
 === 29 Juni 2025
 
 Die folgende Berechtigung ist jetzt im _schreibgeschützten_ Modus für Datenbanken verfügbar:  `cloudwatch:GetMetricData` .
@@ -2366,7 +2379,7 @@ Die folgende Berechtigung wurde aus dem Lese-/Schreibmodus für GenAI entfernt: 
 
 ==== iam:SimulatePrincipalPolicy-Berechtigungsaktualisierung
 
-Die `iam:SimulatePrincipalPolicy` Berechtigung ist Teil aller Workload-Berechtigungsrichtlinien, wenn Sie die automatische Berechtigungssüberprüfung aktivieren, wenn Sie zusätzliche AWS-Kontoanmeldeinformationen hinzufügen oder eine neue Workload-Funktion von der Arbeitslastwerkkonsole hinzufügen. Die Berechtigung simuliert Workload-Vorgänge und prüft, ob Sie über die erforderlichen AWS-Kontoberechtigungen verfügen, bevor Sie Ressourcen aus der Workload-Werkseinstellung bereitstellen. Durch die Aktivierung dieser Prüfung wird der Zeitaufwand und der Aufwand verringert, den Sie möglicherweise benötigen, um Ressourcen von fehlgeschlagenen Vorgängen zu bereinigen und fehlende Berechtigungen hinzuzufügen.
+Der `iam:SimulatePrincipalPolicy` Die Berechtigung ist Teil aller Workload-Berechtigungsrichtlinien, wenn Sie die automatische Berechtigungsprüfung beim Hinzufügen zusätzlicher AWS-Kontoanmeldeinformationen oder beim Hinzufügen einer neuen Workload-Funktion über die Workload Factory-Konsole aktivieren.  Die Berechtigung simuliert Workload-Vorgänge und prüft, ob Sie über die erforderlichen AWS-Kontoberechtigungen verfügen, bevor Sie Ressourcen aus Workload Factory bereitstellen.  Durch die Aktivierung dieser Prüfung verringern Sie den Zeit- und Arbeitsaufwand, der möglicherweise zum Bereinigen von Ressourcen aus fehlgeschlagenen Vorgängen und zum Hinzufügen fehlender Berechtigungen erforderlich ist.
 
 
 

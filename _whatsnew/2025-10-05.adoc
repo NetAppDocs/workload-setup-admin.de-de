@@ -1,0 +1,11 @@
+= Neue Benachrichtigung für Speicher
+:allow-uri-read: 
+
+
+
+
+=== Neue Benachrichtigung für Speicher
+
+Der Benachrichtigungsdienst von NetApp Workload Factory umfasst die Benachrichtigung bei gut strukturierten Problemen für Storage.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Benachrichtigungen für NetApp Workload Factory"]

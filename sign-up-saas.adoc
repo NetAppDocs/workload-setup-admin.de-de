@@ -2,33 +2,33 @@
 sidebar: sidebar 
 permalink: sign-up-saas.html 
 keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
-summary: Der Zugriff auf die Workload Factory erfolgt über eine webbasierte Konsole. Wenn Sie mit der Workload-Farm beginnen, müssen Sie sich zunächst mit Ihren vorhandenen Zugangsdaten für die NetApp Support-Website anmelden oder ein NetApp Cloud-Login erstellen. 
+summary: Auf Workload Factory kann über eine webbasierte Konsole zugegriffen werden.  Wenn Sie mit Workload Factory beginnen, müssen Sie sich zunächst mit Ihren vorhandenen Anmeldeinformationen für die NetApp Support-Site anmelden oder ein NetApp Cloud-Login erstellen. 
 ---
-= Melden Sie sich bei der BlueXP -Workload-Fabrik an
+= Registrieren Sie sich bei NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Der Zugriff auf die BlueXP -Workload-Fabrik ist über eine webbasierte Konsole möglich. Wenn Sie mit der Workload-Farm beginnen, müssen Sie sich zunächst mit Ihren vorhandenen Zugangsdaten für die NetApp Support-Website anmelden oder ein NetApp Cloud-Login erstellen.
+Auf NetApp Workload Factory kann über eine webbasierte Konsole zugegriffen werden.  Wenn Sie mit Workload Factory beginnen, müssen Sie sich zunächst mit Ihren vorhandenen Anmeldeinformationen für die NetApp Support-Site anmelden oder ein NetApp Cloud-Login erstellen.
 
 .Über diese Aufgabe
-Sie können sich mit einer der folgenden Optionen für die Workload-Fabrik anmelden:
+Sie können sich mit einer der folgenden Optionen bei Workload Factory anmelden:
 
 * Ihre vorhandenen Zugangsdaten für die NetApp Support Site (NSS
 * Geben Sie Ihre E-Mail-Adresse und ein Passwort an, um sich bei einem NetApp Cloud-Login anzumelden
 
 
 .Schritte
-. Öffnen Sie einen Webbrowser, und wechseln Sie zum https://console.workloads.netapp.com["Arbeitslastwerkkonsole"^]
+. Öffnen Sie einen Webbrowser und gehen Sie zu https://console.workloads.netapp.com["Workload Factory-Konsole"^]
 . Wenn Sie über ein NetApp Support Site Konto verfügen, geben Sie die mit Ihrem NSS Konto verknüpfte E-Mail-Adresse direkt auf der *Anmelden* Seite ein.
 +
-Sie können die Anmeldeseite überspringen, wenn Sie ein NSS-Konto haben. Workload Factory registriert Sie im Rahmen dieser ersten Anmeldung.
+Sie können die Anmeldeseite überspringen, wenn Sie ein NSS-Konto haben.  Workload Factory wird Sie im Rahmen dieser ersten Anmeldung anmelden.
 
 . Wenn Sie noch keinen NSS-Account haben und sich mit einem NetApp Cloud Login registrieren möchten, wählen Sie *Registrieren*.
 +
-image:screenshot-sign-up1.png["Ein Screenshot der Anmeldeseite, auf der Sie Ihren Benutzernamen und Ihr Kennwort für den Zugriff auf die Workload Factory hinzufügen können."]
+image:screenshot-sign-up1.png["Ein Screenshot der Anmeldeseite, auf der Sie Ihren Benutzernamen und Ihr Kennwort für den Zugriff auf Workload Factory hinzufügen können."]
 
 . Geben Sie auf der Seite *Anmelden* die erforderlichen Informationen ein, um einen NetApp-Cloud-Login zu erstellen, und wählen Sie *Weiter*.
 +
@@ -47,8 +47,8 @@ Ein Account ist das wichtigste Element der Identitätsplattform von NetApp, übe
 +
 image:screenshot-account-selection.png["Ein Screenshot der Kontoseite, der angezeigt wird, wenn Sie sich mit einem neuen Konto anmelden."]
 
-. Wählen Sie *Create*, und die Workload Factory-Homepage wird angezeigt.
+. Wählen Sie *Erstellen* und die Startseite von Workload Factory wird angezeigt.
 
 
 .Ergebnis
-Sie verfügen jetzt über eine Workload Factory-Anmeldung und ein Konto. Sie gelten als Kontoadministrator und haben Zugriff auf alle werkseitigen Funktionen für Arbeitslasten.
+Sie verfügen jetzt über einen Workload Factory-Login und ein Konto.  Sie gelten als Kontoadministrator und haben Zugriff auf alle Funktionen von Workload Factory.

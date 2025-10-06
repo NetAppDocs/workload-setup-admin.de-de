@@ -2,26 +2,26 @@
 sidebar: sidebar 
 permalink: log-in.html 
 keywords: logging in, log in, sign in, signing in, user account, login with netapp, log in with netapp, sign up, create account 
-summary: Nachdem Sie sich bei der Workload Factory angemeldet haben, können Sie sich jederzeit über die webbasierte Konsole einloggen, um mit dem Management Ihrer Workloads und FSX für ONTAP-Filesysteme zu beginnen. 
+summary: Nachdem Sie sich bei Workload Factory angemeldet haben, können Sie sich jederzeit über die webbasierte Konsole anmelden, um mit der Verwaltung Ihrer Workloads und FSx für ONTAP Dateisysteme zu beginnen. 
 ---
-= Melden Sie sich bei der BlueXP  Workload Factory an
+= Melden Sie sich bei NetApp Workload Factory an
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Nachdem Sie sich bei der BlueXP  Workload Factory angemeldet haben, können Sie sich jederzeit über die webbasierte Konsole einloggen, um mit dem Management Ihrer Workloads und FSX für ONTAP-Filesysteme zu beginnen.
+Nachdem Sie sich bei NetApp Workload Factory angemeldet haben, können Sie sich jederzeit über die webbasierte Konsole anmelden, um mit der Verwaltung Ihrer Workloads und FSx für ONTAP Dateisysteme zu beginnen.
 
 .Über diese Aufgabe
-Sie können sich über eine der folgenden Optionen bei der webbasierten Arbeitslastwerkkonsole anmelden:
+Sie können sich mit einer der folgenden Optionen bei der webbasierten Konsole von Workload Factory anmelden:
 
 * Ihre vorhandenen Zugangsdaten für die NetApp Support Site (NSS
 * Nutzen Sie Ihre E-Mail-Adresse und ein Passwort, um sich bei einem NetApp Cloud-Login anzumelden
 
 
 .Schritte
-. Öffnen Sie einen Webbrowser und gehen Sie zum https://console.workloads.netapp.com["Arbeitslastwerkkonsole"^].
+. Öffnen Sie einen Webbrowser und gehen Sie zu https://console.workloads.netapp.com["Workload Factory-Konsole"^] .
 . Geben Sie auf der Seite *Anmelden* die E-Mail-Adresse ein, die mit Ihrem Login verknüpft ist.
 . Abhängig von der Authentifizierungsmethode, die mit Ihrer Anmeldung verknüpft ist, werden Sie aufgefordert, Ihre Anmeldedaten einzugeben:
 +
@@ -32,7 +32,7 @@ Sie können sich über eine der folgenden Optionen bei der webbasierten Arbeitsl
 
 . Wählen Sie *Anmelden*.
 +
-Wenn Sie sich in der Vergangenheit erfolgreich angemeldet haben, wird die Arbeitslastwerksseite angezeigt, und Sie verwenden das Standardkonto.
+Wenn Sie sich in der Vergangenheit erfolgreich angemeldet haben, wird die Startseite von Workload Factory angezeigt und Sie verwenden das Standardkonto.
 
 +
 Wenn Sie sich zum ersten Mal angemeldet haben, werden Sie auf die Seite *Account* weitergeleitet.
@@ -45,4 +45,4 @@ Wenn Sie sich zum ersten Mal angemeldet haben, werden Sie auf die Seite *Account
 
 
 .Ergebnis
-Sie sind jetzt angemeldet und können mit der Workload Factory beginnen, um FSX für ONTAP-Dateisysteme und Ihre Workloads zu verwalten.
+Sie sind jetzt angemeldet und können Workload Factory verwenden, um FSx für ONTAP Dateisysteme und Ihre Workloads zu verwalten.
