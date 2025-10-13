@@ -39,6 +39,12 @@ Workload Factory sendet Benachrichtigungen für die folgenden Ereignisse:
 | FSx für ONTAP -Erstellungsfehler | Ein FSx for ONTAP Dateisystemerstellungsprozess ist fehlgeschlagen.  Weitere Informationen finden Sie unter Tracker. | FSx für ONTAP -Dateisystemaktion | Kritisch | Allgemeine Lagerung | FSx für ONTAP 
 
 
+| Automatische SSD-Kapazität oder Inodes steigern den Erfolg | Während eines kürzlich durchgeführten automatischen Kapazitätsverwaltungsupdates hat das FSx für ONTAP Dateisystem entweder die SSD-Kapazität oder die Volume-Inodes erfolgreich erhöht. Weitere Informationen finden Sie unter Tracker. | Kapazitätsmanagement | Erfolg | Allgemeine Lagerung | FSx für ONTAP Datei 
+
+
+| Automatische SSD-Kapazität oder Inodes erhöhen den Ausfall | Bei einem kürzlich durchgeführten automatischen Kapazitätsverwaltungsupdate konnte das FSx für ONTAP Dateisystem die SSD-Kapazität oder die Volume-Inodes nicht erhöhen. Weitere Informationen finden Sie unter Tracker. | Kapazitätsmanagement | Kritisch | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
+
+
 | FSx für ONTAP -Problem erkannt | Alle FSx for ONTAP Dateisysteme wurden auf Probleme mit der guten Architektur analysiert.  Der Scan hat ein oder mehrere Probleme erkannt.  Weitere Informationen finden Sie in der gut strukturierten Analyse des Storage-Dashboards in der Workload Factory-Konsole. | Gut strukturierte Analyse | Empfehlung | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
 |===
 
