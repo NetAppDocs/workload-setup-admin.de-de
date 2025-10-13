@@ -1261,7 +1261,6 @@
   <block id="a77641000b55773f3d4f4abfc8eaa6ac" category="sidebar">Optimieren Sie Workloads mit Workload Factory</block>
   <block id="bec1e3daee54f5a9410751eb03bd867e" category="sidebar">Workload Factory verwalten</block>
   <block id="7ffef60a0bb1e63a8505f9e4285dab5f" category="sidebar">Melden Sie sich bei Workload Factory an</block>
-  <block id="9d4ab4efb1eff322f698ff725220f0c6" category="paragraph">Der Benachrichtigungsdienst von NetApp Workload Factory umfasst die Benachrichtigung für das automatische Kapazitätsmanagement für Storage.</block>
   <block id="8880bf2394c75ebe6ed859ae103855bd" category="cell">Automatische SSD-Kapazität oder Inodes steigern den Erfolg</block>
   <block id="0f4ae4b5b0836264a3d9e9d0e29731c8" category="cell">Während eines kürzlich durchgeführten automatischen Kapazitätsverwaltungsupdates hat das FSx für ONTAP Dateisystem entweder die SSD-Kapazität oder die Volume-Inodes erfolgreich erhöht. Weitere Informationen finden Sie unter Tracker.</block>
   <block id="1d19e21de0f93b11f5ceb8b535a3afc2" category="cell">Kapazitätsmanagement</block>
@@ -1269,4 +1268,7 @@
   <block id="8ae74df732197be5b987055e70bb307d" category="cell">Automatische SSD-Kapazität oder Inodes erhöhen den Ausfall</block>
   <block id="564359bbc40d00ebaa88afdacbe218a7" category="cell">Bei einem kürzlich durchgeführten automatischen Kapazitätsverwaltungsupdate konnte das FSx für ONTAP Dateisystem die SSD-Kapazität oder die Volume-Inodes nicht erhöhen. Weitere Informationen finden Sie unter Tracker.</block>
   <block id="b271a75b2d121a8cb5f59ae458394323" category="section-title">09. September 2025</block>
+  <block id="fd46c6801c12745a0b45c3f9e025fb2e" category="paragraph">Der Benachrichtigungsdienst der BlueXP workload factory umfasst die Benachrichtigung für die automatische Kapazitätsverwaltung für Speicher.</block>
+  <block id="28a2c493e9a663d617e582302e1bcf28" category="inline-link-macro">Benachrichtigungen für die BlueXP workload factory</block>
+  <block id="a4bdb4b5125441fbfaec27ac4bb48be0" category="paragraph"><block ref="a4bdb4b5125441fbfaec27ac4bb48be0" category="inline-link-macro-rx"></block></block>
 </blocks>

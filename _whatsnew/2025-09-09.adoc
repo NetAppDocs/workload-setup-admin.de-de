@@ -6,6 +6,6 @@
 
 === Neue Benachrichtigung für Speicher
 
-Der Benachrichtigungsdienst von NetApp Workload Factory umfasst die Benachrichtigung für das automatische Kapazitätsmanagement für Storage.
+Der Benachrichtigungsdienst der BlueXP workload factory umfasst die Benachrichtigung für die automatische Kapazitätsverwaltung für Speicher.
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Benachrichtigungen für NetApp Workload Factory"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Benachrichtigungen für die BlueXP workload factory"]
