@@ -1315,206 +1315,208 @@ Einsatz
 | Lese-/Schreibzugriff 
 
 
-.2+| FSX for ONTAP – Details | fsx:DescribeFileSystemAliases  a| 
-Einsatz
-| Lese-/Schreibzugriff 
+| FSX for ONTAP – Details | fsx:DescribeFileSystemAliases | Einsatz | Lese-/Schreibzugriff 
 
 
-| Ändern der Größe von FSX für ONTAP-Dateisystem, um Reserve des Dateisystems zu beheben | fsx:UpdateFilesystem | Optimierung 
+| Ändern der Größe von FSX für ONTAP-Dateisystem, um Reserve des Dateisystems zu beheben | fsx:UpdateFilesystem | Optimierung | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | Ändern Sie die Größe von Volumes zur Korrektur von Protokoll- und tempdb-Laufwerkgrößen | fsx:UpdateVolumen | Optimierung 
+| Ändern Sie die Größe von Volumes zur Korrektur von Protokoll- und tempdb-Laufwerkgrößen | fsx:UpdateVolumen | Optimierung | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff .3+| KMS-Schlüsseldetails erhalten und FSX für ONTAP-Verschlüsselung verwenden | Km:CreateGrant | Einsatz 
+.3+| KMS-Schlüsseldetails erhalten und FSX für ONTAP-Verschlüsselung verwenden | Km:CreateGrant | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | kms:DescribeCustomKeyStores | Einsatz 
+| kms:DescribeCustomKeyStores | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | Kms:GenerateDataKey | Einsatz 
+| Kms:GenerateDataKey | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff .8+| Erstellen Sie CloudWatch-Protokolle für Validierungs- und Bereitstellungsskripte, die auf EC2-Instanzen ausgeführt werden | Protokolle:CreateLogGroup | Einsatz 
+.8+| Erstellen Sie CloudWatch-Protokolle für Validierungs- und Bereitstellungsskripte, die auf EC2-Instanzen ausgeführt werden | Protokolle:CreateLogGroup | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | Protokolle:CreateLogStream | Einsatz 
+| Protokolle:CreateLogStream | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | Protokolle:DescribeLogStreams  a| 
+| Protokolle:DescribeLogStreams  a| 
 * Einsatz
 * Bewertung
 
+| Lese-/Schreibzugriff 
 
 
-
-| Lese-/Schreibzugriff | Protokolle:GetLogGroupFields | Einsatz 
-
-
-| Lese-/Schreibzugriff | Protokolle:GetLogRecord | Einsatz 
+| Protokolle:GetLogGroupFields | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | Protokolle:ListLogDeliveries | Einsatz 
+| Protokolle:GetLogRecord | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | Protokolle:PutLogEvents  a| 
+| Protokolle:ListLogDeliveries | Einsatz | Lese-/Schreibzugriff 
+
+
+| Protokolle:PutLogEvents  a| 
 * Einsatz
 * Managen von Abläufen
 
+| Lese-/Schreibzugriff 
 
 
+| Protokolle:TagResource | Einsatz | Lese-/Schreibzugriff 
 
-| Lese-/Schreibzugriff | Protokolle:TagResource | Einsatz 
 
-
-| Lese-/Schreibzugriff | Workload Factory wechselt zu Amazon CloudWatch-Protokollen für die SQL-Instanz, wenn eine Kürzung der SSM-Ausgabe auftritt | Protokolle:GetLogEvents  a| 
+| Workload Factory wechselt zu Amazon CloudWatch-Protokollen für die SQL-Instanz, wenn eine Kürzung der SSM-Ausgabe auftritt | Protokolle:GetLogEvents  a| 
 * Storage-Bewertung (Optimierung)
 * Inventar
-
-
-
 
  a| 
 * Schreibgeschützt
 * Lese-/Schreibzugriff
+
+
+
 
 | Erlauben Sie Workload Factory, aktuelle Protokollgruppen abzurufen und zu überprüfen, ob die Aufbewahrung für von Workload Factory erstellte Protokollgruppen festgelegt ist | Protokolle:DescribeLogGroups  a| 
 * Storage-Bewertung (Optimierung)
 * Inventar
 
+| Schreibgeschützt 
 
 
-
-| Schreibgeschützt | Erlauben Sie Workload Factory, eine eintägige Aufbewahrungsrichtlinie für von Workload Factory erstellte Protokollgruppen festzulegen, um eine unnötige Ansammlung von Protokollströmen für SSM-Befehlsausgaben zu vermeiden. | Protokolle:PutRetentionPolicy  a| 
+| Erlauben Sie Workload Factory, eine eintägige Aufbewahrungsrichtlinie für von Workload Factory erstellte Protokollgruppen festzulegen, um eine unnötige Ansammlung von Protokollströmen für SSM-Befehlsausgaben zu vermeiden. | Protokolle:PutRetentionPolicy  a| 
 * Storage-Bewertung (Optimierung)
 * Inventar
-
-
-
 
  a| 
 * Schreibgeschützt
 * Lese-/Schreibzugriff
 
-| Erstellen Sie Geheimnisse in einem Benutzerkonto für die Anmeldeinformationen für SQL, Domäne und FSX für ONTAP | Service-Equotas:ListServiceQuotas | Einsatz 
 
 
-| Lese-/Schreibzugriff .2+| Führen Sie die SNS-Themen des Kunden auf und veröffentlichen Sie sie in WLMDB-Backend-SNS sowie in Kunden-SNS, falls ausgewählt | sns:listTopics | Einsatz 
+
+| Erstellen Sie Geheimnisse in einem Benutzerkonto für die Anmeldeinformationen für SQL, Domäne und FSX für ONTAP | Service-Equotas:ListServiceQuotas | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | sns:Veröffentlichen | Einsatz 
+.2+| Führen Sie die SNS-Themen des Kunden auf und veröffentlichen Sie sie in WLMDB-Backend-SNS sowie in Kunden-SNS, falls ausgewählt | sns:listTopics | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff .11+| Erforderliche SSM-Berechtigungen, um das Erkennungsskript auf bereitgestellten SQL-Instanzen auszuführen und die aktuelle Liste von FSX für von ONTAP unterstützte AWS-Regionen abzurufen. | ssm:PutComplianceItems | Einsatz 
+| sns:Veröffentlichen | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | ssm:PutConfigurePackageResult | Einsatz 
+.11+| Erforderliche SSM-Berechtigungen, um das Erkennungsskript auf bereitgestellten SQL-Instanzen auszuführen und die aktuelle Liste von FSX für von ONTAP unterstützte AWS-Regionen abzurufen. | ssm:PutComplianceItems | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | ssm:PutInventory | Einsatz 
+| ssm:PutConfigurePackageResult | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | ssm:SendCommand  a| 
+| ssm:PutInventory | Einsatz | Lese-/Schreibzugriff 
+
+
+| ssm:SendCommand  a| 
 * Einsatz
 * Inventar
 * Managen von Abläufen
 
+| Lese-/Schreibzugriff 
 
 
-
-| Lese-/Schreibzugriff | ssm:UpdateAssociationStatus | Einsatz 
-
-
-| Lese-/Schreibzugriff | ssm:UpdateInstanceAssociationStatus | Einsatz 
+| ssm:UpdateAssociationStatus | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | ssm:UpdateInstanceInformation | Einsatz 
+| ssm:UpdateInstanceAssociationStatus | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | ssmmesages:CreateControlChannel | Einsatz 
+| ssm:UpdateInstanceInformation | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | ssmmesages:CreateDataChannel | Einsatz 
+| ssmmesages:CreateControlChannel | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | ssmmesages:OpenControlChannel | Einsatz 
+| ssmmesages:CreateDataChannel | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | ssmmesages:OpenDataChannel | Einsatz 
+| ssmmesages:OpenControlChannel | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff .4+| Anmeldedaten für FSX für ONTAP-, Active Directory- und SQL-Benutzer speichern (nur für SQL-Benutzerauthentifizierung) | ssm:GetParameter ^1^  a| 
+| ssmmesages:OpenDataChannel | Einsatz | Lese-/Schreibzugriff 
+
+
+.4+| Anmeldedaten für FSX für ONTAP-, Active Directory- und SQL-Benutzer speichern (nur für SQL-Benutzerauthentifizierung) | ssm:GetParameter ^1^  a| 
 * Einsatz
 * Managen von Abläufen
 * Inventar
 
+| Lese-/Schreibzugriff 
 
 
-
-| Lese-/Schreibzugriff | ssm:GetParameters ^1^  a| 
+| ssm:GetParameters ^1^  a| 
 * Einsatz
 * Inventar
 
+| Lese-/Schreibzugriff 
 
 
-
-| Lese-/Schreibzugriff | ssm:PutParameter ^1^  a| 
+| ssm:PutParameter ^1^  a| 
 * Einsatz
 * Managen von Abläufen
 
+| Lese-/Schreibzugriff 
 
 
-
-| Lese-/Schreibzugriff | ssm:DeleteParameters ^1^  a| 
+| ssm:DeleteParameters ^1^  a| 
 * Einsatz
 * Managen von Abläufen
 
+| Lese-/Schreibzugriff 
 
 
-
-| Lese-/Schreibzugriff | Signal CloudFormation Stack auf Erfolg oder Misserfolg. | Cloudformation:SignalRessource ^1^ | Einsatz 
-
-
-| Lese-/Schreibzugriff | Fügen Sie die von Vorlage erstellte EC2-Rolle zum Instanzprofil von EC2 hinzu, um Skripts auf EC2 Zugriff auf die für die Implementierung erforderlichen Ressourcen zu ermöglichen. | iam:AddRoleToInstanceProfile | Einsatz 
+| Signal CloudFormation Stack auf Erfolg oder Misserfolg. | Cloudformation:SignalRessource ^1^ | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | Instanzprofil für EC2 erstellen und erstellte EC2-Rolle zuweisen. | iam:CreateInstanceProfil | Einsatz 
+| Fügen Sie die von Vorlage erstellte EC2-Rolle zum Instanzprofil von EC2 hinzu, um Skripts auf EC2 Zugriff auf die für die Implementierung erforderlichen Ressourcen zu ermöglichen. | iam:AddRoleToInstanceProfile | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | EC2-Rolle über Vorlage mit den unten aufgeführten Berechtigungen erstellen | iam:CreateRollenole | Einsatz 
+| Instanzprofil für EC2 erstellen und erstellte EC2-Rolle zuweisen. | iam:CreateInstanceProfil | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | Mit EC2-Service verknüpfte Rolle erstellen | iam:CreateServiceLinkedRole ^2^ | Einsatz 
+| EC2-Rolle über Vorlage mit den unten aufgeführten Berechtigungen erstellen | iam:CreateRollenole | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | Löschen Sie das während der Bereitstellung speziell für die Validierungsknoten erstellte Instanzprofil | iam:DeleteInstanceProfil | Einsatz 
+| Mit EC2-Service verknüpfte Rolle erstellen | iam:CreateServiceLinkedRole ^2^ | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff .5+| Rufen Sie die Rollen- und Richtliniendetails ab, um Lücken in der Berechtigung zu ermitteln und die Bereitstellung zu validieren | iam:GetPolicy | Einsatz 
+| Löschen Sie das während der Bereitstellung speziell für die Validierungsknoten erstellte Instanzprofil | iam:DeleteInstanceProfil | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | iam:GetPolicyVersion | Einsatz 
+.5+| Rufen Sie die Rollen- und Richtliniendetails ab, um Lücken in der Berechtigung zu ermitteln und die Bereitstellung zu validieren | iam:GetPolicy | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | iam:GetRole | Einsatz 
+| iam:GetPolicyVersion | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | iam:GetRolePolicy | Einsatz 
+| iam:GetRole | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | iam:GetUser | Einsatz 
+| iam:GetRolePolicy | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | Übergeben Sie die erstellte Rolle an EC2-Instanz | iam:PassRole ^3^ | Einsatz 
+| iam:GetUser | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | Fügen Sie der erstellten EC2-Rolle eine Richtlinie mit den erforderlichen Berechtigungen hinzu | iam:PuttePolicy | Einsatz 
+| Übergeben Sie die erstellte Rolle an EC2-Instanz | iam:PassRole ^3^ | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | Trennen der Rolle vom bereitgestellten EC2-Instanzprofil | iam:RemoveRoleFromInstanceProfile | Einsatz 
+| Fügen Sie der erstellten EC2-Rolle eine Richtlinie mit den erforderlichen Berechtigungen hinzu | iam:PuttePolicy | Einsatz | Lese-/Schreibzugriff 
 
 
-| Lese-/Schreibzugriff | Simulieren Sie Workload-Vorgänge, um verfügbare Berechtigungen zu validieren und sie mit den erforderlichen AWS Kontoberechtigungen zu vergleichen | iam:SimulatePrincipalPolicy | Einsatz 
+| Trennen der Rolle vom bereitgestellten EC2-Instanzprofil | iam:RemoveRoleFromInstanceProfile | Einsatz | Lese-/Schreibzugriff 
+
+
+| Simulieren Sie Workload-Vorgänge, um verfügbare Berechtigungen zu validieren und sie mit den erforderlichen AWS Kontoberechtigungen zu vergleichen | iam:SimulatePrincipalPolicy | Einsatz  a| 
+* Schreibgeschützt
+* Lese-/Schreibzugriff
+
+
 |===
 . Die Berechtigung ist auf Ressourcen beschränkt, die mit WLMDB beginnen.
 . „iam:CreateServiceLinkedRole“ begrenzt durch „iam:AWSServiceName“: „ec2.amazonaws.com"*
