@@ -91,16 +91,11 @@ link:manage-service-accounts.html["Erfahren Sie, wie Sie Servicekonten verwalten
 
 
 
-=== Betriebsmodi
+=== Berechtigungen
 
-Workload Factory bietet drei Betriebsmodi, mit denen Sie den Zugriff auf Ihre Cloud-Umgebung sorgfältig steuern und Workload Factory basierend auf Ihren IT-Richtlinien schrittweise Vertrauenswürdigkeit zuweisen können.
+Workload Factory bietet flexible Berechtigungsrichtlinien, mit denen Sie den Zugriff auf Ihre Cloud-Umgebung präzise steuern und Workload Factory basierend auf Ihren IT-Richtlinien schrittweise Vertrauen zuweisen können.
 
-* Der *Basismodus* stellt eine Zero-Trust-Beziehung dar und ist für die frühzeitige Erkundung von Workload Factory und die Verwendung der verschiedenen Assistenten zum Erstellen der erforderlichen Infrastruktur als Code konzipiert.  Dieser Code kann vom Benutzer zusammen mit seinen entsprechenden AWS-Anmeldeinformationen kopiert und manuell verwendet werden.
-* *Schreibgeschützter Modus* verbessert die Erfahrung des Basic-Modus, indem er den Benutzer bei der Erkennung verschiedener Ressourcen und Tools unterstützt und damit hilft, relevante Assistenten zu vervollständigen.
-* *Lese-/Schreibmodus* stellt eine vollständige Vertrauensbeziehung dar und wurde entwickelt, um im Namen des Benutzers zusammen mit den zugewiesenen Anmeldeinformationen auszuführen und zu automatisieren, die die erforderlichen und validierten Berechtigungen für die Ausführung haben.
-
-
-link:operational-modes.html["Weitere Informationen zu den Betriebsmodi von Workload Factory"] .
+link:permissions-reference.html["Erfahren Sie mehr über die Berechtigungsrichtlinien von Workload Factory."].
 
 
 

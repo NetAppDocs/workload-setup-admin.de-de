@@ -24,8 +24,6 @@ sidebar:
       entries:
       - title: Erfahren Sie mehr über NetApp Workload Factory
         url: "/workload-factory-overview.html"
-      - title: Betriebsmodi
-        url: "/operational-modes.html"
       - title: Konsolenerfahrungen
         url: "/console-experiences.html"
       - title: Berechtigungen

@@ -13,7 +13,7 @@ summary: Beginnen Sie mit Workload Factory, indem Sie das Netzwerk für die Work
 [role="lead"]
 Beginnen Sie mit NetApp Workload Factory, indem Sie sich anmelden und ein Konto erstellen, Anmeldeinformationen hinzufügen, damit Workload Factory AWS-Ressourcen direkt verwalten kann, und dann Ihre Workloads mithilfe von Amazon FSx for NetApp ONTAP optimieren.
 
-NetApp Workload Factory ist für Benutzer als Cloud-Dienst über die webbasierte Konsole zugänglich.  Bevor Sie beginnen, sollten Sie Folgendes verstehen:link:workload-factory-overview.html["Workload Factory"] Undlink:operational-modes.html["Betriebsmodi"] .
+NetApp Workload Factory ist für Benutzer als Cloud-Service über die webbasierte Konsole zugänglich.  Bevor Sie beginnen, sollten Sie Folgendes verstehen:link:workload-factory-overview.html["Workload Factory"] Die
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] Registrieren Sie sich und erstellen Sie ein Konto
 [role="quick-margin-para"]
@@ -24,7 +24,7 @@ link:sign-up-saas.html["Erfahren Sie, wie Sie sich anmelden und ein Konto erstel
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]AWS-Anmeldeinformationen zu Workload Factory hinzufügen
 [role="quick-margin-para"]
-Dieser Schritt ist optional. Sie können Workload Factory im _Basic_-Modus verwenden, ohne Anmeldeinformationen für den Zugriff auf Ihr AWS-Konto hinzuzufügen.  Durch das Hinzufügen von AWS-Anmeldeinformationen zu Workload Factory im Nur-Lese-Modus oder im Lese-/Schreibmodus erhält Ihr Workload Factory-Konto die erforderlichen Berechtigungen zum Erstellen und Verwalten von FSx für ONTAP Dateisystemen sowie zum Bereitstellen und Verwalten bestimmter Workloads wie Datenbanken und GenAI.
+Dieser Schritt ist optional. Sie können Workload Factory nutzen, ohne Anmeldeinformationen für den Zugriff auf Ihr AWS-Konto hinzufügen zu müssen.  Durch das Hinzufügen von AWS-Anmeldeinformationen zu Workload Factory erhält Ihr Workload Factory-Konto die erforderlichen Berechtigungen zum Erstellen und Verwalten von FSx for ONTAP -Dateisystemen sowie zum Bereitstellen und Verwalten bestimmter Workloads, wie z. B. Datenbanken und GenAI.
 
 [role="quick-margin-para"]
 link:add-credentials.html["Hier erfahren Sie, wie Sie Ihrem Konto Anmeldeinformationen hinzufügen"].

@@ -22,14 +22,10 @@ indexpage:
       url: workload-factory-overview.html
     - title: Melden Sie sich an
       url: sign-up-saas.html
-  - title: Betriebsmodi und Anmeldeinformationen
-    links:
-    - title: Weitere Informationen zu Betriebsmodi
-      url: operational-modes.html
     - title: AWS-Anmeldedaten hinzufügen
       url: add-credentials.html
-    - title: Anmeldedaten entfernen
-      url: manage-credentials.html
+    - title: Berechtigungen für Workload Factory
+      url: permissions-reference.html
   - title: Automatisierung mit Codebox
     links:
     - title: Erfahren Sie mehr über Codebox

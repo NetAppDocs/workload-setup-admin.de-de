@@ -1,0 +1,27 @@
+= Berechtigungsaktualisierung
+:allow-uri-read: 
+
+
+
+
+=== Berechtigungsaktualisierung
+
+In dieser Version haben wir bedeutende Aktualisierungen an den Berechtigungsrichtlinien für Speicher-, Datenbank- und VMware-Workloads vorgenommen, um die Sicherheit und die Benutzerkontrolle zu verbessern.  Sie können Ihre Berechtigungseinstellungen detaillierter anpassen und Berechtigungen nach Bedarf hinzufügen oder entfernen.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Berechtigungsreferenz für Workload Factory"]
+
+
+
+=== Neue Benachrichtigung für Speicher
+
+Der NetApp Workload Factory Benachrichtigungsdienst umfasst die Benachrichtigung für die automatische Inode-Verwaltung für Speicher.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Benachrichtigungen für NetApp Workload Factory"]
+
+
+
+=== Schwellenwertwarnungen für die automatische Kapazitäts- und Inode-Verwaltung
+
+Die automatische Kapazitäts- und Inode-Verwaltung für den Speicher kann mit einem Warnschwellenwert eingerichtet werden, der eine Benachrichtigung vom Workload Factory-Benachrichtigungsdienst auslöst.  Um diese Funktion nutzen zu können, müssen Sie zuerst den Workload Factory-Benachrichtigungsdienst aktivieren.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Konfigurieren Sie Benachrichtigungen für NetApp Workload Factory"]
