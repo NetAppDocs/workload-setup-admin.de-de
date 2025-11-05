@@ -29,4 +29,8 @@ Durch die Implementierung und das Management einer RAG-Infrastruktur (Retrieval-
 +
 Optimieren Sie Migrationen und Betriebsabläufe mithilfe intelligenter Empfehlungen und automatischer Problembehebung. Implementieren Sie effiziente Backups und zuverlässige Disaster Recovery. Überwachen Sie Ihre VMs und beheben Sie Fehler.
 
+* https://docs.netapp.com/us-en/workload-builders/index.html["Arbeitslasten der Bauarbeiter"^]
++
+Vereinfachen Sie die Nutzung und den Zugriff auf Softwareversionen durch die Ermöglichung der Instant-Clone-Integration mit Versionskontrollsystemen und CI/CD-Workflows und sparen Sie so Zeit und Ressourcen.
+
 
