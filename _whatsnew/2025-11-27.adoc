@@ -1,0 +1,17 @@
+= Berechtigungsaktualisierung für Speicher
+:allow-uri-read: 
+
+
+
+
+=== Berechtigungsaktualisierung für Speicher
+
+Der FSx for ONTAP EMS-Ereignisanalysator verwendet die folgenden Amazon Bedrock-Berechtigungen in der Berechtigungsrichtlinie _operations and remediation_, um Ereignisdaten für die Storage-Workload abzurufen.
+
+* `bedrock:ListInferenceProfiles`
+* `bedrock:GetInferenceProfile`
+* `bedrock:InvokeModelWithResponseStream`
+* `bedrock:InvokeModel`
+
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["Änderungsprotokoll für Berechtigungen"]

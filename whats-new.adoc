@@ -15,6 +15,24 @@ Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen von Work
 
 
 
+== 27. November 2025
+
+
+
+=== Berechtigungsaktualisierung für Speicher
+
+Der FSx for ONTAP EMS-Ereignisanalysator verwendet die folgenden Amazon Bedrock-Berechtigungen in der Berechtigungsrichtlinie _operations and remediation_, um Ereignisdaten für die Storage-Workload abzurufen.
+
+* `bedrock:ListInferenceProfiles`
+* `bedrock:GetInferenceProfile`
+* `bedrock:InvokeModelWithResponseStream`
+* `bedrock:InvokeModel`
+
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["Änderungsprotokoll für Berechtigungen"]
+
+
+
 == 06. Oktober 2025
 
 
