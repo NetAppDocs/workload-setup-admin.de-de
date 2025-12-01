@@ -64,7 +64,7 @@ Workload Factory umfasst eine webbasierte Konsole, die über die SaaS-Schicht be
 
 Der Zugriff auf Workload Factory erfolgt über dielink:https://console.workloads.netapp.com["NetApp Workload Factory-Konsole"^] und dielink:https://console.netapp.com["NetApp Konsole"^] .  Diese SaaS-Erfahrungen ermöglichen Ihnen den automatischen Zugriff auf die neuesten Funktionen, sobald diese veröffentlicht werden, und das einfache Wechseln zwischen Ihren Workload Factory-Konten und -Links.
 
-Erfahren Sie mehr über die verschiedenen link:console-experiences.html["Konsolenerfahrungen"].
+link:console-experiences.html["Erfahren Sie mehr über die verschiedenen Konsolenerlebnisse."]
 
 
 
@@ -87,7 +87,7 @@ TIP: Wenn Sie die NetApp Konsole verwenden, gehören Sie bereits einem Konto an,
 
 Ein Servicekonto fungiert als „Benutzer“, der zu Automatisierungszwecken autorisierte API-Aufrufe an NetApp Workload Factory tätigen kann.  Dies erleichtert die Verwaltung der Automatisierung, da Sie keine Automatisierungsskripte basierend auf dem Benutzerkonto einer realen Person erstellen müssen, die das Unternehmen jederzeit verlassen kann.  Alle Kontoinhaber in Workload Factory gelten als Kontoadministratoren.  Kontoadministratoren können mehrere Dienstkonten erstellen und löschen.
 
-link:manage-service-accounts.html["Erfahren Sie, wie Sie Servicekonten verwalten"].
+link:manage-service-accounts.html["Erfahren Sie, wie Sie Servicekonten verwalten"]
 
 
 
@@ -95,7 +95,7 @@ link:manage-service-accounts.html["Erfahren Sie, wie Sie Servicekonten verwalten
 
 Workload Factory bietet flexible Berechtigungsrichtlinien, mit denen Sie den Zugriff auf Ihre Cloud-Umgebung präzise steuern und Workload Factory basierend auf Ihren IT-Richtlinien schrittweise Vertrauen zuweisen können.
 
-link:permissions-reference.html["Erfahren Sie mehr über die Berechtigungsrichtlinien von Workload Factory."].
+link:permissions-reference.html["Erfahren Sie mehr über die Berechtigungsrichtlinien von Workload Factory."]
 
 
 
@@ -119,7 +119,7 @@ Codebox ist auf die Betriebsmodi der Workload Factory (_basic_, _read-only_ und 
 
 Im Codebox-Fenster wird die IAC angezeigt, die von einem bestimmten Job-Flow-Vorgang generiert wird und von einem grafischen Assistenten oder einer Konversations-Chat-Schnittstelle abgeglichen wird. Codebox unterstützt Farbcodierung und Suche für eine einfache Navigation und Analyse, aber es ist nicht erlaubt zu bearbeiten. Sie können nur im Automatisierungskatalog kopieren oder speichern.
 
-link:codebox-automation.html["Erfahren Sie mehr über Codebox"].
+link:codebox-automation.html["Erfahren Sie mehr über Codebox"]
 
 
 

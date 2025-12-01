@@ -111,6 +111,7 @@ Die erforderlichen IAM-Richtlinien anzeigen:
         "fsx:TagResource",
         "fsx:UntagResource",
         "bedrock:InvokeModelWithResponseStream",
+        "bedrock:InvokeModel",
         "bedrock:ListInferenceProfiles",
         "bedrock:GetInferenceProfile"
       ],
@@ -286,13 +287,16 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 | Listen Sie Tags für FSX for ONTAP-Ressourcen auf | fsx:ListTagsForRessource | Inventar | Ansicht, Planung und Analyse 
 
 
-.2+| Ausgang und Ingress der Sicherheitsgruppe für ein FSX für ONTAP Filesystem managen | ec2:RevokeSecurityGroupIngress | Managementvorgänge | Dateisystemerstellung und -löschung 
+.3+| Ausgang und Ingress der Sicherheitsgruppe für ein FSX für ONTAP Filesystem managen | ec2:RevokeSecurityGroupIngress | Managementvorgänge | Dateisystemerstellung und -löschung 
+
+
+| ec2: RevokeSecurityGroupEgress | Managementvorgänge | Dateisystemerstellung und -löschung 
 
 
 | ec2:DeleteSecurityGroup | Managementvorgänge | Dateisystemerstellung und -löschung 
 
 
-.17+| Erstellen, Anzeigen und Verwalten von FSX for ONTAP-Dateisystemressourcen | fsx: CreateVolume erstellen | Managementvorgänge | Betriebs- und Sanierungsmaßnahmen 
+.18+| Erstellen, Anzeigen und Verwalten von FSX for ONTAP-Dateisystemressourcen | fsx: CreateVolume erstellen | Managementvorgänge | Betriebs- und Sanierungsmaßnahmen 
 
 
 | fsx:TagResource | Managementvorgänge | Betriebs- und Sanierungsmaßnahmen 
@@ -343,6 +347,9 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 | fsx:CreateVolumeFromBackup | Managementvorgänge | Betriebs- und Sanierungsmaßnahmen 
 
 
+| fsx:Backup löschen | Managementvorgänge | Betriebs- und Sanierungsmaßnahmen 
+
+
 .2+| Abrufen von Kennzahlen zu Dateisystem und Volume | cloudwatch:GetMetricData | Managementvorgänge | Ansicht, Planung und Analyse 
 
 
@@ -350,6 +357,24 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 
 
 | Simulieren Sie Workload-Vorgänge, um verfügbare Berechtigungen zu validieren und sie mit den erforderlichen AWS Kontoberechtigungen zu vergleichen | iam:SimulatePrincipalPolicy | Einsatz | Alle 
+
+
+.4+| Fetch FSx for ONTAP EMS events | Bedrock:ListInferenceProfiles | FSx für ONTAP EMS-Analyse | Betriebs- und Sanierungsmaßnahmen 
+
+
+| bedrock:GetInferenceProfile | FSx für ONTAP EMS-Analyse | Betriebs- und Sanierungsmaßnahmen 
+
+
+| bedrock:InvokeModelWihResponseStream | FSx für ONTAP EMS-Analyse | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Bedrock:InvokeModel | FSx für ONTAP EMS-Analyse | Betriebs- und Sanierungsmaßnahmen 
+
+
+.2+| Rufen Sie Kosten- und Nutzungsdaten für FSx for ONTAP -Dateisysteme über den AWS Cost Explorer ab. | ce:GetCostAndUsage | Kosten- und Nutzungsanalyse | Ansicht, Planung und Analyse 
+
+
+| ce:GetTags | Kosten- und Nutzungsanalyse | Ansicht, Planung und Analyse 
 |===
 ====
 
@@ -1984,6 +2009,18 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für VMware-Wor
 == Änderungsprotokoll
 
 Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den folgenden Abschnitten zur Kenntnis nehmen.
+
+
+
+=== 27. November 2025
+
+Dem Speicherworkload wurden folgende Berechtigungen hinzugefügt:
+
+* `bedrock:ListInferenceProfiles`
+* `bedrock:GetInferenceProfile`
+* `bedrock:InvokeModelWithResponseStream`
+* `bedrock:InvokeModel`
+
 
 
 
