@@ -1257,4 +1257,10 @@
   <block id="491e45ff3f847be901c7d8962829a3f8" category="paragraph"><block ref="491e45ff3f847be901c7d8962829a3f8" category="inline-link-macro-rx"></block></block>
   <block id="6fe4c05a9bf5207dceacd4fcc6fc1064" category="doc">Berechtigungsaktualisierung für Speicher</block>
   <block id="7d3f4d33aca7af4519cb87a63113caf9" category="paragraph">Der FSx for ONTAP EMS-Ereignisanalysator verwendet die folgenden Amazon Bedrock-Berechtigungen in der Berechtigungsrichtlinie _operations and remediation_, um Ereignisdaten für die Storage-Workload abzurufen.</block>
+  <block id="499a631b37689fc0831d508e7df713ac" category="paragraph">Sie können auch andere Personen einladen, Ihrem Workload Factory-Konto beizutreten, damit auch diese auf Workload Factory zugreifen und es nutzen können.</block>
+  <block id="74c47b5a5003eaa998a2ddfd60579fcd" category="section-title">Laden Sie andere ein, einem Konto in Workload Factory beizutreten.</block>
+  <block id="cfe62ca3b745b1e1ba1704c2d481b1a0" category="paragraph">Als Kontoadministrator können Sie andere Personen einladen, Ihrem Workload Factory-Konto beizutreten, damit diese auf Workload Factory zugreifen und es nutzen können. Die Kontoverwaltung ist nur über die NetApp Console möglich.</block>
+  <block id="4271c82b5b3d2551c37fdf5569e1bdf4" category="inline-link-macro">Erfahren Sie, wie Sie Mitglieder (Benutzerkonten) hinzufügen.</block>
+  <block id="c128860bea2b6fa591ace59f9f82d9e2" category="paragraph">Siehe die Dokumentation der NetApp Console . <block ref="d39c43ee8c7f0d03870545e14a548b70" category="inline-link-macro-rx"></block>zu Ihrem Workload Factory-Konto.</block>
+  <block id="51a52248cd0718b8835bd272badd5424" category="paragraph">Der eingeladene Benutzer erhält eine E-Mail mit Anweisungen zum Beitritt zu Ihrem Workload Factory-Konto.</block>
 </blocks>
