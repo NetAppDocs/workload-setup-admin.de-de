@@ -1231,9 +1231,6 @@
   <block id="fd7910c842c61985f2e90af78f1b304f" category="paragraph">Workload Factory bietet flexible Berechtigungsrichtlinien, mit denen Sie den Zugriff auf Ihre Cloud-Umgebung präzise steuern und Workload Factory basierend auf Ihren IT-Richtlinien schrittweise Vertrauen zuweisen können.</block>
   <block id="1b512d78c8df2f0c24a19da35f804ca3" category="inline-link-macro">Erfahren Sie mehr über die Berechtigungsrichtlinien von Workload Factory.</block>
   <block id="c51a57db8914c4d0002701f58f6f3d36" category="sidebar">Berechtigungen für Workload Factory</block>
-  <block id="67cc1fa9f1a93753f08cfa64d81c9661" category="inline-link">Arbeitslasten der Bauarbeiter</block>
-  <block id="fadf0a6a0fc7dcefddc336cf580be28f" category="list-text"><block ref="fadf0a6a0fc7dcefddc336cf580be28f" category="inline-link-rx"></block></block>
-  <block id="4dbca6300d097acc1ed4450a1e0d70d7" category="paragraph">Vereinfachen Sie die Nutzung und den Zugriff auf Softwareversionen durch die Ermöglichung der Instant-Clone-Integration mit Versionskontrollsystemen und CI/CD-Workflows und sparen Sie so Zeit und Ressourcen.</block>
   <block id="97364a76409afb35bcf8e78ca91dd72d" category="paragraph">Sie können über die NetApp Console auf Workload Factory zugreifen. Zusätzlich zur Nutzung von Workload Factory für AWS-Speicher- und Workload-Funktionen können Sie auch auf andere Datendienste wie NetApp Copy and Sync und mehr zugreifen.</block>
   <block id="01984b12c408bdab681895b084bd6c06" category="cell">ec2: RevokeSecurityGroupEgress</block>
   <block id="c8f3ab0d5795ea54c17a7c0f85e22fbd" category="cell">fsx:Backup löschen</block>
@@ -1266,4 +1263,7 @@
   <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">Integration des KI-Assistenten auf der Startseite</block>
   <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">Auf der Startseite der Workload Factory-Konsole ist der KI-Assistent „Ask me“ integriert, mit dem Sie Fragen zu Ihrer eigenen Speicherlandschaft stellen, personalisierte Einblicke direkt aus Ihrer Umgebung erhalten und auf frühere Konversationen zurückgreifen können. Sie können mit „Fragen Sie mich“ interagieren, um Ihre Workloads zu verstehen, Probleme zu beheben und mehr über Workload Factory zu erfahren – alles, ohne die Konsole zu verlassen.</block>
   <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">04. Januar 2026</block>
+  <block id="2bc4b4a88d694b207aacb90573eb4b7f" category="inline-link">EDA-Workloads</block>
+  <block id="f5051781c2f560348461adb9d928d406" category="list-text"><block ref="f5051781c2f560348461adb9d928d406" category="inline-link-rx"></block></block>
+  <block id="ce9f0edfab2350bf4aa1961cdca492ac" category="paragraph">FSx für ONTAP über mehrere Dateisysteme hinweg optimieren, um die Leistung zu steigern und die Betriebskosten durch automatisiertes Speicherparametermanagement zu senken.</block>
 </blocks>
