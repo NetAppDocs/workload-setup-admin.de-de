@@ -359,7 +359,7 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 | Simulieren Sie Workload-Vorgänge, um verfügbare Berechtigungen zu validieren und sie mit den erforderlichen AWS Kontoberechtigungen zu vergleichen | iam:SimulatePrincipalPolicy | Einsatz | Alle 
 
 
-.4+| Fetch FSx for ONTAP EMS events | Bedrock:ListInferenceProfiles | FSx für ONTAP EMS-Analyse | Betriebs- und Sanierungsmaßnahmen 
+.4+| Bereitstellung KI-basierter Erkenntnisse für FSx für ONTAP EMS-Ereignisse | Bedrock:ListInferenceProfiles | FSx für ONTAP EMS-Analyse | Betriebs- und Sanierungsmaßnahmen 
 
 
 | bedrock:GetInferenceProfile | FSx für ONTAP EMS-Analyse | Betriebs- und Sanierungsmaßnahmen 
