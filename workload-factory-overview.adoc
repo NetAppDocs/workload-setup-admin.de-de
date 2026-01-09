@@ -125,10 +125,11 @@ link:codebox-automation.html["Erfahren Sie mehr über Codebox"]
 
 === Einsparungsrechner
 
-Workload Factory bietet Einsparungsrechner, mit denen Sie die Kosten Ihrer Speicherumgebungen oder Ihrer Datenbank-Workloads auf FSx für ONTAP -Dateisystemen mit Elastic Block Store (EBS), Elastic File Systems (EFS) und FSx für Windows File Server vergleichen können.  Abhängig von Ihren Speicheranforderungen stellen FSx für ONTAP Dateisysteme möglicherweise die kostengünstigste Option für Sie dar.
+Workload Factory bietet Kostenrechner, mit denen Sie die Kosten Ihrer Speicherumgebungen, Datenbanken oder VMware-Workloads auf FSx for ONTAP -Dateisystemen mit anderen Amazon-Diensten vergleichen können. Je nach Ihren Speicheranforderungen könnten Sie feststellen, dass FSx für ONTAP -Dateisysteme die kostengünstigste Option für Sie darstellen.
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html["Erfahren Sie, wie Sie die Einsparungen in Ihren Storage-Umgebungen untersuchen können"^]
 * link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Erfahren Sie, welche Einsparungen Sie für Ihre Datenbank-Workloads erzielen können"^]
+* link:https://docs.netapp.com/us-en/workload-vmware/calculate-evs-savings.html["Erfahren Sie, wie Sie bei Ihren VMware-Workloads Einsparungen erzielen können."^]
 
 
 
