@@ -134,6 +134,14 @@ Workload Factory bietet Kostenrechner, mit denen Sie die Kosten Ihrer Speicherum
 
 
 
+=== Gut strukturierte Arbeitslasten
+
+Workload Factory unterstützt Sie bei der Wartung und dem Betrieb zuverlässiger, sicherer, effizienter und kostengünstiger Speicher- und Datenbankkonfigurationen, die mit dem AWS Well-Architected Framework übereinstimmen. Workload Factory scannt FSx täglich nach ONTAP -Dateisystemen, SQL Server- und Oracle-Datenbankbereitstellungen, um Einblicke in potenzielle Fehlkonfigurationen zu gewinnen und entweder manuelle oder automatisierte Maßnahmen zur Behebung von Problemen zu empfehlen.
+
+link:well-architected-workloads.html["Erfahren Sie mehr über gut strukturierte Workloads."]
+
+
+
 == Tools zur Verwendung von NetApp Workload Factory
 
 Sie können NetApp Workload Factory mit den folgenden Tools verwenden:
@@ -146,14 +154,6 @@ Sie können NetApp Workload Factory mit den folgenden Tools verwenden:
 * *CloudFormation*: Verwenden Sie AWS CloudFormation-Code, um die Aktionen auszuführen, die Sie in der Workload Factory-Konsole definiert haben, um AWS- und Drittanbieterressourcen aus dem CloudFormation-Stack in Ihrem AWS-Konto zu modellieren, bereitzustellen und zu verwalten.
 * *Terraform NetApp Workload Factory-Anbieter*: Verwenden Sie Terraform, um in der Workload Factory-Konsole generierte Infrastruktur-Workflows zu erstellen und zu verwalten.
 
-
-
-
-=== Gut strukturierte Arbeitslasten
-
-Workload Factory unterstützt Sie bei der Wartung und dem Betrieb zuverlässiger, sicherer, effizienter und kostengünstiger Speicher- und Datenbankkonfigurationen, die mit dem AWS Well-Architected Framework übereinstimmen. Workload Factory scannt FSx täglich nach ONTAP -Dateisystemen, SQL Server- und Oracle-Datenbankbereitstellungen, um Einblicke in potenzielle Fehlkonfigurationen zu gewinnen und entweder manuelle oder automatisierte Maßnahmen zur Behebung von Problemen zu empfehlen.
-
-link:well-architected-workloads.html["Erfahren Sie mehr über gut strukturierte Workloads."]
 
 
 
