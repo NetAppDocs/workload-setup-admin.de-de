@@ -1,0 +1,386 @@
+---
+sidebar: sidebar 
+permalink: well-architected-workloads.html 
+keywords: well-architected, best practices, well-architected file system, Amazon FSx for NetApp ONTAP, FSx for ONTAP 
+summary: Workload Factory scannt Workload-Konfigurationen auf Zuverlässigkeit, Sicherheit, operative Exzellenz, Kostenoptimierung und Leistungseffizienz und liefert Erkenntnisse und Empfehlungen, die Ihnen helfen, operative Exzellenz zu erreichen. 
+---
+= Gut strukturierte Workloads erstellen und betreiben
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Workload Factory, die NetApp -Management-Suite für Amazon FSx for NetApp ONTAP, unterstützt Sie bei der Wartung und dem Betrieb zuverlässiger, sicherer, effizienter und kostengünstiger Speicher- und Datenbankkonfigurationen, die mit dem AWS Well-Architected Framework übereinstimmen. Workload Factory bietet tägliche Analysen Ihrer Speicher- und Datenbank-Workloads, Empfehlungen und automatische Korrekturen, um einen reibungslosen Workload-Betrieb zu gewährleisten. Durch die Automatisierung dieses Prozesses minimiert Workload Factory menschliche Fehler und gewährleistet Konsistenz im Workload-Management.
+
+
+
+== So funktioniert es
+
+Workload Factory analysiert täglich Amazon FSx for NetApp ONTAP -Dateisysteme, Microsoft SQL Server und Oracle-Datenbankbereitstellungen. Die tägliche Analyse liefert einen gut strukturierten Status sowie Erkenntnisse und Empfehlungen mit Optionen zur automatischen Behebung von Konfigurationsproblemen, sodass Ihre Bereitstellungen Best Practices entsprechen und effizient funktionieren.
+
+Nach Abschluss der täglichen Analyse werden die Konfigurationen im Well-architected-Dashboard für die Bereitstellung als „optimiert“ oder „nicht optimiert“ angezeigt. Sie finden dort die Gesamtoptimierungspunktzahl, Konfigurationsprobleme nach Kategorie sowie eine Liste der Konfigurationsprobleme und Empfehlungen. Sie können die Empfehlungen zu Konfigurationsproblemen einsehen. Manche Probleme können von Workload Factory automatisch behoben werden, andere erfordern einen manuellen Eingriff. In diesem Fall stellt Workload Factory detaillierte Anweisungen bereit, die Ihnen bei der Umsetzung der empfohlenen Änderungen helfen.
+
+Da die Anforderungen an Speicher- und Datenbank-Workloads variieren, können Sie die Analyse spezifischer Konfigurationen, die für Ihre Umgebungen nicht relevant sind, getrost ignorieren. Dies hilft Ihnen, unnötige Warnmeldungen und ungenaue Optimierungsergebnisse zu vermeiden. Wird eine bestimmte Konfigurationsanalyse verworfen, wird die Konfiguration nicht in die Gesamtoptimierungsbewertung einbezogen.
+
+
+
+== Warum es wichtig ist
+
+Workload Factory vereinfacht die schwierige Aufgabe, Best Practices manuell auf große Speicher- oder Datenbankumgebungen anzuwenden; es optimiert diesen Prozess durch die Kombination von Analyse und Behebung suboptimaler Konfigurationen über die Workload Factory-Konsole. Die in der Workload Factory-Konsole vorgenommenen Korrekturen eliminieren das Risiko menschlicher Fehler und gewährleisten Einheitlichkeit bei der Speicher- und Datenbankverwaltung. Durch den Einsatz von Automatisierung können Sie gewährleisten, dass die Konfigurationen jedes Mal korrekt angewendet und im Laufe der Zeit auf diese Weise beibehalten werden, wodurch die hohen Standards an Leistung und Zuverlässigkeit in Ihrer gesamten Speicherinfrastruktur aufrechterhalten werden.
+
+
+
+== Legen Sie mit Workload Factory los, um Fehlkonfigurationen zu erkennen und zu korrigieren.
+
+Legen Sie los mit Workload Factory, indem Sie sich anmelden und ein Konto erstellen, Anmeldeinformationen hinzufügen und eine Verbindung herstellen, damit Workload Factory AWS-Ressourcen direkt verwalten kann, und optimieren Sie dann Ihre Workloads mit Amazon FSx for NetApp ONTAP.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html["Schnellstart"]
+
+
+
+== Bewährte Verfahren und Empfehlungen für Speicherworkloads
+
+Workload Factory bietet einen detaillierten Einblick in die Best Practices der ONTAP Konfiguration für das Speichermanagement. Im Einzelnen analysiert die Storage-Workload innerhalb der Workload Factory Speicherkonfigurationen auf Konformität mit den Säulen des AWS Well-Architected Framework und bietet Empfehlungen und Abhilfemaßnahmen für suboptimale Konfigurationen. Im gut strukturierten Status-Dashboard von Storage finden Sie Erkenntnisse, die Ihnen helfen, bewährte Vorgehensweisen umzusetzen, um optimale Leistung und Zuverlässigkeit für Ihre FSx for ONTAP -Dateisysteme zu gewährleisten.
+
+Die gut strukturierte Analyse kategorisiert Konfigurationen anhand der folgenden Säulen des Rahmenwerks: Zuverlässigkeit, Sicherheit, operative Exzellenz, Kostenoptimierung und Leistungseffizienz.
+
+
+
+=== Zuverlässigkeit
+
+Zuverlässigkeit gewährleistet, dass Arbeitslasten ihre beabsichtigten Funktionen auch bei Störungen korrekt und konsistent erfüllen.
+
+* *FSx für ONTAP Backups planen*
++
+FSx für ONTAP: Die Sicherung Ihrer Volumes unterstützt die Datenaufbewahrung und die Einhaltung von Compliance-Vorgaben. Mit FSx for ONTAP backup können Sie eine zentral verwaltete, automatisierte Backup- und Aufbewahrungsstrategie für Ihre Daten implementieren.
+
+* *Lokale Snapshots planen*
++
+Planen Sie lokale Snapshots für effiziente Datensicherung und schnelle Wiederherstellung. Snapshots sind Momentaufnahmen Ihrer Volumes zu einem bestimmten Zeitpunkt.
+
+* *Regionenübergreifende Replikation*
++
+Die regionsübergreifende Replikation stellt sicher, dass Ihre Daten in eine andere AWS-Region repliziert werden, wodurch die Datenbeständigkeit und -verfügbarkeit verbessert werden. Workload Factory empfiehlt die Konfiguration regionsübergreifender Replikation für die Notfallwiederherstellung und die Einhaltung von Compliance-Anforderungen.
+
+* *Datenreplikation einrichten*
++
+Um die Datenzuverlässigkeit zu erhöhen, können Daten auf ein FSx for ONTAP -Dateisystem in derselben Region oder in einer anderen Region repliziert werden. Richten Sie eine Datenreplikation ein, um Migration, Notfallwiederherstellung und langfristige Aufbewahrung über Dateisysteme hinweg zu unterstützen.
+
+* *SSD-Kapazitätsschwelle erhöhen*
++
+Die SSD-Speicherkapazität sollte dauerhaft nicht zu mehr als 80 % ausgelastet sein. Dies könnte sich auf Lese- und Schreibvorgänge von Daten in Ihrem Kapazitätspool-Speicherbereich auswirken und die Durchsatzkapazität Ihres Dateisystems beeinträchtigen. Wenn die Speicherkapazität erschöpft ist, kann dies dazu führen, dass Datenmengen schreibgeschützt werden und Dienste, die versuchen, neue Daten zu schreiben, fehlschlagen.
+
+* *Zugleichung der Beschriftungen zur Sicherstellung der Datenzuverlässigkeit*
++
+Um die Datenzuverlässigkeit zu gewährleisten, müssen die Snapshot-Richtlinienbezeichnungen des Quellvolumes und die Replikationsrichtlinienbezeichnungen übereinstimmen.
+
+* *Dateikapazitätsschwelle erhöhen*
++
+Der Schwellenwert für die Dateikapazität sollte erhöht werden, um ein Erreichen der Speicherkapazitätsgrenze zu vermeiden. Eine geringe Dateikapazität (Inodes) verhindert das Schreiben zusätzlicher Daten auf das Volume. Workload Factory empfiehlt, die Auslastung der verfügbaren Dateikapazität dauerhaft unter 80 % zu halten. Um neue Dateien im Volume zu erstellen, wird freier Dateispeicher benötigt.
+
+
+
+
+
+=== Sicherheit
+
+Im Bereich der Sicherheit liegt der Schwerpunkt auf dem Schutz von Daten, Systemen und Vermögenswerten durch Risikobewertungen und Risikominderungsstrategien.
+
+* *ARP/AI aktivieren*
++
+NetApp Autonomous Ransomware Protection with AI (ARP/AI) verbessert die Cyber-Resilienz und gewährleistet aktiven Schutz für Datenmengen vor sich ständig weiterentwickelnden Ransomware-Bedrohungen. Workload Factory empfiehlt, ARP/AI für alle Volumes zu aktivieren.
+
+* *Unbefugter Zugriff auf Datenträger*
++
+Datenträger, die Anwendungsdaten über iSCSI bereitstellen, sollten keinen parallelen NAS-Zugriff zulassen. Workload Factory empfiehlt, dass auf Volumes, die über das iSCSI-Protokoll zugegriffen werden, keine weiteren Protokolle verwendet werden dürfen.
+
+
+
+
+
+=== Operative Exzellenz
+
+Operative Exzellenz konzentriert sich auf die Bereitstellung einer optimalen Architektur und eines optimalen Geschäftswerts.
+
+* *Automatische Kapazitätsverwaltung aktivieren*
++
+Die automatische Kapazitätsverwaltung sollte aktiviert werden, um regelmäßig sicherzustellen, dass die SSD-Ebene den Schwellenwert nicht überschreitet.
+
+* *Auslastungsschwelle für Volumenkapazität*
++
+Workload Factory empfiehlt, dass die Auslastung der Volumenkapazität dauerhaft 80 % nicht überschreiten sollte. Dies könnte Auswirkungen auf Lese- und Schreibvorgänge Ihrer Anwendung haben. Die Volumenkapazität kann manuell oder automatisch mithilfe der Funktion „Volumen automatisch vergrößern“ erhöht werden.
+
+* *Die Volumenauslastung nähert sich der Vollauslastung*
++
+Wenn ein Datenvolumen fast seine volle Kapazität erreicht, empfiehlt Workload Factory, Maßnahmen zur Erhöhung der Volumenkapazität zu ergreifen, um potenzielle Anwendungsunterbrechungen zu vermeiden.
+
+* *Schreibmodus für Cache-Beziehungen*
++
+Für eine optimale Leistung empfiehlt Workload Factory den Cache-Beziehungsschreibmodus, der am besten zu Ihrer Arbeitslast passt. Der Write-Around-Modus bietet eine bessere Leistung bei leseintensiven Arbeitslasten mit kleinen Dateien, während der Write-Back-Modus eine bessere Leistung bei schreibintensiven Arbeitslasten mit großen Dateien bietet.
+
+
+
+
+
+=== Kostenoptimierung
+
+Ziel der Kostenoptimierung ist es, einen Mehrwert für das Unternehmen zu schaffen und gleichzeitig die Kosten zu minimieren.
+
+* *Optimieren Sie die Gesamtbetriebskosten durch Staffelung der Kaltdaten*
++
+Um die Auslastung der SSD-Speicherebene zu reduzieren, sollte Cold Data Tiering aktiviert werden. Es wird empfohlen, für jedes Volumen eine Staffelungsrichtlinie anzuwenden. FSx for ONTAP scannt die Daten kontinuierlich, um selten genutzte Daten zu erkennen und diese unterbrechungsfrei in den Speicherpool mit hoher Kapazität zu verschieben.
+
+* *Speichereffizienz aktivieren*
++
+Um die Speicherauslastung zu optimieren und die Kosten der SSD-Ebene zu senken, sollten Speichereffizienzmaßnahmen wie Komprimierung, Verdichtung und Deduplizierung aktiviert werden.
+
+* *Unnötige Löschung von Snapshots und Backups*
++
+Um Kosten zu sparen, sollten nicht mehr benötigte Snapshots und Backups gelöscht werden.
+
+
+
+
+
+== Bewährte Verfahren und Empfehlungen für Datenbank-Workloads
+
+Workload Factory bietet eine Reihe von Best Practices und Empfehlungen für den Betrieb gut strukturierter Datenbank-Workloads. Die gut durchdachte Analyse bewertet die Konfigurationen und Einstellungen von Microsoft SQL Server und Oracle Database in Bezug auf Speicherdimensionierung, Speicherlayout, Speicherkonfiguration, Rechenleistung, Anwendung (SQL Server) und Ausfallsicherheit.
+
+
+
+=== Speichergrößen
+
+* *Speicherebene*
++
+Für eine optimale Speicherleistung sollten FSx for ONTAP -Volumes auf der primären SSD-Ebene bereitgestellt werden. Die Nutzung des Kapazitätspool-Tiers kann zu einer geringeren Leistung und höheren Latenz führen.
+
+* *Freier Speicherplatz im Dateisystem*
++
+Um die Speicherleistung zu optimieren, sollte die Dateisystemkapazität das 1,35-fache der Gesamtgröße des bereitgestellten Volumes betragen.
+
++
+Die prozentualen Spielraumreserven des Dateisystems sind wie folgt:
+
++
+** Unterversorgt: < 35 %
+** Optimiert: 35–100 %
+** Überversorgung: > 100 %
+
+
+* *Speicherlaufwerkgröße*
++
+Um Probleme wie Transaktions-Rollbacks, Datenbankausfälle, Datenbeschädigung und Leistungseinbußen durch ein volles Protokolllaufwerk zu vermeiden, ist eine genaue Dimensionierung und regelmäßige Überwachung des SQL Server-Protokolllaufwerks erforderlich.
+
++
+Die prozentuale Verteilung der Log-Laufwerksgröße ist wie folgt:
+
++
+** Unterversorgt: < 20 %
+** Optimiert: 20-30 %
+** Überversorgung: > 30 %
+
+
+* *TempDB-Laufwerksgröße*
++
+Um die Leistung zu optimieren und die Gesamtstabilität zu gewährleisten, ist eine genaue Dimensionierung und regelmäßige Überwachung der SQL Server TempDB erforderlich. Eine korrekt konfigurierte TempDB verhindert Leistungsprobleme und Instabilität. Unzureichender Speicherplatz oder hohe Konflikte können zu Verzögerungen bei Abfragen, Anwendungstimeouts und Systemabstürzen führen.
+
++
+Die prozentualen Anteile der TempDB-Laufwerksgröße sind wie folgt:
+
++
+** Unterversorgt: < 10 %
+** Optimiert: 10–20 %
+** Überversorgung: > 20 %
+
+
+
+
+
+
+=== Lagerlayout
+
+* *Platzierung der Datendateien (.mdf)*
++
+Die Trennung von Daten- und Protokolldateien auf verschiedene Laufwerke verbessert die Leistung durch die Möglichkeit gleichzeitiger E/A-Aktivitäten, unabhängiger Sicherungspläne und verbesserter Wiederherstellungsfunktionen. Wir empfehlen, Daten- und Protokoll-LUN-Pfade für kleinere Datenbanken auf verschiedene Volumes aufzuteilen. Diese Trennung ist erforderlich, wenn mehr als eine große Datenbank (> 500 GiB) vorhanden ist.
+
+* *Platzierung der Protokolldateien (.ldf)*
++
+Die Trennung von Daten- und Protokolldateien auf verschiedene Laufwerke verbessert die Leistung durch die Möglichkeit gleichzeitiger E/A-Aktivitäten, unabhängiger Sicherungspläne und verbesserter Wiederherstellungsfunktionen. Wir empfehlen, Daten- und Protokoll-LUN-Pfade für kleinere Datenbanken auf verschiedene Volumes aufzuteilen. Diese Trennung ist erforderlich, wenn mehr als eine große Datenbank (> 500 GiB) vorhanden ist.
+
+* *TempDB-Platzierung*
++
+Isolieren Sie die TempDB-E/A und vermeiden Sie E/A-Konflikte mit anderen Datenbanken, indem Sie TempDB auf einem eigenen Laufwerk platzieren. Diese Optimierung verbessert die Gesamtleistung und Stabilität des SQL-Servers. Wird dies nicht beachtet, kann es zu erheblichen E/A-Engpässen, einer langsameren Abfrageleistung und potenzieller Systeminstabilität kommen.
+
+
+
+
+
+=== Storage-Konfiguration
+
+* * ONTAP Konfiguration *
++
+[cols="1a,1a,2a"]
+|===
+| Juristische Person | Einstellung | Empfehlung 
+
+
+ a| 
+Volumen
+ a| 
+** Thin Provisioning (-space-guarantee = none)
+** Automatische Größenanpassung aktiviert
+** Automatischer Größenmodus = wachsen
+** Teilreserve = 0 %
+** Snapshot-Kopienreserve = 0 %
+** Automatisches Löschen von Snapshots (Volume/ältester zuerst)
+** Space-mgmt-try-first = volume_grow
+
+ a| 
+Um die Speichereffizienz und Kosteneffektivität zu optimieren, konfigurieren Sie Thin Provisioning, Autosize und Speicherverwaltungsoptionen für Ihre FSx for ONTAP Volumes. Ohne Thin Provisioning wird Speicherplatz im Voraus zugewiesen, was zu ineffizienter Nutzung und höheren Kosten aufgrund von Überprovisionierung führt; statische Zuweisung führt dazu, dass für ungenutzte Kapazität bezahlt wird, was die Ausgaben erhöht; fehlende dynamische Zuweisung behindert Skalierbarkeit und Flexibilität und beeinträchtigt die Leistung; und ohne Speicherplatzrückgewinnung belegen gelöschte Daten Speicherplatz, was die Effizienz verringert.
+
+
+
+ a| 
+Volumen
+ a| 
+** Tiering-Richtlinie = nur Snapshot
+** Tiering-minimum-cooling-days = 7
+
+ a| 
+Für eine optimale Datenbankleistung und Kosteneffizienz empfiehlt Workload Factory, nur Snapshots in die Kapazitätsebene zu verschieben. Diese Strategie gewährleistet hohe Leistung bei gleichzeitiger Kostenreduzierung. Es wird insbesondere empfohlen, Snapshots, die älter als 7 Tage sind, in verschiedene Kategorien einzuteilen.
+
+
+
+ a| 
+LUN
+ a| 
+Betriebssystemtyp = Windows 2008
+ a| 
+Der Wert des ONTAP LUN OS-Typs muss mit dem Partitionierungsschema des Betriebssystems übereinstimmen, um eine I/O-Ausrichtung zu erreichen. Eine fehlerhafte Konfiguration kann zu suboptimaler Leistung führen.
+
+
+
+ a| 
+LUN
+ a| 
+Platzreservierung aktiviert
+ a| 
+Wenn die Speicherplatzreservierung aktiviert ist, reserviert ONTAP genügend Speicherplatz im Volume, sodass Schreibvorgänge auf diese LUNs nicht aufgrund von Speicherplatzmangel fehlschlagen.
+
+
+
+ a| 
+LUN
+ a| 
+Speicherplatzzuweisung aktiviert
+ a| 
+Diese Option stellt sicher, dass FSx for ONTAP den EC2-Host benachrichtigt, wenn das Volume voll ist und keine Schreibvorgänge mehr annehmen kann. Diese Einstellung ermöglicht es FSx for ONTAP außerdem, Speicherplatz automatisch freizugeben, wenn SQL Server auf dem EC2-Host Daten löscht. Wenn diese Funktion deaktiviert ist, sind Schreibfehler möglich und der Speicherplatz wird möglicherweise ineffizient genutzt.
+
+|===
+* *Windows-Speicherkonfiguration*
++
+[cols="1a,1a,2a"]
+|===
+| Juristische Person | Einstellung | Empfehlung 
+
+
+ a| 
+Microsoft Multipath I/O (MPIO)
+ a| 
+** Status = Aktiviert
+** Richtlinie = Round Robin
+** Anzahl der Sitzungen = 5
+
+ a| 
+Um eine optimale Verfügbarkeit und Datenzugriffskonsistenz für Microsoft SQL Server-Datenbanken auf EC2 mit zugrunde liegenden LUNs, die in FSx für ONTAP bereitgestellt werden, zu gewährleisten, empfiehlt Workload Factory die Aktivierung und Konfiguration von Multipath I/O (MPIO). MPIO bietet mehrere Pfade zu FSx für ONTAP und verbessert so sowohl die Ausfallsicherheit als auch die Leistung. Diese bewährte Vorgehensweise schützt vor potenziellen Datenverlusten oder Ausfallzeiten, indem der Datenzugriff auch dann aufrechterhalten wird, wenn eine Komponente ausfällt.
+
+
+
+ a| 
+Größe der Zuteilungseinheit
+ a| 
+NTFS-Zuordnungseinheitsgröße = 64 KB
+ a| 
+Um den Speicherplatz besser zu nutzen, die Fragmentierung zu reduzieren und die Lese-/Schreibleistung von Dateien zu verbessern, stellen Sie die NTFS-Zuordnungseinheitsgröße auf 64K ein. Eine fehlerhafte Konfiguration kann zu ineffizienter Festplattennutzung und Leistungseinbußen führen.
+
+|===
+
+
+
+
+=== Berechnen
+
+* *Die richtige Dimensionierung berechnen*
++
+Um eine optimale Leistung und Kosteneffizienz Ihrer SQL Server EC2-Instanz zu gewährleisten, empfehlen wir, die Größe an Ihre Arbeitslastanforderungen anzupassen. Falls Ihre aktuelle Instanz unterdimensioniert ist, verbessert ein Upgrade die CPU-, Speicher- und E/A-Kapazität. Bei einer Überdimensionierung kann durch eine Herabstufung die Leistungsfähigkeit erhalten und gleichzeitig die Kosten gesenkt werden.
+
+* *Betriebssystem-Patch*
++
+Installieren Sie nach Möglichkeit immer die neuesten Patches, um Sicherheit und Stabilität zu gewährleisten. Durch die Installation des neuesten Patches werden Ihre SQL Server-Datenbanken vor Sicherheitslücken geschützt und die allgemeine Systemzuverlässigkeit deutlich verbessert.
+
+* *Netzwerkadaptereinstellungen*
++
+Eine genaue Konfiguration der Empfangsseitenskalierung (RSS) ist für eine optimale Netzwerkleistung in Microsoft SQL Server-Instanzen unerlässlich. RSS verteilt die Netzwerkverarbeitung auf mehrere Prozessoren, wodurch Engpässe vermieden und die Systemleistung verbessert werden. Workload Factory empfiehlt die folgenden RSS-Einstellungen:
+
++
+** TCP-Offloading-Funktionen deaktivieren: Stellen Sie sicher, dass alle TCP-Offloading-Funktionen deaktiviert sind.
+** Anzahl der Empfangswarteschlangen: Auf 8 setzen, wenn vCPUs > 8. Auf die Anzahl der vCPUs setzen, falls vCPUs ≤ 8.
+** RSS-Profil: Auf NUMAStatic eingestellt.
+** Basisprozessornummer: Auf 2 einstellen.
++
+Durch die Einhaltung dieser Einstellungen verbessern Sie die Leistung und Zuverlässigkeit Ihrer Microsoft SQL Server-Instanzen. Wir empfehlen Ihnen, die empfohlenen Einstellungen zu testen, um Leistungsverbesserungen festzustellen, bevor Sie Änderungen an Ihrer Produktionsumgebung vornehmen.
+
+
+
+
+
+
+
+=== Anwendung (SQL Server)
+
+* *Lizenz*
++
+Die Bewertung und Empfehlung der SQL Server-Lizenz erfolgt auf Hostebene.
+
++
+Nicht optimiert: Eine Lizenz gilt als "nicht optimiert", wenn Workload Factory feststellt, dass Ihre Datenbankinfrastruktur keine der Funktionen der kommerziellen Softwarelizenz nutzt, für die Sie bezahlen. Eine nicht optimierte Lizenz kann zu unnötigen Kosten führen.
+
++
+Optimiert: Eine Lizenz gilt als "optimiert", wenn die kommerzielle Softwarelizenz für Ihre Datenbanken Ihre Leistungsanforderungen erfüllt.
+
+* *Microsoft SQL Server-Patch*
++
+Installieren Sie nach Möglichkeit immer die neuesten Patches, um Sicherheit und Stabilität zu gewährleisten. Durch die Installation des neuesten Patches werden Ihre SQL Server-Datenbanken vor Sicherheitslücken geschützt und die allgemeine Systemzuverlässigkeit deutlich verbessert.
+
+* *MAXDOP*
++
+Um die Abfrageleistung durch einen Ausgleich der parallelen Verarbeitung zu optimieren, sollte der maximale Parallelisierungsgrad (MAXDOP) festgelegt werden. Eine präzise MAXDOP-Konfiguration verbessert Leistung und Effizienz. Die besten Ergebnisse werden in den meisten Anwendungsfällen erzielt, wenn MAXDOP auf 4, 8 oder 16 eingestellt wird. Wir empfehlen Ihnen, Ihre Arbeitslast zu testen und auf alle mit Parallelität zusammenhängenden Wartearten wie z. B. CXPACKET zu achten.
+
+
+
+
+
+=== Zuverlässigkeit
+
+* *FSx für ONTAP Backups planen*
++
+Die Sicherung Ihrer Microsoft SQL Server-Volumes ist entscheidend für die Einhaltung Ihrer Datenaufbewahrungs- und Compliance-Anforderungen. Mit FSx for ONTAP Backup können Sie eine zentral verwaltete, automatisierte Backup- und Aufbewahrungsstrategie für Ihre SQL Server-Daten implementieren.
+
+* *Lokale Snapshots planen*
++
+Planen Sie lokale Snapshots für effiziente Datensicherung und schnelle Wiederherstellung. Snapshots sind Momentaufnahmen Ihrer Volumes zu einem bestimmten Zeitpunkt.
+
+* *Regionenübergreifende Replikation*
++
+Die regionsübergreifende Replikation stellt sicher, dass Ihre Daten in eine andere AWS-Region repliziert werden, wodurch die Datenbeständigkeit und -verfügbarkeit verbessert werden. Workload Factory empfiehlt die Konfiguration regionsübergreifender Replikation für die Notfallwiederherstellung und die Einhaltung von Compliance-Anforderungen.
+
+
+
+
+
+== Ähnliche Informationen
+
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html["Implementieren Sie gut strukturierte FSx-Dateisysteme für ONTAP."^]
+* link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["Implementieren Sie gut strukturierte Datenbank-Workloads"^]
+

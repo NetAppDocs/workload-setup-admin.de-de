@@ -13,7 +13,7 @@ summary: NetApp Workload Factory ist eine leistungsstarke Lebenszyklus-Managemen
 [role="lead"]
 NetApp Workload Factory ist eine leistungsstarke Lebenszyklus-Management-Plattform, die Ihnen dabei hilft, Ihre Workloads mithilfe von Amazon FSx for NetApp ONTAP -Dateisysteme zu optimieren.  Zu den Workloads, die mit Workload Factory und FSx für ONTAP optimiert werden können, gehören Datenbanken, VMware-Migrationen zu VMware Cloud auf AWS, KI-Chatbots und mehr.
 
-Ein Workload umfasst eine Kombination aus Ressourcen, Code und Services oder Applikationen, die auf das Erreichen eines Geschäftsziels ausgelegt sind. Dabei kann es sich um alles, von einer kundenorientierten Anwendung bis hin zu einem Backend-Prozess, gehen. Für Workloads kann ein Teilsatz der Ressourcen in einem einzelnen AWS-Konto erforderlich sein oder sich über mehrere Konten erstrecken.
+Eine _Arbeitslast_ umfasst eine Kombination aus Ressourcen, Code und Diensten oder Anwendungen, die darauf ausgelegt sind, ein Geschäftsziel zu erreichen. Dies kann alles Mögliche sein, von einer kundenorientierten Anwendung bis hin zu einem Backend-Prozess. Workloads können sich auf eine Teilmenge der Ressourcen innerhalb eines einzelnen AWS-Kontos beziehen oder sich über mehrere Konten erstrecken.
 
 Amazon FSx for NetApp ONTAP bietet vollständig verwaltete, AWS-native NFS-, SMB/CIFS- und iSCSI-Speichervolumes für unternehmenskritische Anwendungen, Datenbanken, Container, VMware Cloud-Datenspeicher und Benutzerdateien.  Sie können FSx für ONTAP über Workload Factory und mithilfe nativer AWS-Verwaltungstools verwalten.
 
@@ -42,7 +42,7 @@ Mit Workload Factory können Sie Cloud-Speicher verwalten und Workload-Funktione
 
 == Sicherheit
 
-Die Sicherheit der NetApp Workload Factory hat für NetApp höchste Priorität.  Alle Workloads in Workload Factory werden auf Amazon FSx for NetApp ONTAP ausgeführt.  Zusätzlich zu allenlink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security.html["AWS-Sicherheitsfunktionen"^] , NetApp Workload Factory hatlink:https://netapp-security.trustshare.com/certifications/soc2type_1?documentId=84d4110a-3fc7-4d0c-9c65-b9f0d034c058["SOC2 Typ 1-Konformität"^] .
+Sicherheit hat für NetApp NetApp Workload Factory höchste Priorität. Alle Workloads in Workload Factory laufen auf Amazon FSx for NetApp ONTAP. Zusätzlich zu allen link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security.html["AWS-Sicherheitsfunktionen"^]NetApp Workload Factory hat erhalten link:https://trust.netapp.com/["SOC2 Typ 1-Konformität, SOC2 Typ 2-Konformität und HIPAA-Konformität"^]Die
 
 Amazon FSx for NetApp ONTAP für NetApp Workload Factory ist einlink:https://aws.amazon.com/solutions/guidance/deploying-enterprise-apps-with-netapp-bluexp-workload-factory-for-aws-and-amazon-fsx-for-netapp-ontap/["AWS-Lösung zum Bereitstellen von Unternehmens-Apps"^] das unter Berücksichtigung bewährter Vorgehensweisen erstellt wurde.
 
@@ -146,6 +146,14 @@ Sie können NetApp Workload Factory mit den folgenden Tools verwenden:
 * *CloudFormation*: Verwenden Sie AWS CloudFormation-Code, um die Aktionen auszuführen, die Sie in der Workload Factory-Konsole definiert haben, um AWS- und Drittanbieterressourcen aus dem CloudFormation-Stack in Ihrem AWS-Konto zu modellieren, bereitzustellen und zu verwalten.
 * *Terraform NetApp Workload Factory-Anbieter*: Verwenden Sie Terraform, um in der Workload Factory-Konsole generierte Infrastruktur-Workflows zu erstellen und zu verwalten.
 
+
+
+
+=== Gut strukturierte Arbeitslasten
+
+Workload Factory unterstützt Sie bei der Wartung und dem Betrieb zuverlässiger, sicherer, effizienter und kostengünstiger Speicher- und Datenbankkonfigurationen, die mit dem AWS Well-Architected Framework übereinstimmen. Workload Factory scannt FSx täglich nach ONTAP -Dateisystemen, SQL Server- und Oracle-Datenbankbereitstellungen, um Einblicke in potenzielle Fehlkonfigurationen zu gewinnen und entweder manuelle oder automatisierte Maßnahmen zur Behebung von Problemen zu empfehlen.
+
+link:well-architected-workloads.html["Erfahren Sie mehr über gut strukturierte Workloads."]
 
 
 
