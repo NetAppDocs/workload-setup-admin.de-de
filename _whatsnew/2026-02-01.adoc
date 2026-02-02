@@ -1,0 +1,44 @@
+= Gut konzipierte Updates
+:allow-uri-read: 
+
+
+
+
+=== Gut konzipierte Updates
+
+NetApp Workload Factory umfasst die well-architected assessment für Elastic VMware Service (EVS) Workloads und fügt neue Konfigurationen für Storage- und Datenbank-Workloads hinzu.
+
+* *VMware workloads* NetApp Workload Factory bietet Best Practices und Empfehlungen für den Betrieb gut strukturierter Amazon Elastic VMware Service (EVS) Workloads.
++
+link:https://docs.netapp.com/us-en/workload-vmware/view-evs-well-architected.html["Implementieren Sie gut strukturierte EVS-Konfigurationen"^]
+
+* *Speicher-Workloads* Mehrere neue Konfigurationen wurden der Funktion „Gut strukturiert“ im Bereich „Speicher-Workloads“ hinzugefügt, damit Sie mehr Einblick in Speicherleistung und -kosten erhalten.
++
+** Logische Berichterstellung für Storage-VMs
+** Cache-Volume-Größe optimieren
+** Verwaiste Blockgeräte
++
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html["Implementieren Sie gut strukturierte Dateisystemkonfigurationen für Storage-Workloads"^]
+
+
+
+* *Datenbank-Workloads* Workload Factory für Datenbanken beinhaltet neue Speicherkonfiguration für Oracle zur Aktivierung und Einrichtung von Direct NFS (dNFS), um die I/O-Leistung zu verbessern und die Last auf dem Host und dem Speichersystem zu verringern.
++
+** dNFS-Aktivierung
+** dNFS konsistente IP-Auflösung
+** dNFS Konfigurationsdatei
+** dNFS `nosharecache`
++
+link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["Implementieren Sie gut strukturierte Datenbank-Workloads"^]
+
+
+
+
+
+
+
+=== Neue Berechtigungen für Storage
+
+Neue Berechtigungen wurden zur Storage-Workload hinzugefügt, um Verbesserungen bei der Verwaltung von S3-Zugriffspunkten zu ermöglichen.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#change-log["Änderungsprotokoll für Berechtigungen"]

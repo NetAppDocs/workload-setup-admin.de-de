@@ -73,9 +73,6 @@ Die erforderlichen IAM-Richtlinien anzeigen:
         "elasticfilesystem:DescribeFileSystems",
         "ce:GetCostAndUsage",
         "ce:GetTags",
-        "ce:GetCostAndUsageWithResources",
-        "ce:GetCostForecast",
-        "ce:GetUsageForecast"
       ],
       "Resource": "*"
     },
@@ -110,10 +107,32 @@ Die erforderlichen IAM-Richtlinien anzeigen:
         "fsx:DeleteBackup",
         "fsx:TagResource",
         "fsx:UntagResource",
+        "fsx:CreateAndAttachS3AccessPoint",
+        "fsx:DetachAndDeleteS3AccessPoint",
+        "s3:CreateAccessPoint",
+        "s3:DeleteAccessPoint",
+        "s3:GetObjectTagging",
         "bedrock:InvokeModelWithResponseStream",
         "bedrock:InvokeModel",
         "bedrock:ListInferenceProfiles",
-        "bedrock:GetInferenceProfile"
+        "bedrock:GetInferenceProfile",
+        "s3tables:CreateTableBucket",
+        "s3tables:ListTables",
+        "s3tables:GetTable",
+        "s3tables:GetTableMetadataLocation",
+        "s3tables:CreateTable",
+        "s3tables:GetNamespace",
+        "s3tables:PutTableData",
+        "s3tables:CreateNamespace",
+        "s3tables:GetTableData",
+        "s3tables:ListNamespaces",
+        "s3tables:ListTableBuckets",
+        "s3tables:GetTableBucket",
+        "s3tables:UpdateTableMetadataLocation",
+        "s3tables:ListTagsForResource",
+        "s3tables:TagResource",
+        "s3:GetObjectTagging",
+        "s3:ListBucket"
       ],
       "Resource": "*"
     },
@@ -375,6 +394,60 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 
 
 | ce:GetTags | Kosten- und Nutzungsanalyse | Ansicht, Planung und Analyse 
+
+
+| Erstellen Sie einen S3-Zugriffspunkt und verbinden Sie ihn mit einem FSx for ONTAP Dateisystem | fsx:CreateAndAttachS3AccessPoint | S3-Zugangspunktverwaltung | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Einen S3-Zugriffspunkt von einem FSx for ONTAP Dateisystem trennen und löschen | fsx:DetachAndDeleteS3AccessPoint | S3-Zugangspunktverwaltung | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Erstellen Sie einen S3-Zugriffspunkt für eine vereinfachte Bucket-Zugriffsverwaltung | s3:CreateAccessPoint | S3-Zugangspunktverwaltung | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Löschen eines S3 Access Point | s3:DeleteAccessPoint | S3-Zugangspunktverwaltung | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Fügen Sie einem S3-Zugriffspunkt Tags hinzu | s3:TagResource | S3-Zugangspunktverwaltung | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Tags auf einem S3-Zugriffspunkt auflisten und anzeigen | s3:ListTagsForResource | S3-Zugangspunktverwaltung | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Tags von einem S3-Zugriffspunkt entfernen | s3:UntagResource | S3-Zugangspunktverwaltung | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Objekte in einem S3 access point Bucket ermitteln | s3:ListBucket | S3-Bucket-Operationen | Betriebs- und Sanierungsmaßnahmen 
+
+
+| S3-Tabellen-Buckets auflisten, erstellen und beschreiben | s3tables:ListTableBuckets s3tables:CreateTableBucket s3tables:GetTableBucket | S3-Tabellen-Bucket-Verwaltung | Betriebs- und Sanierungsmaßnahmen 
+
+
+| S3-Tabellen auflisten, erstellen und abrufen | s3tables:ListTables s3tables:CreateTable s3tables:GetTable | S3-Tabellenoperationen | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Speicherort der Tabellenmetadaten lesen | s3tables:GetTableMetadataLocation | S3-Tabellenmetadatenoperationen | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Speicherort der Tabellenmetadaten aktualisieren | s3tables:UpdateTableMetadataLocation | S3-Tabellenmetadatenoperationen | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Tabellen-Namespaces auflisten, erstellen und abrufen | s3tables:ListNamespaces s3tables:CreateNamespace s3tables:GetNamespace | S3-Namensraumoperationen | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Tabellendaten lesen (select, scan) | s3tables:GetTableData | S3-Tabellendatenoperationen | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Tabellendaten schreiben (insert) | s3tables:PutTableData | S3-Tabellendatenoperationen | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Tags in einer Inventartabelle auflisten (FSx for ONTAP, Storage-VM, Volume-IDs abrufen) | s3tables:ListTagsForResource | S3-Tabellen-Tag-Operationen | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Kennzeichnen Sie eine Inventartabelle für die Workload Factory-Suche | s3tables:TagResource | S3-Tabellen-Tag-Operationen | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Objekt-Tags über Zugriffspunkt abrufen | s3:GetObjectTagging | S3-Objektoperationen | Betriebs- und Sanierungsmaßnahmen 
 |===
 ====
 
@@ -827,7 +900,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 | fsx:DescribeStorageVirtualMachines  a| 
 * Einsatz
-* Managen von Abläufen
+* Managementvorgänge
 * Inventar
 
 | Ansicht, Planung und Analyse 
@@ -835,14 +908,14 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 | fsx:DescribeFileSystems  a| 
 * Einsatz
-* Managen von Abläufen
+* Managementvorgänge
 * Inventar
 * Einsparungen entdecken
 
 | Ansicht, Planung und Analyse 
 
 
-| fsx:ListTagsForRessource | Managen von Abläufen | Ansicht, Planung und Analyse 
+| fsx:ListTagsForRessource | Managementvorgänge | Ansicht, Planung und Analyse 
 
 
 | Servicekontingente für CloudFormation und VPC abrufen / Geheimnisse in einem Benutzerkonto für die für SQL, Domäne und FSx für ONTAP bereitgestellten Anmeldeinformationen erstellen | Service-Equotas:ListServiceQuotas | Einsatz | Ansicht, Planung und Analyse 
@@ -851,8 +924,8 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 | Verwenden Sie SSM-basierte Abfrage, um die aktualisierte Liste von FSX für ONTAP unterstützte Regionen zu erhalten | ssm:GetParametersByPath | Einsatz | Ansicht, Planung und Analyse 
 
 
-| Abfrage der SSM-Antwort nach dem Senden des Befehls für Verwaltungsvorgänge nach der Bereitstellung | ssm:GetCommandInvocation  a| 
-* Managen von Abläufen
+| Abfrage der SSM-Antwort nach dem Senden des Befehls für Verwaltungsoperationen nach der Bereitstellung | ssm:GetCommandInvocation  a| 
+* Managementvorgänge
 * Inventar
 * Einsparungen entdecken
 * Optimierung
@@ -861,7 +934,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 
 | Senden Sie Befehle über SSM an EC2-Instanzen zur Erkennung und Verwaltung. | ssm:SendCommand  a| 
-* Managen von Abläufen
+* Managementvorgänge
 * Inventar
 * Einsparungen entdecken
 * Optimierung
@@ -870,7 +943,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 
 | Ermitteln Sie den SSM-Konnektivitätsstatus der Instanzen nach der Bereitstellung | ssm:GetConnectionStatus  a| 
-* Managen von Abläufen
+* Managementvorgänge
 * Inventar
 * Optimierung
 
@@ -933,7 +1006,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 .4+| Abrufen, Auflisten, Erstellen und Löschen von SSM-Parametern für AD, FSX für ONTAP und SQL-Benutzeranmeldeinformationen, die während der Bereitstellung verwendet oder in Ihrem AWS-Konto verwaltet werden | ssm:GetParameter ^1^  a| 
 * Einsatz
-* Managen von Abläufen
+* Managementvorgänge
 * Inventar
 
 | Ansicht, Planung und Analyse 
@@ -941,7 +1014,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 | ssm:GetParameters ^1^  a| 
 * Einsatz
-* Managen von Abläufen
+* Managementvorgänge
 * Inventar
 
 | Ansicht, Planung und Analyse 
@@ -949,14 +1022,14 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 | ssm:PutParameter ^1^  a| 
 * Einsatz
-* Managen von Abläufen
+* Managementvorgänge
 
 | Ansicht, Planung und Analyse 
 
 
 | ssm:DeleteParameters ^1^  a| 
 * Einsatz
-* Managen von Abläufen
+* Managementvorgänge
 
 | Ansicht, Planung und Analyse 
 
@@ -1077,7 +1150,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 | Markieren Sie benutzerdefinierte Werte für von WLMDB erstellte Amazon FSX for NetApp ONTAP-Ressourcen, um Rechnungsdetails während der Ressourcenverwaltung zu erhalten | fsx:TagResource ^1^  a| 
 * Einsatz
-* Managen von Abläufen
+* Managementvorgänge
 
 | Erstellung eines Datenbankhosts 
 
@@ -1129,7 +1202,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 | fsx: CreateVolume erstellen  a| 
 * Einsatz
-* Managen von Abläufen
+* Managementvorgänge
 
 | Erstellung eines Datenbankhosts 
 
@@ -1169,7 +1242,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 | Protokolle:PutLogEvents  a| 
 * Einsatz
-* Managen von Abläufen
+* Managementvorgänge
 
 | Erstellung eines Datenbankhosts 
 
@@ -2009,6 +2082,46 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für VMware-Wor
 == Änderungsprotokoll
 
 Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den folgenden Abschnitten zur Kenntnis nehmen.
+
+
+
+=== 1. Februar 2025
+
+Dem Speicherworkload wurden folgende Berechtigungen hinzugefügt:
+
+* `s3:TagResource`
+* `s3:ListTagsForResource`
+* `s3:UntagResource`
+* `s3tables:CreateTableBucket`
+* `s3tables:ListTables`
+* `s3tables:GetTable`
+* `s3tables:GetTableMetadataLocation`
+* `s3tables:CreateTable`
+* `s3tables:GetNamespace`
+* `s3tables:PutTableData`
+* `s3tables:CreateNamespace`
+* `s3tables:GetTableData`
+* `s3tables:ListNamespaces`
+* `s3tables:ListTableBuckets`
+* `s3tables:GetTableBucket`
+* `s3tables:UpdateTableMetadataLocation`
+* `s3tables:ListTagsForResource`
+* `s3tables:TagResource`
+* `s3:GetObjectTagging`
+* `s3:ListBucket`
+
+
+
+
+=== 04. Dezember 2025
+
+Dem Speicherworkload wurden folgende Berechtigungen hinzugefügt:
+
+* `fsx:CreateAndAttachS3AccessPoint`
+* `fsx:DetachAndDeleteS3AccessPoint`
+* `s3:CreateAccessPoint`
+* `s3:DeleteAccessPoint`
+
 
 
 
