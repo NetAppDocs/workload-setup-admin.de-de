@@ -147,7 +147,7 @@ Um die Speicherauslastung zu optimieren und die Kosten der SSD-Ebene zu senken, 
 +
 Um Kosten zu sparen, sollten nicht mehr benötigte Snapshots und Backups gelöscht werden.
 
-* *Verwaiste Blockgeräte*
+* *Inaktive Blockgeräte*
 +
 Nachdem ein Blockgerät sieben Tage lang nicht verwendet wurde, empfiehlt Workload Factory, die Blockgerätedaten zu archivieren oder das ungenutzte Blockgerät zu löschen, um Kosten zu senken.
 

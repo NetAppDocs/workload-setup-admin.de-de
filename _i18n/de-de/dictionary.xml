@@ -1501,7 +1501,6 @@
   <block id="a49bf929860657a29ec7b321ff7a63ba" category="list-text">*Logische Berichterstellung für Storage-VMs*</block>
   <block id="7edda8ec9be79d47927f4aa7e27bd776" category="paragraph">Workload Factory empfiehlt, dass die Standardeinstellung für die Berichtserstellung für eine Speicher-VM auf logisch gesetzt wird, um eine bessere Sichtbarkeit der Speichernutzung auf Volume-Ebene zu bieten.</block>
   <block id="394c926099d3d2cf7e0d7477f17faf38" category="paragraph">Kostenoptimierung hilft Ihnen, den größtmöglichen Nutzen für Ihr Unternehmen zu erzielen und gleichzeitig die Kosten niedrig zu halten.</block>
-  <block id="6d281baa5967f3e1be000f071dda6d92" category="list-text">*Verwaiste Blockgeräte*</block>
   <block id="934ae55c0ac8033312b0dd4fc00ad677" category="paragraph">Nachdem ein Blockgerät sieben Tage lang nicht verwendet wurde, empfiehlt Workload Factory, die Blockgerätedaten zu archivieren oder das ungenutzte Blockgerät zu löschen, um Kosten zu senken.</block>
   <block id="08e31d66d631ac235f15db15294a1bed" category="paragraph">Für optimale Speicherleistung erstellen Sie FSx for ONTAP-Volumes auf der primären SSD-Ebene. Die Verwendung der Kapazitätspool-Ebene kann die Leistung verlangsamen und die Latenz erhöhen.</block>
   <block id="c882de88255b448709010276c1779e90" category="paragraph">Um die Speicherleistung zu optimieren, stellen Sie die Dateisystemkapazität auf das 1,35-fache der Gesamtgröße Ihrer Volumes ein.</block>
@@ -1518,4 +1517,5 @@
   <block id="9bcd13fbdffcddd84a7b637f7ec4e9b8" category="list-text">*Cluster-Knoten-Verwaltung*</block>
   <block id="240380a5970626d74754b96038898f5e" category="paragraph">Stellen Sie sicher, dass Ihre EVS-Clusterknoten über einen geeigneten EC2-Stopp- und Beendigungsschutz verfügen. EVS ESXi-Knoten sollten ausschließlich mit vCenter oder anderen VMware-Verwaltungstools verwaltet werden. Ohne entsprechenden EC2-Schutz können Knoten versehentlich über die EC2-Konsole gestoppt oder beendet werden, was zur Nichtverfügbarkeit von virtuellen Maschinendaten oder zu Datenverlust führen kann.</block>
   <block id="d1fabbd85b7cc34641739e525d26f652" category="section-title">01. Februar 2026</block>
+  <block id="c359614024935abd3712075452782fa3" category="list-text">*Inaktive Blockgeräte*</block>
 </blocks>
