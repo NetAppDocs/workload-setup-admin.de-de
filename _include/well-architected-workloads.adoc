@@ -1,0 +1,19 @@
+= So funktioniert es
+:allow-uri-read: 
+
+
+
+
+== So funktioniert es
+
+Workload Factory analysiert täglich Ihre Workloads, die auf Amazon FSx for NetApp ONTAP-Dateisystembereitstellungen laufen. Die Analyse liefert well-architected Status, Erkenntnisse und Empfehlungen.
+
+Nach Abschluss der täglichen Analyse werden die Konfigurationen im Well-architected-Dashboard für die Bereitstellung als „optimiert“ oder „nicht optimiert“ angezeigt. Sie finden dort die Gesamtoptimierungspunktzahl, Konfigurationsprobleme nach Kategorie sowie eine Liste der Konfigurationsprobleme und Empfehlungen. Sie können die Empfehlungen zu Konfigurationsproblemen einsehen. Manche Probleme können von Workload Factory automatisch behoben werden, andere erfordern einen manuellen Eingriff. In diesem Fall stellt Workload Factory detaillierte Anweisungen bereit, die Ihnen bei der Umsetzung der empfohlenen Änderungen helfen.
+
+Sie können die Analyse von Konfigurationen, die für Ihre Umgebungen nicht gelten, ausblenden. Dadurch werden unnötige Warnmeldungen und ungenaue Optimierungsergebnisse vermieden. Wenn Sie eine bestimmte Konfigurationsanalyse ausblenden, berücksichtigt Workload Factory die Konfiguration nicht in der Gesamtoptimierungsbewertung.
+
+
+
+== Warum es wichtig ist
+
+Workload Factory wendet Best Practices auf große Speicher-, Datenbank- und VMware-Umgebungen an, indem kontinuierliche Analysen mit Empfehlungseinblicken und Fehlerbehebungen kombiniert werden. Automatisierte Korrekturen, die in der Workload Factory-Konsole angewendet werden, reduzieren menschliche Fehler, gewährleisten einheitliches Management und erhalten Leistung und Zuverlässigkeit über Ihre Workload-Infrastrukturen hinweg.
