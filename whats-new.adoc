@@ -15,6 +15,18 @@ Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen von Work
 
 
 
+== 06. April 2026
+
+
+
+=== Neue Benachrichtigung für Speicher
+
+Der NetApp Workload Factory-Benachrichtigungsdienst umfasst die Benachrichtigung für NetApp Autonomous Ransomware Protection with AI (ARP/AI) für Storage.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Benachrichtigungen für NetApp Workload Factory"]
+
+
+
 == 01. März 2026
 
 

@@ -1,0 +1,11 @@
+= Neue Benachrichtigung für Speicher
+:allow-uri-read: 
+
+
+
+
+=== Neue Benachrichtigung für Speicher
+
+Der NetApp Workload Factory-Benachrichtigungsdienst umfasst die Benachrichtigung für NetApp Autonomous Ransomware Protection with AI (ARP/AI) für Storage.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Benachrichtigungen für NetApp Workload Factory"]

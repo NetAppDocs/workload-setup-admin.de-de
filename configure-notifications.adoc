@@ -52,6 +52,9 @@ Workload Factory sendet Benachrichtigungen für die folgenden Ereignisse:
 
 
 | Automatisches Inode-Management-Ereignis für FSx für ONTAP | Die Anzahl der Inodes für das FSx for ONTAP -Volume hat den Warnschwellenwert (Anzahl/Prozentsatz) erreicht. | Kapazitätsmanagement | Warnung | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
+
+
+| Verdächtige Datenträgeraktivität im FSx für ONTAP-Dateisystem festgestellt | NetApp Autonomous Ransomware Protection mit KI (ARP/AI) hat verdächtige Volumenaktivitäten erkannt. | Schutz vor Ransomware | Kritisch | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
 |===
 
 
