@@ -15,6 +15,28 @@ Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen von Work
 
 
 
+== 03. Mai 2026
+
+
+
+=== E-Mail-Benachrichtigungen für Workload Factory
+
+Sie können Workload Factory-Benachrichtigungen jetzt per E-Mail erhalten, ohne ein Amazon SNS-Thema konfigurieren zu müssen. Aktivieren Sie E-Mail-Benachrichtigungen, um Benachrichtigungen an alle mit dem Konto verknüpften E-Mail-Adressen zu senden.
+
+Sie können E-Mail-Benachrichtigungen entweder über die Workload Factory Console oder die NetApp Console konfigurieren. Die NetApp Console bietet außerdem die Möglichkeit, NetApp Console-Benachrichtigungen zu konfigurieren, die unter dem Glockensymbol angezeigt werden.
+
+Wenn Sie Benachrichtigungen in der NetApp Console konfigurieren, übernimmt die NetApp Console die Zustellung der Benachrichtigungen. Die Benachrichtigungseinstellungen in der NetApp Workload Factory-Konsole werden schreibgeschützt, um doppelte Benachrichtigungen zu vermeiden.
+
+
+
+=== Neue Benachrichtigung für EDA-Latenz
+
+Der NetApp Workload Factory-Benachrichtigungsdienst umfasst die Benachrichtigung für EDA-Latenz, die Sie benachrichtigt, wenn die Latenz einer EDA-Operation einen bestimmten Schwellenwert überschreitet.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Konfigurieren von Workload Factory-Benachrichtigungen"]
+
+
+
 == 06. April 2026
 
 
