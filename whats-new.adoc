@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes' 
-summary: 'Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen von Workload Factory: Anmeldeinformationen des Cloud-Anbieters, Codebox-Erweiterungen und mehr.' 
+summary: Erfahren Sie mehr über die Neuerungen bei den Workload Factory-Verwaltungsfunktionen wie Cloud-Anbieter-Anmeldeinformationen, Codebox-Verbesserungen und mehr. 
 ---
 = Was ist neu bei den Verwaltungsfunktionen von NetApp Workload Factory?
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktione
 
 
 [role="lead"]
-Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen von Workload Factory: Anmeldeinformationen des Cloud-Anbieters, Codebox-Erweiterungen und mehr.
+Erfahren Sie mehr über die Neuerungen bei den Workload Factory-Verwaltungsfunktionen wie Cloud-Anbieter-Anmeldeinformationen, Codebox-Verbesserungen und mehr.
 
 
 
@@ -32,6 +32,14 @@ Wenn Sie Benachrichtigungen in der NetApp Console konfigurieren, übernimmt die 
 === Neue Benachrichtigung für EDA-Latenz
 
 Der NetApp Workload Factory-Benachrichtigungsdienst umfasst die Benachrichtigung für EDA-Latenz, die Sie benachrichtigt, wenn die Latenz einer EDA-Operation einen bestimmten Schwellenwert überschreitet.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Konfigurieren von Workload Factory-Benachrichtigungen"]
+
+
+
+=== Neue Benachrichtigung für FSx für ONTAP-Dateisysteme
+
+Der NetApp Workload Factory-Benachrichtigungsdienst beinhaltet eine Benachrichtigung mit einer monatlichen Kostenübersicht für Ihr Konto, die Ausgabentrends, ungewöhnliche Änderungen und die besten Einsparmöglichkeiten für FSx für ONTAP-Dateisysteme aufzeigt.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Konfigurieren von Workload Factory-Benachrichtigungen"]
 

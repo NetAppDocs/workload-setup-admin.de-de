@@ -58,6 +58,9 @@ Workload Factory sendet Benachrichtigungen für die folgenden Ereignisse:
 
 
 | Überschreitung des Latenzschwellenwerts festgestellt | Mindestens ein Volume im FSx for ONTAP Cluster hat den Latenzschwellenwert überschritten. | Leistungsüberwachung | Warnung | EDA | FSx für ONTAP -Dateisysteme 
+
+
+| Monatlicher Kostenbericht | Monatliche Kostenübersicht für Ihr Konto, die Ausgabentrends, ungewöhnliche Änderungen und die besten Einsparmöglichkeiten für FSx für ONTAP-Dateisysteme anzeigt. | Kostenbericht | Empfehlung | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
 |===
 
 

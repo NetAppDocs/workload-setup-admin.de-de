@@ -19,3 +19,11 @@ Wenn Sie Benachrichtigungen in der NetApp Console konfigurieren, übernimmt die 
 Der NetApp Workload Factory-Benachrichtigungsdienst umfasst die Benachrichtigung für EDA-Latenz, die Sie benachrichtigt, wenn die Latenz einer EDA-Operation einen bestimmten Schwellenwert überschreitet.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Konfigurieren von Workload Factory-Benachrichtigungen"]
+
+
+
+=== Neue Benachrichtigung für FSx für ONTAP-Dateisysteme
+
+Der NetApp Workload Factory-Benachrichtigungsdienst beinhaltet eine Benachrichtigung mit einer monatlichen Kostenübersicht für Ihr Konto, die Ausgabentrends, ungewöhnliche Änderungen und die besten Einsparmöglichkeiten für FSx für ONTAP-Dateisysteme aufzeigt.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Konfigurieren von Workload Factory-Benachrichtigungen"]

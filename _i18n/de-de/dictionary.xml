@@ -1073,7 +1073,6 @@
   <block id="23f4fbebbe0125e9fa4a06e2e7e8b9fc" category="list-text">Nachdem Sie die Workload Factory-Konsole verwendet haben, um den Vorgang zu definieren, den Sie ausführen möchten, kopieren Sie den API-Code in die Codebox.</block>
   <block id="8c308624c961296988a91695046fff26" category="list-text">Nachdem Sie die Workload Factory-Konsole verwendet haben, um den Vorgang zu definieren, den Sie ausführen möchten, kopieren Sie die AWS CLI in die Codebox.</block>
   <block id="6e9cd110581bdd8427e1caca1ab0a668" category="list-text">Nachdem Sie die auszuführende Operation mithilfe der Workload Factory-Konsole definiert haben, laden Sie den Terraform-Code aus der Codebox herunter.</block>
-  <block id="3c9ee3abb878e5099cd76beeedcb2d04" category="summary">Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen von Workload Factory: Anmeldeinformationen des Cloud-Anbieters, Codebox-Erweiterungen und mehr.</block>
   <block id="8e11dbed1edcb7cf815a9454ba0f0315" category="doc">Was ist neu bei den Verwaltungsfunktionen von NetApp Workload Factory?</block>
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">06. Oktober 2025</block>
   <block id="7fe837fc0a93acdad81da1d440ee3fd2" category="section-title">05. Oktober 2025</block>
@@ -1418,4 +1417,10 @@
   <block id="8749fce6a42b5cc208c97e090bbdf52e" category="section-title">Benachrichtigungen in der NetApp Console filtern</block>
   <block id="067205dc8475e129dc9d47a407ae631d" category="paragraph">Sie können die Benachrichtigungseinstellungen der NetApp Console verwenden, um die Benachrichtigungen, die Sie in der Console erhalten, nach Schweregrad zu filtern, wie zum Beispiel Kritisch, Info oder Warnung.</block>
   <block id="3be044b694628f6e958377c22febfacd" category="section-title">03. Mai 2026</block>
+  <block id="394b492bc5d751a9928357af63eeb4df" category="section-title">Neue Benachrichtigung für FSx für ONTAP-Dateisysteme</block>
+  <block id="6d358c966898e9dabc6d051e85958cd8" category="paragraph">Der NetApp Workload Factory-Benachrichtigungsdienst beinhaltet eine Benachrichtigung mit einer monatlichen Kostenübersicht für Ihr Konto, die Ausgabentrends, ungewöhnliche Änderungen und die besten Einsparmöglichkeiten für FSx für ONTAP-Dateisysteme aufzeigt.</block>
+  <block id="2c18ddd8b06b4ef1ba84f543d572dc20" category="cell">Monatlicher Kostenbericht</block>
+  <block id="e3e28d348f2fd8f74a410b0565f54037" category="cell">Monatliche Kostenübersicht für Ihr Konto, die Ausgabentrends, ungewöhnliche Änderungen und die besten Einsparmöglichkeiten für FSx für ONTAP-Dateisysteme anzeigt.</block>
+  <block id="e298f728c751f07eb265d52e8b508cc2" category="cell">Kostenbericht</block>
+  <block id="f983e68b5fe658be13decdbe22777f19" category="summary">Erfahren Sie mehr über die Neuerungen bei den Workload Factory-Verwaltungsfunktionen wie Cloud-Anbieter-Anmeldeinformationen, Codebox-Verbesserungen und mehr.</block>
 </blocks>
