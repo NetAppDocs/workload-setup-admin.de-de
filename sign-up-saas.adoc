@@ -45,12 +45,15 @@ Beachten Sie, dass nur englische Zeichen im Anmeldeformular zulässig sind.
 Dieser Schritt ist erforderlich, bevor Sie sich anmelden können.
 
 . Wenn Sie dazu aufgefordert werden, lesen Sie die Endbenutzer-Lizenzvereinbarung, akzeptieren Sie die Bedingungen und wählen Sie *Weiter* aus.
-. Geben Sie auf der Seite *Account* einen Namen für Ihr Konto ein und wählen Sie optional Ihre Stellenbeschreibung aus.
+. Erstellen Sie auf der Seite *Konto* ein Konto. Ein Konto ist das oberste Element in NetApps Identitätsplattform und ermöglicht Ihnen das Hinzufügen und Verwalten von Berechtigungen und Anmeldeinformationen.
 +
-Ein Account ist das wichtigste Element der Identitätsplattform von NetApp, über das Sie Berechtigungen und Anmeldeinformationen hinzufügen und managen können.
+image:screenshot-account-selection-govcloud.png["Ein Screenshot der Kontoseite, der angezeigt wird, wenn Sie sich mit einem neuen Konto anmelden."]
 
 +
-image:screenshot-account-selection.png["Ein Screenshot der Kontoseite, der angezeigt wird, wenn Sie sich mit einem neuen Konto anmelden."]
+.. Geben Sie einen Namen für das Konto ein.
+.. Optional können Sie das Konto als AWS GovCloud (US)-Konto einrichten. Dieser Kontotyp verwendet ausschließlich AWS GovCloud (US)-Endpunkte und -Regionen für Einrichtung und Betrieb. Anmeldeinformationen und Geheimnisse bleiben in GovCloud. Diese Auswahl ist endgültig.
+.. Optional können Sie eine Stellenbeschreibung für das Konto angeben.
+
 
 . Wählen Sie *Erstellen* und die Startseite von Workload Factory wird angezeigt.
 

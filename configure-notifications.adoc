@@ -61,6 +61,9 @@ Workload Factory sendet Benachrichtigungen für die folgenden Ereignisse:
 
 
 | Monatlicher Kostenbericht | Monatliche Kostenübersicht für Ihr Konto, die Ausgabentrends, ungewöhnliche Änderungen und die besten Einsparmöglichkeiten für FSx für ONTAP-Dateisysteme anzeigt. | Kostenbericht | Empfehlung | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
+
+
+| Replikationsverzögerung | Die Replikation dauert länger als erwartet. | Replikation | Kritisch | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
 |===
 
 
