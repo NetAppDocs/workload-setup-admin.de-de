@@ -39,6 +39,10 @@ Die für Storage verfügbaren IAM-Richtlinien bieten die Berechtigungen, die Wor
 Für den Speicher stehen folgende Berechtigungsrichtlinien zur Auswahl:
 
 * *Ansicht, Planung und Analyse*: Sehen Sie sich FSx for ONTAP -Dateisysteme an, erfahren Sie mehr über den Systemzustand, erhalten Sie eine fundierte Analyse Ihrer Systeme und entdecken Sie Einsparmöglichkeiten.
++
+
+NOTE: AWS GovCloud unterstützt AWS Cost Explorer nicht, daher sind diese Berechtigungen nicht erforderlich: `ce:GetCostAndUsage` und  `ce:GetTags`. Auch wenn sie enthalten sind, funktioniert die Richtlinie weiterhin.
+
 * *Betrieb und Fehlerbehebung*: Führen Sie operative Aufgaben durch, wie z. B. die Anpassung der Dateisystemkapazität und die Behebung von Problemen in Ihren Dateisystemkonfigurationen.
 * *Dateisystemerstellung und -löschung*: Erstellen und Löschen von FSx-Dateisystemen und Speicher-VMs für ONTAP .
 
