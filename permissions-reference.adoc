@@ -115,6 +115,9 @@ Die erforderlichen IAM-Richtlinien anzeigen:
         "fsx:DetachAndDeleteS3AccessPoint",
         "s3:CreateAccessPoint",
         "s3:DeleteAccessPoint",
+        "s3:TagResource",
+        "s3:UntagResource",
+        "s3:ListTagsForResource",
         "s3:GetObjectTagging",
         "bedrock:InvokeModelWithResponseStream",
         "bedrock:InvokeModel",
@@ -139,6 +142,19 @@ Die erforderlichen IAM-Richtlinien anzeigen:
         "s3:ListBucket"
       ],
       "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudtrail:PutEventSelectors",
+        "cloudtrail:GetEventSelectors"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:ResourceTag/netapp-fsx-s3-metadata": "journal"
+        }
+      }
     },
     {
       "Effect": "Allow",
@@ -452,6 +468,12 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 
 
 | Objekt-Tags über Zugriffspunkt abrufen | s3:GetObjectTagging | S3-Objektoperationen | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Die aktuelle Ereignisauswahlkonfiguration des AWS CloudTrail Trails abrufen | cloudtrail:GetEventSelectors | S3 Access Point Journaloperationen | Betriebs- und Sanierungsmaßnahmen 
+
+
+| Konfigurieren oder aktualisieren Sie die AWS CloudTrail Ereignisselektoren, indem die Zuordnung zwischen dem FSx for ONTAP S3 Zugriffspunkt und dem CloudTrail Trail aktiviert oder deaktiviert wird. | cloudtrail:PutEventSelectors | S3 Access Point Journaloperationen | Betriebs- und Sanierungsmaßnahmen 
 |===
 ====
 
