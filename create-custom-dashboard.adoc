@@ -30,7 +30,7 @@ Beachten Sie, dass benutzerdefinierte Dashboards standardmäßig schreibgeschüt
 == Ein Dashboard erstellen
 
 .Schritte
-. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich mit einem der link:console-experiences.html["Konsolenerfahrungen"^] an.
 . Wählen Sie das Menü image:workloads-menu-icon.png["Das Hamburger-Menü-Symbol wird verwendet, um zu Workloads wie Storage, eda, ai, databases, vmware und administration zu navigieren."] und dann *Workloads Overview* > *Custom dashboards*.
 +
 Wenn dies Ihr erstes Dashboard ist, sehen Sie einen leeren Bildschirm mit Beispielaufforderungen, die Ihnen den Einstieg erleichtern. *Aufforderung kopieren* kann ausgewählt werden, um eine Beispielaufforderung in das Textfeld des KI-Dialogs zu kopieren.

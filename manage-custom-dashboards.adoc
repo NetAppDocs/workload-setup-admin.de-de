@@ -26,7 +26,7 @@ Sie müssen mindestens ein benutzerdefiniertes Dashboard in Ihrem Workload Facto
 == Auf den Dashboard Katalog zugreifen
 
 .Schritte
-. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Melden Sie sich mit einem der link:console-experiences.html["Konsolenerfahrungen"^] an.
 . Im Menü *Workloads Overview* und anschließend *Custom dashboards* auswählen.
 +
 Der Dashboard Katalog zeigt alle benutzerdefinierten Dashboards in Ihrem Workload Factory Konto an.
