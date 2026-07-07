@@ -48,6 +48,14 @@ indexpage:
       url: https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html
     - title: EMS-Ereignisse für Speicherworkloads anzeigen und analysieren
       url: https://docs.netapp.com/us-en/workload-fsx-ontap/analyze-events.html
+  - title: Benutzerdefinierte Dashboards
+    links:
+    - title: Informationen zu benutzerdefinierten Dashboards
+      url: "/learn-custom-dashboards.html"
+    - title: Ein benutzerdefiniertes Dashboard erstellen
+      url: "/create-custom-dashboard.html"
+    - title: Benutzerdefinierte Dashboards verwalten
+      url: "/manage-custom-dashboards.html"
   - title: Blogs und Community
     links:
     - title: NetApp Konsole

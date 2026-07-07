@@ -46,6 +46,16 @@ sidebar:
       url: "/well-architected-workloads.html"
     - title: Konfigurieren Sie Benachrichtigungen
       url: "/configure-notifications.html"
+    - title: Benutzerdefinierte Dashboards
+      entries:
+      - title: Informationen zu benutzerdefinierten Dashboards
+        url: "/learn-custom-dashboards.html"
+      - title: Ein benutzerdefiniertes Dashboard erstellen
+        url: "/create-custom-dashboard.html"
+      - title: Benutzerdefinierte Dashboards verwalten
+        url: "/manage-custom-dashboards.html"
+      - title: Fehlerbehebung bei benutzerdefinierten Dashboards
+        url: "/troubleshoot-custom-dashboards.html"
     - title: Automatisieren Sie Aufgaben mit der Codebox
       entries:
       - title: Erfahren Sie mehr über Codebox

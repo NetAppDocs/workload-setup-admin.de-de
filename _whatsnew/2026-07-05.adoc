@@ -1,0 +1,15 @@
+= Benutzerdefinierte Dashboards
+:allow-uri-read: 
+
+
+
+
+=== Benutzerdefinierte Dashboards
+
+KI-gestützte Dashboards können erstellt werden, die auf Ihre Workloads und Prioritäten abgestimmt sind, sodass die Performance Ihrer Abläufe einfach ersichtlich ist. Anstelle fester Ansichten ermöglichen benutzerdefinierte Dashboards den Fokus auf die Informationen, die am wichtigsten sind.
+
+Beschreiben Sie in verständlicher Sprache, was Sie überwachen möchten, und die KI erstellt ein Dashboard basierend auf Ihrer Anfrage. Beispielsweise lassen sich der Status der Notfallwiederherstellung, Kapazität und Kosten regionsübergreifend, die Einhaltung von Speicherschutzrichtlinien und andere betriebliche Metriken verfolgen.
+
+Benutzerdefinierte Dashboards sind schreibgeschützt, daher können sie Ihre Speicher- oder Workload-Einstellungen nicht ändern. Jede Person in Ihrem Workload Factory-Konto kann diese Dashboards anzeigen und verwalten, was es Teams erleichtert, Erkenntnisse zu teilen und abgestimmt zu bleiben.
+
+link:learn-custom-dashboards.html["Weitere Informationen zu benutzerdefinierten Dashboards"]

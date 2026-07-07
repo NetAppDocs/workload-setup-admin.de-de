@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: learn-custom-dashboards.html 
+keywords: custom dashboards, dashboards, personalized dashboards, AI dashboards, operational visibility, workload monitoring 
+summary: KI-gestützte Dashboards, die auf Ihre Arbeitslasten und Prioritäten zugeschnitten sind, ermöglichen eine verbesserte operative Transparenz, ohne durch vordefinierte Ansichten eingeschränkt zu werden. 
+---
+= Informationen zu benutzerdefinierten Dashboards
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Als Cloud- und Storage-Administrator bieten benutzerdefinierte Dashboards einen klaren Überblick über die Systeme und Workloads, die Sie verwalten. Sie ermöglichen es, Ansichten zu erstellen und zu personalisieren, die Ihrer Arbeit, Ihren Prioritäten und Geschäftszielen entsprechen, anstatt auf vorgegebene Layouts beschränkt zu sein.
+
+Benutzerdefinierte Dashboards nutzen KI, um personalisierte Ansichten Ihrer Workload Factory Umgebung zu erstellen. Es genügt, in verständlicher Sprache zu beschreiben, was überwacht werden soll, und das System erstellt automatisch visuelle Diagramme basierend auf den jeweiligen Anforderungen.
+
+Alle Benutzer Ihres Workload Factory Kontos können alle benutzerdefinierten Dashboards einsehen. Diese gemeinsame Einrichtung unterstützt die Zusammenarbeit der Teams und ermöglicht es, dass in Ihrer Organisation dieselben betrieblichen Informationen angezeigt werden.
+
+
+
+== Warum benutzerdefinierte Dashboards verwendet werden
+
+Workload Factory Nutzer verwalten zahlreiche Workloads, Umgebungen und Prioritäten, aber die Standard Dashboards zeigen nur vordefinierte Ansichten. Benutzerdefinierte Dashboards tragen zur Lösung verschiedener betrieblicher Herausforderungen bei:
+
+* *Wichtige Fragen schnell beantworten*: Der Fokus liegt auf den wichtigsten Fragen oder Wissenslücken statt auf allgemeinen Systemstatistiken.
+* *Überwachen Sie, was jetzt wichtig ist*: Verfolgen Sie die Kennzahlen, die Ihren aktuellen Prioritäten entsprechen, nicht einen festen Satz von Gesundheitsindikatoren.
+* *Technische Daten mit Geschäftsergebnissen verknüpfen*: Es wird dargestellt, wie sich die Systemleistung auf den Betrieb und die Geschäftsziele auswirkt.
+* *Vermeiden Sie das Wechseln zwischen verschiedenen Tools*: Alle relevanten Informationen sind an einem Ort verfügbar, ein Wechsel zwischen Tools, Seiten oder Exporten ist nicht erforderlich.
+
+
+
+
+== Möglichkeiten mit benutzerdefinierten Dashboards
+
+Während der Einrichtung unterstützt Sie der KI-gestützte Dialog dabei, Folgendes zu definieren:
+
+* Zu überwachende Arbeitslasten und Ressourcen
+* Wichtige Kennzahlen für Ihre Arbeit
+* Zeitbereiche und Vergleichszeiträume
+* Ansichten nach Region, Arbeitslast oder anderen Kategorien
+* Regeln oder Anforderungen, die verfolgt und angezeigt werden müssen
+
+
+
+
+== Überlegungen und Einschränkungen
+
+
+
+=== Berechtigungen
+
+Zum Erstellen oder Anzeigen benutzerdefinierter Dashboards benötigen Sie die entsprechenden AWS IAM-Berechtigungen für die Ressourcen, die Sie überwachen möchten. Es ist sicherzustellen, dass das Workload Factory Konto über Lesezugriff auf die von den Dashboards verwendeten Datenquellen verfügt.
+
+link:add-credentials.html["Informationen zum Hinzufügen von AWS-Anmeldeinformationen und zum Einrichten von IAM-Berechtigungen"^].
+
+
+
+=== Read-only-Design
+
+Benutzerdefinierte Dashboards sind schreibgeschützt. Sie können Ihre Speicher- oder Workload-Einstellungen nicht ändern. Dadurch ist es möglich, das System zu überwachen, ohne versehentlich Änderungen vorzunehmen.
+
+
+
+=== Einschränkungen
+
+Für benutzerdefinierte Dashboards gelten derzeit folgende Einschränkungen:
+
+* Dashboards können nicht außerhalb Ihres Workload Factory Kontos geteilt werden.
+* Nur ein Benutzer kann ein Dashboard gleichzeitig bearbeiten
+* Gleichzeitige Bearbeitung wird nicht unterstützt
+
+
+
+
+=== Demo Umgebung
+
+Wenn Sie ein Workload Factory Demoaccount verwenden, stehen einige vordefinierte Dashboards zur Verfügung. Diese helfen dabei, die Möglichkeiten benutzerdefinierter Dashboards zu erkennen. Jedes Dashboard zeigt einen typischen Überwachungsbedarf: Status der Notfallwiederherstellung, Kapazität und Kosten in verschiedenen Regionen sowie ob Speicherschutzregeln eingehalten werden.
+
+
+
+=== Beispiel-Eingabeaufforderungen
+
+Die folgenden Beispiele zeigen, wie sich Überwachungsanforderungen in einfacher Sprache beschreiben lassen:
+
+* *Überwachung der Notfallwiederherstellung*: „Ich richte eine Notfallwiederherstellungslösung in AWS für meine On-Premises-Systeme ein. Ich möchte eine vollständige Liste meiner On-Premises-Ressourcen und den Status jeder einzelnen Ressource am Notfallwiederherstellungsstandort in der Region US East sehen, einschließlich der Information, ob sie konfiguriert, aktiv und fehlerfrei ist.“
+* *Multiregionale Kapazität und Kosten*: „Ich verwalte Speicher über mehrere Cloud-Regionen und Anwendungen hinweg. Ich möchte einen klaren Überblick darüber, wie viel Speicherplatz ich zugewiesen habe, wie viel davon genutzt wird und wie hoch die Kosten sind, mit Details für jede Region und jede Anwendung.“
+* *Konformität mit den Speicherschutzrichtlinien*: „Ich richte eine neue Speicherschutzstrategie gemäß den Standards meiner Organisation ein. Alle Dateisysteme anzeigen und angeben, ob sie diese Anforderungen erfüllen:
++
+** Datenbank-Workloads: 12 tägliche Snapshots pro Volume und 2 manipulationssichere Snapshots pro Woche.
+** NFS und SMB Freigaben: 7 tägliche Snapshots pro Volume und 1 manipulationssicherer Snapshot pro Woche.
+** ARP muss auf allen Volumes aktiviert sein.
+
+
+
+
+
+
+== Nächste Schritte
+
+* link:create-custom-dashboard.html["Ein benutzerdefiniertes Dashboard erstellen"]
+* link:manage-custom-dashboards.html["Benutzerdefinierte Dashboards verwalten"]
+* link:troubleshoot-custom-dashboards.html["Fehlerbehebung bei benutzerdefinierten Dashboards"]
+

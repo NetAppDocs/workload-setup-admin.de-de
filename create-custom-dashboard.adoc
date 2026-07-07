@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: create-custom-dashboard.html 
+keywords: create dashboard, custom dashboard, AI dashboard, dashboard creation, personalized dashboard 
+summary: Ein individuelles Dashboard mit KI-gestützten Abfragen ermöglicht die Überwachung der wichtigsten Aspekte Ihrer Arbeitslasten und betrieblichen Prioritäten. 
+---
+= Ein benutzerdefiniertes Dashboard erstellen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Individuelle Dashboards lassen sich erstellen, indem in einfacher Sprache beschrieben wird, was überwacht werden soll. Die KI unterstützt bei der Einrichtung, sodass die Dashboards zu den jeweiligen Workloads und Prioritäten passen.
+
+.Über diese Aufgabe
+Benutzerdefinierte Dashboards nutzen einen KI-gestützten Dialog, um zu verstehen, was Sie visualisieren möchten. Ihre Überwachungsanforderungen werden in natürlicher Sprache beschrieben, und das System stellt klärende Fragen, damit das Dashboard Ihren Anforderungen entspricht.
+
+Nach der Erstellung kann das Dashboard aktualisiert werden, um die aktualisierten Daten anzuzeigen.
+
+Beachten Sie, dass benutzerdefinierte Dashboards standardmäßig schreibgeschützt sind und keine Änderungen an Ihren Speicher- oder Workload-Konfigurationen vornehmen können.
+
+.Bevor Sie beginnen
+* Sie benötigen Berechtigungen, um auf die Ressourcen zuzugreifen, die Sie in Ihrem Dashboard überwachen möchten.
+* Die Workloads werden in Workload Factory eingerichtet, bevor Dashboards zu deren Überwachung erstellt werden.
+
+
+
+
+== Ein Dashboard erstellen
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^]an.
+. Wählen Sie das Menü image:workloads-menu-icon.png["Das Hamburger-Menü-Symbol wird verwendet, um zu Workloads wie Storage, eda, ai, databases, vmware und administration zu navigieren."] und dann *Workloads Overview* > *Custom dashboards*.
++
+Wenn dies Ihr erstes Dashboard ist, sehen Sie einen leeren Bildschirm mit Beispielaufforderungen, die Ihnen den Einstieg erleichtern. *Aufforderung kopieren* kann ausgewählt werden, um eine Beispielaufforderung in das Textfeld des KI-Dialogs zu kopieren.
+
+. *Neues Dashboard erstellen* auswählen.
+. Im KI-Dialog wird beschrieben, was überwacht werden soll.
++
+Beschreiben Sie es in einfachen Worten. Die KI stellt einige Fragen, um Ihre Bedürfnisse besser zu verstehen.
+
+. Wählen Sie image:arrow.png["Das Menüsymbol wird verwendet, um Dashboards zu generieren., width=18"].
+. Antworten auf die klärenden Fragen der KI.
++
+Die KI bittet Sie möglicherweise, aus mehreren Optionen auszuwählen, um Ihre Bedürfnisse besser zu verstehen. Jede Frage wird beantwortet und *Weiter* ausgewählt, oder *Überspringen* wird gewählt, um optionale Fragen zu überspringen.
+
+. Nachdem Sie alle Fragen beantwortet haben, *Weiter* auswählen, um Ihr Dashboard zu erstellen.
+
+
+.Ergebnis
+Ihr benutzerdefiniertes Dashboard befindet sich nun im Dashboard Katalog. Alle Benutzer in Ihrem Workload Factory Account können darauf zugreifen und es anzeigen.
+
+.Was kommt als Nächstes
+Nach der Erstellung können Sie:
+
+* Dashboard-Daten werden aktualisiert, damit die neuesten Informationen angezeigt werden.
+* Dashboards bearbeiten, um anzuzeigen, was sie zeigen
+* Dashboards, die nicht mehr benötigt werden, können gelöscht werden.
+* Dashboard-Details anzeigen, einschließlich des Erstellers und des Zeitpunkts der letzten Aktualisierung
+
+
+
+
+== Ähnliche Informationen
+
+* link:manage-custom-dashboards.html["Eigene benutzerdefinierte Dashboards verwalten"]
+* link:troubleshoot-custom-dashboards.html["Fehlerbehebung bei benutzerdefinierten Dashboards"]
+
