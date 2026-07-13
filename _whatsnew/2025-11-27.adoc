@@ -4,6 +4,7 @@
 
 
 
+[[permissions-update-for-storage]]
 === Berechtigungsaktualisierung für Speicher
 
 Der FSx for ONTAP EMS-Ereignisanalysator verwendet die folgenden Amazon Bedrock-Berechtigungen in der Berechtigungsrichtlinie _operations and remediation_, um Ereignisdaten für die Storage-Workload abzurufen.

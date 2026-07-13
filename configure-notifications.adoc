@@ -15,6 +15,7 @@ Sie können den NetApp Workload Factory-Benachrichtigungsdienst so konfigurieren
 
 
 
+[[notification-types-and-messages]]
 == Benachrichtigungstypen und Nachrichten
 
 Workload Factory sendet Benachrichtigungen für die folgenden Ereignisse:
@@ -67,6 +68,7 @@ Workload Factory sendet Benachrichtigungen für die folgenden Ereignisse:
 |===
 
 
+[[configure-workload-factory-notifications]]
 == Konfigurieren von Workload Factory-Benachrichtigungen
 
 Sie können Workload Factory-Benachrichtigungen mithilfe der NetApp Console oder der Workload Factory-Konsole konfigurieren.
@@ -75,6 +77,7 @@ Folgende Optionen stehen zum Empfangen von Benachrichtigungen zur Verfügung:
 
 
 
+[[netapp-console]]
 === NetApp Konsole
 
 * *Benachrichtigungen*: Konfigurieren Sie Workload Factory so, dass Benachrichtigungen gesendet werden, die unter dem Glockensymbol in NetApp Console angezeigt werden.
@@ -84,6 +87,7 @@ Folgende Optionen stehen zum Empfangen von Benachrichtigungen zur Verfügung:
 
 
 
+[[workload-factory-console]]
 === Workload Factory-Konsole
 
 * *E-Mail*: Aktivieren Sie E-Mail-Benachrichtigungen in der Workload Factory Console, um Benachrichtigungen an alle mit dem Konto verknüpften E-Mail-Adressen zu erhalten, ohne dass eine Amazon SNS-Konfiguration erforderlich ist.
@@ -121,6 +125,7 @@ Nachdem Sie das Thema erstellt haben, kopieren Sie die Themen-ARN und geben Sie 
 
 
 --
+[[wf-console-email-notifications]]
 .Konfigurieren von Benachrichtigungen über die Workload Factory-Konsole
 --
 .Schritte
@@ -141,18 +146,21 @@ Nachdem Sie die Konfiguration durch Senden einer Testbenachrichtigung überprüf
 ====
 
 
+[[subscribe-to-the-amazon-sns-topic]]
 == Abonnieren Sie das Amazon SNS-Thema
 
 Nachdem Sie Workload Factory so konfiguriert haben, dass Benachrichtigungen an ein Thema gesendet werden, folgen Sie den https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html["Anweisungen"] in der Amazon SNS-Dokumentation, um das Thema zu abonnieren, damit Sie Benachrichtigungen von Workload Factory erhalten können.
 
 
 
+[[filter-notifications]]
 == Benachrichtigungen filtern
 
 Sie können unnötigen Benachrichtigungsverkehr reduzieren und bestimmte Benachrichtigungstypen gezielt an bestimmte Nutzer senden, indem Sie Filter auf die Benachrichtigungen anwenden. Sie können dies mithilfe einer Amazon SNS-Richtlinie für SNS-Benachrichtigungen und mit den Benachrichtigungseinstellungen in der NetApp Console tun.
 
 
 
+[[filter-amazon-sns-notifications]]
 === Filtern von Amazon SNS-Benachrichtigungen
 
 Wenn Sie ein Amazon SNS-Thema abonnieren, erhalten Sie standardmäßig alle zu diesem Thema veröffentlichten Benachrichtigungen.  Wenn Sie nur bestimmte Benachrichtigungen zum Thema erhalten möchten, können Sie mithilfe einer Filterrichtlinie steuern, welche Benachrichtigungen Sie erhalten.  Filterrichtlinien bewirken, dass Amazon SNS dem Abonnenten nur die Benachrichtigungen übermittelt, die der Filterrichtlinie entsprechen.
@@ -231,6 +239,7 @@ Weitere Informationen zum Erstellen von Filterrichtlinien finden Sie im https://
 
 
 
+[[filter-notifications-in-netapp-console]]
 === Benachrichtigungen in der NetApp Console filtern
 
 Sie können die Benachrichtigungseinstellungen der NetApp Console verwenden, um die Benachrichtigungen, die Sie in der Console erhalten, nach Schweregrad zu filtern, wie zum Beispiel Kritisch, Info oder Warnung.

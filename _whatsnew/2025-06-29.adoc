@@ -4,6 +4,7 @@
 
 
 
+[[permissions-update-for-databases]]
 === Berechtigungsaktualisierung für Datenbanken
 
 Die folgende Berechtigung ist jetzt im _schreibgeschützten_ Modus für Datenbanken verfügbar:  `cloudwatch:GetMetricData` .
@@ -12,6 +13,7 @@ https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#ch
 
 
 
+[[bluexp-workload-factory-notification-service-support]]
 === Unterstützung des BlueXP Workload Factory-Benachrichtigungsdienstes
 
 Der Benachrichtigungsdienst der BlueXP Workload Factory ermöglicht es der Workload Factory, Benachrichtigungen an den BlueXP-Warndienst oder an ein Amazon SNS-Thema zu senden. An BlueXP-Warnmeldungen gesendete Benachrichtigungen werden im BlueXP-Warnmeldungsbereich angezeigt. Wenn die Workload Factory Benachrichtigungen an ein Amazon SNS-Thema veröffentlicht, erhalten Abonnenten des Themas (z. B. Benutzer oder andere Anwendungen) die Benachrichtigungen an den für das Thema konfigurierten Endpunkten (z. B. per E-Mail oder SMS).

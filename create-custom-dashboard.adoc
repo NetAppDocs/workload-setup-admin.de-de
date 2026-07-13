@@ -20,13 +20,9 @@ Nach der Erstellung kann das Dashboard aktualisiert werden, um die aktualisierte
 
 Beachten Sie, dass benutzerdefinierte Dashboards standardmäßig schreibgeschützt sind und keine Änderungen an Ihren Speicher- oder Workload-Konfigurationen vornehmen können.
 
-.Bevor Sie beginnen
-* Sie benötigen Berechtigungen, um auf die Ressourcen zuzugreifen, die Sie in Ihrem Dashboard überwachen möchten.
-* Die Workloads werden in Workload Factory eingerichtet, bevor Dashboards zu deren Überwachung erstellt werden.
 
 
-
-
+[[create-a-dashboard]]
 == Ein Dashboard erstellen
 
 .Schritte
@@ -55,13 +51,13 @@ Ihr benutzerdefiniertes Dashboard befindet sich nun im Dashboard Katalog. Alle B
 Nach der Erstellung können Sie:
 
 * Dashboard-Daten werden aktualisiert, damit die neuesten Informationen angezeigt werden.
-* Dashboards bearbeiten, um anzuzeigen, was sie zeigen
 * Dashboards, die nicht mehr benötigt werden, können gelöscht werden.
 * Dashboard-Details anzeigen, einschließlich des Erstellers und des Zeitpunkts der letzten Aktualisierung
 
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:manage-custom-dashboards.html["Eigene benutzerdefinierte Dashboards verwalten"]

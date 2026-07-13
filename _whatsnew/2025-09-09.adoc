@@ -4,6 +4,7 @@
 
 
 
+[[new-notification-for-storage]]
 === Neue Benachrichtigung für Speicher
 
 Der Benachrichtigungsdienst der BlueXP workload factory umfasst die Benachrichtigung für die automatische Kapazitätsverwaltung für Speicher.

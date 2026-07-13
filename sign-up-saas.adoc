@@ -17,6 +17,7 @@ Sie können auch andere Personen einladen, Ihrem Workload Factory-Konto beizutre
 
 
 
+[[sign-up-to-workload-factory]]
 == Registrieren Sie sich bei Workload Factory
 
 Sie können sich mit einer der folgenden Optionen bei Workload Factory anmelden:
@@ -63,6 +64,7 @@ Sie verfügen jetzt über einen Workload Factory-Login und ein Konto.  Sie gelte
 
 
 
+[[invite-others-to-join-an-account-in-workload-factory]]
 == Laden Sie andere ein, einem Konto in Workload Factory beizutreten.
 
 Als Kontoadministrator können Sie andere Personen einladen, Ihrem Workload Factory-Konto beizutreten, damit diese auf Workload Factory zugreifen und es nutzen können. Die Kontoverwaltung ist nur über die NetApp Console möglich.

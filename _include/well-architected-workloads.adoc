@@ -4,6 +4,7 @@
 
 
 
+[[how-it-works]]
 == So funktioniert es
 
 Workload Factory analysiert täglich Ihre Workloads, die auf Amazon FSx for NetApp ONTAP-Dateisystembereitstellungen laufen. Die Analyse liefert well-architected Status, Erkenntnisse und Empfehlungen.
@@ -14,6 +15,7 @@ Sie können die Analyse von Konfigurationen, die für Ihre Umgebungen nicht gelt
 
 
 
+[[why-it-matters]]
 == Warum es wichtig ist
 
 Workload Factory wendet Best Practices auf große Speicher-, Datenbank- und VMware-Umgebungen an, indem kontinuierliche Analysen mit Empfehlungseinblicken und Fehlerbehebungen kombiniert werden. Automatisierte Korrekturen, die in der Workload Factory-Konsole angewendet werden, reduzieren menschliche Fehler, gewährleisten einheitliches Management und erhalten Leistung und Zuverlässigkeit über Ihre Workload-Infrastrukturen hinweg.

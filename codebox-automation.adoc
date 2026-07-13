@@ -15,6 +15,7 @@ Codebox ist ein Infrastructure as Code (IaC) Co-Pilot, der Entwicklern und DevOp
 
 
 
+[[codebox-capabilities]]
 == Codebox-Funktionen
 
 Codebox bietet zwei wichtige IAC-Funktionen:
@@ -27,6 +28,7 @@ Darüber hinaus zeigt Codebox beim Einrichten der Workload Factory-Anmeldeinform
 
 
 
+[[supported-code-formats]]
 == Unterstützte Codeformate
 
 Die unterstützten Codeformate umfassen:
@@ -39,6 +41,7 @@ Die unterstützten Codeformate umfassen:
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 link:use-codebox.html["Lernen Sie die Verwendung von Codebox kennen"].

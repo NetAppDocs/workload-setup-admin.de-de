@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: manage-custom-dashboards.html 
-keywords: manage dashboards, edit dashboard, delete dashboard, refresh dashboard, dashboard catalog 
-summary: Im Dashboard-Katalog können benutzerdefinierte Dashboards in Workload Factory angezeigt, bearbeitet, aktualisiert und gelöscht werden. 
+keywords: manage dashboards, delete dashboard, refresh dashboard, dashboard catalog 
+summary: Im Dashboard-Katalog können benutzerdefinierte Dashboards in Workload Factory angezeigt, aktualisiert und gelöscht werden. 
 ---
 = Benutzerdefinierte Dashboards verwalten
 :allow-uri-read: 
@@ -11,18 +11,19 @@ summary: Im Dashboard-Katalog können benutzerdefinierte Dashboards in Workload 
 
 
 [role="lead"]
-Verwalten Sie Ihre benutzerdefinierten Dashboards im Dashboard-Katalog. Von dort aus lassen sich Details anzeigen, Daten aktualisieren, Dashboard-Einstellungen bearbeiten oder Dashboards entfernen, die nicht mehr benötigt werden.
+Verwalten Sie Ihre benutzerdefinierten Dashboards im Dashboard-Katalog. Dort lassen sich Details anzeigen, Daten aktualisieren oder Dashboards, die nicht mehr benötigt werden, löschen.
 
 .Über diese Aufgabe
-Alle Benutzer Ihres Workload Factory Kontos haben Zugriff auf alle benutzerdefinierten Dashboards. Jedes Dashboard zeigt grundlegende Details wie den Namen des Erstellers, das Erstellungsdatum und ob es derzeit von jemandem bearbeitet wird.
+Alle Benutzer Ihres Workload Factory Kontos haben Zugriff auf alle benutzerdefinierten Dashboards. Jedes Dashboard zeigt grundlegende Details wie den Namen des Erstellers und das Erstellungsdatum.
 
-Benutzerdefinierte Dashboards sind schreibgeschützt. Sie können weder Ihre Speicher- noch Ihre Workload-Einstellungen ändern. Das Dashboard selbst kann bearbeitet werden, jedoch nicht die von ihm überwachten Ressourcen.
+Benutzerdefinierte Dashboards sind schreibgeschützt. Sie können weder Ihre Speicher- noch Ihre Workload-Einstellungen ändern.
 
 .Bevor Sie beginnen
 Sie müssen mindestens ein benutzerdefiniertes Dashboard in Ihrem Workload Factory Konto haben.
 
 
 
+[[access-the-dashboard-catalog]]
 == Auf den Dashboard Katalog zugreifen
 
 .Schritte
@@ -36,6 +37,7 @@ Der Dashboard Katalog zeigt alle benutzerdefinierten Dashboards in Ihrem Workloa
 
 
 
+[[refresh-dashboard-data]]
 == Dashboard-Daten aktualisieren
 
 Dashboard-Daten werden beim Öffnen eines Dashboards geladen. Eine Aktualisierung zeigt die neuesten Informationen an.
@@ -44,28 +46,7 @@ Das Dashboard lädt Daten aus Ihren Workloads neu. Die Zeitangabe „Letzte Aktu
 
 
 
-== Ein Dashboard bearbeiten
-
-Ein Dashboard kann bearbeitet werden, um anzuzeigen, welche Metriken und Diagramme dargestellt werden.
-
-.Schritte
-. Auf der Seite *Benutzerdefinierte Dashboards* das Dashboard suchen, das bearbeitet werden soll.
-. Im Menü *Aktionen* für dieses Dashboard die Option *Dashboard bearbeiten* auswählen.
-+
-Wenn ein anderer Benutzer das Dashboard bearbeitet, erscheint eine Meldung wie „Wird gerade von [Benutzername] bearbeitet“. Es kann abgewartet oder eine Abstimmung mit dieser Person vorgenommen werden.
-
-. Im KI-Dialog die gewünschten Änderungen beschreiben.
-+
-Dieser Vorgang ähnelt dem Erstellen eines neuen Dashboards. Die Workloads, Metriken oder Zeiträume, die das Dashboard erfasst, können geändert werden.
-
-. Die Änderungen überprüfen und **Speichern** auswählen.
-
-
-.Ergebnis
-Das Dashboard wird mit Ihren Änderungen aktualisiert. Das Datum der letzten Änderung wird ebenfalls aktualisiert.
-
-
-
+[[delete-a-dashboard]]
 == Ein Dashboard löschen
 
 Dashboards, die nicht mehr benötigt werden, können gelöscht werden. Dieser Vorgang ist endgültig und kann nicht rückgängig gemacht werden.
@@ -81,6 +62,7 @@ Das Dashboard wird dauerhaft aus Ihrem Workload Factory-Konto entfernt und alle 
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:create-custom-dashboard.html["Zusätzliche benutzerdefinierte Dashboards erstellen"]

@@ -4,6 +4,7 @@
 
 
 
+[[support-for-service-accounts-in-bluexp-workload-factory]]
 === Support für Servicekonten in der BlueXP  Workload-Fabrik
 
 Servicekonten werden jetzt in der BlueXP  Workload-Fabrik unterstützt. Sie können Servicekonten erstellen, die als Maschinenbenutzer fungieren, die Infrastrukturvorgänge automatisieren.

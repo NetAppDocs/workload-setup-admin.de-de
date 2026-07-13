@@ -4,12 +4,14 @@
 
 
 
+[[cloudshell-autocomplete-support]]
 === Autocomplete-Unterstützung für CloudShell
 
 Wenn Sie BlueXP  Workload Factory CloudShell verwenden, können Sie einen Befehl eingeben und die Tabulatortaste drücken, um die verfügbaren Optionen anzuzeigen. Wenn mehrere Möglichkeiten vorhanden sind, zeigt die CLI eine Liste mit Vorschlägen an. Diese Funktion steigert die Produktivität, indem Fehler minimiert und die Befehlsausführung beschleunigt wird.
 
 
 
+[[updated-permissions-terminology]]
 === Terminologie für Berechtigungen wurde aktualisiert
 
 In der Benutzeroberfläche und Dokumentation der Workload Factory wird jetzt „schreibgeschützt“ für Leseberechtigungen und „Lesen/Schreiben“ für automatisierte Berechtigungen verwendet.

@@ -15,6 +15,7 @@ Diese Informationen helfen bei der Behebung häufiger Probleme, die beim Erstell
 
 
 
+[[dashboard-creation-failed]]
 == Dashboard Erstellung fehlgeschlagen
 
 **Problem:** Beim Erstellen eines Dashboards wird die Fehlermeldung „Failed to understand request and generate code“ angezeigt.
@@ -31,6 +32,7 @@ Diese Informationen helfen bei der Behebung häufiger Probleme, die beim Erstell
 
 
 
+[[dashboard-failed-to-load-data]]
 == Das Dashboard konnte keine Daten laden
 
 **Problem:** Das Dashboard wurde erstellt, aber beim Laden der Daten werden Fehler angezeigt.
@@ -39,13 +41,13 @@ Diese Informationen helfen bei der Behebung häufiger Probleme, die beim Erstell
 
 **Lösung:**
 
-* **Berechtigungen prüfen:** Stellen Sie sicher, dass Ihr Workload Factory-Konto Lesezugriff auf die vom Dashboard verwendeten Workloads und Ressourcen hat. Die Berechtigungsanforderungen sind in link:learn-custom-dashboards.html#permissions["Berechtigungen"] zu finden.
+* **Berechtigungen prüfen:** Stellen Sie sicher, dass Ihr Workload Factory-Konto Lesezugriff auf die vom Dashboard verwendeten Workloads und Ressourcen hat. Die Berechtigungsanforderungen sind in link:learn-custom-dashboards.html#aws-credentials-and-permissions["AWS Anmeldeinformationen und Berechtigungen"] zu finden.
 * **Anmeldeinformationen überprüfen:** Bestätigen Sie, dass Ihre AWS-Anmeldeinformationen gültig sind und nicht abgelaufen sind. Siehe link:add-credentials.html["AWS-Anmeldedaten hinzufügen"] für Details.
-* **Workload-Konfiguration bestätigen:** Es sollte sichergestellt sein, dass die Workloads, die überwacht werden sollen, in Workload Factory korrekt konfiguriert sind und aktuell ausgeführt werden.
 
 
 
 
+[[dashboard-not-loading-or-loading-slowly]]
 == Dashboard lädt nicht oder lädt nur langsam
 
 **Problem:** Das Dashboard lädt langsam oder einige Widgets werden nicht angezeigt.
@@ -62,21 +64,7 @@ Diese Informationen helfen bei der Behebung häufiger Probleme, die beim Erstell
 
 
 
-== Dashboard kann nicht bearbeitet werden
-
-**Problem:** Beim Versuch, ein Dashboard zu bearbeiten, erscheint die Meldung „Currently being edited by [user name].“
-
-**Ursache:** Ein anderer Benutzer Ihres Workload Factory Kontos bearbeitet das Dashboard. Nur ein Benutzer kann ein Dashboard gleichzeitig bearbeiten.
-
-**Lösung:**
-
-* Warten Sie, bis der andere Benutzer seine Änderungen abgeschlossen und gespeichert hat.
-* Wenden Sie sich an die in der Nachricht angegebene Person, um die Bearbeitung abzustimmen.
-* Wenn der Benutzer keine Bearbeitung mehr durchführt, die Sperre aber weiterhin besteht, sollte er das Bearbeitungsfenster schließen, um die Sperre aufzuheben.
-
-
-
-
+[[missing-dashboards]]
 == Fehlende Dashboards
 
 **Problem:** Ein von Ihnen erstelltes Dashboard wird nicht mehr im Dashboard-Katalog aufgeführt.
@@ -94,6 +82,7 @@ Alle Benutzer eines Workload Factory Kontos können benutzerdefinierte Dashboard
 
 
 
+[[additional-help]]
 == Weitere Hilfe
 
 Falls weiterhin Probleme mit benutzerdefinierten Dashboards auftreten, enthält link:get-help.html["Holen Sie sich Hilfe"] Informationen zur Kontaktaufnahme mit dem NetApp Support.

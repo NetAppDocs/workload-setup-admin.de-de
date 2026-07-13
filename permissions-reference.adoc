@@ -18,6 +18,7 @@ Um die Funktionen und Dienste von NetApp Workload Factory nutzen zu können, mü
 
 
 
+[[why-use-permissions]]
 == Warum Berechtigungen verwenden
 
 Wenn Sie Berechtigungen erteilen, ordnet Workload Factory der Instanz eine Richtlinie mit Berechtigungen zur Verwaltung von Ressourcen und Prozessen innerhalb dieses AWS-Kontos zu.  Dies ermöglicht es Workload Factory, verschiedene Operationen auszuführen, von der Erkennung Ihrer Speicherumgebungen bis hin zur Bereitstellung von AWS-Ressourcen wie Dateisystemen im Speichermanagement oder Wissensdatenbanken für GenAI-Workloads.
@@ -26,12 +27,14 @@ Wenn Workload Factory beispielsweise bei Datenbank-Workloads über die erforderl
 
 
 
+[[permissions-by-workload]]
 == Berechtigungen nach Workload
 
 Jede Arbeitslast verwendet Berechtigungen, um bestimmte Aufgaben in Workload Factory auszuführen.  Berechtigungen werden in festgelegten Berechtigungsrichtlinien gebündelt.  Scrollen Sie zu der von Ihnen verwendeten Arbeitslast, um mehr über die Berechtigungsrichtlinien, kopierbares JSON für die Berechtigungsrichtlinien und eine Tabelle zu erfahren, die alle Berechtigungen, ihren Zweck, ihre Verwendung und die sie unterstützenden Berechtigungsrichtlinien auflistet.
 
 
 
+[[permissions-for-storage]]
 === Berechtigungen für Speicher
 
 Die für Storage verfügbaren IAM-Richtlinien bieten die Berechtigungen, die Workload Factory benötigt, um Ressourcen und Prozesse in Ihrer öffentlichen Cloud-Umgebung zu verwalten.
@@ -478,6 +481,7 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 ====
 
 
+[[permissions-for-database-workloads]]
 === Berechtigungen für Datenbank-Workloads
 
 Die für Datenbank-Workloads verfügbaren IAM-Richtlinien bieten die Berechtigungen, die Workload Factory benötigt, um Ressourcen und Prozesse in Ihrer öffentlichen Cloud-Umgebung zu verwalten.
@@ -1401,6 +1405,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 ====
 
 
+[[permissions-for-genai-workloads]]
 === Berechtigungen für GenAI-Workloads
 
 Die IAM-Richtlinien für VMware-Workloads bieten die Berechtigungen, die Workload Factory für VMware benötigt, um Ressourcen und Prozesse in Ihrer öffentlichen Cloud-Umgebung basierend auf dem Betriebsmodus zu verwalten, in dem Sie arbeiten.
@@ -1874,6 +1879,7 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für GenAI-Work
 ====
 
 
+[[permissions-for-vmware-workloads]]
 === Berechtigungen für VMware-Workloads
 
 Für VMware-Workloads stehen folgende Berechtigungsrichtlinien zur Auswahl:
@@ -2115,12 +2121,14 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für VMware-Wor
 ====
 
 
+[[change-log]]
 == Änderungsprotokoll
 
 Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den folgenden Abschnitten zur Kenntnis nehmen.
 
 
 
+[[1-february-2026]]
 === 1. Februar 2026
 
 Dem Speicherworkload wurden folgende Berechtigungen hinzugefügt:
@@ -2149,6 +2157,7 @@ Dem Speicherworkload wurden folgende Berechtigungen hinzugefügt:
 
 
 
+[[04-december-2025]]
 === 04. Dezember 2025
 
 Dem Speicherworkload wurden folgende Berechtigungen hinzugefügt:
@@ -2161,6 +2170,7 @@ Dem Speicherworkload wurden folgende Berechtigungen hinzugefügt:
 
 
 
+[[27-november-2025]]
 === 27. November 2025
 
 Dem Speicherworkload wurden folgende Berechtigungen hinzugefügt:
@@ -2173,12 +2183,14 @@ Dem Speicherworkload wurden folgende Berechtigungen hinzugefügt:
 
 
 
+[[2-november-2025]]
 === 2. November 2025
 
 Die Berechtigungsrichtlinien „Nur lesen“ und „Lesen/Schreiben“ wurden in den Workloads Storage, Database und VMware ersetzt, um eine feinere Granularität und Flexibilität bei der Zuweisung von Berechtigungen zu ermöglichen.
 
 
 
+[[5-october-2025]]
 === 5. Oktober 2025
 
 Die folgenden Berechtigungen wurden aus GenAI entfernt und werden jetzt von der GenAI-Engine verwaltet:
@@ -2192,18 +2204,21 @@ Die folgenden Berechtigungen wurden aus GenAI entfernt und werden jetzt von der 
 
 
 
+[[29-june-2025]]
 === 29 Juni 2025
 
 Die folgende Berechtigung ist jetzt im _schreibgeschützten_ Modus für Datenbanken verfügbar:  `cloudwatch:GetMetricData` .
 
 
 
+[[3-june-2025]]
 === 3 Juni 2025
 
 Die folgende Berechtigung ist jetzt im Lese-/Schreibmodus für GenAI verfügbar:  `s3:ListAllMyBuckets` .
 
 
 
+[[4-may-2025]]
 === 4 Mai 2025
 
 Die folgende Berechtigung ist jetzt im Lese-/Schreibmodus für GenAI verfügbar:  `qbusiness:ListApplications` .
@@ -2219,12 +2234,14 @@ Die folgende Berechtigung ist jetzt im Lese-/Schreibmodus für Datenbanken verf�
 
 
 
+[[2-april-2025]]
 === Bis 2. April 2025
 
 Die folgende Berechtigung ist jetzt im _schreibgeschützten_ Modus für Datenbanken verfügbar:  `ssm:DescribeInstanceInformation` .
 
 
 
+[[30-march-2025]]
 === 30 März 2025
 
 
@@ -2250,12 +2267,14 @@ Der `iam:SimulatePrincipalPolicy` Die Berechtigung ist Teil aller Workload-Berec
 
 
 
+[[2-march-2025]]
 === 2 März 2025
 
 Die folgende Berechtigung ist jetzt im Lese-/Schreibmodus für GenAI verfügbar:  `bedrock:GetFoundationModel` .
 
 
 
+[[3-february-2025]]
 === 3 Februar 2025
 
 Die folgende Berechtigung ist jetzt im _schreibgeschützten_ Modus für Datenbanken verfügbar:  `iam:SimulatePrincipalPolicy` .

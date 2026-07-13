@@ -19,6 +19,7 @@ Alle Benutzer Ihres Workload Factory Kontos können alle benutzerdefinierten Das
 
 
 
+[[why-use-custom-dashboards]]
 == Warum benutzerdefinierte Dashboards verwendet werden
 
 Workload Factory Nutzer verwalten zahlreiche Workloads, Umgebungen und Prioritäten, aber die Standard Dashboards zeigen nur vordefinierte Ansichten. Benutzerdefinierte Dashboards tragen zur Lösung verschiedener betrieblicher Herausforderungen bei:
@@ -31,6 +32,7 @@ Workload Factory Nutzer verwalten zahlreiche Workloads, Umgebungen und Prioritä
 
 
 
+[[what-you-can-do-with-custom-dashboards]]
 == Möglichkeiten mit benutzerdefinierten Dashboards
 
 Während der Einrichtung unterstützt Sie der KI-gestützte Dialog dabei, Folgendes zu definieren:
@@ -44,11 +46,13 @@ Während der Einrichtung unterstützt Sie der KI-gestützte Dialog dabei, Folgen
 
 
 
+[[considerations-and-limitations]]
 == Überlegungen und Einschränkungen
 
 
 
-=== Berechtigungen
+[[aws-credentials-and-permissions]]
+=== AWS Anmeldeinformationen und Berechtigungen
 
 Zum Erstellen oder Anzeigen benutzerdefinierter Dashboards benötigen Sie die entsprechenden AWS IAM-Berechtigungen für die Ressourcen, die Sie überwachen möchten. Es ist sicherzustellen, dass das Workload Factory Konto über Lesezugriff auf die von den Dashboards verwendeten Datenquellen verfügt.
 
@@ -56,29 +60,40 @@ link:add-credentials.html["Informationen zum Hinzufügen von AWS-Anmeldeinformat
 
 
 
+[[link-to-fsx-for-ontap]]
+=== Link zu FSx für ONTAP
+
+Workload Factory benötigt einen Link, um eine Verbindung zu FSx for ONTAP Dateisystemen herzustellen. Ein Link schafft eine Vertrauensbeziehung und Konnektivität zwischen Workload Factory und einem oder mehreren FSx for ONTAP Dateisystemen. Dadurch ist es möglich, bestimmte Dateisystemfunktionen direkt über die ONTAP REST API-Aufrufe zu überwachen und zu verwalten, die über die Amazon FSx for ONTAP API nicht verfügbar sind.
+
+https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Informationen zum Erstellen eines Links"^].
+
+
+
+[[read-only-design]]
 === Read-only-Design
 
 Benutzerdefinierte Dashboards sind schreibgeschützt. Sie können Ihre Speicher- oder Workload-Einstellungen nicht ändern. Dadurch ist es möglich, das System zu überwachen, ohne versehentlich Änderungen vorzunehmen.
 
 
 
+[[limitations]]
 === Einschränkungen
 
 Für benutzerdefinierte Dashboards gelten derzeit folgende Einschränkungen:
 
 * Dashboards können nicht außerhalb Ihres Workload Factory Kontos geteilt werden.
-* Nur ein Benutzer kann ein Dashboard gleichzeitig bearbeiten
-* Gleichzeitige Bearbeitung wird nicht unterstützt
 
 
 
 
+[[demo-environment]]
 === Demo Umgebung
 
 Wenn Sie ein Workload Factory Demoaccount verwenden, stehen einige vordefinierte Dashboards zur Verfügung. Diese helfen dabei, die Möglichkeiten benutzerdefinierter Dashboards zu erkennen. Jedes Dashboard zeigt einen typischen Überwachungsbedarf: Status der Notfallwiederherstellung, Kapazität und Kosten in verschiedenen Regionen sowie ob Speicherschutzregeln eingehalten werden.
 
 
 
+[[sample-prompts]]
 === Beispiel-Eingabeaufforderungen
 
 Die folgenden Beispiele zeigen, wie sich Überwachungsanforderungen in einfacher Sprache beschreiben lassen:
@@ -96,6 +111,7 @@ Die folgenden Beispiele zeigen, wie sich Überwachungsanforderungen in einfacher
 
 
 
+[[next-steps]]
 == Nächste Schritte
 
 * link:create-custom-dashboard.html["Ein benutzerdefiniertes Dashboard erstellen"]

@@ -4,6 +4,7 @@
 
 
 
+[[rss-subscription]]
 === RSS-Abonnement
 
 RSS-Abonnement ist über die verfügbarlink:https://console.workloads.netapp.com/["Arbeitslastwerkkonsole"]. Durch die Verwendung eines RSS-Feeds können Sie auf einfache Weise von Änderungen in der BlueXP  Workload Factory Gebrauch machen.
@@ -12,6 +13,7 @@ image:screenshot-rss-subscribe-button.png["Screenshot des Dropdown-Menüs „Wor
 
 
 
+[[support-for-a-single-permission-policy-per-workload]]
 === Unterstützung einer einzelnen Berechtigungsrichtlinie pro Workload
 
 Beim Hinzufügen von AWS Zugangsdaten an die Workload-Farm können Sie nun für jeden Workload und jedes Storage-Management eine einzelne Berechtigungsrichtlinie auswählen, entweder den Lese- oder den Automatisierungsmodus.

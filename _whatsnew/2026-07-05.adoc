@@ -4,6 +4,7 @@
 
 
 
+[[custom-dashboards]]
 === Benutzerdefinierte Dashboards
 
 KI-gestützte Dashboards können erstellt werden, die auf Ihre Workloads und Prioritäten abgestimmt sind, sodass die Performance Ihrer Abläufe einfach ersichtlich ist. Anstelle fester Ansichten ermöglichen benutzerdefinierte Dashboards den Fokus auf die Informationen, die am wichtigsten sind.

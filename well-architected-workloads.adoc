@@ -15,6 +15,7 @@ Workload Factory, die NetApp Management Suite für Amazon FSx for NetApp ONTAP, 
 
 
 
+[[how-it-works]]
 == So funktioniert es
 
 Workload Factory analysiert täglich Ihre Workloads, die auf Amazon FSx for NetApp ONTAP-Dateisystembereitstellungen laufen. Die Analyse liefert well-architected Status, Erkenntnisse und Empfehlungen.
@@ -25,12 +26,14 @@ Sie können die Analyse von Konfigurationen, die für Ihre Umgebungen nicht gelt
 
 
 
+[[why-it-matters]]
 == Warum es wichtig ist
 
 Workload Factory wendet Best Practices auf große Speicher-, Datenbank- und VMware-Umgebungen an, indem kontinuierliche Analysen mit Empfehlungseinblicken und Fehlerbehebungen kombiniert werden. Automatisierte Korrekturen, die in der Workload Factory-Konsole angewendet werden, reduzieren menschliche Fehler, gewährleisten einheitliches Management und erhalten Leistung und Zuverlässigkeit über Ihre Workload-Infrastrukturen hinweg.
 
 
 
+[[get-started-with-workload-factory-to-detect-and-fix-workload-misconfigurations]]
 == Beginnen Sie mit Workload Factory, um Fehlkonfigurationen von Workloads zu erkennen und zu beheben
 
 Um mit Workload Factory zu beginnen, registrieren Sie sich, fügen Sie Anmeldeinformationen hinzu und stellen Sie eine Verbindung her, um AWS-Ressourcen zu verwalten und Workloads mithilfe von Amazon FSx for NetApp ONTAP zu optimieren.
@@ -39,6 +42,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/quick-start.html["Schnel
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html["Implementieren Sie gut strukturierte FSx-Dateisysteme für ONTAP."^]

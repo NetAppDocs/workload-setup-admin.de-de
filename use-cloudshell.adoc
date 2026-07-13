@@ -15,6 +15,7 @@ summary: Sie können CloudShell von überall in der Benutzeroberfläche der NetA
 
 
 
+[[about-this-task]]
 == Über diese Aufgabe
 
 Mit CloudShell können Sie AWS CLI-Befehle oder ONTAP CLI-Befehle in einer Shell-ähnlichen Umgebung innerhalb der Workload Factory-Konsole ausführen.  Es simuliert Terminalsitzungen im Browser, stellt Terminalfunktionen bereit und leitet Nachrichten über das Backend von Workload Factory weiter.  Sie können damit die AWS- und ONTAP Anmeldeinformationen verwenden, die Sie in Ihrem NetApp -Konto angegeben haben.
@@ -32,6 +33,7 @@ Zu den CloudShell-Funktionen gehören:
 
 
 
+[[cloudshell-commands]]
 == CloudShell-Befehle
 
 In der GUI von CloudShell können Sie eingeben `help`, um verfügbare CloudShell-Befehle anzuzeigen. Nachdem Sie den Befehl ausgegeben `help` haben, wird die folgende Referenz angezeigt.
@@ -71,6 +73,7 @@ Shell-Operatoren wie Pipe `|`, Hintergrundausführung `&` und Umleitung `>` werd
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 CloudShell kann mit Ihren AWS-Anmeldeinformationen verwendet werden. Um CloudShell verwenden zu können, müssen Sie mindestens eine AWS-Zertifizierung angeben.
@@ -80,6 +83,7 @@ NOTE: CloudShell steht Ihnen zur Verfügung, um jeden AWS- oder ONTAP-CLI-Befehl
 
 
 
+[[deploy-cloudshell]]
 == Implementieren von CloudShell
 
 Sie können CloudShell von überall in der NetApp Workload Factory-Konsole bereitstellen.  Sie können CloudShell auch über die NetApp Konsole bereitstellen.
@@ -138,6 +142,7 @@ image:screenshot-cloudshell-tab-menu.png["Screenshot, der das Aktionsmenü der C
 
 
 
+[[rename-a-cloudshell-session-tab]]
 == Benennen Sie eine Registerkarte für CloudShell-Sitzungen um
 
 Sie können eine Registerkarte für CloudShell-Sitzungen umbenennen, um die Sitzung zu identifizieren.
@@ -153,6 +158,7 @@ Der neue Name wird auf der Registerkarte CloudShell-Sitzung angezeigt.
 
 
 
+[[duplicate-cloudshell-session-tab]]
 == Doppelte Registerkarte für CloudShell-Sitzung
 
 Sie können eine CloudShell-Sitzungsregisterkarte duplizieren, um eine neue Sitzung mit demselben Namen, denselben Anmeldeinformationen und derselben Region zu erstellen. Der Code aus der ursprünglichen Registerkarte wird auf der duplizierten Registerkarte nicht dupliziert.
@@ -167,6 +173,7 @@ Die neue Registerkarte wird mit demselben Namen wie die ursprüngliche Registerk
 
 
 
+[[close-cloudshell-session-tabs]]
 == Schließen Sie die Registerkarten der CloudShell-Sitzung
 
 Sie können CloudShell-Registerkarten nacheinander schließen, andere Registerkarten schließen, an denen Sie nicht arbeiten, oder alle Registerkarten gleichzeitig schließen.
@@ -187,6 +194,7 @@ Die ausgewählten Registerkarten der CloudShell-Sitzung werden geschlossen.
 
 
 
+[[split-cloudshell-session-tabs]]
 == Teilen Sie die Registerkarten der CloudShell-Sitzung auf
 
 Sie können CloudShell-Sitzungsregisterkarten aufteilen, um zwei oder mehr Registerkarten gleichzeitig anzuzeigen.
@@ -198,6 +206,7 @@ image:screenshot-cloudshell-split-view.png["Screenshot, der zwei CloudShell-Regi
 
 
 
+[[update-settings-for-a-cloudshell-session]]
 == Einstellungen für eine CloudShell-Sitzung aktualisieren
 
 Sie können Schriftart- und Ausgabetypeinstellungen für CloudShell-Sitzungen aktualisieren.
