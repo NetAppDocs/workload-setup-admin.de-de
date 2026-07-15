@@ -14,3 +14,10 @@ Beschreiben Sie in verständlicher Sprache, was Sie überwachen möchten, und di
 Benutzerdefinierte Dashboards sind schreibgeschützt, daher können sie Ihre Speicher- oder Workload-Einstellungen nicht ändern. Jede Person in Ihrem Workload Factory-Konto kann diese Dashboards anzeigen und verwalten, was es Teams erleichtert, Erkenntnisse zu teilen und abgestimmt zu bleiben.
 
 link:learn-custom-dashboards.html["Weitere Informationen zu benutzerdefinierten Dashboards"]
+
+
+
+[[genai-workload-removal-from-workload-factory]]
+=== GenAI Workload-Entfernung aus der Workload Factory
+
+Die GenAI Workload ist aus der Workload Factory Konsole entfernt worden.
