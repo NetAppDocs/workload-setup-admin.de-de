@@ -21,10 +21,6 @@ Bewerten und analysieren Sie aktuelle Datenbestände auf mögliche Kosteneinspar
 +
 Erkennen Sie Ihren vorhandenen Datenbankbestand auf AWS, ermitteln Sie potenzielle Kosteneinsparungen durch einen Wechsel zu FSX für ONTAP, implementieren Sie Datenbanken durchgängig mit integrierten Best Practices zur Optimierung und automatisieren Sie Thin Cloning für CI/CD-Pipelines.
 
-* https://docs.netapp.com/us-en/workload-genai/index.html["GenAI"^]
-+
-Durch die Implementierung und das Management einer RAG-Infrastruktur (Retrieval-Augmented Generation) werden die Genauigkeit und Einzigartigkeit Ihrer KI-Applikationen verbessert. Erstellen Sie eine RAG Knowledge Base auf FSX for ONTAP mit integrierter Datensicherheit und Compliance.
-
 * https://docs.netapp.com/us-en/workload-vmware/index.html["VMware-Workloads"^]
 +
 Optimieren Sie Migrationen und Betriebsabläufe mithilfe intelligenter Empfehlungen und automatischer Problembehebung. Implementieren Sie effiziente Backups und zuverlässige Disaster Recovery. Überwachen Sie Ihre VMs und beheben Sie Fehler.
