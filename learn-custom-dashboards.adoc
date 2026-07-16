@@ -56,6 +56,8 @@ Während der Einrichtung unterstützt Sie der KI-gestützte Dialog dabei, Folgen
 
 Zum Erstellen oder Anzeigen benutzerdefinierter Dashboards benötigen Sie die entsprechenden AWS IAM-Berechtigungen für die Ressourcen, die Sie überwachen möchten. Es ist sicherzustellen, dass das Workload Factory Konto über Lesezugriff auf die von den Dashboards verwendeten Datenquellen verfügt.
 
+Zum Erstellen von Dashboards verwendet Workload Factory schreibgeschützte AWS-Anmeldeinformationen. Diese Anmeldeinformationen erlauben nur Leseaktionen wie  `fsx:DescribeVolumes` und  `fsx:DescribeFileSystems`, für die folgenden Dienste: EC2, FSx, CloudWatch, Resource Groups Tagging API, Backup, CloudWatch Logs, KMS und EFS.
+
 link:add-credentials.html["Informationen zum Hinzufügen von AWS-Anmeldeinformationen und zum Einrichten von IAM-Berechtigungen"^].
 
 

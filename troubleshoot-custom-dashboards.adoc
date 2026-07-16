@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: troubleshoot-custom-dashboards.html 
 keywords: troubleshooting, dashboard errors, dashboard issues, failed creation, failed to load, dashboard not loading 
-summary: Häufig auftretende Probleme mit benutzerdefinierten Dashboards, einschließlich Erstellungsfehlern, Problemen beim Laden von Daten und Zugriffsproblemen, werden behandelt. 
+summary: Häufig auftretende Probleme mit benutzerdefinierten Dashboards, einschließlich Einrichtungsfehlern, Problemen beim Laden von Daten und Zugriffsproblemen. 
 ---
 = Fehlerbehebung bei benutzerdefinierten Dashboards
 :allow-uri-read: 
