@@ -32,6 +32,9 @@ Zu den CloudShell-Funktionen gehören:
 
 
 
+NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, stehen keine KI-generierten Fehlermeldungen zur Verfügung. link:manage-genai-features.html["Informationen zur Verwaltung von KI-Funktionen"].
+
+
 
 [[cloudshell-commands]]
 == CloudShell-Befehle

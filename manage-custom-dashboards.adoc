@@ -11,10 +11,10 @@ summary: Im Dashboard-Katalog können benutzerdefinierte Dashboards in Workload 
 
 
 [role="lead"]
-Verwalten Sie Ihre benutzerdefinierten Dashboards im Dashboard-Katalog. Dort lassen sich Details anzeigen, Daten aktualisieren oder Dashboards, die nicht mehr benötigt werden, löschen.
+Verwalten Sie Ihre benutzerdefinierten Dashboards im Dashboard-Katalog. Von dort aus lassen sich Details anzeigen, Dashboards freigeben, Daten aktualisieren oder Dashboards, die nicht mehr benötigt werden, löschen.
 
 .Über diese Aufgabe
-Alle Benutzer Ihres Workload Factory Kontos haben Zugriff auf alle benutzerdefinierten Dashboards. Jedes Dashboard zeigt grundlegende Details wie den Namen des Erstellers und das Erstellungsdatum.
+Im Dashboard-Katalog können benutzerdefinierte Dashboards angezeigt und verwaltet werden. Private Dashboards sind nur für Sie sichtbar, während öffentliche Dashboards für alle Benutzer Ihres Workload Factory Kontos sichtbar sind. Jedes Dashboard zeigt grundlegende Details wie den Namen des Erstellers, das Erstellungsdatum und eine Kennzeichnung der Sichtbarkeit (Privat oder Öffentlich).
 
 Benutzerdefinierte Dashboards sind schreibgeschützt. Sie können weder Ihre Speicher- noch Ihre Workload-Einstellungen ändern.
 
@@ -34,6 +34,26 @@ Der Dashboard Katalog zeigt alle benutzerdefinierten Dashboards in Ihrem Workloa
 
 . Die Dashboard-Liste wird angezeigt.
 
+
+
+
+[[change-dashboard-visibility]]
+== Dashboard-Sichtbarkeit ändern
+
+Ein Dashboard kann öffentlich gemacht werden, um es mit dem Team zu teilen. Durch das Setzen auf privat wird die gemeinsame Nutzung beendet.
+
+.Schritte
+. Auf der Seite *Benutzerdefinierte Dashboards* das Dashboard suchen, das aktualisiert werden soll.
+. Im Dropdown-Menü *Aktionen* image:icon-action.png["Das Drei-Punkte-Symbol, das das Aktionsmenü öffnet"] für dieses Dashboard eine der folgenden Optionen auswählen:
++
+** *Dashboard teilen* – Macht das Dashboard für alle Benutzer Ihres Workload Factory Kontos sichtbar.
+** *Auf privates Dashboard umschalten* – macht das Dashboard nur für Sie sichtbar
+
+
+
+
+.Ergebnis
+Das Dashboard wird sofort aktualisiert. Die Sichtbarkeitsanzeige auf der Dashboard-Karte zeigt den aktuellen Status.
 
 
 

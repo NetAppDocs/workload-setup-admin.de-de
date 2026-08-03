@@ -1,0 +1,144 @@
+---
+sidebar: sidebar 
+permalink: manage-genai-features.html 
+keywords: gen ai, generative ai, bedrock, ask me, custom dashboards, rules builder, cloudshell ai, ems analyzer, db log analyzer, latency analyzer, byom, bring your own model, administration 
+summary: Zugriff auf Bedrock-basierte KI-Funktionen in Workload Factory steuern. Es besteht die Möglichkeit, KI-Funktionen zu deaktivieren oder NetApp-verwaltetes AWS Bedrock zu nutzen. 
+---
+= KI-Funktionen verwalten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Den Zugriff auf KI-Funktionen in Workload Factory steuern. KI-Funktionen können deaktiviert oder AWS Bedrock verwendet werden, das von NetApp verwaltet wird.
+
+
+
+[[about-ai-features]]
+== Über KI-Funktionen
+
+Workload Factory beinhaltet mehrere KI-gestützte Funktionen, die Ihr Benutzererlebnis verbessern, wie Ask Me, benutzerdefinierte Dashboards und Analysetools für EMS, Datenbankprotokolle und Latenz.
+
+Als Administrator von Workload Factory kann auf der Seite „KI-Einstellungen“ gesteuert werden, wie diese Funktionen KI nutzen.
+
+
+
+[[configuration-options]]
+== Konfigurationsoptionen
+
+Wählen Sie aus diesen Konfigurationsoptionen:
+
+NetApp Managed Bedrock (Empfohlen):: Ein von NetApp verwalteter AWS Bedrock Service kann verwendet werden. Diese Option wird für die meisten Benutzer empfohlen.
++
+--
+* Ihre Daten werden nicht zum Trainieren von Modellen verwendet
+* Monatliche Nutzungsguthaben sind organisationsweit gemeinsam nutzbar.
+* Keine zusätzliche AWS-Einrichtung ist erforderlich.
+
+
+--
+GenAI Funktionen deaktiviert:: Deaktiviert alle KI-Funktionen. Benutzer können „Ask Me“, Analysetools, benutzerdefinierte Dashboards, den Errichter oder andere KI-gestützte Tools nicht mehr verwenden.
+
+
+
+
+[[before-you-begin]]
+== Bevor Sie beginnen
+
+* Es wird empfohlen, dass ein Kontoadministrator die KI-Funktionen einrichtet.
+
+
+
+
+[[configure-ai-features]]
+== KI-Funktionen konfigurieren
+
+.Schritte
+. Melden Sie sich mit einem der link:console-experiences.html["Konsolenerfahrungen"^] an.
+. Im Menü *Administration* und anschließend *AI settings* auswählen.
+. Auf der Seite *KI-Einstellungen* kann die bevorzugte Konfiguration ausgewählt werden:
++
+** *NetApp-verwaltetes Bedrock (Empfohlen)*: NetApp-verwaltetes AWS Bedrock verwenden.
+** *Gen AI-Funktionen deaktiviert*: Alle KI-Funktionen sind deaktiviert.
+
+
+. *Einstellungen speichern* auswählen.
+
+
+.Ergebnis
+Ihre Einstellungen werden gespeichert und sofort auf alle KI-Funktionen in Workload Factory angewendet. Im Tracker ist ersichtlich, wer die Einstellungen zuletzt aktualisiert hat und wann.
+
+Wenn KI-Funktionen deaktiviert sind, sehen Nutzer eine Meldung, wenn sie versuchen, KI-gestützte Funktionen zu verwenden. Die Benutzeroberfläche bleibt sichtbar und zeigt deutlich, dass die Funktion nicht verfügbar ist.
+
+
+
+[[budget-controls-and-credit-limits]]
+== Budgetkontrolle und Kreditlimits
+
+NetApp verwaltet die Budgetkontrolle für KI-Funktionen bei Verwendung der standardmäßigen, von NetApp verwalteten Konfiguration.
+
+
+
+[[monthly-credit-limits]]
+=== Monatliche Kreditlimits
+
+Jedes Konto hat ein monatliches Ausgabenlimit für jede KI-Funktion, wenn NetApp-verwaltetes Bedrock verwendet wird.
+
+
+
+[[when-budget-is-reached]]
+=== Wenn das Budget erreicht ist
+
+Wenn Ihr Konto das monatliche Budgetlimit erreicht, führt Workload Factory Folgendes aus:
+
+* KI-Funktionen deaktivieren und die zugehörigen Teile der Benutzeroberfläche ausgrauen
+* Diese Meldung als Tooltip anzeigen: „Monatliches KI-Guthaben erreicht. Wenden Sie sich an den NetApp Support.“
+* Protokollnutzung zu Nachverfolgungszwecken
+
+
+
+
+[[request-additional-credits]]
+=== Zusätzliche Gutschriften beantragen
+
+Falls Sie mehr KI-Guthaben benötigen, wenden Sie sich an Ihren NetApp Ansprechpartner. Ihr Ansprechpartner kann das Kreditlimit entsprechend Ihres Bedarfs anpassen.
+
+[TIP]
+====
+Um Ihren NetApp Ansprechpartner bezüglich Kreditlimits zu kontaktieren, kann der In-Product-Chat genutzt werden oder die link:get-help.html["Holen Sie sich Hilfe"] Seite aufgerufen werden.
+
+====
+
+
+[[govcloud-considerations]]
+== GovCloud Überlegungen
+
+Wenn ein Workload Factory Konto in AWS GovCloud (US) erstellt wird, ist zu beachten, dass KI-Funktionen standardmäßig AWS Bedrock Dienste in öffentlichen AWS Regionen verwenden.
+
+Wenn Ihre Sicherheitsanforderungen keine Verbindungen zu öffentlichen AWS Region Services zulassen, können KI-Funktionen deaktiviert werden.
+
+link:sign-up-saas.html["Informationen zur Erstellung von GovCloud-Konten"].
+
+
+
+[[impact-on-existing-sessions]]
+== Auswirkungen auf bestehende Sitzungen
+
+Wenn Sie die KI-Einstellungen ändern, werden alle aktiven KI-Sitzungen sanft beendet. Laufende Arbeitsabläufe können abgeschlossen werden, aber neue Anfragen verwenden die aktualisierten Einstellungen.
+
+Das Beendigungsverhalten kann je nach Funktion variieren. Einzelheiten sind in der funktionsspezifischen Dokumentation zu finden.
+
+
+
+[[related-information]]
+== Ähnliche Informationen
+
+* link:workload-factory-overview.html["Informationen zu den Funktionen von Workload Factory"]
+* link:learn-custom-dashboards.html["Informationen zu benutzerdefinierten Dashboards"]
+* link:add-credentials.html["AWS-Anmeldedaten hinzufügen"]
+* link:permissions-reference.html["Berechtigungsreferenz"]
+

@@ -488,8 +488,8 @@ Die für Datenbank-Workloads verfügbaren IAM-Richtlinien bieten die Berechtigun
 
 Für Datenbanken stehen folgende Berechtigungsrichtlinien zur Auswahl:
 
-* *Ansicht, Planung und Analyse*: Sehen Sie sich das Inventar der Datenbankressourcen an, erfahren Sie mehr über den Zustand Ihrer Ressourcen, überprüfen Sie die gut strukturierte Analyse Ihrer Datenbankkonfigurationen und entdecken Sie Einsparmöglichkeiten, erhalten Sie eine Fehlerprotokollanalyse und entdecken Sie Einsparmöglichkeiten.
-* *Betrieb und Fehlerbehebung*: Führen Sie operative Aufgaben für Ihre Datenbankressourcen durch und beheben Sie Probleme mit Datenbankkonfigurationen und dem zugrunde liegenden FSx for ONTAP Dateisystemspeicher.
+* *Ansicht, Planung und Analyse*: Das Inventar der Datenbankressourcen kann angezeigt werden, Informationen zum Zustand der Ressourcen stehen zur Verfügung, und die gut strukturierte Analyse der Datenbankkonfigurationen kann überprüft werden.
+* *Betrieb und Fehlerbehebung*: Operative Aufgaben für Ihre Datenbankressourcen ausführen, Fehlerprotokollanalysen erhalten, Einsparmöglichkeiten erkunden und Probleme bei Datenbankkonfigurationen sowie dem zugrunde liegenden FSx for ONTAP Dateisystemspeicher beheben.
 * *Erstellung von Datenbank-Hosts*: Bereitstellung von Datenbank-Hosts und des zugrunde liegenden FSx for ONTAP Dateisystemspeichers gemäß bewährten Verfahren.
 
 
@@ -505,79 +505,82 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
 [source, json]
 ----
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "CommonGroup",
-            "Effect": "Allow",
-            "Action": [
-                "cloudwatch:GetMetricStatistics",
-                "cloudwatch:GetMetricData",
-                "sns:ListTopics",
-                "ec2:DescribeInstances",
-                "ec2:DescribeVpcs",
-                "ec2:DescribeSubnets",
-                "ec2:DescribeSecurityGroups",
-                "ec2:DescribeImages",
-                "ec2:DescribeRegions",
-                "ec2:DescribeRouteTables",
-                "ec2:DescribeKeyPairs",
-                "ec2:DescribeNetworkInterfaces",
-                "ec2:DescribeInstanceTypes",
-                "ec2:DescribeVpcEndpoints",
-                "ec2:DescribeInstanceTypeOfferings",
-                "ec2:DescribeSnapshots",
-                "ec2:DescribeVolumes",
-                "ec2:DescribeAddresses",
-                "kms:ListAliases",
-                "kms:ListKeys",
-                "kms:DescribeKey",
-                "cloudformation:ListStacks",
-                "cloudformation:DescribeAccountLimits",
-                "ds:DescribeDirectories",
-                "fsx:DescribeVolumes",
-                "fsx:DescribeBackups",
-                "fsx:DescribeStorageVirtualMachines",
-                "fsx:DescribeFileSystems",
-                "servicequotas:ListServiceQuotas",
-                "ssm:GetParametersByPath",
-                "ssm:GetCommandInvocation",
-                "ssm:SendCommand",
-                "ssm:GetConnectionStatus",
-                "ssm:DescribePatchBaselines",
-                "ssm:DescribeInstancePatchStates",
-                "ssm:ListCommands",
-                "ssm:DescribeInstanceInformation",
-                "fsx:ListTagsForResource",
-                "logs:DescribeLogGroups",
-                "bedrock:GetFoundationModelAvailability",
-                "bedrock:ListInferenceProfiles"
-            ],
-            "Resource": [
-                "*"
-            ]
-        },
-        {
-            "Sid": "SSMParameterStore",
-            "Effect": "Allow",
-            "Action": [
-                "ssm:GetParameter",
-                "ssm:GetParameters",
-                "ssm:PutParameter",
-                "ssm:DeleteParameters"
-            ],
-            "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
-        },
-        {
-            "Sid": "SSMResponseCloudWatch",
-            "Effect": "Allow",
-            "Action": [
-                "logs:GetLogEvents",
-                "logs:PutRetentionPolicy"
-            ],
-            "Resource": "arn:aws:logs:*:*:log-group:netapp/wlmdb/*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CommonGroup",
+      "Effect": "Allow",
+      "Action": [
+        "sns:ListTopics",
+        "ec2:DescribeInstances",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeSecurityGroups",
+        "ec2:DescribeImages",
+        "ec2:DescribeRegions",
+        "ec2:DescribeRouteTables",
+        "ec2:DescribeKeyPairs",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DescribeInstanceTypes",
+        "ec2:DescribeVpcEndpoints",
+        "ec2:DescribeInstanceTypeOfferings",
+        "ec2:DescribeSnapshots",
+        "ec2:DescribeVolumes",
+        "ec2:DescribeAddresses",
+        "kms:ListAliases",
+        "kms:ListKeys",
+        "kms:DescribeKey",
+        "cloudformation:ListStacks",
+        "cloudformation:DescribeAccountLimits",
+        "ds:DescribeDirectories",
+        "fsx:DescribeVolumes",
+        "fsx:DescribeBackups",
+        "fsx:DescribeStorageVirtualMachines",
+        "fsx:DescribeFileSystems",
+        "servicequotas:ListServiceQuotas",
+        "ssm:GetParametersByPath",
+        "ssm:GetCommandInvocation",
+        "ssm:GetConnectionStatus",
+        "ssm:DescribeInstancePatches",
+        "ssm:DescribePatchBaselines",
+        "ssm:DescribeInstancePatchStates",
+        "ssm:DescribeAvailablePatches",
+        "ssm:ListCommands",
+        "ssm:GetInventory",
+        "ssm:ListInventoryEntries",
+        "ssm:DescribeInstanceInformation",
+        "fsx:ListTagsForResource",
+        "logs:DescribeLogGroups"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "AllowSpecificSSMDocuments",
+      "Effect": "Allow",
+      "Action": "ssm:SendCommand",
+      "Resource": [
+        "arn:aws:ssm:*::document/AWSFleetManager-GetWindowsRegistryContent",
+        "arn:aws:ssm:*::document/AWSFleetManager-GetFileSystemContent"
+      ]
+    },
+    {
+      "Sid": "AllowAllEC2InstancesForSendCommand",
+      "Effect": "Allow",
+      "Action": "ssm:SendCommand",
+      "Resource": [
+        "arn:aws:ec2:*:*:instance/*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ----
 --
@@ -588,6 +591,49 @@ Wählen Sie Ihren Betriebsmodus aus, um die erforderlichen IAM-Richtlinien anzuz
 {
   "Version": "2012-10-17",
   "Statement": [
+    {
+      "Sid": "ExtendedCommonGroup",
+      "Effect": "Allow",
+      "Action": [
+        "cloudwatch:GetMetricStatistics",
+        "cloudwatch:GetMetricData",
+        "bedrock:GetFoundationModelAvailability",
+        "bedrock:ListInferenceProfiles"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "AllowPSSSMDocuments",
+      "Effect": "Allow",
+      "Action": "ssm:SendCommand",
+      "Resource": [
+        "arn:aws:ssm:*::document/AWS-RunPowerShellScript",
+        "arn:aws:ssm:*::document/AWS-RunShellScript",
+        "arn:aws:ssm:*::document/AWS-RunPatchBaseline"
+      ]
+    },
+    {
+      "Sid": "SSMParameterStore",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:GetParameter",
+        "ssm:GetParameters",
+        "ssm:PutParameter",
+        "ssm:DeleteParameters"
+      ],
+      "Resource": "arn:aws:ssm:*:*:parameter/netapp/wlmdb/*"
+    },
+    {
+      "Sid": "SSMResponseCloudWatch",
+      "Effect": "Allow",
+      "Action": [
+        "logs:GetLogEvents",
+        "logs:PutRetentionPolicy"
+      ],
+      "Resource": "arn:aws:logs:*:*:log-group:netapp/wlmdb/*"
+    },
     {
       "Sid": "FSxRemediation",
       "Effect": "Allow",
@@ -827,10 +873,10 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 * Inventar
 * Einsparungen entdecken
 
-| Ansicht, Planung und Analyse 
+| Betriebs- und Sanierungsmaßnahmen 
 
 
-| Sammeln Sie in Amazon CloudWatch gespeicherte Leistungsmetriken von registrierten SQL-Knoten. Die Daten werden in Leistungstrenddiagrammen auf dem Bildschirm „Instanzverwaltung“ für registrierte SQL-Instanzen generiert. | cloudwatch:GetMetricData | Inventar | Ansicht, Planung und Analyse 
+| Sammeln Sie in Amazon CloudWatch gespeicherte Leistungsmetriken von registrierten SQL-Knoten. Die Daten werden in Leistungstrenddiagrammen auf dem Bildschirm „Instanzverwaltung“ für registrierte SQL-Instanzen generiert. | cloudwatch:GetMetricData | Inventar | Betriebs- und Sanierungsmaßnahmen 
 
 
 .4+| Informieren Sie sich über Details für EC2 Instanzen | ec2:DescribeInstances  a| 
@@ -979,7 +1025,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 * Einsparungen entdecken
 * Optimierung
 
-| Ansicht, Planung und Analyse 
+| Überblick, Planung und Analyse; Betrieb und Behebung 
 
 
 | Ermitteln Sie den SSM-Konnektivitätsstatus der Instanzen nach der Bereitstellung | ssm:GetConnectionStatus  a| 
@@ -994,6 +1040,18 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 
 
 | Liste der verfügbaren Patch-Basispläne für die Bewertung von Patches des Betriebssystems abrufen | ssm:DescribePatchBaselines | Optimierung | Ansicht, Planung und Analyse 
+
+
+| Die Details zum Patching-Inventar auf Windows EC2-Instanzen für Bewertungs- und Behebungsworkflows anzeigen. | ssm:DescribeInstancePatches | Optimierung | Ansicht, Planung und Analyse 
+
+
+| Die Liste der verfügbaren Patches für die Bewertung von Betriebssystem-Patches abrufen | ssm:DescribeAvailablePatches | Optimierung | Ansicht, Planung und Analyse 
+
+
+| Inventarmetadaten, die von verwalteten SQL-Knoten erfasst wurden, abrufen | ssm:GetInventory | Inventar | Ansicht, Planung und Analyse 
+
+
+| Inventareinträge, die von verwalteten SQL-Knoten erfasst wurden | ssm:ListInventoryEntries | Inventar | Ansicht, Planung und Analyse 
 
 
 | Ermitteln Sie den Patchstatus auf Windows EC2-Instanzen für die Bewertung von Betriebssystem-Patches | ssm:DescribeInstancePatchStates | Optimierung | Ansicht, Planung und Analyse 
@@ -1049,7 +1107,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 * Managementvorgänge
 * Inventar
 
-| Ansicht, Planung und Analyse 
+| Betriebs- und Sanierungsmaßnahmen 
 
 
 | ssm:GetParameters ^1^  a| 
@@ -1057,21 +1115,21 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 * Managementvorgänge
 * Inventar
 
-| Ansicht, Planung und Analyse 
+| Betriebs- und Sanierungsmaßnahmen 
 
 
 | ssm:PutParameter ^1^  a| 
 * Einsatz
 * Managementvorgänge
 
-| Ansicht, Planung und Analyse 
+| Betriebs- und Sanierungsmaßnahmen 
 
 
 | ssm:DeleteParameters ^1^  a| 
 * Einsatz
 * Managementvorgänge
 
-| Ansicht, Planung und Analyse 
+| Betriebs- und Sanierungsmaßnahmen 
 
 
 .9+| Zuordnen von Netzwerkressourcen zu SQL-Knoten und Validierungsknoten und Hinzufügen weiterer sekundärer IPs zu SQL-Knoten | ec2:AllocateAddress ^1^ | Einsatz | Erstellung eines Datenbankhosts 
@@ -1294,7 +1352,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 * Storage-Bewertung (Optimierung)
 * Inventar
 
-| Ansicht, Planung und Analyse 
+| Betriebs- und Sanierungsmaßnahmen 
 
 
 | Erlauben Sie Workload Factory, aktuelle Protokollgruppen abzurufen und zu überprüfen, ob die Aufbewahrung für von Workload Factory erstellte Protokollgruppen festgelegt ist | Protokolle:DescribeLogGroups  a| 
@@ -1308,7 +1366,7 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 * Storage-Bewertung (Optimierung)
 * Inventar
 
-| Ansicht, Planung und Analyse 
+| Betriebs- und Sanierungsmaßnahmen 
 
 
 .2+| Führen Sie die SNS-Themen des Kunden auf und veröffentlichen Sie sie in WLMDB-Backend-SNS sowie in Kunden-SNS, falls ausgewählt | sns:listTopics | Einsatz | Ansicht, Planung und Analyse 
@@ -1392,10 +1450,10 @@ In der folgenden Tabelle werden die Berechtigungen für Datenbank-Workloads ange
 | Simulieren Sie Workload-Vorgänge, um verfügbare Berechtigungen zu validieren und sie mit den erforderlichen AWS Kontoberechtigungen zu vergleichen | iam:SimulatePrincipalPolicy | Einsatz | Alle 
 
 
-| Nutzen Sie die verfügbaren Basismodelle für die Fehlerprotokollanalyse. | Bedrock:GetFoundationModelVerfügbarkeit | Fehlerprotokollanalyse | Ansicht, Planung und Analyse 
+| Nutzen Sie die verfügbaren Basismodelle für die Fehlerprotokollanalyse. | Bedrock:GetFoundationModelVerfügbarkeit | Fehlerprotokollanalyse | Betriebs- und Sanierungsmaßnahmen 
 
 
-| Liste der in Amazon Bedrock verfügbaren Schnittstellenprofile für die Fehlerprotokollanalyse | Bedrock:ListInferenceProfiles | Fehlerprotokollanalyse | Ansicht, Planung und Analyse 
+| Liste der in Amazon Bedrock verfügbaren Schnittstellenprofile für die Fehlerprotokollanalyse | Bedrock:ListInferenceProfiles | Fehlerprotokollanalyse | Betriebs- und Sanierungsmaßnahmen 
 |===
 . Die Berechtigung ist auf Ressourcen beschränkt, die mit WLMDB beginnen.
 . „iam:CreateServiceLinkedRole“ begrenzt durch „iam:AWSServiceName“: „ec2.amazonaws.com"*
@@ -1651,6 +1709,17 @@ Die folgende Tabelle enthält Einzelheiten zu den Berechtigungen für VMware-Wor
 == Änderungsprotokoll
 
 Wenn Berechtigungen hinzugefügt und entfernt werden, werden wir diese in den folgenden Abschnitten zur Kenntnis nehmen.
+
+
+
+[[3-august-2026]]
+=== 3. August 2026
+
+Die Berechtigungen für Datenbanken wurden aktualisiert, um den Funktionszugriff zu verbessern und den SSM-Zugriff dort einzuschränken, wo er nicht erforderlich ist.
+
+Die Berechtigungen zum Anzeigen, Planen und Analysieren sind auf die AWS SSM-Dokumente beschränkt. Mit diesen Berechtigungen können Sie Hosts, Instanzen und Datenbanken anzeigen. Es ist außerdem möglich, eine grundlegende bedarfsgesteuerte Well-Architected-Analyse Ihrer Ressourcen durchzuführen.
+
+Die Berechtigungen für Betrieb und Fehlerbehebung ermöglichen eine umfassende Well-Architected-Bewertung, das Anwenden empfohlener Maßnahmen basierend auf der Well-Architected-Analyse, Änderungen an Ihren Ressourcen sowie die Analyse von Fehlerprotokollen.
 
 
 

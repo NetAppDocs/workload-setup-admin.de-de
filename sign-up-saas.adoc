@@ -53,6 +53,10 @@ image:screenshot-account-selection-govcloud.png["Ein Screenshot der Kontoseite, 
 +
 .. Geben Sie einen Namen für das Konto ein.
 .. Optional können Sie das Konto als AWS GovCloud (US)-Konto einrichten. Dieser Kontotyp verwendet ausschließlich AWS GovCloud (US)-Endpunkte und -Regionen für Einrichtung und Betrieb. Anmeldeinformationen und Geheimnisse bleiben in GovCloud. Diese Auswahl ist endgültig.
++
+
+NOTE: Die KI-Funktionen von Workload Factory nutzen AWS Bedrock Dienste, die in öffentlichen AWS-Regionen gehostet werden. Wenn Ihre Sicherheitsrichtlinien keine Verbindungen zu Diensten in öffentlichen Regionen zulassen, ist es möglich, die KI-Funktionen in den Administrationseinstellungen zu deaktivieren. link:manage-genai-features.html["Informationen zur Verwaltung von KI-Funktionen"].
+
 .. Optional können Sie eine Stellenbeschreibung für das Konto angeben.
 
 

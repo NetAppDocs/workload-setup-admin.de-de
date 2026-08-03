@@ -21,6 +21,9 @@ Nach der Erstellung kann das Dashboard aktualisiert werden, um die aktualisierte
 Beachten Sie, dass benutzerdefinierte Dashboards standardmäßig schreibgeschützt sind und keine Änderungen an Ihren Speicher- oder Workload-Konfigurationen vornehmen können.
 
 
+NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, wird eine Meldung angezeigt und das Erstellen von Dashboards ist nicht möglich. Wenden Sie sich an Ihren Administrator oder link:manage-genai-features.html["Informationen zur KI-Administration"].
+
+
 
 [[create-a-dashboard]]
 == Ein Dashboard erstellen
@@ -44,12 +47,17 @@ Die KI bittet Sie möglicherweise, aus mehreren Optionen auszuwählen, um Ihre B
 . Nachdem Sie alle Fragen beantwortet haben, *Weiter* auswählen, um Ihr Dashboard zu erstellen.
 
 
+Ihr Dashboard wird erstellt. Dies kann einen Moment dauern.
+
 .Ergebnis
-Ihr benutzerdefiniertes Dashboard befindet sich nun im Dashboard Katalog. Alle Benutzer in Ihrem Workload Factory Account können darauf zugreifen und es anzeigen.
+Ihr benutzerdefiniertes Dashboard wurde erstellt und dem Dashboard Katalog hinzugefügt. Standardmäßig ist das Dashboard privat und nur für Sie sichtbar. Die Sichtbarkeit kann auf öffentlich geändert werden, wenn eine Freigabe für andere Benutzer Ihres Workload Factory Kontos gewünscht ist. link:manage-custom-dashboards.html#change-dashboard-visibility["Informationen zum Ändern der Dashboard-Sichtbarkeit"].
+
+Sie erhalten eine Benachrichtigung, sobald Ihr Dashboard fertig ist. Falls es nicht erstellt werden kann, erhalten Sie eine Benachrichtigung mit einem Link, um es erneut zu versuchen. link:configure-notifications.html["Informationen zur Konfiguration von Benachrichtigungen"].
 
 .Was kommt als Nächstes
 Nach der Erstellung können Sie:
 
+* Die Dashboard-Sichtbarkeit kann geändert werden, sodass sie mit dem Team geteilt wird.
 * Dashboard-Daten werden aktualisiert, damit die neuesten Informationen angezeigt werden.
 * Dashboards, die nicht mehr benötigt werden, können gelöscht werden.
 * Dashboard-Details anzeigen, einschließlich des Erstellers und des Zeitpunkts der letzten Aktualisierung

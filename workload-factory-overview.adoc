@@ -34,6 +34,9 @@ Ask Me KI-Assistent:: Stellen Sie dem KI-Assistenten Fragen zur Verwaltung und z
 
 
 
+NOTE: Kontoadministratoren können KI-Funktionen aktivieren oder deaktivieren. Wenn ein Administrator sie deaktiviert, steht der Ask Me KI-Assistent nicht zur Verfügung. link:manage-genai-features.html["Informationen zur Verwaltung von KI-Funktionen"].
+
+
 
 [[supported-cloud-providers]]
 == Unterstützte Cloud-Provider
@@ -116,7 +119,7 @@ Sie benötigen keinen Link, um mit Workload Factory zu beginnen, aber in einigen
 
 Links nutzen derzeit AWS Lambda.
 
-https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Weitere Informationen zu Links"^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Weitere Informationen zu Links"^]
 
 
 

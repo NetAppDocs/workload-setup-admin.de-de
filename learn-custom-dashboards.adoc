@@ -18,6 +18,9 @@ Benutzerdefinierte Dashboards nutzen KI, um personalisierte Ansichten Ihrer Work
 Alle Benutzer Ihres Workload Factory Kontos können alle benutzerdefinierten Dashboards einsehen. Diese gemeinsame Einrichtung unterstützt die Zusammenarbeit der Teams und ermöglicht es, dass in Ihrer Organisation dieselben betrieblichen Informationen angezeigt werden.
 
 
+NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, wird eine Meldung angezeigt und das Erstellen von Dashboards ist nicht möglich. Wenden Sie sich an Ihren Administrator oder link:manage-genai-features.html["Informationen zur KI-Administration"].
+
+
 
 [[why-use-custom-dashboards]]
 == Warum benutzerdefinierte Dashboards verwendet werden
@@ -43,6 +46,21 @@ Während der Einrichtung unterstützt Sie der KI-gestützte Dialog dabei, Folgen
 * Ansichten nach Region, Arbeitslast oder anderen Kategorien
 * Regeln oder Anforderungen, die verfolgt und angezeigt werden müssen
 
+
+
+
+[[view-and-share-dashboards]]
+== Dashboards anzeigen und teilen
+
+Neue Dashboards sind standardmäßig privat, sodass nur Sie sie sehen können. Ein Dashboard kann jederzeit öffentlich gemacht werden, um es mit Ihrem Team zu teilen.
+
+* *Private Dashboards*: Nur Sie können diese Dashboards einsehen. Diese eignen sich für persönliche Überwachung, Tests oder laufende Arbeiten.
+* *Öffentliche Dashboards*: Alle Benutzer Ihres Workload Factory-Kontos können diese Dashboards einsehen. Damit lassen sich Überwachungsansichten teilen und das Team bleibt hinsichtlich Workloads, Prioritäten und Geschäftszielen auf dem gleichen Stand.
+
+
+Jede Dashboard-Karte zeigt an, ob das Dashboard privat oder öffentlich ist, sodass Sie schnell sehen können, welche Dashboards geteilt sind.
+
+link:manage-custom-dashboards.html#change-dashboard-visibility["Informationen zum Ändern der Dashboard-Sichtbarkeit"].
 
 
 
@@ -83,7 +101,7 @@ Benutzerdefinierte Dashboards sind schreibgeschützt. Sie können Ihre Speicher-
 
 Für benutzerdefinierte Dashboards gelten derzeit folgende Einschränkungen:
 
-* Dashboards können nicht außerhalb Ihres Workload Factory Kontos geteilt werden.
+* Dashboards können nicht außerhalb Ihres Workload Factory-Kontos geteilt werden. Die Freigabe von Dashboards ist auf Benutzer innerhalb desselben Workload Factory-Kontos beschränkt.
 
 
 

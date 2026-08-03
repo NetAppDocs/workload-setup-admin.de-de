@@ -1,0 +1,63 @@
+= Aktualisierte IAM-Berechtigungsrichtlinien für Datenbanken
+:allow-uri-read: 
+
+
+
+
+[[updated-iam-permission-policies-for-databases]]
+=== Aktualisierte IAM-Berechtigungsrichtlinien für Datenbanken
+
+Die Berechtigungen für Datenbanken wurden aktualisiert, um den Funktionszugriff zu verbessern und den SSM-Zugriff dort einzuschränken, wo er nicht erforderlich ist.
+
+Die Berechtigungen zum Anzeigen, Planen und Analysieren sind auf AWS SSM-Dokumente beschränkt. Mit diesen Berechtigungen ist das Anzeigen von Hosts, Instanzen und Datenbanken möglich. Eine grundlegende bedarfsgesteuerte Well-Architected-Analyse der Ressourcen ist ebenfalls möglich.
+
+Die Berechtigungen für Operationen und Fehlerbehebung ermöglichen Änderungen an Ihren Ressourcen, die Analyse von Fehlerprotokollen, eine umfassende Well-Architected-Analyse Ihrer Ressourcen sowie die Behebung von Konfigurationsproblemen.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Berechtigungsreferenz"] === Benutzerdefinierte Dashboards
+
+
+
+==== Benachrichtigungen für benutzerdefinierte Dashboards
+
+Workload Factory benachrichtigt Sie jetzt, wenn Ihr benutzerdefiniertes Dashboard bereit ist oder wenn die Erstellung fehlschlägt.
+
+Nachdem Sie ein benutzerdefiniertes Dashboard erstellt haben, erhalten Sie eine Benachrichtigung mit einem direkten Link zur Anzeige. Wenn die Erstellung fehlschlägt, wird eine Benachrichtigung mit einem Link zum benutzerdefinierten Dashboard-Inventar bereitgestellt, um es erneut zu versuchen.
+
+Dies hilft Ihnen zu erkennen, wann Ihr Dashboard bereit ist, und erleichtert die Überprüfung oder Neuerstellung.
+
+link:create-custom-dashboard.html["Informationen zur Erstellung benutzerdefinierter Dashboards"]
+
+link:configure-notifications.html["Informationen zur Konfiguration von Benachrichtigungen"]
+
+
+
+==== Private und öffentliche benutzerdefinierte Dashboards
+
+Benutzerdefinierte Dashboards enthalten jetzt Freigabeeinstellungen. Ein Dashboard kann privat gehalten oder mit dem Team geteilt werden.
+
+Neue Dashboards sind standardmäßig privat und nur für Sie sichtbar. Ein Dashboard kann jederzeit öffentlich gemacht werden, sodass es mit allen in Ihrem Workload Factory Konto geteilt werden kann.
+
+Jede Dashboard-Karte zeigt ein Label „Privat“ oder „Öffentlich“, sodass schnell ersichtlich ist, welche Dashboards freigegeben sind.
+
+link:learn-custom-dashboards.html#dashboard-visibility-and-sharing["Informationen zur Sichtbarkeit und Freigabe von Dashboards"]
+
+link:manage-custom-dashboards.html#change-dashboard-visibility["Informationen zum Teilen von Dashboards"]
+
+
+
+[[ai-features-administration]]
+=== Verwaltung von KI-Funktionen
+
+Mit den folgenden Einstellungen in der Workload Factory Administration lässt sich der Zugriff auf KI-Funktionen in Ihrer gesamten Organisation steuern.
+
+* NetApp-verwaltetes Bedrock verwenden (empfohlen und standardmäßig aktiviert, mit monatlichen Kreditlimits)
+* Alle KI-Funktionen deaktivieren
+
+
+Die neue Administrationsseite ermöglicht die Verwaltung dieser Einstellungen an einem Ort.
+
+Zu den KI-Funktionen gehören Ask Me, benutzerdefinierte Dashboards, Rule Builder, und Analysetools für EMS, Datenbankprotokolle und Volume-Latenz.
+
+Wenn die KI-Funktionen deaktiviert sind, sehen die Benutzer eine Meldung, dass die KI nicht verfügbar ist.
+
+link:manage-genai-features.html["Informationen zur Verwaltung von KI-Funktionen"]
