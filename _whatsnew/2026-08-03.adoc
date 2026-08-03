@@ -30,9 +30,9 @@ Nachdem Sie ein benutzerdefiniertes Dashboard erstellt haben, erhalten Sie eine 
 
 Dies hilft Ihnen zu erkennen, wann Ihr Dashboard bereit ist, und erleichtert die Überprüfung oder Neuerstellung.
 
-link:create-custom-dashboard.html["Informationen zur Erstellung benutzerdefinierter Dashboards"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-custom-dashboard.html["Informationen zur Erstellung benutzerdefinierter Dashboards"]
 
-link:configure-notifications.html["Informationen zur Konfiguration von Benachrichtigungen"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Informationen zur Konfiguration von Benachrichtigungen"]
 
 
 
@@ -44,9 +44,9 @@ Neue Dashboards sind standardmäßig privat und nur für Sie sichtbar. Ein Dashb
 
 Jede Dashboard-Karte zeigt ein Label „Privat“ oder „Öffentlich“, sodass schnell ersichtlich ist, welche Dashboards freigegeben sind.
 
-link:learn-custom-dashboards.html#dashboard-visibility-and-sharing["Informationen zur Sichtbarkeit und Freigabe von Dashboards"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/learn-custom-dashboards.html#view-and-share-dashboards["Informationen zur Sichtbarkeit und Freigabe von Dashboards"]
 
-link:manage-custom-dashboards.html#change-dashboard-visibility["Informationen zum Teilen von Dashboards"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-custom-dashboards.html#change-dashboard-visibility["Informationen zum Teilen von Dashboards"]
 
 
 
@@ -65,4 +65,4 @@ Zu den KI-Funktionen gehören Ask Me, benutzerdefinierte Dashboards, Rule Builde
 
 Wenn die KI-Funktionen deaktiviert sind, sehen die Benutzer eine Meldung, dass die KI nicht verfügbar ist.
 
-link:manage-genai-features.html["Informationen zur Verwaltung von KI-Funktionen"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Informationen zur Verwaltung von KI-Funktionen"]
