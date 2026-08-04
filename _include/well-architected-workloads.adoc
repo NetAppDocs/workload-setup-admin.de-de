@@ -15,10 +15,6 @@ Sie können die Analyse von Konfigurationen ausblenden, die für Ihre Umgebungen
 
 Es können auch benutzerdefinierte Regeln in einfacher Sprache erstellt werden, um die Umgebungen anhand der Standards Ihrer Organisation und der NetApp Best Practices zu validieren. Regeln lassen sich mit einem Probelauf testen und anschließend für die Ausführung in den Umgebungen terminieren. link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["Weitere Informationen zu benutzerdefinierten Regeln"^].
 
-Es besteht auch die Möglichkeit, benutzerdefinierte Regeln in einfacher Sprache zu erstellen, um Ihre Umgebungen anhand der Standards Ihres Unternehmens und der NetApp Best Practices zu validieren. Regeln können mit einem Probelauf getestet und anschließend für die Ausführung in Ihren Umgebungen terminiert werden.
-
-link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["Weitere Informationen zu benutzerdefinierten Regeln"^].
-
 
 
 [[why-it-matters]]
