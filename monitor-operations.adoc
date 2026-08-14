@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: monitor-operations.html 
+keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
+summary: FSx for ONTAP, Anmeldeinformationen und Verbindungsvorgänge sowie den Jobfortschritt mit Tracker in NetApp Workload Factory for Storage nachverfolgen und überwachen. 
+---
+= Vorgänge mit Tracker in NetApp Workload Factory überwachen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die Ausführung von FSx für ONTAP, Anmeldeinformationen und Link-Vorgängen sowie den Aufgabenfortschritt mit Tracker in NetApp Workload Factory überwachen und nachverfolgen.
+
+.Über diese Aufgabe
+Workload Factory bietet Tracker, eine Überwachungsfunktion, mit der der Fortschritt und Status von FSx for ONTAP, Anmeldeinformationen und Verbindungsvorgängen überwacht und verfolgt, Details zu Betriebsaufgaben und Unteraufgaben überprüft sowie etwaige Probleme oder Fehler diagnostiziert werden können.
+
+In Tracker stehen mehrere Aktionen zur Verfügung. Aufträge können nach Zeitraum (letzte 24 Stunden, 7 Tage, 14 Tage oder 30 Tage), Arbeitslast, Status und Benutzer gefiltert, mit der Suchfunktion gefunden und die Auftragstabelle als CSV-Datei heruntergeladen werden. Tracker kann jederzeit aktualisiert werden. Ein fehlgeschlagener Vorgang kann schnell wiederholt oder die Parameter eines fehlgeschlagenen Vorgangs bearbeitet und der Vorgang erneut ausgeführt werden.
+
+Tracker unterstützt je nach Vorgang zwei Überwachungsebenen. Jede Aufgabe, wie beispielsweise die Bereitstellung eines Dateisystems, zeigt die Aufgabenbeschreibung, den Status, die Startzeit, die Aufgabendauer, den Benutzer, die Region, die Proxy-Ressource, die Aufgaben-ID und alle zugehörigen Unteraufgaben an. API-Antworten können angezeigt werden, um nachzuvollziehen, was während des Vorgangs passiert ist.
+
+Tracker-Aufgabenebenen mit Beispielen::
++
+--
+* Ebene 1 (Aufgabe): Verfolgt die Bereitstellung des Dateisystems.
+* Ebene 2 (Teilaufgabe): Verfolgt die Teilaufgaben im Zusammenhang mit der Dateisystembereitstellung.
+
+
+--
+Betriebsstatus:: Der Vorgangsstatus in Tracker ist wie folgt: _in Bearbeitung_, _erfolgreich_ und _fehlgeschlagen_.
++
+--
+Betriebsfrequenz:: Die Betriebshäufigkeit richtet sich nach der Art des Auftrags und dem Auftragsplan.
+
+
+--
+Ereignisaufbewahrung:: Ereignisse bleiben 30 Tage lang in der Benutzeroberfläche erhalten.
+
+
+
+
+[[track-and-monitor-operations]]
+== Abläufe nachverfolgen und überwachen
+
+Vorgänge in der NetApp Console lassen sich mit Tracker nachverfolgen und überwachen.
+
+.Schritte
+. Melden Sie sich mit einem der link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["Konsolenerfahrungen"^] an.
+. Wählen Sie das Menü image:workloads-menu-icon.png["Das Hamburger-Menü-Symbol wird verwendet, um zu Workloads wie Storage, eda, ai, databases, vmware und administration zu navigieren."] und dann *Administration*.
+. Im Menü „Administration“ *Tracker* auswählen.
+. In Tracker können Sie mithilfe der Filter oder der Suchfunktion die Job-Ergebnisse eingrenzen. Es besteht außerdem die Möglichkeit, einen Jobbericht herunterzuladen.
+
+
+
+
+[[view-api-request]]
+== API-Anfrage anzeigen
+
+Die API-Anfrage für eine Aufgabe in Tracker ist im Codebox-Bereich einsehbar.
+
+.Schritte
+. In Tracker eine Aufgabe auswählen.
+. Das Menü „Aktionen“ auswählen und anschließend *API-Anfrage anzeigen* wählen.
+
+
+
+
+[[retry-a-failed-operation]]
+== Einen fehlgeschlagenen Vorgang wiederholen
+
+Eine fehlgeschlagene Operation in Tracker wiederholen. Sie können auch die Fehlermeldung einer fehlgeschlagenen Operation kopieren.
+
+
+NOTE: Bei einem fehlgeschlagenen Vorgang sind nur x Wiederholungsversuche zulässig.
+
+.Schritte
+. In Tracker einen fehlgeschlagenen Vorgang auswählen.
+. Das Menü „Aktionen“ auswählen und dann *Wiederholen* auswählen.
+
+
+.Ergebnis
+Die Operation wird erneut gestartet.
+
+
+
+[[edit-and-retry-a-failed-operation]]
+== Einen fehlgeschlagenen Vorgang bearbeiten und erneut versuchen
+
+Die Parameter des fehlgeschlagenen Vorgangs können bearbeitet und der Vorgang außerhalb von Tracker erneut ausgeführt werden.
+
+.Schritte
+. In Tracker einen fehlgeschlagenen Vorgang auswählen.
+. Wählen Sie das Aktionsmenü und dann *Bearbeiten und erneut versuchen*.
++
+Sie werden auf die Seite für den Vorgang weitergeleitet, wo Sie die Parameter bearbeiten und den Vorgang erneut versuchen können.
+
+
+
+.Ergebnis
+Der Vorgang wurde neu gestartet. Den Status des Vorgangs können Sie im Tracker einsehen.

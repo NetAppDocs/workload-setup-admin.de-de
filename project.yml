@@ -46,6 +46,8 @@ sidebar:
       url: "/well-architected-workloads.html"
     - title: Konfigurieren Sie Benachrichtigungen
       url: "/configure-notifications.html"
+    - title: Überwachungsvorgänge
+      url: "/monitor-operations.html"
     - title: KI-Funktionen verwalten
       url: "/manage-genai-features.html"
     - title: Benutzerdefinierte Dashboards
