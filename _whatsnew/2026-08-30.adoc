@@ -1,0 +1,10 @@
+= Neues Onboarding Erlebnis für Anmeldeinformationen und Links
+:allow-uri-read: 
+
+
+
+
+[[new-onboarding-experience-for-credentials-and-links]]
+=== Neues Onboarding Erlebnis für Anmeldeinformationen und Links
+
+Workload Factory verbessert das Onboarding-Erlebnis für Anmeldeinformationen und Links und erleichtert so den Einstieg. Nach der Erstellung Ihres Kontos und der Anmeldung kann in einer beliebigen Workload-Kachel, zum Beispiel *Storage*, *Get started* ausgewählt werden, und auf der nächsten Seite erfolgt die schrittweise Anleitung durch den Einrichtungsprozess.
