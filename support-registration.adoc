@@ -4,7 +4,7 @@ permalink: support-registration.html
 keywords: support registration, register for support, support, nss account, add nss account 
 summary: Bevor Sie einen Supportfall beim technischen Support von NetApp eröffnen können, müssen Sie der NetApp Konsole ein NetApp -Support-Site-Konto hinzufügen und sich dann für den Support registrieren. 
 ---
-= Für den Support anmelden
+= Registrierung Ihres Workload Factory Kontos für NetApp Support
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

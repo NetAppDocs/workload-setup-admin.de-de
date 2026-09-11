@@ -4,7 +4,7 @@ permalink: manage-custom-dashboards.html
 keywords: manage dashboards, delete dashboard, refresh dashboard, dashboard catalog 
 summary: Im Dashboard-Katalog können benutzerdefinierte Dashboards in Workload Factory angezeigt, aktualisiert und gelöscht werden. 
 ---
-= Benutzerdefinierte Dashboards verwalten
+= Benutzerdefinierte Dashboards in NetApp Workload Factory verwalten
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

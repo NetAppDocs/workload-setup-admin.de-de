@@ -4,7 +4,7 @@ permalink: create-custom-dashboard.html
 keywords: create dashboard, custom dashboard, AI dashboard, dashboard creation, personalized dashboard 
 summary: Ein individuelles Dashboard mit KI-gestützten Abfragen ermöglicht die Überwachung der wichtigsten Aspekte Ihrer Arbeitslasten und betrieblichen Prioritäten. 
 ---
-= Ein benutzerdefiniertes Dashboard erstellen
+= Ein benutzerdefiniertes Dashboard in NetApp Workload Factory erstellen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

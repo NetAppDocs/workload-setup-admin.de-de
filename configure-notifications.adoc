@@ -15,65 +15,6 @@ Sie können den NetApp Workload Factory-Benachrichtigungsdienst so konfigurieren
 
 
 
-[[notification-types-and-messages]]
-== Benachrichtigungstypen und Nachrichten
-
-Workload Factory sendet Benachrichtigungen für die folgenden Ereignisse:
-
-[cols="6*"]
-|===
-| Ereignis | Beschreibung | Benachrichtigungstyp | Schweregrad | Workload | Ressourcentyp 
-
-
-| Einige Datenbankinstanzen in Ihrem Konto sind nicht gut strukturiert | Alle Microsoft SQL Server-Instanzen in Ihrem Konto wurden auf gut strukturierte Probleme analysiert.  Die Beschreibung dieses Ereignisses gibt die Anzahl der gut konzipierten und nicht optimierten Instanzen an.  Überprüfen Sie die Ergebnisse und Empfehlungen zum gut strukturierten Status im Datenbankinventar der Workload Factory-Konsole. | Gut gestaltet | Empfehlung | Datenbanken | Microsoft SQL Server-Instanz 
-
-
-| Die Bereitstellung des Microsoft SQL Server/PostgreSQL-Servers war erfolgreich | Die Bereitstellung des Microsoft SQL Server- oder PostgreSQL-Hosts war erfolgreich. Weitere Informationen finden Sie in der Jobüberwachung. | Einsatz | Erfolg | Datenbanken | FSx für ONTAP, DB-Host 
-
-
-| Die Bereitstellung des Microsoft SQL Server/PostgreSQL-Servers ist fehlgeschlagen | Die Bereitstellung des Microsoft SQL Server- oder PostgreSQL-Hosts ist fehlgeschlagen. Weitere Informationen finden Sie in der Jobüberwachung. | Einsatz | Fehler | Datenbanken | FSx für ONTAP, DB-Host 
-
-
-| Fehler beim Erstellen der Replikationsbeziehung | Die Erstellung einer SnapMirror Replikationsbeziehung ist fehlgeschlagen.  Weitere Informationen finden Sie unter Tracker. | Replikation | Kritisch | Allgemeine Lagerung | FSx für ONTAP 
-
-
-| FSx für ONTAP -Erstellungsfehler | Ein FSx for ONTAP Dateisystemerstellungsprozess ist fehlgeschlagen.  Weitere Informationen finden Sie unter Tracker. | FSx für ONTAP -Dateisystemaktion | Kritisch | Allgemeine Lagerung | FSx für ONTAP 
-
-
-| Automatische SSD-Kapazität oder Inodes steigern den Erfolg | Während eines kürzlich durchgeführten automatischen Kapazitätsverwaltungsupdates hat das FSx für ONTAP Dateisystem entweder die SSD-Kapazität oder die Volume-Inodes erfolgreich erhöht. Weitere Informationen finden Sie unter Tracker. | Kapazitätsmanagement | Erfolg | Allgemeine Lagerung | FSx für ONTAP Datei 
-
-
-| Automatische SSD-Kapazität oder Inodes erhöhen den Ausfall | Bei einem kürzlich durchgeführten automatischen Kapazitätsverwaltungsupdate konnte das FSx für ONTAP Dateisystem die SSD-Kapazität oder die Volume-Inodes nicht erhöhen. Weitere Informationen finden Sie unter Tracker. | Kapazitätsmanagement | Kritisch | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
-
-
-| FSx für ONTAP -Problem erkannt | Alle FSx for ONTAP Dateisysteme wurden auf Probleme mit der guten Architektur analysiert.  Der Scan hat ein oder mehrere Probleme erkannt.  Weitere Informationen finden Sie in der gut strukturierten Analyse des Storage-Dashboards in der Workload Factory-Konsole. | Gut strukturierte Analyse | Empfehlung | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
-
-
-| Automatisches Kapazitätsmanagement-Ereignis für FSx für ONTAP | Die SSD-Leistungsstufe für das FSx for ONTAP Dateisystem hat den Warnschwellenwert für Kapazität/Prozentsatz erreicht. | Kapazitätsmanagement | Warnung | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
-
-
-| Automatisches Inode-Management-Ereignis für FSx für ONTAP | Die Anzahl der Inodes für das FSx for ONTAP -Volume hat den Warnschwellenwert (Anzahl/Prozentsatz) erreicht. | Kapazitätsmanagement | Warnung | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
-
-
-| Verdächtige Datenträgeraktivität im FSx für ONTAP-Dateisystem festgestellt | NetApp Autonomous Ransomware Protection mit KI (ARP/AI) hat verdächtige Volumenaktivitäten erkannt. | Schutz vor Ransomware | Kritisch | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
-
-
-| Überschreitung des Latenzschwellenwerts festgestellt | Mindestens ein Volume im FSx for ONTAP Cluster hat den Latenzschwellenwert überschritten. | Leistungsüberwachung | Warnung | EDA | FSx für ONTAP -Dateisysteme 
-
-
-| Monatlicher Kostenbericht | Monatliche Kostenübersicht für Ihr Konto, die Ausgabentrends, ungewöhnliche Änderungen und die besten Einsparmöglichkeiten für FSx für ONTAP-Dateisysteme anzeigt. | Kostenbericht | Empfehlung | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
-
-
-| Replikationsverzögerung | Die Replikation dauert länger als erwartet. | Replikation | Kritisch | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
-
-
-| Die Erstellung des benutzerdefinierten Dashboards war erfolgreich | Ihr individuelles Dashboard wurde erfolgreich erstellt und ist bereit zur Anzeige. | Benutzerdefinierte Dashboards | Erfolg | Allgemeine Lagerung | Workload Factory Konto 
-
-
-| Erstellung eines benutzerdefinierten Dashboards fehlgeschlagen | Workload Factory konnte Ihr benutzerdefiniertes Dashboard nicht erstellen. Das Dashboard kann erneut erstellt werden. | Benutzerdefinierte Dashboards | Fehler | Allgemeine Lagerung | Workload Factory Konto 
-|===
-
-
 [[configure-workload-factory-notifications]]
 == Konfigurieren von Workload Factory-Benachrichtigungen
 
@@ -251,3 +192,63 @@ Weitere Informationen zum Erstellen von Filterrichtlinien finden Sie im https://
 Sie können die Benachrichtigungseinstellungen der NetApp Console verwenden, um die Benachrichtigungen, die Sie in der Console erhalten, nach Schweregrad zu filtern, wie zum Beispiel Kritisch, Info oder Warnung.
 
 Weitere Informationen zum Filtern von Benachrichtigungen in der Konsole finden Sie im https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#filter-notifications["Dokumentation zur NetApp -Konsole"^] .
+
+
+
+[[notification-types-and-messages]]
+== Benachrichtigungstypen und Nachrichten
+
+Workload Factory sendet Benachrichtigungen für die folgenden Ereignisse:
+
+[cols="6*"]
+|===
+| Ereignis | Beschreibung | Benachrichtigungstyp | Schweregrad | Workload | Ressourcentyp 
+
+
+| Einige Datenbankinstanzen in Ihrem Konto sind nicht gut strukturiert | Alle Microsoft SQL Server-Instanzen in Ihrem Konto wurden auf gut strukturierte Probleme analysiert.  Die Beschreibung dieses Ereignisses gibt die Anzahl der gut konzipierten und nicht optimierten Instanzen an.  Überprüfen Sie die Ergebnisse und Empfehlungen zum gut strukturierten Status im Datenbankinventar der Workload Factory-Konsole. | Gut gestaltet | Empfehlung | Datenbanken | Microsoft SQL Server-Instanz 
+
+
+| Die Bereitstellung des Microsoft SQL Server/PostgreSQL-Servers war erfolgreich | Die Bereitstellung des Microsoft SQL Server- oder PostgreSQL-Hosts war erfolgreich. Weitere Informationen finden Sie in der Jobüberwachung. | Einsatz | Erfolg | Datenbanken | FSx für ONTAP, DB-Host 
+
+
+| Die Bereitstellung des Microsoft SQL Server/PostgreSQL-Servers ist fehlgeschlagen | Die Bereitstellung des Microsoft SQL Server- oder PostgreSQL-Hosts ist fehlgeschlagen. Weitere Informationen finden Sie in der Jobüberwachung. | Einsatz | Fehler | Datenbanken | FSx für ONTAP, DB-Host 
+
+
+| Fehler beim Erstellen der Replikationsbeziehung | Die Erstellung einer SnapMirror Replikationsbeziehung ist fehlgeschlagen.  Weitere Informationen finden Sie unter Tracker. | Replikation | Kritisch | Allgemeine Lagerung | FSx für ONTAP 
+
+
+| FSx für ONTAP -Erstellungsfehler | Ein FSx for ONTAP Dateisystemerstellungsprozess ist fehlgeschlagen.  Weitere Informationen finden Sie unter Tracker. | FSx für ONTAP -Dateisystemaktion | Kritisch | Allgemeine Lagerung | FSx für ONTAP 
+
+
+| Automatische SSD-Kapazität oder Inodes steigern den Erfolg | Während eines kürzlich durchgeführten automatischen Kapazitätsverwaltungsupdates hat das FSx für ONTAP Dateisystem entweder die SSD-Kapazität oder die Volume-Inodes erfolgreich erhöht. Weitere Informationen finden Sie unter Tracker. | Kapazitätsmanagement | Erfolg | Allgemeine Lagerung | FSx für ONTAP Datei 
+
+
+| Automatische SSD-Kapazität oder Inodes erhöhen den Ausfall | Bei einem kürzlich durchgeführten automatischen Kapazitätsverwaltungsupdate konnte das FSx für ONTAP Dateisystem die SSD-Kapazität oder die Volume-Inodes nicht erhöhen. Weitere Informationen finden Sie unter Tracker. | Kapazitätsmanagement | Kritisch | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
+
+
+| FSx für ONTAP -Problem erkannt | Alle FSx for ONTAP Dateisysteme wurden auf Probleme mit der guten Architektur analysiert.  Der Scan hat ein oder mehrere Probleme erkannt.  Weitere Informationen finden Sie in der gut strukturierten Analyse des Storage-Dashboards in der Workload Factory-Konsole. | Gut strukturierte Analyse | Empfehlung | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
+
+
+| Automatisches Kapazitätsmanagement-Ereignis für FSx für ONTAP | Die SSD-Leistungsstufe für das FSx for ONTAP Dateisystem hat den Warnschwellenwert für Kapazität/Prozentsatz erreicht. | Kapazitätsmanagement | Warnung | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
+
+
+| Automatisches Inode-Management-Ereignis für FSx für ONTAP | Die Anzahl der Inodes für das FSx for ONTAP -Volume hat den Warnschwellenwert (Anzahl/Prozentsatz) erreicht. | Kapazitätsmanagement | Warnung | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
+
+
+| Verdächtige Datenträgeraktivität im FSx für ONTAP-Dateisystem festgestellt | NetApp Autonomous Ransomware Protection mit KI (ARP/AI) hat verdächtige Volumenaktivitäten erkannt. | Schutz vor Ransomware | Kritisch | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
+
+
+| Überschreitung des Latenzschwellenwerts festgestellt | Mindestens ein Volume im FSx for ONTAP Cluster hat den Latenzschwellenwert überschritten. | Leistungsüberwachung | Warnung | EDA | FSx für ONTAP -Dateisysteme 
+
+
+| Monatlicher Kostenbericht | Monatliche Kostenübersicht für Ihr Konto, die Ausgabentrends, ungewöhnliche Änderungen und die besten Einsparmöglichkeiten für FSx für ONTAP-Dateisysteme anzeigt. | Kostenbericht | Empfehlung | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
+
+
+| Replikationsverzögerung | Die Replikation dauert länger als erwartet. | Replikation | Kritisch | Allgemeine Lagerung | FSx für ONTAP -Dateisysteme 
+
+
+| Die Erstellung des benutzerdefinierten Dashboards war erfolgreich | Ihr individuelles Dashboard wurde erfolgreich erstellt und ist bereit zur Anzeige. | Benutzerdefinierte Dashboards | Erfolg | Allgemeine Lagerung | Workload Factory Konto 
+
+
+| Erstellung eines benutzerdefinierten Dashboards fehlgeschlagen | Workload Factory konnte Ihr benutzerdefiniertes Dashboard nicht erstellen. Das Dashboard kann erneut erstellt werden. | Benutzerdefinierte Dashboards | Fehler | Allgemeine Lagerung | Workload Factory Konto 
+|===

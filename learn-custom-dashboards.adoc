@@ -4,7 +4,7 @@ permalink: learn-custom-dashboards.html
 keywords: custom dashboards, dashboards, personalized dashboards, AI dashboards, operational visibility, workload monitoring 
 summary: KI-gestützte Dashboards, die auf Ihre Arbeitslasten und Prioritäten zugeschnitten sind, ermöglichen eine verbesserte operative Transparenz, ohne durch vordefinierte Ansichten eingeschränkt zu werden. 
 ---
-= Informationen zu benutzerdefinierten Dashboards
+= Informationen zu benutzerdefinierten Dashboards in NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
