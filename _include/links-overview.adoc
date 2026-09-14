@@ -1,0 +1,70 @@
+= Warum Links von Vorteil sind
+:allow-uri-read: 
+
+
+Ein NetApp Workload Factory Link stellt eine Vertrauensbeziehung und Konnektivität zwischen einem Workload Factory Konto und einem oder mehreren FSx for ONTAP Dateisystemen her. Dies ermöglicht die Überwachung und Verwaltung bestimmter Dateisystemfunktionen direkt über die ONTAP REST API Aufrufe, die über die Amazon FSx for ONTAP API nicht verfügbar sind.
+
+Sie benötigen keinen Link, um mit Workload Factory zu beginnen, aber in einigen Fällen müssen Sie einen Link erstellen, um alle Funktionen und Workload-Funktionen von Workload Factory freizuschalten.
+
+
+
+[[why-links-are-beneficial]]
+== Warum Links von Vorteil sind
+
+Links sind vorteilhaft, da sie Workload Factory die Durchführung von Operationen ermöglichen, die über die Amazon FSx for ONTAP API nicht nativ verfügbar sind. Links ermöglichen erweiterte ONTAP Funktionen und Automatisierungen, was die Verwaltung von FSx for ONTAP Dateisystemen verbessert.
+
+Hier sind einige Vorteile der Verwendung von Links:
+
+* Durch diese Verbindung kann die NetApp Console ONTAP-Befehle direkt an Ihr FSx for ONTAP Dateisystem senden und so erweiterte ONTAP Funktionen bereitstellen, die über das native Angebot von AWS hinausgehen.
+* Links nutzen AWS Lambda, um Code als Reaktion auf Ereignisse auszuführen. Dieser serverlose Ansatz beseitigt die Abhängigkeit von einer Instanz, die in Ihrer VPC ausgeführt wird.
+
+
+
+
+[[how-links-work]]
+== Wie Links funktionieren
+
+Links nutzen AWS Lambda. Lambda führt Code als Reaktion auf Ereignisse aus und verwaltet automatisch die dafür benötigten Rechenressourcen. Die von Ihnen erstellten Links sind Teil Ihres NetApp Kontos und mit einem AWS Konto verknüpft.
+
+Nachdem Sie eine Verknüpfung erstellt haben, kann diese einem oder mehreren FSx for ONTAP Dateisystemen zugeordnet werden. Jedem Dateisystem kann nur eine Verknüpfung im selben NetApp Konto zugeordnet werden. Wenn mehrere NetApp Konten vorhanden sind, kann ein einzelnes Dateisystem mit zusätzlichen Verknüpfungen unter verschiedenen NetApp Konten verknüpft werden.
+
+Links werden aus der Storage Workload in Workload Factory erstellt und zugeordnet.
+
+Sie können Links mithilfe von Anmeldeinformationen authentifizieren, die im Workload Factory Anmeldeinformationsdienst oder mit Ihren Anmeldeinformationen, die in AWS Secrets Manager gespeichert sind, hinterlegt sind. Workload Factory unterstützt keine Änderung des Authentifizierungsverfahrens.
+
+Die Verbindung von GovCloud-Konten wird unterstützt. Workload Factory verwendet GovCloud-Authentifizierungsschlüssel und ermöglicht so einen sicheren, agentenlosen Zugriff auf FSx für ONTAP-Operationen über GovCloud-genehmigte Mechanismen.
+
+
+
+[[costs]]
+== Kosten
+
+Für jede von Lambda durchgeführte Transaktion fällt eine Gebühr an. Da Lambda als Proxy zwischen den beiden Systemen fungiert, fällt eine Gebühr an, wenn Lambda eine Anfrage an die ONTAP REST API auf einem Dateisystem sendet und wenn die Antwort an Workload Factory zurückgesendet wird.
+
+link:https://aws.amazon.com/lambda/pricing/["Weitere Informationen zu den Kosten im Zusammenhang mit der Nutzung von AWS Lambda."^]
+
+
+
+[[when-a-link-is-required]]
+== Wenn ein Link erforderlich ist
+
+Workload Factory benötigt eine Verbindung, um bestimmte Informationen anzuzeigen und einige Aufgaben auszuführen. Wenn versucht wird, einen Vorgang auszuführen, der eine Verbindung erfordert, und keine Verbindung mit dem FSx for ONTAP Dateisystem hergestellt wurde, weist Workload Factory darauf hin, dass für den Vorgang eine Verbindung erforderlich ist.
+
+Zu den Funktionen, die eine Verknüpfung erfordern, gehören:
+
+* Gut strukturierter Status von FSx für ONTAP Dateisystemkonfigurationen für proaktive Wartung, Zuverlässigkeit und Kosten-Leistungs-Optimierung
+* ONTAP EMS Ereignisüberwachung und Alarmierung
+* NetApp Autonomous Ransomware Protection (ARP/AI)
+* Verbesserte ganzheitliche Kapazitätsüberwachung über FSx für ONTAP Dateisysteme
+* Datenreplizierung, Verwaltung und Überwachung von Volumes und Storage-VMs
+* Bereitstellung und Verwaltung von SMB/CIFS-Freigaben und NFS-Exportrichtlinien
+* Verwaltung von iSCSI-Volumes auf einem FSx for ONTAP Dateisystem
+* Erstellung und Verwaltung von Snapshot-Richtlinien für benutzerdefinierte Schutz-SLA
+* Verbesserungen im Inode-Management für automatisches Kapazitätsmanagement
+* Automatisches Volumenwachstum für elastische Skalierung
+* Klonerstellung und -verwaltung für die sofortige, direkte Datenklonierung
+* Zusätzliche Metriken direkt aus ONTAP wie die ONTAP Version anzeigen
+* Anzeige der Details zu Speicher-VMs und Cluster-LIFs, einschließlich Rollen, Endpunkten, Knoten, IP-Adressen und Status
+
+
+Weitere Informationen link:create-link.html["Eine Verbindung zu einem FSx for ONTAP Dateisystem herstellen"].
