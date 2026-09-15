@@ -67,4 +67,11 @@ Zu den Funktionen, die eine Verknüpfung erfordern, gehören:
 * Anzeige der Details zu Speicher-VMs und Cluster-LIFs, einschließlich Rollen, Endpunkten, Knoten, IP-Adressen und Status
 
 
-Weitere Informationen link:create-link.html["Eine Verbindung zu einem FSx for ONTAP Dateisystem herstellen"].
+
+
+[[related-information]]
+== Ähnliche Informationen
+
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Eine Verbindung zu einem FSx for ONTAP Dateisystem herstellen"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/manage-links.html["Links verwalten"]
+
