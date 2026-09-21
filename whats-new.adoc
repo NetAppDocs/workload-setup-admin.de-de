@@ -111,7 +111,7 @@ Beschreiben Sie in verständlicher Sprache, was Sie überwachen möchten, und di
 
 Benutzerdefinierte Dashboards sind schreibgeschützt, daher können sie Ihre Speicher- oder Workload-Einstellungen nicht ändern. Jede Person in Ihrem Workload Factory-Konto kann diese Dashboards anzeigen und verwalten, was es Teams erleichtert, Erkenntnisse zu teilen und abgestimmt zu bleiben.
 
-link:learn-custom-dashboards.html["Weitere Informationen zu benutzerdefinierten Dashboards"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/learn-custom-dashboards.html["Weitere Informationen zu benutzerdefinierten Dashboards"]
 
 
 
