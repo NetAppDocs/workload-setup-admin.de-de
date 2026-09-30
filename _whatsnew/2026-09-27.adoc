@@ -1,0 +1,79 @@
+= KI Agents für Workload Factory
+:allow-uri-read: 
+
+
+
+
+[[ai-agents-for-workload-factory]]
+=== KI Agents für Workload Factory
+
+Workload Factory AIOps nutzt KI, um Ihre Umgebung zu analysieren und Verbesserungen zu empfehlen. Nach Ihrer Zustimmung kann die Lösung auch mithilfe der von Ihnen eingerichteten Anmeldeinformationen und Berechtigungen Maßnahmen ergreifen. KI-Agenten analysieren Ihre Umgebung und helfen Ihnen, Risiken zu erkennen, Workloads zu verbessern und Probleme in Workload Factory und Slack zu beheben.
+
+Im neuen Bereich *Agenten erkunden* in „Frag mich“ sind KI-Agenten verfügbar. Standardmäßig laufen die Agenten im Nur-Lese-Modus und liefern Empfehlungen und Analysen.
+
+Mit *Agenteneinstellungen* kann die Arbeitsweise der Agenten gesteuert werden. Folgendes ist möglich:
+
+* Es kann zwischen dem Nur-Lese- und dem Lese-/Schreibmodus gewählt werden.
+* Auswahl der Anmeldeinformationen, die Agenten verwenden können
+* Benutzerdefinierte Anweisungen hinzufügen
+* Anpassen, wie detailliert die Antworten sein sollen
+
+
+Diese zusätzlichen Steuerungsmöglichkeiten bieten Ihnen mehr Transparenz und Kontrolle. Im Lese-/Schreibmodus müssen Agenten Ihre Genehmigung einholen, bevor sie Änderungen an AWS, ONTAP oder unterstützten APIs vornehmen. Sie können außerdem festlegen, wie detailliert die Antworten sein sollen, einschließlich Informationen zur Begründung des Agenten und in Slack zu dessen Tool-Aktivitäten.
+
+Agenten unterstützen zudem Umgebungen mit mehreren Konten und eine einfachere Einrichtung. Ein einzelner Agent kann mit mehreren Anmeldeinformationen sicher über mehrere AWS-Konten hinweg arbeiten.
+
+link:learn-agent.html["Informationen zu KI-Agenten"]
+
+link:manage-agent-settings.html["Agenteneinstellungen verwalten"]
+
+
+
+[[scheduled-tasks-in-ask-me]]
+=== Geplante Aufgaben in Ask Me
+
+Es ist jetzt möglich, im Ask Me Chat eine Eingabeaufforderung anzupassen, um geplante Aufgaben zu erstellen. Geplante Aufgaben dienen dazu, Ask Me zu veranlassen, wiederkehrende Prüfungen auszuführen und entsprechend dem definierten Zeitplan Aktualisierungen im Chat zu senden.
+
+Beispielhafte Eingabeaufforderungen:
+
+* Der Gesundheits- und Lebenszyklusstatus aller FSx for NetApp ONTAP Dateisysteme wird stündlich geprüft, damit Probleme frühzeitig erkannt werden.
+* Zur Gewährleistung eines aktuellen Inventars werden stündlich alle zugänglichen AWS FSx Dateisysteme aufgelistet.
+
+
+link:workload-factory-overview.html#features["Erfahren Sie mehr über Ask Me"]
+
+
+
+[[ontap-support-in-ask-me]]
+=== ONTAP Unterstützung in Ask Me
+
+Ask Me unterstützt jetzt FSx für ONTAP und On-Premises ONTAP Systeme. Mit derselben Chat-Funktion erhalten Sie Antworten und Einblicke in Ihre gesamte ONTAP Infrastruktur.
+
+link:workload-factory-overview.html#features["Erfahren Sie mehr über Ask Me"]
+
+
+
+[[notifications-update]]
+=== Aktualisierung von Benachrichtigungen
+
+NetApp Console Benachrichtigungen sind jetzt standardmäßig aktiviert. NetApp Console Benutzer erhalten automatisch Workload Factory Benachrichtigungen ohne zusätzliche Konfiguration.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Workload Factory Benachrichtigungen"]
+
+
+
+[[link-creation-notification-email]]
+=== E-Mail-Benachrichtigung zur Erstellung des Links
+
+Workload Factory erinnert Sie nun nach erfolgreichem Hinzufügen der Anmeldeinformationen daran, die Verknüpfung abzuschließen. Anmeldeinformationen ermöglichen zwar die Ressourcenerkennung, aber erweiterte ONTAP-Funktionen erfordern die Verknüpfung mit den erkannten Dateisystemen. Sie erhalten die E-Mail-Benachrichtigung einmal pro Woche, jeweils montags. Nach Abschluss der Verknüpfung werden keine weiteren Benachrichtigungen mehr gesendet.
+
+
+
+[[lambda-link-version-notifications-and-upgrade-guidance]]
+=== Benachrichtigungen zur Lambda link Version und Hinweise zum Upgrade
+
+Workload Factory benachrichtigt Sie nun, wenn ein Lambda Link nicht das aktuellste verfügbare Image verwendet. Falls automatische Aktualisierungen für einen Link nicht unterstützt werden, wird eine Benachrichtigung angezeigt, sobald eine neuere Version verfügbar ist.
+
+Die Upgrade-Anweisungen können auf der Seite „Links“ eingesehen werden. Darin wird erläutert, wie das Lambda Link Image manuell aktualisiert und automatische Upgrades aktiviert werden, sobald diese verfügbar sind. Wenn Links auf dem neuesten Stand gehalten werden, erhalten Sie Zugriff auf die neuesten Funktionen, bekannte Probleme werden behoben, und aktuelle Sicherheitsupdates werden angewendet.
+
+Außerdem erhalten Sie im FSx for ONTAP Dashboard eine Benachrichtigung, wenn für einen Link, der keine automatischen Upgrades unterstützt, eine neuere Linkversion verfügbar ist.

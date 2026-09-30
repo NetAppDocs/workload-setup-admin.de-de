@@ -50,6 +50,12 @@ indexpage:
       url: https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html
     - title: EMS-Ereignisse für Speicherworkloads anzeigen und analysieren
       url: https://docs.netapp.com/us-en/workload-fsx-ontap/analyze-events.html
+  - title: KI-Agenten
+    links:
+    - title: Informationen zu KI-Agenten
+      url: "/learn-agent.html"
+    - title: Verwaltung der Einstellungen für KI-Agenten
+      url: "/manage-agent-settings.html"
   - title: Benutzerdefinierte Dashboards
     links:
     - title: Informationen zu benutzerdefinierten Dashboards

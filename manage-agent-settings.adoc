@@ -1,0 +1,141 @@
+---
+sidebar: sidebar 
+permalink: manage-agent-settings.html 
+keywords: agents settings, aiops, agent configuration, ai agent, agent mode, credentials, read-only, read-write, custom prompt, verbose, slack integration 
+summary: Die Einstellungen der KI-Agenten, z. B. Betriebsmodus, Zugriffsberechtigungen, benutzerdefinierte Anweisungen und Antwortdetailstufen, können so eingerichtet werden, dass gesteuert wird, wie die Agenten in Ihrer Workload Factory Umgebung arbeiten. 
+---
+= Verwaltung der Einstellungen für KI-Agenten in NetApp Workload Factory
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Hier wird eingerichtet, wie KI-Agenten in Ihrer Workload Factory Umgebung funktionieren. Sie können festlegen, wie Agenten arbeiten, entscheiden, welche Anmeldeinformationen sie verwenden können, benutzerdefinierte Eingabeaufforderungen hinzufügen und den Detaillierungsgrad der Antworten anpassen.
+
+
+
+[[before-you-begin]]
+== Bevor Sie beginnen
+
+* Wir empfehlen, dass ein Kontoadministrator die Agenteneinstellungen konfiguriert.
+* Bevor Sie den Lese-/Schreibmodus aktivieren, sollten Sie sich über die Sicherheitsrisiken im Klaren sein, die damit verbunden sind, dass Agenten für Sie Aktionen ausführen dürfen.
+
+
+
+NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, stehen die KI-Agenten nicht zur Verfügung. link:manage-genai-features.html["Informationen zur Verwaltung von KI-Funktionen"].
+
+
+
+[[access-agents-settings]]
+== Access Agents Einstellungen
+
+.Schritte
+. Melden Sie sich mit einem der link:console-experiences.html["Konsolenerfahrungen"^] an.
+. Auf die Agenteneinstellungen kann mit einer dieser Methoden zugegriffen werden:
++
+** Im Menü werden *Administration*, *Einstellungen* und anschließend *Agenten* ausgewählt.
+** Im Agenten-Chat ist der Link zu *Agenteneinstellungen* auszuwählen.
+
+
+
+
+
+
+[[set-up-agents-operation-mode]]
+== Einrichten des Agentenbetriebsmodus
+
+Es wird ausgewählt, ob die Agenten im Nur-Lese-Modus oder im Lese-/Schreib-Modus arbeiten.
+
+.Über diese Aufgabe
+Der Betriebsmodus der Agenten bestimmt, welche Aktionen die Agenten ausführen können:
+
+Schreibgeschützter Modus (Standard):: Die Agenten können Ihre Daten einsehen und analysieren, aber sie können Ihre Ressourcen nicht verändern. Sie können Fragen beantworten, Risiken identifizieren, Empfehlungen aussprechen und bei der Fehlerbehebung helfen.
+Lese-/Schreibmodus:: Die Agenten können mit den von Ihnen gewählten Zugangsdaten Aktionen in Ihrem Namen durchführen. Bevor sie eine Aktion ausführen, zeigen sie Ihnen eine Zusammenfassung an und warten auf Ihre Zustimmung. Ohne Ihre Zustimmung führen sie keine Aktion aus.
+
+
+.Schritte
+. Im Menü werden *Administration*, *Einstellungen* und anschließend *Agenten* ausgewählt.
+. Auf der Seite *Agenteneinstellungen* befindet sich der Abschnitt *Agentenmodus*.
+. Wählen Sie den Betriebsmodus aus.
+. Wählen Sie *Anwenden*.
+
+
+
+
+[[select-credentials-for-agents-access]]
+== Auswahl von Anmeldeinformationen für den Agentenzugriff
+
+Es kann ausgewählt werden, welche AWS-Anmeldeinformationen Agents für den Zugriff auf Ihre Cloud-Umgebung verwenden dürfen. Standardmäßig sind alle Anmeldeinformationen ausgewählt, dies kann jedoch auf eine Teilmenge Ihrer konfigurierten Anmeldeinformationen beschränkt werden.
+
+.Über diese Aufgabe
+Sie können keine, eine, einige oder alle Ihrer konfigurierten Anmeldeinformationen auswählen. Wenn Sie keine Anmeldeinformationen auswählen, können Agenten allgemeine Fragen beantworten, aber keine Ressourcen in Ihrer Umgebung analysieren.
+
+.Schritte
+. Auf der Seite *Agenteneinstellungen* befindet sich der Abschnitt *Anmeldeinformationen*.
+. Im Dropdown-Menü *Name der Anmeldeinformationen* wird ausgewählt, welche Anmeldeinformationen die Agenten verwenden können.
++
+Falls keine Anmeldeinformationen konfiguriert sind, wird Ihnen die Option angezeigt, Anmeldeinformationen für Ihr Workload Factory Konto hinzuzufügen.
+
+. Wählen Sie *Anwenden*.
+
+
+
+
+[[slack-integration]]
+== Slack Integration
+
+Sie können die Agenten mit Slack verbinden und direkt in Ihrem Slack Workspace mit ihnen interagieren.
+
+Informationen zur Einrichtung der Slack Integration finden Sie in der Slack Integrationsdokumentation, oder wenden Sie sich bezüglich der Agenten an Ihren NetApp Ansprechpartner.
+
+
+
+[[add-a-custom-prompt]]
+== Hinzufügen einer benutzerdefinierten Eingabeaufforderung
+
+Sie können benutzerdefinierte Richtlinien, Präferenzen oder Regeln hinzufügen, die die Agenten bei der Beantwortung Ihrer Anfragen befolgen sollen.
+
+.Über diese Aufgabe
+Eine individuell angepasste Eingabeaufforderung hilft Agenten dabei, ihre Antworten so zu gestalten, dass sie den Richtlinien, der Sprache und den Arbeitsabläufen Ihres Unternehmens entsprechen. Sie gilt für jede Interaktion eines Agenten.
+
+Das Feld für die benutzerdefinierte Eingabeaufforderung ist standardmäßig leer. Die benutzerdefinierte Eingabeaufforderung kann jederzeit hinzugefügt, geändert oder entfernt werden.
+
+.Schritte
+. Auf der Seite *Agenteneinstellungen* befindet sich der Abschnitt *Benutzerdefinierte Eingabeaufforderung*.
+. Im Textfeld werden Ihre individuellen Richtlinien für die Agenten eingegeben.
++
+Beispielsweise können Namensregeln, bevorzugte Antwortformate oder Unternehmensrichtlinien definiert werden, denen die Agenten folgen sollen.
+
+. Wählen Sie *Anwenden*.
+
+
+.Ergebnis
+Die Agenten verwenden Ihre individuelle Eingabeaufforderung zusammen mit ihren integrierten Funktionen, wenn sie auf Ihre Anfragen antworten.
+
+Um die benutzerdefinierte Eingabeaufforderung zu ändern oder zu entfernen, kehren Sie zu dieser Seite zurück, bearbeiten Sie das Textfeld und wählen Sie *Anwenden* aus.
+
+
+
+[[configure-verbosity-options]]
+== Konfigurieren von Ausführlichkeitsoptionen
+
+Sie können auswählen, wie detailliert Agenten ihre Denkweise und die Verwendung der Tools erläutern.
+
+.Über diese Aufgabe
+Mithilfe der Ausführlichkeitsoptionen erhalten Sie detailliertere Informationen darüber, wie die Agenten zu ihren Antworten gelangen und welche Tools sie zur Informationsbeschaffung verwenden:
+
+Ausführliche Begründung:: Wenn diese Option aktiviert ist, erklären die Agenten, wie sie zu ihren Antworten gelangen und Entscheidungen treffen. Dies hilft Ihnen, zu verstehen, warum sie bestimmte Maßnahmen empfehlen oder zu bestimmten Schlussfolgerungen gelangen.
+Ausführliche Werkzeuge mit detaillierter Darstellung:: Wenn diese Option aktiviert ist, zeigen die Agenten an, welche Tools und APIs sie zur Datenerfassung und Analyse verwenden. Dies hilft Ihnen, zu verstehen, wie sie mit Ihrer Umgebung interagieren.
+
+
+Beide Optionen sind standardmäßig deaktiviert, um die Antworten kurz und prägnant zu halten. Sie können sie aktivieren, wenn mehr Transparenz benötigt wird oder das Verhalten von Agenten analysiert und behoben werden soll.
+
+.Schritte
+. Auf der Seite *Agenteneinstellungen* befindet sich der Abschnitt *Ausführlichkeitsgrad*.
+. Die gewünschten Ausführlichkeitsoptionen werden ausgewählt.
+. Wählen Sie *Anwenden*.
+

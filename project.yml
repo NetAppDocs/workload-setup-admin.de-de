@@ -56,6 +56,12 @@ sidebar:
       url: "/monitor-operations.html"
     - title: KI-Funktionen verwalten
       url: "/manage-genai-features.html"
+    - title: Workload Factory AIOps
+      entries:
+      - title: Informationen zu KI-Agenten
+        url: "/learn-agent.html"
+      - title: Verwaltung der Einstellungen für KI-Agenten
+        url: "/manage-agent-settings.html"
     - title: Benutzerdefinierte Dashboards
       entries:
       - title: Informationen zu benutzerdefinierten Dashboards

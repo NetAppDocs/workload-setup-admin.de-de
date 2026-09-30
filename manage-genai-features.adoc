@@ -21,7 +21,7 @@ Den Zugriff auf KI-Funktionen in Workload Factory steuern. KI-Funktionen können
 [[about-ai-features]]
 == Über KI-Funktionen
 
-Workload Factory beinhaltet mehrere KI-gestützte Funktionen, die Ihr Benutzererlebnis verbessern, wie Ask Me, benutzerdefinierte Dashboards und Analysetools für EMS, Datenbankprotokolle und Latenz.
+Workload Factory umfasst mehrere KI-gestützte Funktionen, die Ihre Benutzererfahrung verbessern, wie z. B. Ask Me, KI-Agenten, benutzerdefinierte Dashboards, Rule Errichter und Analysetools für EMS, Datenbankprotokolle und Latenz.
 
 Als Administrator von Workload Factory kann auf der Seite „KI-Einstellungen“ gesteuert werden, wie diese Funktionen KI nutzen.
 
@@ -41,7 +41,7 @@ NetApp Managed Bedrock (Empfohlen):: Ein von NetApp verwalteter AWS Bedrock Serv
 
 
 --
-GenAI Funktionen deaktiviert:: Deaktiviert alle KI-Funktionen. Benutzer können „Ask Me“, Analysetools, benutzerdefinierte Dashboards, den Errichter oder andere KI-gestützte Tools nicht mehr verwenden.
+GenAI Funktionen deaktiviert:: Alle KI-Funktionen werden deaktiviert. Benutzer können „Ask Me“, den KI-Agenten, Analysetools, benutzerdefinierte Dashboards, den Regel-Errichter oder andere KI-gestützte Tools nicht mehr verwenden.
 
 
 

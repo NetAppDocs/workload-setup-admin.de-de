@@ -20,6 +20,9 @@ Sie können den NetApp Workload Factory-Benachrichtigungsdienst so konfigurieren
 
 Sie können Workload Factory-Benachrichtigungen mithilfe der NetApp Console oder der Workload Factory-Konsole konfigurieren.
 
+
+IMPORTANT: Wenn Sie Benachrichtigungen in der NetApp Console konfigurieren, übernimmt diese die Zustellung der Benachrichtigungen und die Benachrichtigungsoptionen der Workload Factory Console werden deaktiviert und im Nur-Lese-Modus angezeigt. Ein Tooltip weist darauf hin, dass Benachrichtigungen von der NetApp Console verwaltet werden. Sie können Benachrichtigungen dann nur noch über die NetApp Console verwalten.
+
 Folgende Optionen stehen zum Empfangen von Benachrichtigungen zur Verfügung:
 
 
@@ -37,12 +40,7 @@ Folgende Optionen stehen zum Empfangen von Benachrichtigungen zur Verfügung:
 [[workload-factory-console]]
 === Workload Factory-Konsole
 
-* *E-Mail*: Aktivieren Sie E-Mail-Benachrichtigungen in der Workload Factory Console, um Benachrichtigungen an alle mit dem Konto verknüpften E-Mail-Adressen zu erhalten, ohne dass eine Amazon SNS-Konfiguration erforderlich ist.
-* *Amazon SNS*: Konfigurieren Sie Workload Factory so, dass Benachrichtigungen mithilfe der Workload Factory Console an ein Amazon SNS-Thema gesendet werden.
-
-
-
-IMPORTANT: Wenn Sie Benachrichtigungen in der NetApp Console konfigurieren, übernimmt diese die Zustellung der Benachrichtigungen und die Benachrichtigungsoptionen der Workload Factory Console werden deaktiviert und im Nur-Lese-Modus angezeigt. Ein Tooltip weist darauf hin, dass Benachrichtigungen von der NetApp Console verwaltet werden. Sie können Benachrichtigungen dann nur noch über die NetApp Console verwalten.
+*Amazon SNS*: Konfigurieren Sie Workload Factory so, dass Benachrichtigungen mithilfe der Workload Factory Console an ein Amazon SNS-Thema gesendet werden.
 
 .Bevor Sie beginnen
 Die folgenden Voraussetzungen gelten nur bei der Konfiguration von Amazon SNS-Benachrichtigungen:
@@ -78,9 +76,8 @@ Nachdem Sie das Thema erstellt haben, kopieren Sie die Themen-ARN und geben Sie 
 .Schritte
 . Melden Sie sich an beilink:https://console.workloads.netapp.com["Workload Factory-Konsole"^] .
 . Wählen Sie im Konsolenmenü von Workload Factory *Workloads*, *Administration* und dann *Benachrichtigungs-Setup* aus.
-. Aktivieren Sie einen oder mehrere der folgenden Benachrichtigungstypen:
 +
-** *E-Mail-Benachrichtigungen*: Wählen Sie *E-Mail-Benachrichtigungen aktivieren*. Alle mit dem Konto verknüpften E-Mail-Adressen werden im Nur-Lese-Modus angezeigt.
+** *E-Mail-Benachrichtigungen*: Zum Erhalt von E-Mail-Benachrichtigungen werden Benachrichtigungsempfänger und Schweregradpräferenzen in link:link:https://console.netapp.com["NetApp Konsole"^] den Benachrichtigungseinstellungen konfiguriert.
 ** *Amazon SNS-Benachrichtigungen*: Wählen Sie *SNS-Benachrichtigungen aktivieren* und folgen Sie dann den Anweisungen, um Amazon SNS aus der Amazon SNS-Konsole zu konfigurieren.
 +
 Nachdem Sie die Konfiguration durch Senden einer Testbenachrichtigung überprüft haben, wählen Sie *Übernehmen*.

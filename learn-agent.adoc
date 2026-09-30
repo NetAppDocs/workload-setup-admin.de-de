@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: learn-agent.html 
+keywords: agent, ai agent, aiops, ask me, explore agent, ai assistant, environment-aware, read-only, read-write, agents settings 
+summary: Es wird beschrieben, wie KI-Agenten für Workload Factory Ihre Umgebung analysieren, Risiken und Möglichkeiten zur Leistungsverbesserung identifizieren und mit Ihrer Zustimmung Maßnahmen für Sie ergreifen können. 
+---
+= Informationen zu den KI-Agenten in NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Workload Factory AIOps verwendet KI, um Ihre Umgebung zu analysieren und Verbesserungen zu empfehlen. Nach Ihrer Zustimmung kann es auch Aktionen mit den von Ihnen festgelegten Anmeldeinformationen und Berechtigungen ausführen.
+
+
+NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, wird Ihnen eine entsprechende Meldung angezeigt, und Sie können die Agenten nicht nutzen. Bitte kontaktieren Sie Ihren Administrator oder link:manage-genai-features.html["Informationen zur KI-Administration"].
+
+
+
+[[before-you-begin]]
+== Bevor Sie beginnen
+
+Stellen Sie sicher, dass Ihr Workload Factory Konto über AWS-Anmeldeinformationen und die IAM-Berechtigungen verfügt, die Agents für die Ressourcen benötigen, auf die sie zugreifen. Wenn Sie den Lese-/Schreibmodus aktivieren, müssen diese Berechtigungen auch unterstützte Änderungen zulassen.
+
+link:add-credentials.html["Informationen zum Hinzufügen von AWS-Anmeldeinformationen und zum Einrichten von IAM-Berechtigungen"^].
+
+
+
+[[data-usage-and-privacy]]
+== Datennutzung und Datenschutz
+
+Ihre Daten werden nicht zum Trainieren von KI-Modellen verwendet. Agenten verwenden Ihre Anmeldeinformationen, um über Standard-AWS-APIs sicher auf AWS-Ressourcen zuzugreifen und auf Grundlage Ihrer tatsächlichen Umgebung zu reagieren. Alle Agentenaktivitäten erfolgen in Übereinstimmung mit den Datenschutzrichtlinien von NetApp und den AWS-Sicherheitskontrollen.
+
+
+
+[[why-use-ai-agents]]
+== Warum KI-Agenten verwendet werden
+
+KI-Agenten helfen Ihnen, in Workload Factory effizienter zu arbeiten:
+
+* Antworten und Empfehlungen auf der Grundlage Ihrer Umgebung.
+* Identifizierung von Risiken und Optimierungspotenzialen.
+* Probleme beheben und genehmigte Maßnahmen in einem einzigen Workflow durchführen.
+* Geplante Prüfungen werden ausgeführt, und Aktualisierungen erscheinen im Chatverlauf.
+* Arbeiten in FSx for ONTAP und in ONTAP Umgebungen On-Premises.
+
+
+
+
+[[access-the-ai-agents]]
+== Zugriff auf die KI-Agenten
+
+Von der Ask Me-Startseite:: Auf der Landingpage von Ask Me ist *Explore Agents* auszuwählen. Das Seitenfenster mit den KI-Agenten öffnet sich mit einer Begrüßungsnachricht, die die Fähigkeiten der Agenten vorstellt.
+Aus den Weiterleitungslinks der Agenten:: Bei der Nutzung von **Ask Me** oder anderen Funktionen werden Ihnen möglicherweise Links angezeigt, die Sie für weiterführende Unterstützung zu den Agents weiterleiten.
+
+
+
+
+[[how-ai-agents-work]]
+== Wie KI-Agenten funktionieren
+
+
+
+[[how-agents-access-your-environment]]
+=== Wie Agenten auf Ihre Umgebung zugreifen
+
+Agenten können nur dann auf Ressourcen zugreifen, wenn diese im aktuellen Workload Factory Bereich enthalten sind und durch die in link:manage-agent-settings.html["Agenteneinstellungen"] ausgewählten Anmeldeinformationen unterstützt werden. Agenten können nur dort arbeiten, wo beide Steuerungen gelten. Die Ressourcen, auf die sie zugreifen können, hängen außerdem von den Berechtigungen ab, die ihren AWS-Anmeldeinformationen zugewiesen sind. Standardmäßig sind alle Anmeldeinformationen ausgewählt, Sie können dies jedoch auf eine Teilmenge Ihrer konfigurierten Anmeldeinformationen beschränken.
+
+Ihr aktueller Geltungsbereich umfasst:
+
+* *AWS-Konten*: Auf welche AWS-Konten Agenten zugreifen können.
+* *Anmeldeinformationen*: Welche Anmeldeinformationen Agenten verwenden können.
+* *Regionen*: Auf welche AWS-Regionen Agents zugreifen können.
+
+
+Filter in Workload Factory legen den Geltungsbereich der aktuellen Seite fest, z. B. die angezeigten AWS-Konten und -Regionen. Agenteneinstellungen steuern, welche Anmeldeinformationen Agents innerhalb dieses Geltungsbereichs verwenden dürfen. Der Zugriff auf Ressourcen hängt außerdem von den diesen Anmeldeinformationen zugewiesenen IAM-Berechtigungen ab.
+
+
+NOTE: Die Auswahl von Anmeldeinformationen in den *Agenteneinstellungen* gewährt keine zusätzlichen AWS-Berechtigungen. Es muss sichergestellt sein, dass die Anmeldeinformationen über die erforderlichen IAM-Berechtigungen verfügen, damit Agenten auf die Ressourcen zugreifen können, die sie analysieren oder verwalten sollen.
+
+
+
+[[read-only-mode-default]]
+=== Schreibgeschützter Modus (Standard)
+
+Standardmäßig arbeiten die Agenten im Nur-Lese-Modus. In diesem Modus können sie:
+
+* Fragen zu Ihrer Umgebung werden beantwortet.
+* Die Analyse Ihrer FSx for ONTAP Dateisysteme, Datenbanken und Workloads.
+* Identifizierung von Risiken, Fehlkonfigurationen und Optimierungsmöglichkeiten.
+* Empfehlungen zur Verbesserung von Leistung, Verfügbarkeit, Schutz und Kosteneffizienz werden bereitgestellt.
+* Problembehandlung und Vorschläge für Abhilfemaßnahmen.
+
+
+Im Nur-Lese-Modus können Ressourcen nicht geändert werden. Wenn Sie eine Aktion anfordern, die Schreibzugriff erfordert, erläutert der Agent die Einschränkung und verlinkt auf die Agenteneinstellungen.
+
+
+
+[[read-write-mode-opt-in]]
+=== Lese-/Schreibmodus (optional)
+
+Sie können Lese- und Schreibfunktionen in link:manage-agent-settings.html["Agenteneinstellungen"] aktivieren. In diesem Modus erläutern die Agenten jede unterstützte Aktion und benötigen Ihre Zustimmung, bevor sie Änderungen vornehmen.
+
+Dieser Genehmigungsprozess gilt für alle Agentenerfahrungen, einschließlich Slack-Integrationen und der NetApp Console.
+
+
+
+[[what-users-see-when-ai-agents-have-no-data-or-activity]]
+== Was Nutzer sehen, wenn KI-Agenten keine Daten oder Aktivitäten haben
+
+Wenn Agenten nicht über Anmeldeinformationen verfügen, können sie dennoch allgemeine Hinweise geben. Sie können jedoch weder Ihre Ressourcen prüfen noch spezifische Einblicke in Ihre Umgebung geben.
