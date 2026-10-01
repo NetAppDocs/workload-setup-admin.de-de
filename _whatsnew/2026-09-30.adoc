@@ -23,9 +23,9 @@ Diese zusätzlichen Steuerungsmöglichkeiten bieten Ihnen mehr Transparenz und K
 
 Agenten unterstützen zudem Umgebungen mit mehreren Konten und eine einfachere Einrichtung. Ein einzelner Agent kann mit mehreren Anmeldeinformationen sicher über mehrere AWS-Konten hinweg arbeiten.
 
-link:learn-agent.html["Informationen zu KI-Agenten"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/learn-agent.html["Informationen zu KI-Agenten"]
 
-link:manage-agent-settings.html["Agenteneinstellungen verwalten"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-agent-settings.html["Agenteneinstellungen verwalten"]
 
 
 
@@ -40,7 +40,7 @@ Beispielhafte Eingabeaufforderungen:
 * Zur Gewährleistung eines aktuellen Inventars werden stündlich alle zugänglichen AWS FSx Dateisysteme aufgelistet.
 
 
-link:workload-factory-overview.html#features["Erfahren Sie mehr über Ask Me"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html#features["Erfahren Sie mehr über Ask Me"]
 
 
 
@@ -49,7 +49,7 @@ link:workload-factory-overview.html#features["Erfahren Sie mehr über Ask Me"]
 
 Ask Me unterstützt jetzt FSx für ONTAP und On-Premises ONTAP Systeme. Mit derselben Chat-Funktion erhalten Sie Antworten und Einblicke in Ihre gesamte ONTAP Infrastruktur.
 
-link:workload-factory-overview.html#features["Erfahren Sie mehr über Ask Me"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html#features["Erfahren Sie mehr über Ask Me"]
 
 
 
