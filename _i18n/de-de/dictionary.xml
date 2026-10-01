@@ -1864,8 +1864,6 @@
   <block id="ff51f1512e81cb44e19946405c4c3751" category="paragraph">Beispielhafte Eingabeaufforderungen:</block>
   <block id="9c51276de03bc7f0cc89565810a9583c" category="list-text">Der Gesundheits- und Lebenszyklusstatus aller FSx for NetApp ONTAP Dateisysteme wird stündlich geprüft, damit Probleme frühzeitig erkannt werden.</block>
   <block id="7c232a692347d9efae9eafb444b454ef" category="list-text">Zur Gewährleistung eines aktuellen Inventars werden stündlich alle zugänglichen AWS FSx Dateisysteme aufgelistet.</block>
-  <block id="fcc3c37c09c2649e94509997e3e32ace" category="section-title">ONTAP Unterstützung in Ask Me</block>
-  <block id="5887518ab4bafe0e2cd30ee6d85ca830" category="paragraph">Ask Me unterstützt jetzt FSx für ONTAP und On-Premises ONTAP Systeme. Mit derselben Chat-Funktion erhalten Sie Antworten und Einblicke in Ihre gesamte ONTAP Infrastruktur.</block>
   <block id="61ac51994f4e558eb3be753f892d08aa" category="section-title">Aktualisierung von Benachrichtigungen</block>
   <block id="02796e8ea898eccf4fc1ec43b8c9a990" category="paragraph">NetApp Console Benachrichtigungen sind jetzt standardmäßig aktiviert. NetApp Console Benutzer erhalten automatisch Workload Factory Benachrichtigungen ohne zusätzliche Konfiguration.</block>
   <block id="21342e11f90d32dc68b1110fcbb8adc2" category="inline-link-macro">Workload Factory Benachrichtigungen</block>
@@ -1889,7 +1887,6 @@
   <block id="f41dc5b513f7a5678f949fafbb672e71" category="list-text">Identifizierung von Risiken und Optimierungspotenzialen.</block>
   <block id="45747fdf81b9f650b9ab26706866db24" category="list-text">Probleme beheben und genehmigte Maßnahmen in einem einzigen Workflow durchführen.</block>
   <block id="6fd44b1c4edd80ad7b595f1fcb4c7483" category="list-text">Geplante Prüfungen werden ausgeführt, und Aktualisierungen erscheinen im Chatverlauf.</block>
-  <block id="e974804a88a47e4bcdb4ff1c718951bc" category="list-text">Arbeiten in FSx for ONTAP und in ONTAP Umgebungen On-Premises.</block>
   <block id="4eeb2bca1dddd7a796d908c266d60075" category="section-title">Zugriff auf die KI-Agenten</block>
   <block id="e6478bab5c49062e219e1290c4442eed" category="list-text">Von der Ask Me-Startseite</block>
   <block id="b3c72178808d9fa6e9c876b76d5d1928" category="list-text">Auf der Landingpage von Ask Me ist *Explore Agents* auszuwählen. Das Seitenfenster mit den KI-Agenten öffnet sich mit einer Begrüßungsnachricht, die die Fähigkeiten der Agenten vorstellt.</block>
@@ -1966,7 +1963,6 @@
   <block id="5af9190832e86a39b32955d77e972b2e" category="list-text">Die gewünschten Ausführlichkeitsoptionen werden ausgewählt.</block>
   <block id="17f306dd010c4f9182635b5f5e336fa1" category="paragraph">Workload Factory umfasst mehrere KI-gestützte Funktionen, die Ihre Benutzererfahrung verbessern, wie z. B. Ask Me, KI-Agenten, benutzerdefinierte Dashboards, Rule Errichter und Analysetools für EMS, Datenbankprotokolle und Latenz.</block>
   <block id="cbdbc1bacc2d0ff55d93219e225f857a" category="list-text">Alle KI-Funktionen werden deaktiviert. Benutzer können „Ask Me“, den KI-Agenten, Analysetools, benutzerdefinierte Dashboards, den Regel-Errichter oder andere KI-gestützte Tools nicht mehr verwenden.</block>
-  <block id="346e26a9cf03697a4cc5fa74d552d528" category="list-text">Dem KI-Assistenten können Fragen zur Verwaltung und zum Betrieb von FSx für ONTAP und lokalen ONTAP Dateisystemen gestellt werden. Ask Me stellt eine sichere Verbindung zu Ihrer Umgebung her und verwendet APIs, um Antworten auf der Grundlage Ihrer Speicherkonfiguration bereitzustellen.</block>
   <block id="c04236280596e42d063458cddb934506" category="list-text">KI-Agenten</block>
   <block id="3189c2a21a0d40fdf4391d22fec8b33c" category="inline-link-macro">Informationen zu den KI-Agenten</block>
   <block id="b91ab34707ef60b3cb9e7b43383594ea" category="list-text">Workload Factory AIOps verwendet KI, um Ihre Umgebung zu analysieren und Verbesserungen zu empfehlen. Nach Ihrer Genehmigung kann die Lösung auch mithilfe der von Ihnen eingerichteten Anmeldeinformationen und Berechtigungen Aktionen ausführen. Die KI-Agenten helfen Ask Me, Ihnen mithilfe Ihrer verbundenen Konten Einblicke zu geben. Im Abschnitt „Explore Agents“ in Ask Me erhalten Sie schnelle Antworten, können Risiken und Chancen identifizieren, Probleme beheben und Empfehlungen erhalten. Standardmäßig können Agenten Informationen nur anzeigen. Im Lese-/Schreibmodus können sie erst nach Ihrer Genehmigung Aktionen in AWS, ONTAP und unterstützten APIs ausführen. Sie können außerdem Anmeldeinformationen aus mehreren AWS-Konten verwenden, benutzerdefinierte Eingabeaufforderungen hinzufügen und festlegen, wie viele Details in Antworten enthalten sein sollen, einschließlich Begründungen und Tool-Aktivitäten in Slack. <block ref="4688d09efacd50ccc7831795bcbb59e1" category="inline-link-macro-rx"></block>.</block>
@@ -1977,4 +1973,8 @@
   <block id="92ef509d26c2f4b8f1eafc483dafc514" category="paragraph"><block ref="92ef509d26c2f4b8f1eafc483dafc514" category="inline-link-macro-rx"></block></block>
   <block id="ff60e6cb69fa35fc765fb6716dc86a1d" category="paragraph"><block ref="ff60e6cb69fa35fc765fb6716dc86a1d" category="inline-link-macro-rx"></block></block>
   <block id="5ff6cb415ca5edb6088a3bb92aadbf41" category="list-text">*E-Mail-Benachrichtigungen*: Zum Erhalt von E-Mail-Benachrichtigungen werden Benachrichtigungsempfänger und Schweregradpräferenzen in <block ref="7532dfde8c533672ea63a5b546224a97" category="inline-link-macro-rx"></block> den Benachrichtigungseinstellungen konfiguriert.</block>
+  <block id="d757afa220ac7f97f408903182fddee2" category="section-title">Storage-Support in Ask Me</block>
+  <block id="541644294bd888a59c4f26e19102bfb2" category="paragraph">Ask Me unterstützt jetzt FSx für ONTAP und Google Cloud NetApp Volumes. Mit derselben Chat-Funktion erhalten Sie Antworten und Einblicke in Ihre unterstützten Speicherumgebungen.</block>
+  <block id="54ba8fb885319acf274731794ecf9b35" category="list-text">Arbeiten in FSx für ONTAP und Google Cloud NetApp Volumes Umgebungen.</block>
+  <block id="3ddb8c8ba0ebed85a3c1d3ddf7cc424c" category="list-text">Fragen an den KI-Assistenten zur Verwaltung und zum Betrieb von FSx für ONTAP und Google Cloud NetApp Volumes. Ask Me stellt sicher eine Verbindung zu Ihrer Umgebung her und verwendet APIs, um Antworten auf der Grundlage Ihrer Speicherkonfiguration bereitzustellen.</block>
 </blocks>

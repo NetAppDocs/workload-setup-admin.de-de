@@ -43,7 +43,7 @@ KI-Agenten helfen Ihnen, in Workload Factory effizienter zu arbeiten:
 * Identifizierung von Risiken und Optimierungspotenzialen.
 * Probleme beheben und genehmigte Maßnahmen in einem einzigen Workflow durchführen.
 * Geplante Prüfungen werden ausgeführt, und Aktualisierungen erscheinen im Chatverlauf.
-* Arbeiten in FSx for ONTAP und in ONTAP Umgebungen On-Premises.
+* Arbeiten in FSx für ONTAP und Google Cloud NetApp Volumes Umgebungen.
 
 
 
