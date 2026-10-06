@@ -59,6 +59,7 @@ Nach der Erstellung können Sie:
 
 * Die Dashboard-Sichtbarkeit kann geändert werden, sodass sie mit dem Team geteilt wird.
 * Dashboard-Daten werden aktualisiert, damit die neuesten Informationen angezeigt werden.
+* In Dashboards lassen sich Anzeigeinhalte wie Kennzahlen, Diagramme und Zeiträume ändern
 * Dashboards, die nicht mehr benötigt werden, können gelöscht werden.
 * Dashboard-Details anzeigen, einschließlich des Erstellers und des Zeitpunkts der letzten Aktualisierung
 

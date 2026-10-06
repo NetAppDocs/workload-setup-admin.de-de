@@ -62,29 +62,27 @@ Das Dashboard wird sofort aktualisiert. Die Sichtbarkeitsanzeige auf der Dashboa
 
 Dashboard-Daten werden beim Öffnen eines Dashboards geladen. Eine Aktualisierung zeigt die neuesten Informationen an.
 
-Das Dashboard lädt Daten aus Ihren Workloads neu. Die Zeitangabe „Letzte Aktualisierung“ ändert sich und zeigt an, wann die Daten aktualisiert wurden.
+Das Dashboard lädt Daten aus Ihren Workloads neu.
 
 
 
-[[delete-a-dashboard]]
-== Ein Dashboard löschen
+[[edit-dashboards]]
+== Dashboards bearbeiten
 
-Dashboards, die nicht mehr benötigt werden, können gelöscht werden. Dieser Vorgang ist endgültig und kann nicht rückgängig gemacht werden.
+Sie können ein Dashboard bearbeiten, um zu ändern, was es anzeigt, einschließlich der Kennzahlen, Diagramme und Zeitbereiche.
+
+
+NOTE: Nur der Ersteller des Dashboards kann das Dashboard bearbeiten. Während der Bearbeitung sind Ihre Änderungen für andere Nutzer erst sichtbar, nachdem Sie sie gespeichert haben.
 
 .Schritte
-. Auf der Seite *Benutzerdefinierte Dashboards* das Dashboard suchen, das entfernt werden soll.
-. Im Dropdown-Menü *Aktionen* für dieses Dashboard die Option *Löschen* auswählen.
-. Bestätigen Sie die Löschung.
+. Auf der Seite *Benutzerdefinierte Dashboards* das Dashboard suchen, das bearbeitet werden soll.
+. Im Menü *Aktionen* für dieses Dashboard die Option *Dashboard bearbeiten* auswählen.
+. Im KI-Dialog die gewünschten Änderungen beschreiben.
++
+Dieser Vorgang ähnelt dem Erstellen eines neuen Dashboards. Die Workloads, Metriken oder Zeiträume, die das Dashboard erfasst, können geändert werden.
+
+. Die Änderungen überprüfen und **Speichern** auswählen.
 
 
 .Ergebnis
-Das Dashboard wird dauerhaft aus Ihrem Workload Factory-Konto entfernt und alle Benutzer verlieren den Zugriff darauf.
-
-
-
-[[related-information]]
-== Ähnliche Informationen
-
-* link:create-custom-dashboard.html["Zusätzliche benutzerdefinierte Dashboards erstellen"]
-* link:troubleshoot-custom-dashboards.html["Fehlerbehebung bei benutzerdefinierten Dashboards"]
-
+Das Dashboard wird mit Ihren Änderungen aktualisiert. Das Datum der letzten Änderung wird ebenfalls aktualisiert.

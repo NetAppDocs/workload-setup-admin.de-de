@@ -18,7 +18,7 @@ Benutzerdefinierte Dashboards nutzen KI, um personalisierte Ansichten Ihrer Work
 Alle Benutzer Ihres Workload Factory Kontos können alle benutzerdefinierten Dashboards einsehen. Diese gemeinsame Einrichtung unterstützt die Zusammenarbeit der Teams und ermöglicht es, dass in Ihrer Organisation dieselben betrieblichen Informationen angezeigt werden.
 
 
-NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, wird eine Meldung angezeigt und das Erstellen von Dashboards ist nicht möglich. Wenden Sie sich an Ihren Administrator oder link:manage-genai-features.html["Informationen zur KI-Administration"].
+NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, wird eine entsprechende Meldung angezeigt, und Sie können keine Dashboards erstellen oder bearbeiten. In diesem Fall ist Ihr Administrator oder link:manage-genai-features.html["Informationen zur KI-Administration"] der richtige Ansprechpartner.
 
 
 
@@ -46,6 +46,11 @@ Während der Einrichtung unterstützt Sie der KI-gestützte Dialog dabei, Folgen
 * Ansichten nach Region, Arbeitslast oder anderen Kategorien
 * Regeln oder Anforderungen, die verfolgt und angezeigt werden müssen
 
+
+Sie können Dashboards aus dem Katalog bearbeiten und den Dashboard-Namen, die Beschreibung, die Kategorie oder die Monitoring-Anfrage aktualisieren, bevor Sie entscheiden, ob Sie die überarbeitete Version speichern möchten.
+
+
+NOTE: Nur der Ersteller des Dashboards kann das Dashboard bearbeiten. Während der Bearbeitung sind Ihre Änderungen für andere Nutzer erst sichtbar, nachdem Sie sie gespeichert haben.
 
 
 

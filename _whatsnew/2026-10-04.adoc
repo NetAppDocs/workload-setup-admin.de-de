@@ -1,0 +1,28 @@
+= Benutzerdefinierte Dashboard-Aktualisierungen
+:allow-uri-read: 
+
+
+
+
+[[custom-dashboard-updates]]
+=== Benutzerdefinierte Dashboard-Aktualisierungen
+
+Individuell anpassbare Dashboards erleichtern Ihnen jetzt das Managen Ihrer Arbeit.
+
+Sie können Dashboards direkt im Katalog bearbeiten, einschließlich Kennzahlen, Diagrammen und Zeitbereichen.
+
+Wenn Sie ein Dashboard bearbeiten, öffnet Workload Factory den Chat mit Ihren vorherigen Eingabeaufforderungen und Nachrichten erneut. Anschließend können Sie das Dashboard aktualisieren, Ihre Änderungen speichern oder die vorherige Version wiederherstellen.
+
+Nur der Ersteller des Dashboards kann das Dashboard bearbeiten. Während der Bearbeitung sind Ihre Änderungen für andere Nutzer erst sichtbar, nachdem Sie sie gespeichert haben.
+
+Der Dashboard-Katalog enthält jetzt mehr Filter, mit denen sich Dashboards schnell nach Kategorie und Status finden lassen.
+
+Wenn Ihr Administrator die KI-Funktionen deaktiviert oder Ihr monatliches Kreditlimit erreicht ist, sind die Erstellung und Bearbeitung von Dashboards deaktiviert.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/learn-custom-dashboards.html["Informationen zu benutzerdefinierten Dashboards"]
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-custom-dashboard.html["Ein benutzerdefiniertes Dashboard erstellen"]
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-custom-dashboards.html["Benutzerdefinierte Dashboards verwalten"]
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/troubleshoot-custom-dashboards.html["Fehlerbehebung bei benutzerdefinierten Dashboards"]
