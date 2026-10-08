@@ -74,6 +74,7 @@ Zu den Funktionen, die eine Verknüpfung erfordern, gehören:
 * Klonerstellung und -verwaltung für die sofortige, direkte Datenklonierung
 * Zusätzliche Metriken direkt aus ONTAP wie die ONTAP Version anzeigen
 * Anzeige der Details zu Speicher-VMs und Cluster-LIFs, einschließlich Rollen, Endpunkten, Knoten, IP-Adressen und Status
+* Komponentenaufschlüsselung für Latenzereignisse
 
 
 
