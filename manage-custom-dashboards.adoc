@@ -86,3 +86,28 @@ Dieser Vorgang ähnelt dem Erstellen eines neuen Dashboards. Die Workloads, Metr
 
 .Ergebnis
 Das Dashboard wird mit Ihren Änderungen aktualisiert. Das Datum der letzten Änderung wird ebenfalls aktualisiert.
+
+
+
+[[delete-a-dashboard]]
+== Ein Dashboard löschen
+
+Dashboards, die nicht mehr benötigt werden, können gelöscht werden. Dieser Vorgang ist endgültig und kann nicht rückgängig gemacht werden.
+
+.Schritte
+. Auf der Seite *Benutzerdefinierte Dashboards* das Dashboard suchen, das entfernt werden soll.
+. Im Dropdown-Menü *Aktionen* für dieses Dashboard die Option *Löschen* auswählen.
+. Bestätigen Sie die Löschung.
+
+
+.Ergebnis
+Das Dashboard wird dauerhaft aus Ihrem Workload Factory-Konto entfernt und alle Benutzer verlieren den Zugriff darauf.
+
+
+
+[[related-information]]
+== Ähnliche Informationen
+
+* link:create-custom-dashboard.html["Zusätzliche benutzerdefinierte Dashboards erstellen"]
+* link:troubleshoot-custom-dashboards.html["Fehlerbehebung bei benutzerdefinierten Dashboards"]
+
