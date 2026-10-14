@@ -14,7 +14,7 @@ summary: Im Dashboard-Katalog können benutzerdefinierte Dashboards in Workload 
 Verwalten Sie Ihre benutzerdefinierten Dashboards im Dashboard-Katalog. Von dort aus lassen sich Details anzeigen, Dashboards freigeben, Daten aktualisieren oder Dashboards, die nicht mehr benötigt werden, löschen.
 
 .Über diese Aufgabe
-Im Dashboard-Katalog können benutzerdefinierte Dashboards angezeigt und verwaltet werden. Private Dashboards sind nur für Sie sichtbar, während öffentliche Dashboards für alle Benutzer Ihres Workload Factory Kontos sichtbar sind. Jedes Dashboard zeigt grundlegende Details wie den Namen des Erstellers, das Erstellungsdatum und eine Kennzeichnung der Sichtbarkeit (Privat oder Öffentlich).
+Im Dashboard-Katalog lassen sich benutzerdefinierte Dashboards anzeigen und managen. Private Dashboards sind nur für Sie sichtbar, während öffentliche Dashboards für alle Benutzer in Ihrem Workload Factory Konto sichtbar sind. Jedes Dashboard zeigt grundlegende Details wie den Namen des Erstellers, das Erstellungsdatum und eine Transparenzkennzeichnung (Privat oder Öffentlich).
 
 Benutzerdefinierte Dashboards sind schreibgeschützt. Sie können weder Ihre Speicher- noch Ihre Workload-Einstellungen ändern.
 

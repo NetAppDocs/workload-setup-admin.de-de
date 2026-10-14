@@ -15,6 +15,24 @@ Erfahren Sie mehr über die Neuerungen bei den Workload Factory-Verwaltungsfunkt
 
 
 
+[[14-october-2026]]
+== 14. Oktober 2026
+
+
+
+[[use-your-own-amazon-bedrock-instance-for-ai-tools]]
+=== Die Verwendung Ihrer eigenen Amazon Bedrock Instanz für KI-Tools
+
+Workload Factory bietet jetzt eine weitere Option auf der Seite mit den KI-Einstellungen, mit der Kunden ihre eigene Amazon Bedrock-Instanz verwenden können.
+
+Diese Option ist im Rahmen von kundenverwaltetem Bedrock für KI-Tools verfügbar und wird von allen Workload Factory AI Services unterstützt.
+
+Nach der Verbindungsherstellung teilt Ihnen Workload Factory mit, ob die Verbindung erfolgreich war.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Informationen zur Verwaltung von KI-Funktionen"]
+
+
+
 [[04-october-2026]]
 == 04. Oktober 2026
 

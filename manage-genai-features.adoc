@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-genai-features.html 
 keywords: gen ai, generative ai, bedrock, ask me, custom dashboards, rules builder, cloudshell ai, ems analyzer, db log analyzer, latency analyzer, byom, bring your own model, administration 
-summary: Zugriff auf Bedrock-basierte KI-Funktionen in Workload Factory steuern. Es besteht die Möglichkeit, KI-Funktionen zu deaktivieren oder NetApp-verwaltetes AWS Bedrock zu nutzen. 
+summary: Der Zugriff auf Bedrock-basierte KI-Funktionen in Workload Factory lässt sich steuern. Sie können die KI-Funktionen deaktivieren oder von NetApp verwaltetes bzw. kundenseitig verwaltetes Bedrock verwenden. 
 ---
 = KI-Funktionen in NetApp Workload Factory verwalten
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Zugriff auf Bedrock-basierte KI-Funktionen in Workload Factory steuern.
 
 
 [role="lead"]
-Den Zugriff auf KI-Funktionen in Workload Factory steuern. KI-Funktionen können deaktiviert oder AWS Bedrock verwendet werden, das von NetApp verwaltet wird.
+Zugriff auf KI-Funktionen in Workload Factory steuern. Sie können KI-Funktionen deaktivieren oder AWS Bedrock verwenden, das von NetApp oder Ihrem Unternehmen verwaltet wird.
 
 
 
@@ -41,6 +41,13 @@ NetApp Managed Bedrock (Empfohlen):: Ein von NetApp verwalteter AWS Bedrock Serv
 
 
 --
+Vom Kunden verwaltetes Bedrock:: Ihre eigene AWS Bedrock Konfiguration wird verwendet.
++
+--
+* Für optimale Ergebnisse empfiehlt NetApp die Verwendung von Anthropic Claude Sonnet 4.5 oder 4.6 mit Ihrer Amazon Bedrock Konfiguration.
+
+
+--
 GenAI Funktionen deaktiviert:: Alle KI-Funktionen werden deaktiviert. Benutzer können „Ask Me“, den KI-Agenten, Analysetools, benutzerdefinierte Dashboards, den Regel-Errichter oder andere KI-gestützte Tools nicht mehr verwenden.
 
 
@@ -50,7 +57,11 @@ GenAI Funktionen deaktiviert:: Alle KI-Funktionen werden deaktiviert. Benutzer k
 == Bevor Sie beginnen
 
 * Es wird empfohlen, dass ein Kontoadministrator die KI-Funktionen einrichtet.
+* Wenn Sie kundenverwaltetes Bedrock verwenden, ist eine Aktualisierung der AWS-Richtlinie für die mit der Workload Factory IAM-Rolle verknüpften Anmeldeinformationen erforderlich.
 
+
+
+NOTE: Die AWS-Richtlinie muss um die erforderlichen Berechtigungen für die Anmeldeinformationen ergänzt werden, die mit der Workload Factory IAM-Rolle verknüpft sind.
 
 
 
@@ -59,14 +70,24 @@ GenAI Funktionen deaktiviert:: Alle KI-Funktionen werden deaktiviert. Benutzer k
 
 .Schritte
 . Melden Sie sich mit einem der link:console-experiences.html["Konsolenerfahrungen"^] an.
-. Im Menü *Administration* und anschließend *AI settings* auswählen.
-. Auf der Seite *KI-Einstellungen* kann die bevorzugte Konfiguration ausgewählt werden:
+. Im Menü erfolgt die Auswahl von *Administration* > *Einstellungen* > *KI-Tools*.
+. Auf der Seite *AI tools* erfolgt die Auswahl der bevorzugten Konfiguration:
 +
 ** *NetApp-verwaltetes Bedrock (Empfohlen)*: NetApp-verwaltetes AWS Bedrock verwenden.
-** *Gen AI-Funktionen deaktiviert*: Alle KI-Funktionen sind deaktiviert.
+** *Kundenseitig verwaltetes Bedrock*:
++
+... Auswahl der AWS-Anmeldeinformationen und der Region, die der Workload Factory IAM-Rolle zugeordnet sind
+... Das Inferenzprofil angeben, das Sie verwenden möchten
+... *Konfiguration validieren* auswählen.
++
+Workload Factory zeigt eine Benachrichtigung an, die angibt, ob die Verbindung erfolgreich war oder fehlgeschlagen ist
 
 
-. *Einstellungen speichern* auswählen.
+
+** *GenAI Funktionen deaktiviert*: Alle KI-Funktionen sind ausgeschaltet.
+
+
+. Wählen Sie *Änderungen speichern*.
 
 
 .Ergebnis
@@ -79,7 +100,7 @@ Wenn KI-Funktionen deaktiviert sind, sehen Nutzer eine Meldung, wenn sie versuch
 [[budget-controls-and-credit-limits]]
 == Budgetkontrolle und Kreditlimits
 
-NetApp verwaltet die Budgetkontrolle für KI-Funktionen bei Verwendung der standardmäßigen, von NetApp verwalteten Konfiguration.
+NetApp verwaltet Budgetkontrollen für KI-Funktionen nur dann, wenn Sie die standardmäßige, von NetApp verwaltete Konfiguration verwenden.
 
 
 
