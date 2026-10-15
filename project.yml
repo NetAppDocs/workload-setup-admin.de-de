@@ -82,6 +82,8 @@ sidebar:
       url: "/use-cloudshell.html"
     - title: Anmeldedaten entfernen
       url: "/manage-credentials.html"
+  - title: FAQ
+    url: "/faq-workload-factory.html"
   - title: Wissen und Support
     entries:
     - title: Für den Support anmelden
