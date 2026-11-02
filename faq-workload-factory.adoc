@@ -228,6 +228,11 @@ Auf der Seite mit den KI-Einstellungen kann ein Administrator NetApp-managed Bed
 
 link:manage-genai-features.html["KI-Funktionen verwalten"].
 
+.Wo werden Agenteneinstellungen und -aktionen zur Auditierung angezeigt?
+Der Tracker protokolliert Änderungen an den Agenteneinstellungen und, im Lese-/Schreibmodus, jede Genehmigungsanfrage, einschließlich der Frage des Agenten und der Antwort des Benutzers. Ressourcenänderungen, die über Workload Factory APIs vorgenommen werden, protokolliert der Workload Factory Service, der den Vorgang ausführt.
+
+link:manage-agent-settings.html#audit-and-tracking-for-agent-actions["Informationen zu Audit und Nachverfolgung von Agentenaktionen"].
+
 .Gibt es eine Grenze für den Einsatz von KI?
 Ja. Mit von NetApp verwaltetem Bedrock verfügt jedes Konto über ein monatliches Ausgabenlimit für jede KI-Funktion. Wenn das Limit erreicht ist, schaltet Workload Factory die KI-Funktionen ab, stellt die zugehörigen Teile der Benutzeroberfläche ausgegraut dar und zeigt einen Tooltip an. Für weitere Guthaben steht Ihr NetApp Ansprechpartner zur Verfügung.
 

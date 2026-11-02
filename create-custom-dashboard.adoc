@@ -16,7 +16,7 @@ Individuelle Dashboards lassen sich erstellen, indem in einfacher Sprache beschr
 .Über diese Aufgabe
 Benutzerdefinierte Dashboards nutzen einen KI-gestützten Dialog, um zu verstehen, was Sie visualisieren möchten. Ihre Überwachungsanforderungen werden in natürlicher Sprache beschrieben, und das System stellt klärende Fragen, damit das Dashboard Ihren Anforderungen entspricht.
 
-Nach der Erstellung kann das Dashboard aktualisiert werden, um die aktualisierten Daten anzuzeigen.
+Nach der Erstellung können Sie überprüfen, wann Ihre Metriken im Dashboard zuletzt aktualisiert wurden, und eine Aktualisierung auf Abruf anfordern. link:manage-custom-dashboards.html#refresh-dashboard-data["Informationen zum Aktualisieren von Dashboard-Daten"].
 
 Beachten Sie, dass benutzerdefinierte Dashboards standardmäßig schreibgeschützt sind und keine Änderungen an Ihren Speicher- oder Workload-Konfigurationen vornehmen können.
 
@@ -58,10 +58,10 @@ Sie erhalten eine Benachrichtigung, sobald Ihr Dashboard fertig ist. Falls es ni
 Nach der Erstellung können Sie:
 
 * Die Dashboard-Sichtbarkeit kann geändert werden, sodass sie mit dem Team geteilt wird.
+* Mit dem Zeitstempel *Last Updated* und der Option *Refresh data* lassen sich aktualisierte Metriken anfordern
 * Dashboard-Daten werden aktualisiert, damit die neuesten Informationen angezeigt werden.
 * In Dashboards lassen sich Anzeigeinhalte wie Kennzahlen, Diagramme und Zeiträume ändern
 * Dashboards, die nicht mehr benötigt werden, können gelöscht werden.
-* Dashboard-Details anzeigen, einschließlich des Erstellers und des Zeitpunkts der letzten Aktualisierung
 
 
 

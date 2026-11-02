@@ -106,6 +106,15 @@ Dieser Genehmigungsprozess gilt für alle Agentenerfahrungen, einschließlich Sl
 
 
 
+[[audit-and-tracking-for-agent-actions]]
+=== Audit und Nachverfolgung von Agentenaktionen
+
+Im Lese-/Schreibmodus protokolliert Tracker jede Genehmigungsanfrage, einschließlich der Frage des Agenten und der Antwort des Benutzers. Ressourcenänderungen, die über Workload Factory APIs vorgenommen werden, protokolliert der Workload Factory Dienst, der den Vorgang ausführt. Beispielsweise erscheint ein über Workload Factory erstelltes Volume unter dem Service-Tag *Storage* und nicht unter *Agent*.
+
+link:manage-agent-settings.html#audit-and-tracking-for-agent-actions["Informationen zu Audit und Nachverfolgung von Agentenaktionen"].
+
+
+
 [[what-users-see-when-ai-agents-have-no-data-or-activity]]
 == Was Nutzer sehen, wenn KI-Agenten keine Daten oder Aktivitäten haben
 

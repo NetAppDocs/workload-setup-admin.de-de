@@ -69,6 +69,17 @@ link:manage-custom-dashboards.html#change-dashboard-visibility["Informationen zu
 
 
 
+[[check-if-the-data-is-up-to-date]]
+== Überprüfung, ob die Daten aktuell sind
+
+Sie können überprüfen, wann Ihre Dashboard-Daten zuletzt aktualisiert wurden, und jederzeit eine Aktualisierung anfordern. Ein Tooltip zeigt das Datum und die Uhrzeit der letzten Aktualisierung an.
+
+Mit *Daten aktualisieren* wird ein neuer Scan gestartet. Die Schaltfläche ist während eines laufenden Scans nicht verfügbar. Sobald neue Daten verfügbar sind, erscheint ein Banner mit der Option, das Dashboard zu aktualisieren.
+
+link:manage-custom-dashboards.html#refresh-dashboard-data["Informationen zum Aktualisieren von Dashboard-Daten"].
+
+
+
 [[considerations-and-limitations]]
 == Überlegungen und Einschränkungen
 

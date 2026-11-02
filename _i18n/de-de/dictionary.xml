@@ -1363,7 +1363,6 @@
   <block id="dfc2a77d9b383cd28cba1a1e99f9a378" category="doc">Ein benutzerdefiniertes Dashboard erstellen</block>
   <block id="43d2bb31c641fd8b871b835572bc7441" category="paragraph">Individuelle Dashboards lassen sich erstellen, indem in einfacher Sprache beschrieben wird, was überwacht werden soll. Die KI unterstützt bei der Einrichtung, sodass die Dashboards zu den jeweiligen Workloads und Prioritäten passen.</block>
   <block id="463a1f1058198f82800c115a2a913de5" category="paragraph">Benutzerdefinierte Dashboards nutzen einen KI-gestützten Dialog, um zu verstehen, was Sie visualisieren möchten. Ihre Überwachungsanforderungen werden in natürlicher Sprache beschrieben, und das System stellt klärende Fragen, damit das Dashboard Ihren Anforderungen entspricht.</block>
-  <block id="5af1607522ddad534f7fc3e5976684e5" category="paragraph">Nach der Erstellung kann das Dashboard aktualisiert werden, um die aktualisierten Daten anzuzeigen.</block>
   <block id="a8f8e9b8eb3f376a4b560c169094087e" category="paragraph">Beachten Sie, dass benutzerdefinierte Dashboards standardmäßig schreibgeschützt sind und keine Änderungen an Ihren Speicher- oder Workload-Konfigurationen vornehmen können.</block>
   <block id="1490f3908001d2cdf7587ba480973340" category="section-title">Ein Dashboard erstellen</block>
   <block id="342a19841e494c61bf9c06a5879eaffa" category="inline-image-macro">Das Hamburger-Menü-Symbol wird verwendet, um zu Workloads wie Storage, eda, ai, databases, vmware und administration zu navigieren.</block>
@@ -1381,7 +1380,6 @@
   <block id="fb3b6f147b0a44a08f4c961dc053571e" category="paragraph">Nach der Erstellung können Sie:</block>
   <block id="a5c04615d2baa4c3104d2afbb5b85c59" category="list-text">Dashboard-Daten werden aktualisiert, damit die neuesten Informationen angezeigt werden.</block>
   <block id="7bff2130a08698224667671d85a34ed4" category="list-text">Dashboards, die nicht mehr benötigt werden, können gelöscht werden.</block>
-  <block id="ed5184af3d39b3e314759db5b95ba675" category="list-text">Dashboard-Details anzeigen, einschließlich des Erstellers und des Zeitpunkts der letzten Aktualisierung</block>
   <block id="d10995cac5dfc264a5da7f4abec9025d" category="inline-link-macro">Eigene benutzerdefinierte Dashboards verwalten</block>
   <block id="1c028f2c092927e5beff0c52bcc2456a" category="list-text"><block ref="1c028f2c092927e5beff0c52bcc2456a" category="inline-link-macro-rx"></block></block>
   <block id="1703fc0755f2533bd9d727fa0298c500" category="inline-link-macro">Fehlerbehebung bei benutzerdefinierten Dashboards</block>
@@ -1432,7 +1430,6 @@
   <block id="04b69ec1d9e5301be209cb2b652a1602" category="paragraph">Der Dashboard Katalog zeigt alle benutzerdefinierten Dashboards in Ihrem Workload Factory Konto an.</block>
   <block id="dffad8b6380340c5079727deb13bb3f2" category="list-text">Die Dashboard-Liste wird angezeigt.</block>
   <block id="9e3f16aef1d22400bdae48c5cb77b00f" category="section-title">Dashboard-Daten aktualisieren</block>
-  <block id="4e424a1ad37782627141d4d50f79b586" category="paragraph">Dashboard-Daten werden beim Öffnen eines Dashboards geladen. Eine Aktualisierung zeigt die neuesten Informationen an.</block>
   <block id="0c5896a9e6c8d2cff1b4d007852b1732" category="paragraph">Diese Informationen helfen bei der Behebung häufiger Probleme, die beim Erstellen oder Verwenden benutzerdefinierter Dashboards auftreten können.</block>
   <block id="2e00365fe32c89b1fd1ad214f291ca85" category="section-title">Dashboard Erstellung fehlgeschlagen</block>
   <block id="09a8c59ab236b488dde6ce993a012c63" category="paragraph">**Problem:** Beim Erstellen eines Dashboards wird die Fehlermeldung „Failed to understand request and generate code“ angezeigt.</block>
@@ -1974,7 +1971,6 @@
   <block id="b2174789d5314bb12b464a8d03a18be6" category="list-text">In Dashboards lassen sich Anzeigeinhalte wie Kennzahlen, Diagramme und Zeiträume ändern</block>
   <block id="0d4c6d4cadfc35e450177a6f124a12ce" category="admonition">Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, wird eine entsprechende Meldung angezeigt, und Sie können keine Dashboards erstellen oder bearbeiten. In diesem Fall ist Ihr Administrator oder <block ref="51cc9b1bceb3cdf8e5a226d8fb6d37eb" category="inline-link-macro-rx"></block> der richtige Ansprechpartner.</block>
   <block id="3dacf374ca39e9d1e2ccd73b21e8d75a" category="paragraph">Sie können Dashboards aus dem Katalog bearbeiten und den Dashboard-Namen, die Beschreibung, die Kategorie oder die Monitoring-Anfrage aktualisieren, bevor Sie entscheiden, ob Sie die überarbeitete Version speichern möchten.</block>
-  <block id="09716803bbab78d4545cc7210ae61d90" category="paragraph">Das Dashboard lädt Daten aus Ihren Workloads neu.</block>
   <block id="d2258a9653c6a977efeeb955b27c66e9" category="section-title">Dashboards bearbeiten</block>
   <block id="4e2f12e496523d85bae4a969657d45aa" category="paragraph">Sie können ein Dashboard bearbeiten, um zu ändern, was es anzeigt, einschließlich der Kennzahlen, Diagramme und Zeitbereiche.</block>
   <block id="b13bad0dcb6df4e403e8e2af9058dfe5" category="list-text">Auf der Seite *Benutzerdefinierte Dashboards* das Dashboard suchen, das bearbeitet werden soll.</block>
@@ -2147,4 +2143,50 @@
   <block id="fb28d89a6b0c6ce8708edc67fed69652" category="paragraph-title">Welche Voraussetzungen sind zum Erstellen und Verwenden benutzerdefinierter Dashboards erforderlich?</block>
   <block id="548b72381df096d33b738a36b3370ab7" category="paragraph">Ihr Kontoadministrator sollte die AI-Funktionen aktivieren. Sie benötigen AWS-Zugangsdaten mit Lesezugriff auf die Services, die Sie überwachen möchten. Sie benötigen einen Link, um eine Verbindung zu FSx for ONTAP Dateisystemen herzustellen. Dashboards sind schreibgeschützt und können Ihre Einstellungen für Storage oder Workloads nicht ändern.</block>
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">FAQ</block>
+  <block id="d5700d6fbdfdaa11c8c6dcbd565d8446" category="doc">Daten des benutzerdefinierten Dashboard überprüfen und aktualisieren</block>
+  <block id="a2ace9589bb1ff3e1b64e40ba9982721" category="paragraph">Sie können nun sehen, wann Ihre benutzerdefinierten Dashboard-Metriken zuletzt aktualisiert wurden, und sie manuell aktualisieren. Wenn Sie den Mauszeiger über *Daten aktualisieren* bewegen, werden Datum und Uhrzeit der letzten Aktualisierung angezeigt.</block>
+  <block id="6497706c70a607634590a156941b4e50" category="paragraph">Durch Auswahl von *Daten aktualisieren* wird ein neuer Scan gestartet. Ein Banner bestätigt, dass der Scan gestartet wurde, und die Schaltfläche bleibt deaktiviert, bis der Scan abgeschlossen ist.</block>
+  <block id="2895998bd3d7c5fdb39e7fddc2bd608a" category="paragraph">Wenn neue Daten verfügbar sind, kann im Benachrichtigungsbanner *Load it now* ausgewählt werden, um das Dashboard zu aktualisieren.</block>
+  <block id="f418ba29e821ca3da1b907e6156d2db5" category="paragraph">Sowohl *Daten aktualisieren* als auch *Jetzt laden* erzeugen Datenerfassungsereignisse in Tracker.</block>
+  <block id="0b62b5947fe6e091e6c0c1e387e32e69" category="inline-link-macro">Informationen zum Aktualisieren benutzerdefinierter Dashboard-Daten</block>
+  <block id="348426e840eb5ae32d612438487c2065" category="paragraph"><block ref="348426e840eb5ae32d612438487c2065" category="inline-link-macro-rx"></block></block>
+  <block id="524f9b4ee818c419ee1585959e10855c" category="section-title">Regionen für benutzerdefinierte Dashboards</block>
+  <block id="9aca8419896ce9b5d75b523be971bafb" category="paragraph">Benutzerdefinierte Dashboards fordern nun zur Auswahl einer oder mehrerer Regionen auf, wenn diese nicht in der Anfrage enthalten sind. Die Dashboard-Daten sind auf die ausgewählten Regionen beschränkt.</block>
+  <block id="35a63836682befdc98086e583b61298a" category="inline-link-macro">Informationen zum Erstellen eines benutzerdefinierten Dashboards</block>
+  <block id="c41b815c81909f8ff39eb5b52d29746d" category="paragraph"><block ref="c41b815c81909f8ff39eb5b52d29746d" category="inline-link-macro-rx"></block></block>
+  <block id="cc2d0ca75f186230ede0faa3f7692c06" category="section-title">IAM-Richtlinie für die Linkerstellung</block>
+  <block id="20721709cc5df2882070722a30cc34c3" category="paragraph">Die CloudFormation Vorlage und der Terraform Code zum Erstellen von Links verwenden nun eine IAM-Richtlinie anstelle von Inline-Lambda-Berechtigungen.</block>
+  <block id="38b63c1d391fa52af61b987953824171" category="paragraph"><block ref="38b63c1d391fa52af61b987953824171" category="inline-link-macro-rx"></block></block>
+  <block id="b3e7d6d7f8501adc86f1a7337ebfb531" category="section-title">Audit und Nachverfolgung von KI-Agentenaktionen</block>
+  <block id="fc5902f94dd3899ad0ce791954b6f521" category="paragraph">Mit Tracker können Sie jetzt Änderungen an den Einstellungen des AI Agent überprüfen und im Lese-/Schreibmodus jede Genehmigungsanfrage einschließlich der Frage des Agenten und der Antwort des Benutzers einsehen.</block>
+  <block id="25d50a8630b3c335d684f59cca6d3ace" category="paragraph">Ressourcenänderungen, die über die Workload Factory APIs vorgenommen werden, protokolliert der Workload Factory Service, der den Vorgang ausführt.</block>
+  <block id="db0781c4ffb5f26ba7ad4f2ffe3dfdbd" category="inline-link-macro">Informationen zu Audit und Nachverfolgung von Agentenaktionen</block>
+  <block id="9b06f95ad3e4fc8477f2ca89d854a603" category="paragraph"><block ref="9b06f95ad3e4fc8477f2ca89d854a603" category="inline-link-macro-rx"></block></block>
+  <block id="3714dde7378ac290c154f62d9c080369" category="section-title">Verbesserungen bei der Linkerstellung</block>
+  <block id="73501dc89cd2fc3be142f43eaffe971b" category="paragraph">Workload Factory hat die Codebox-Ausgabe für die Linkerstellung aktualisiert, indem die Inline-Lambda-Berechtigungen durch die IAM-Richtlinie für die CloudFormation Vorlage und Terraform ersetzt wurden.</block>
+  <block id="0e43f192242267f4b6ae5962e9f5b38c" category="inline-link-macro">Informationen zum Aktualisieren von Dashboard-Daten</block>
+  <block id="05aeb0d0c1502e57f980bbf322cf31a6" category="paragraph">Nach der Erstellung können Sie überprüfen, wann Ihre Metriken im Dashboard zuletzt aktualisiert wurden, und eine Aktualisierung auf Abruf anfordern. <block ref="831e74ba37d5e8d2f1bf86cd0b468bf4" category="inline-link-macro-rx"></block>.</block>
+  <block id="a0029b147e3a4c22ba57efcbb020c23e" category="list-text">Mit dem Zeitstempel *Last Updated* und der Option *Refresh data* lassen sich aktualisierte Metriken anfordern</block>
+  <block id="6d852ab3090e66a5f1f1a6d5675164cb" category="paragraph-title">Wo werden Agenteneinstellungen und -aktionen zur Auditierung angezeigt?</block>
+  <block id="0f679622d131d4b9f3abef96c35743be" category="paragraph">Der Tracker protokolliert Änderungen an den Agenteneinstellungen und, im Lese-/Schreibmodus, jede Genehmigungsanfrage, einschließlich der Frage des Agenten und der Antwort des Benutzers. Ressourcenänderungen, die über Workload Factory APIs vorgenommen werden, protokolliert der Workload Factory Service, der den Vorgang ausführt.</block>
+  <block id="4c1cd3a1bad23fecc0286da543614cd7" category="paragraph"><block ref="bc36590c397b325a073c2ae9b60e53fd" category="inline-link-macro-rx"></block>.</block>
+  <block id="b70a9e9de689b4f17365d6060076d3b8" category="section-title">Audit und Nachverfolgung von Agentenaktionen</block>
+  <block id="774a23889a059a060f089bac423f3b00" category="paragraph">Im Lese-/Schreibmodus protokolliert Tracker jede Genehmigungsanfrage, einschließlich der Frage des Agenten und der Antwort des Benutzers. Ressourcenänderungen, die über Workload Factory APIs vorgenommen werden, protokolliert der Workload Factory Dienst, der den Vorgang ausführt. Beispielsweise erscheint ein über Workload Factory erstelltes Volume unter dem Service-Tag *Storage* und nicht unter *Agent*.</block>
+  <block id="1c25d10ad7fe7b9def7bd90be9bb63ac" category="section-title">Überprüfung, ob die Daten aktuell sind</block>
+  <block id="40d839f036c0870ce0f44a810dc01fd9" category="paragraph">Sie können überprüfen, wann Ihre Dashboard-Daten zuletzt aktualisiert wurden, und jederzeit eine Aktualisierung anfordern. Ein Tooltip zeigt das Datum und die Uhrzeit der letzten Aktualisierung an.</block>
+  <block id="3943baa01d778cb77042aa99b8829491" category="paragraph">Mit *Daten aktualisieren* wird ein neuer Scan gestartet. Die Schaltfläche ist während eines laufenden Scans nicht verfügbar. Sobald neue Daten verfügbar sind, erscheint ein Banner mit der Option, das Dashboard zu aktualisieren.</block>
+  <block id="80aab7a96b15f6ce5d375faafb077b13" category="paragraph"><block ref="831e74ba37d5e8d2f1bf86cd0b468bf4" category="inline-link-macro-rx"></block>.</block>
+  <block id="4561b6d16c60561c7dfef3363842359b" category="paragraph">Sie können prüfen, wann Ihr Dashboard zuletzt aktualisiert wurde, und bei Bedarf einen Scan auf Abruf anfordern, wenn aktuelle Daten benötigt werden.</block>
+  <block id="cb19e9f8b4fdf3bf166690f03f0888ff" category="paragraph">Der Tooltip „Daten aktualisieren“ zeigt einen Zeitstempel „Zuletzt aktualisiert“ mit dem Datum und der Uhrzeit an, zu denen das Dashboard zuletzt aktualisiert wurde. Dieser Zeitstempel bezieht sich auf die erfassten Daten, nicht auf den Zeitpunkt der letzten Änderung der Dashboard-Konfiguration.</block>
+  <block id="34839e5b2cbe60267b78999786be488f" category="paragraph">Die Auswahl von *Daten aktualisieren* startet einen neuen Scan. Während ein Scan läuft, ist die Schaltfläche deaktiviert, und die zugehörige QuickInfo zeigt an, dass ein Scan im Gange ist.</block>
+  <block id="13ab1a7b5cd6ff60fb50525984ba6258" category="inline-link-macro">Informationen zur Überwachung von Vorgängen mit Tracker</block>
+  <block id="b6b3389b8e77a02f15ea3aba7cce028e" category="paragraph">Workload Factory protokolliert ein Ereignis in Tracker, wenn Sie entweder *Daten aktualisieren* oder *Jetzt laden* auswählen. <block ref="74993bbdd897b4c73c70c66a0dd88655" category="inline-link-macro-rx"></block>.</block>
+  <block id="b2f99e18989e76354ebba4fd4d399227" category="list-text">Im Dashboard-Katalog können Sie das Dashboard öffnen, das Sie anzeigen möchten.</block>
+  <block id="b01e2768b9cf649d978bf4ea1879ea19" category="list-text">Durch Bewegen des Mauszeigers über *Daten aktualisieren* können Sie Datum und Uhrzeit der *Letzten Aktualisierung* prüfen.</block>
+  <block id="669bf0e2d3a5223b736f207a1738dcea" category="list-text">Aktualisierte Metriken lassen sich über *Daten aktualisieren* anfordern.</block>
+  <block id="2c40fb628cd47c18fe14a2939979ebf9" category="paragraph">Ein Banner signalisiert den Start eines Scans. Es ist erforderlich, den Abschluss des Scans abzuwarten.</block>
+  <block id="dd2142eca6bec99aaba2fbc5a1fef1f5" category="list-text">Wenn neue Daten verfügbar sind, wird in einem Banner folgende Meldung angezeigt: „Neue Daten sind verfügbar. Sie können sie jetzt laden oder jederzeit auf „Daten aktualisieren“ klicken, um die Ansicht zu aktualisieren.“</block>
+  <block id="f5f7ef3c1692aa4447b9fb26ad98940c" category="list-text">Im Banner steht *Jetzt laden* zur Verfügung, um die verfügbaren Daten in das Dashboard zu laden. Alternativ steht *Daten aktualisieren* zur Verfügung, um die Ansicht zu aktualisieren.</block>
+  <block id="abff96b75117f320254f372b6518244b" category="paragraph">Das Dashboard zeigt die aktualisierten Kennzahlen an.</block>
+  <block id="8b253c1d4259c21c8314fc85adcb31d6" category="section-title">01. November 2026</block>
 </blocks>

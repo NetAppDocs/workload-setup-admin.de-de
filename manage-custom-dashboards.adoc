@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-custom-dashboards.html 
-keywords: manage dashboards, delete dashboard, refresh dashboard, dashboard catalog 
+keywords: manage dashboards, delete dashboard, refresh dashboard, dashboard catalog, refresh data, load data, last updated 
 summary: Im Dashboard-Katalog können benutzerdefinierte Dashboards in Workload Factory angezeigt, aktualisiert und gelöscht werden. 
 ---
 = Benutzerdefinierte Dashboards in NetApp Workload Factory verwalten
@@ -60,9 +60,28 @@ Das Dashboard wird sofort aktualisiert. Die Sichtbarkeitsanzeige auf der Dashboa
 [[refresh-dashboard-data]]
 == Dashboard-Daten aktualisieren
 
-Dashboard-Daten werden beim Öffnen eines Dashboards geladen. Eine Aktualisierung zeigt die neuesten Informationen an.
+Sie können prüfen, wann Ihr Dashboard zuletzt aktualisiert wurde, und bei Bedarf einen Scan auf Abruf anfordern, wenn aktuelle Daten benötigt werden.
 
-Das Dashboard lädt Daten aus Ihren Workloads neu.
+.Über diese Aufgabe
+Der Tooltip „Daten aktualisieren“ zeigt einen Zeitstempel „Zuletzt aktualisiert“ mit dem Datum und der Uhrzeit an, zu denen das Dashboard zuletzt aktualisiert wurde. Dieser Zeitstempel bezieht sich auf die erfassten Daten, nicht auf den Zeitpunkt der letzten Änderung der Dashboard-Konfiguration.
+
+Die Auswahl von *Daten aktualisieren* startet einen neuen Scan. Während ein Scan läuft, ist die Schaltfläche deaktiviert, und die zugehörige QuickInfo zeigt an, dass ein Scan im Gange ist.
+
+Workload Factory protokolliert ein Ereignis in Tracker, wenn Sie entweder *Daten aktualisieren* oder *Jetzt laden* auswählen. link:monitor-operations.html["Informationen zur Überwachung von Vorgängen mit Tracker"].
+
+.Schritte
+. Im Dashboard-Katalog können Sie das Dashboard öffnen, das Sie anzeigen möchten.
+. Durch Bewegen des Mauszeigers über *Daten aktualisieren* können Sie Datum und Uhrzeit der *Letzten Aktualisierung* prüfen.
+. Aktualisierte Metriken lassen sich über *Daten aktualisieren* anfordern.
++
+Ein Banner signalisiert den Start eines Scans. Es ist erforderlich, den Abschluss des Scans abzuwarten.
+
+. Wenn neue Daten verfügbar sind, wird in einem Banner folgende Meldung angezeigt: „Neue Daten sind verfügbar. Sie können sie jetzt laden oder jederzeit auf „Daten aktualisieren“ klicken, um die Ansicht zu aktualisieren.“
+. Im Banner steht *Jetzt laden* zur Verfügung, um die verfügbaren Daten in das Dashboard zu laden. Alternativ steht *Daten aktualisieren* zur Verfügung, um die Ansicht zu aktualisieren.
+
+
+.Ergebnis
+Das Dashboard zeigt die aktualisierten Kennzahlen an.
 
 
 
