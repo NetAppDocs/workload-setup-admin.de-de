@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: learn-agent.html 
-keywords: agent, ai agent, aiops, ask me, explore agent, ai assistant, environment-aware, read-only, read-write, agents settings 
+keywords: agent, ai agent, aiops, ask me, explore agent, ai assistant, environment-aware, read-only, read, write, agents settings 
 summary: Es wird beschrieben, wie KI-Agenten für Workload Factory Ihre Umgebung analysieren, Risiken und Möglichkeiten zur Leistungsverbesserung identifizieren und mit Ihrer Zustimmung Maßnahmen für Sie ergreifen können. 
 ---
 = Informationen zu den KI-Agenten in NetApp Workload Factory
@@ -11,7 +11,7 @@ summary: Es wird beschrieben, wie KI-Agenten für Workload Factory Ihre Umgebung
 
 
 [role="lead"]
-Workload Factory AIOps verwendet KI, um Ihre Umgebung zu analysieren und Verbesserungen zu empfehlen. Nach Ihrer Zustimmung kann es auch Aktionen mit den von Ihnen festgelegten Anmeldeinformationen und Berechtigungen ausführen.
+Workload Factory AIOps nutzt KI-Agenten, um Ihre Umgebung zu analysieren, Risiken zu identifizieren und Verbesserungen vorzuschlagen. Mit Ihrer Zustimmung können die Agenten auch Aktionen mit den von Ihnen festgelegten Anmeldeinformationen und Berechtigungen ausführen.
 
 
 NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, wird Ihnen eine entsprechende Meldung angezeigt, und Sie können die Agenten nicht nutzen. Bitte kontaktieren Sie Ihren Administrator oder link:manage-genai-features.html["Informationen zur KI-Administration"].
@@ -21,7 +21,7 @@ NOTE: Wenn Ihr Kontoadministrator die KI-Funktionen deaktiviert hat, wird Ihnen 
 [[before-you-begin]]
 == Bevor Sie beginnen
 
-Stellen Sie sicher, dass Ihr Workload Factory Konto über AWS-Anmeldeinformationen und die IAM-Berechtigungen verfügt, die Agents für die Ressourcen benötigen, auf die sie zugreifen. Wenn Sie den Lese-/Schreibmodus aktivieren, müssen diese Berechtigungen auch unterstützte Änderungen zulassen.
+Es muss sichergestellt sein, dass Ihr Workload Factory-Konto über AWS-Anmeldeinformationen und die IAM-Berechtigungen verfügt, die Agents für die Ressourcen benötigen, auf die sie zugreifen. Wenn der Modus lesen/schreiben aktiviert wird, müssen diese Berechtigungen auch unterstützte Änderungen zulassen.
 
 link:add-credentials.html["Informationen zum Hinzufügen von AWS-Anmeldeinformationen und zum Einrichten von IAM-Berechtigungen"^].
 
@@ -52,7 +52,7 @@ KI-Agenten helfen Ihnen, in Workload Factory effizienter zu arbeiten:
 == Zugriff auf die KI-Agenten
 
 Von der Ask Me-Startseite:: Auf der Landingpage von Ask Me ist *Explore Agents* auszuwählen. Das Seitenfenster mit den KI-Agenten öffnet sich mit einer Begrüßungsnachricht, die die Fähigkeiten der Agenten vorstellt.
-Aus den Weiterleitungslinks der Agenten:: Bei der Nutzung von **Ask Me** oder anderen Funktionen werden Ihnen möglicherweise Links angezeigt, die Sie für weiterführende Unterstützung zu den Agents weiterleiten.
+Aus den Weiterleitungslinks der Agenten:: Wenn Sie **Ask Me** oder andere Funktionen nutzen, werden Ihnen möglicherweise Links angezeigt, die Sie für weitergehende Unterstützung zu den Agenten weiterleiten.
 
 
 
@@ -65,7 +65,7 @@ Aus den Weiterleitungslinks der Agenten:: Bei der Nutzung von **Ask Me** oder an
 [[how-agents-access-your-environment]]
 === Wie Agenten auf Ihre Umgebung zugreifen
 
-Agenten können nur dann auf Ressourcen zugreifen, wenn diese im aktuellen Workload Factory Bereich enthalten sind und durch die in link:manage-agent-settings.html["Agenteneinstellungen"] ausgewählten Anmeldeinformationen unterstützt werden. Agenten können nur dort arbeiten, wo beide Steuerungen gelten. Die Ressourcen, auf die sie zugreifen können, hängen außerdem von den Berechtigungen ab, die ihren AWS-Anmeldeinformationen zugewiesen sind. Standardmäßig sind alle Anmeldeinformationen ausgewählt, Sie können dies jedoch auf eine Teilmenge Ihrer konfigurierten Anmeldeinformationen beschränken.
+Agenten können nur dann auf Ressourcen zugreifen, wenn diese im aktuellen Workload Factory Bereich enthalten sind und von den in link:manage-agent-settings.html["Agenteneinstellungen"] ausgewählten Anmeldeinformationen unterstützt werden. Agenten können nur dort arbeiten, wo beide Steuerelemente gelten. Die Ressourcen, auf die sie zugreifen können, hängen außerdem von den Berechtigungen ihrer AWS-Anmeldeinformationen ab. Standardmäßig sind alle Anmeldeinformationen ausgewählt, die Auswahl kann jedoch auf eine Teilmenge Ihrer konfigurierten Anmeldeinformationen beschränkt werden.
 
 Ihr aktueller Geltungsbereich umfasst:
 
@@ -97,10 +97,10 @@ Im Nur-Lese-Modus können Ressourcen nicht geändert werden. Wenn Sie eine Aktio
 
 
 
-[[read-write-mode-opt-in]]
-=== Lese-/Schreibmodus (optional)
+[[readwrite-mode-opt-in]]
+=== Lesen/Schreiben-Modus (optional)
 
-Sie können Lese- und Schreibfunktionen in link:manage-agent-settings.html["Agenteneinstellungen"] aktivieren. In diesem Modus erläutern die Agenten jede unterstützte Aktion und benötigen Ihre Zustimmung, bevor sie Änderungen vornehmen.
+Sie können die lesen/schreiben-Funktionen in link:manage-agent-settings.html["Agenteneinstellungen"] aktivieren. In diesem Modus erläutern die Agenten jede unterstützte Aktion und benötigen Ihre Zustimmung, bevor Änderungen vorgenommen werden.
 
 Dieser Genehmigungsprozess gilt für alle Agentenerfahrungen, einschließlich Slack-Integrationen und der NetApp Console.
 
@@ -109,9 +109,7 @@ Dieser Genehmigungsprozess gilt für alle Agentenerfahrungen, einschließlich Sl
 [[audit-and-tracking-for-agent-actions]]
 === Audit und Nachverfolgung von Agentenaktionen
 
-Im Lese-/Schreibmodus protokolliert Tracker jede Genehmigungsanfrage, einschließlich der Frage des Agenten und der Antwort des Benutzers. Ressourcenänderungen, die über Workload Factory APIs vorgenommen werden, protokolliert der Workload Factory Dienst, der den Vorgang ausführt. Beispielsweise erscheint ein über Workload Factory erstelltes Volume unter dem Service-Tag *Storage* und nicht unter *Agent*.
-
-link:manage-agent-settings.html#audit-and-tracking-for-agent-actions["Informationen zu Audit und Nachverfolgung von Agentenaktionen"].
+Im Modus lesen/schreiben protokolliert Tracker jede Genehmigungsanfrage, einschließlich der Frage des Agenten und der Antwort des Benutzers. Der Workload Factory Dienst, der den Vorgang ausführt, protokolliert Ressourcenänderungen, die über Workload Factory APIs vorgenommen wurden. Beispielsweise wird ein über Workload Factory erstelltes Volume unter dem Service-Tag *Storage* und nicht unter *Agent* angezeigt.
 
 
 
