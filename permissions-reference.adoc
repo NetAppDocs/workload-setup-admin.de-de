@@ -481,6 +481,217 @@ In der folgenden Tabelle werden die Berechtigungen für Speicher angezeigt.
 ====
 
 
+==== Auswirkungen der Entfernung von Berechtigungen aus Storage IAM Richtlinien
+
+Aus Sicherheitsgründen kann es sinnvoll sein, bestimmte Berechtigungen aus den Storage IAM Richtlinien zu entfernen. Die folgenden Tabellen beschreiben die Auswirkungen der Entfernung von Berechtigungen aus den einzelnen Richtlinien.
+
+.Berechtigungen für Ansicht, Planung und Analyse
+[%collapsible]
+====
+[cols="2,3,3"]
+|===
+| Berechtigung | Zweck | Auswirkungen bei Entfernung 
+
+
+| fsx:DescribeFileSystems | Dateisystemkonfiguration ermitteln und anzeigen | Keine Dateisysteme sichtbar 
+
+
+| fsx:DescribeVolumes | Auflistung der Volumes und ihrer Eigenschaften | Volumes werden nicht angezeigt 
+
+
+| fsx:DescribeStorageVirtualMachines | Storage VMs, Protokolle und DNS-Konfiguration auflisten | SVMs nicht angezeigt 
+
+
+| fsx:DescribeBackups | Verfügbare Backups auflisten | Sicherungsinformationen nicht verfügbar 
+
+
+| fsx:ListTagsForRessource | Ressourcentags anzeigen | Fehlende Tags 
+
+
+| fsx:DescribeSharedVpcConfigurations | Gemeinsam genutzte VPC-Bereitstellungen erkennen | Informationen zur gemeinsam genutzten VPC nicht verfügbar 
+
+
+| fsx:DescribeS3AccessPointAttachments | Auflisten von S3-Zugriffspunkten auf Volumes | S3 Zugangspunktinformationen fehlen 
+
+
+| s3:GetAccessPoint | Abrufen von Details zum S3 Zugriffspunkt | Details zum Access Point nicht verfügbar 
+
+
+| cloudwatch:GetMetricData | Performance und Kapazitätskennzahlen abrufen | Dashboards und Diagramme leer 
+
+
+| cloudwatch:GetMetricStatistics | Überwachung der Kapazitätsauslastung | Kapazitätsmanagementfunktionen deaktiviert 
+
+
+| ec2:DescribeInstances | Erkennung von Compute-Workloads mit FSx Storage | Workload-Topologie unvollständig 
+
+
+| ec2:DescribeVolumes | EBS Volume Erkennung für den Storage Vergleich | Einsparungsanalyse unvollständig 
+
+
+| ec2:DescribeVpcs | VPC-Auflistung für Netzwerkkontext | VPC-Auswahl nicht verfügbar 
+
+
+| ec2:DescribeSubnets | Subnetzaufzählung für Platzierungsentscheidungen | Subnetzauswahl nicht verfügbar 
+
+
+| ec2:DescribeSecurityGroups | Ermittlung und Validierung von Sicherheitsgruppen | Informationen zur Sicherheitsgruppe fehlen 
+
+
+| ec2:DescribeRouteTables | Zuordnung von Netzwerkrouten | Routeninformationen nicht verfügbar 
+
+
+| ec2:DescribeNetworkInterfaces | Netzwerk-Schnittstellenerkennung | Konnektivitätsprüfungen beeinträchtigt 
+
+
+| elasticfilesystem:DescribeFileSystems | EFS Erkennung für Migrations- und Einsparungsanalyse | EFS nicht in den Einsparungen enthalten 
+
+
+| ce:GetCostAndUsage | Kostendaten für Einsparungsberechnungen | Kostenanalyse nicht verfügbar 
+
+
+| ce:GetTags | Abfragen zu Kostenverteilungs-Tags | Tag-basierte Kostenansichten schlagen fehl 
+|===
+Ressourcenbereich: Alle Ressourcen (`*`). Dies sind schreibgeschützte Aktionen vom Typ „Describe/Get/List“.
+
+====
+.Berechtigungen für Vorgänge und Behebung
+[%collapsible]
+====
+Betriebs- und Behebungsberechtigungen ermöglichen den Volume-Lebenszyklus, die Backup-Verwaltung, S3-Zugriffspunkte, den Metadatenkatalog und die KI-gestützte Ereignisanalyse.
+
+Ressourcenumfang: Alle Ressourcen (`*`), außer CloudTrail Aktionen, die von Tag  `netapp-fsxs3-metadata=journal` abhängig sind.
+
+
+NOTE: Die KI-Inferenz läuft in Ihrem AWS-Konto unter Verwendung Ihrer Bedrock-Inferenzprofile. Für die KI-Diagnose werden keine Daten außerhalb Ihres Kontos gesendet.
+
+[cols="2,3,3"]
+|===
+| Berechtigung | Zweck | Auswirkungen bei Entfernung 
+
+
+| fsx: CreateVolume erstellen | Neue Volumes erstellen | Volumeerstellung nicht verfügbar 
+
+
+| fsx:DeleteVolume | Volumes löschen | Volume-Löschung nicht möglich 
+
+
+| fsx:UpdateFileSystem | Durchsatz und Storage Kapazität anpassen | Dateisystemaktualisierungen und automatische Kapazitätsverwaltung deaktiviert 
+
+
+| fsx:UpdateStorageVirtualMachine | SVM Einstellungen ändern | SVM Konfigurationsänderungen nicht verfügbar 
+
+
+| fsx:UpdateVolumen | Ändern von Volumengröße, Tiering und QoS | Volume Änderungen nicht verfügbar 
+
+
+| fsx:CreateBackup | On-Demand-Backups erstellen | Manuelle Datensicherung nicht möglich 
+
+
+| fsx:CreateVolumeFromBackup | Wiederherstellen eines Volumes aus einer Sicherung | Wiederherstellung aus Backup nicht verfügbar 
+
+
+| fsx:Backup löschen | Backups entfernen | Löschen von Backups nicht möglich 
+
+
+| fsx:TagResource / fsx:UntagResource | Verwaltung von FSx Ressourcentags | Tagging-Vorgänge schlagen fehl 
+
+
+| fsx:CreateAndAttachS3AccessPoint | Erstellung eines S3-Zugriffspunkts auf einem Volume | Erstellung eines S3-Zugangspunkts nicht möglich 
+
+
+| fsx:DetachAndDeleteS3AccessPoint | Einen S3 Zugriffspunkt aus einem Volume entfernen | Entfernung des S3 access point nicht verfügbar 
+
+
+| s3:CreateAccessPoint / s3:DeleteAccessPoint | Lebenszyklus eines S3-Zugangspunkts | Vorgänge für S3 Zugriffspunkte schlagen fehl 
+
+
+| s3:TagResource / s3:UntagResource / s3:ListTagsForResource | S3 Ressourcenkennzeichnung | S3 Tag-Operationen schlagen fehl 
+
+
+| s3:GetObjectTagging / s3:ListBucket | Inhalte des Metadatenkatalogs abfragen | Abfragen des Metadatenkatalogs beeinträchtigt 
+
+
+| bedrock:InvokeModel / bedrock:InvokeModelWithResponseStream | KI-gestützte Analyse und Diagnose | KI-Analysefunktionen nicht verfügbar 
+
+
+| bedrock:ListInferenceProfiles / bedrock:GetInferenceProfile | Verfügbare KI-Modelle auflisten | KI-Funktionen können nicht konfiguriert werden 
+
+
+| s3tables:CreateTableBucket / s3tables:CreateTable / s3tables:CreateNamespace | Erstellen von Metadatenkatalogstrukturen | Die Erstellung des Metadatenkatalogs schlägt fehl 
+
+
+| s3tables:GetTable / s3tables:GetTableBucket / s3tables:GetNamespace / s3tables:GetTableMetadataLocation | Konfiguration des Metadatenkatalogs lesen | Lesevorgänge des Metadatenkatalogs schlagen fehl 
+
+
+| s3tables:PutTableData / s3tables:GetTableData | Metadatenkatalogeinträge schreiben und lesen | Vorgänge im Metadatenkatalog schlagen fehl 
+
+
+| s3tables:ListTables / s3tables:ListNamespaces / s3tables:ListTableBuckets | Metadatenkatalogobjekte auflisten | Navigation im Metadatenkatalog schlägt fehl 
+
+
+| s3tables:UpdateTableMetadataLocation | Aktualisierung der Katalogmetadatenzeiger | Aktualisierungen des Katalogstandorts schlagen fehl 
+
+
+| s3tables:ListTagsForResource / s3tables:TagResource | Tagging des Metadatenkatalogs | Katalog-Tag-Operationen schlagen fehl 
+
+
+| cloudtrail:PutEventSelectors / cloudtrail:GetEventSelectors | Änderungsprotokollierung des Metadatenkatalogs | Katalogjournalisierung nicht verfügbar 
+|===
+====
+.Berechtigungen zur Dateisystemerstellung
+[%collapsible]
+====
+Die Berechtigungen zur Erstellung von Dateisystemen ermöglichen die Provisionierung und Aufhebung der Provisionierung von FSx for ONTAP Dateisystemen und Storage VMs.
+
+[cols="2,3,3"]
+|===
+| Berechtigung | Zweck | Auswirkungen bei Entfernung 
+
+
+| fsx:CreateFileSystem | Bereitstellung neuer FSx for ONTAP Dateisysteme | Dateisystemerstellung nicht möglich 
+
+
+| fsx:Dateisystem löschen | Löschen von Dateisystemen | Dateisystemlöschung nicht verfügbar 
+
+
+| fsx:CreateStorageVirtualMachine | Storage VMs erstellen | Erstellung von SVM nicht möglich 
+
+
+| fsx:DeleteStorageVirtualMachine | Storage VMs löschen | Löschen der SVM nicht verfügbar 
+
+
+| fsx:TagResource / fsx:UntagResource | Ressourcen während der Erstellung mit Tags versehen | Erstellte Ressourcen ohne Tag 
+
+
+| Km:CreateGrant | FSx die Verwendung Ihres KMS-Schlüssels für die Verschlüsselung ruhender Daten ermöglichen | Die Erstellung des verschlüsselten Dateisystems schlägt fehl 
+
+
+| kms:DescribeKey / kms:ListKeys / kms:ListAliases | Auflistung verfügbarer KMS-Schlüssel zur Auswahl | KMS Schlüsselauswahl leer 
+
+
+| iam:CreateServiceLinkedRole | Erstellung der FSx serviceverknüpften Rolle (einmalig) | Die erste Dateisystemerstellung schlägt fehl, wenn die Rolle nicht existiert 
+
+
+| ec2:CreateSecurityGroup / ec2:CreateTags | Erstellung einer Sicherheitsgruppe für ein neues Dateisystem | Die Erstellung des Dateisystems schlägt fehl 
+
+
+| ec2:DescribeVolumeStatus | Prüfung des Systemstatus des zugrunde liegenden Storage | Systemstatusprüfungen beeinträchtigt 
+
+
+| ec2:AuthorizeSecurityGroupEgress / ec2:AuthorizeSecurityGroupIngress | Konfigurieren von Sicherheitsgruppenregeln für ONTAP Zugriff | Netzwerkregeln nicht angewendet 
+
+
+| ec2:RevokeSecurityGroupEgress / ec2:RevokeSecurityGroupIngress | Sicherheitsgruppenregeln beim Löschen bereinigen | Veraltete Regeln bleiben bestehen 
+
+
+| ec2:DeleteSecurityGroup | Sicherheitsgruppe beim Löschen des Dateisystems entfernen | Verwaiste Sicherheitsgruppen 
+|===
+Ressourcenbereich: Aktionen zur Änderung von Sicherheitsgruppen (Autorisieren, Entziehen, Löschen) sind auf Ressourcen beschränkt, die mit Tags `AppCreator=NetappFSxWF` versehen sind.
+
+====
+
+
 [[permissions-for-database-workloads]]
 === Berechtigungen für Datenbank-Workloads
 
